@@ -1,0 +1,16 @@
+wordpress:
+  image: wordpress
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+  volumes:
+    - .:/var/www/html/wp-content/themes/mapasculturais
+    - ./.data/wp:/var/www/html/
+
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: wordpress
+  volumes:
+    - "./.data/db:/var/lib/mysql"
