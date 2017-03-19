@@ -1,0 +1,48 @@
+body {
+  font-size: 1.6em;
+  line-height: 1.8;
+}
+.container {
+  max-width: 1280px;
+}
+@media (min-width: 550px) {
+  .container {
+    width: 90%;
+  }
+}
+input.big-search {
+  font-size: 1.4em;
+  /*padding: 1.2rem;*/
+  height: auto;
+}
+#masthead {
+  margin-top: 4rem;
+}
+.intro-numbers .number {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0;
+}
+.fa {
+  font-size: 1.5em;
+}
+p.big {
+  font-size: 1.6em;
+}
+article h5 {
+  margin: 0;
+}
+p.post-meta {
+  margin: 0;
+  color: #999;
+}
+p.post-meta .fa {
+  font-size: 1em;
+}
+.social-buttons {
+  font-size: 2em;
+  text-align: center;
+}
+.social-buttons a {
+  text-decoration: none;
+}
