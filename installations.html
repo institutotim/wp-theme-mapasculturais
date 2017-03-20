@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Mapas Culturais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" integrity="sha256-bOWY8F32FGGbNDMPAnwWl/Lv9CKen4IQsNZ4RU9rcs0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="masthead">
+      <div class="container">
+        <div class="six columns">
+          <h1><a href="/">Mapas Culturais</a></h1>
+        </div>
+        <div class="six columns">
+          <input class="big-search u-pull-right" type="text" placeholder="Busque qualquer coisa" />
+          <nav id="mastnav" class="u-pull-right">
+            <a href="/page.html">Mapas Culturais</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/page.html">Parceiros</a>
+            <a href="/page.html">Suporte</a>
+            <a href="/page.html">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <hr/>
+    <article id="page">
+      <div class="container">
+        <div class="twelve columns">
+          <h2>Instalações pelo Brasil</h2>
+          <div class="row">
+            <div class="six columns">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mi et malesuada aliquet. Donec dictum lorem sit amet nunc dictum iaculis. Etiam commodo malesuada libero id feugiat. Nam nisi eros, feugiat vel diam vel, semper convallis justo. Integer lacinia placerat elit in egestas. Nam sed enim dictum, ornare sem at, tempus justo.</p>
+            </div>
+            <div class="six columns">
+              <div class="three columns">
+                <div class="intro-numbers">
+                  <p class="number">123456</p>
+                  <p>agentes</p>
+                </div>
+              </div>
+              <div class="three columns">
+                <div class="intro-numbers">
+                  <p class="number">123456</p>
+                  <p>eventos</p>
+                </div>
+              </div>
+              <div class="three columns">
+                <div class="intro-numbers">
+                  <p class="number">32165</p>
+                  <p>equipamentos</p>
+                </div>
+              </div>
+              <div class="three columns">
+                <div class="intro-numbers">
+                  <p class="number">32165</p>
+                  <p>projetos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="seven columns">
+          <div id="map"></div>
+        </div>
+        <div class="five columns">
+          <div class="profiles">
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura de São Paulo</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura do Ceará</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura de São Paulo</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura do Ceará</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura do Ceará</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura do Ceará</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+            <div class="profile row">
+              <span class="fa fa-user-circle image"></span>
+              <h4><a href="/profile.html">Secretaria de Cultura do Ceará</a></h4>
+              <p><strong>321</strong> agentes, <strong>123</strong> eventos, <strong>40</strong> projetos</p>
+            </div>
+          </div>
+          <hr/>
+          <h3>Blog dos gestores</h3>
+          <article>
+            <h5>Lorem ipsum dolor sit amet</h5>
+            <p class="post-meta"><i><span class="fa fa-user-circle"></span> Secretaria de Cultura de São Paulo</i></p>
+            <p>Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.</p>
+          </article>
+          <article>
+            <h5>Lorem ipsum dolor sit amet</h5>
+            <p class="post-meta"><i><span class="fa fa-user-circle"></span> CulturaRS - Rio Grande do Sul</i></p>
+            <p>Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.</p>
+          </article>
+          <a class="button" href="/blog.html">Acesse o blog dos gestores</a>
+        </div>
+      </div>
+    </article>
+    <hr/>
+    <section id="community">
+      <div class="container">
+        <div class="twelve columns">
+          <h3>Faça parte da comunidade</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="six columns">
+          <article>
+            <span class="fa fa-check u-pull-left"></span>
+            <p>Alguns atributos da comunidade. Lorem ipsum dolor sit amet.</p>
+          </article>
+          <article>
+            <span class="fa fa-check u-pull-left"></span>
+            <p>Descrição de métodos de participação. Lorem ipsum dolor sit amet.</p>
+          </article>
+          <article>
+            <span class="fa fa-check u-pull-left"></span>
+            <p>Esforço democrático, etc. Lorem ipsum dolor sit amet.</p>
+          </article>
+        </div>
+        <div class="six columns">
+          <p>Mapas Culturais é um software livre</p>
+          <a class="button"><span class="fa fa-github"></span> GitHub</a>
+          <a class="button button-primary">Participe da discussão</a>
+        </div>
+      </div>
+    </section>
+    <hr/>
+    <footer id="colophon">
+      <div class="container">
+        <div class="twelve columns">
+          <nav id="footnav">
+            <a href="#">Sobre</a>
+            <a href="/timeline.html">Linha do Tempo</a>
+            <a href="#">Contato</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Parceiros</a>
+            <a href="#">GitHub</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <hr/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" integrity="sha256-GXUdrV9FHGDyzoSGD3O+jR3eYZaZZsjbsMvFhK3C0qg=" crossorigin="anonymous"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
