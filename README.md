@@ -1,17 +1,28 @@
-# Portal do Mapas Culturais (PMC)
+# Portal do Mapas Culturais
 
 > O Portal do Mapas Culturais (PMC) é um website baseado no Wordpress que reúne informações sobre a comunidade da Plataforma Mapas Culturais, englobando informações institucionais e sobre desenvolvimento, discussões sobre funcionalidades e material de suporte ao usuário.
 
-## Instalação
+## Project Status
 
-Este projeto utiliza Docker para a criação de um ambiente de desenvolvimento. Para começar, é necessário instalar o [Docker](http://docker.com/).
+Currently we are developing the portal's wireframe.
 
-## Executando
+## Running wireframe server locally
 
-```
+```shell
+
+  # Clone repository
   git clone <link para este repositório>
   cd wp-theme-mapasculturais
-  docker-compose up
+
+  # Install dependencies
+  sudo npm install -g pug-cli
+
+  # Generate HTML
+  cd wireframe/
+  pug *.pug --out html/
+
+  # Run server  
+  python -m SimpleHTTPServer
 ```
 
-Ao final, acesse: [localhost:8080](localhost:8080).
+Visit the wireframe at http://localhost:8000/html.
