@@ -1,6 +1,4 @@
-# Portal do Mapas Culturais
-
-> O Portal do Mapas Culturais (PMC) é um website baseado no Wordpress que reúne informações sobre a comunidade da Plataforma Mapas Culturais, englobando informações institucionais e sobre desenvolvimento, discussões sobre funcionalidades e material de suporte ao usuário.
+> **Portal do Mapas Culturais** is a website that gathers information about *Mapas Culturais* platform, providing institutional information about the project as well serving as plataform for development and support of the project.
 
 ## Project Status
 
