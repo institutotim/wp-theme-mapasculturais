@@ -4,12 +4,12 @@
 
 Currently we are developing the portal's wireframe.
 
-## Running wireframe server locally
+## Run wireframe server
 
 ```shell
 
-  # Clone repository
-  git clone <link para este repositório>
+  # Clone this repository
+  git clone <this repository git url>
   cd wp-theme-mapasculturais
 
   # Install dependencies
@@ -24,3 +24,26 @@ Currently we are developing the portal's wireframe.
 ```
 
 Visit the wireframe at http://localhost:8000/html.
+
+## Setup development
+
+Install:
+
+* [Docker](https://www.docker.com/)
+
+### Clone locally
+
+```
+git clone <this repository git url>
+cd wp-theme-mapasculturais
+```
+
+### Start local server
+
+```shell
+  docker-compose up
+```
+
+### Configure
+
+Walk through the 5-min install and enable this theme in "Apperance/Themes" at admin panel.
