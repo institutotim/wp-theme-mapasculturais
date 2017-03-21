@@ -1,6 +1,88 @@
 extends layouts/site
 
 block body
-  // body goes here
-  hr
-  include parts/sections/community
+  section#community
+    .container
+      .twelve.columns
+        h2 Comunidade
+    .container
+      .six.columns
+        article
+          span.fa.fa-check.u-pull-left
+          p Alguns atributos da comunidade. Lorem ipsum dolor sit amet.
+        article
+          span.fa.fa-check.u-pull-left
+          p Descrição de métodos de participação. Lorem ipsum dolor sit amet.
+        article
+          span.fa.fa-check.u-pull-left
+          p Esforço democrático, etc. Lorem ipsum dolor sit amet.
+      .six.columns
+        .row
+          .four.columns
+            .intro-numbers
+              p.number 4518
+              p contribuições
+          .four.columns
+            .intro-numbers
+              p.number 26
+              p contribuidores
+          .four.columns
+            .intro-numbers
+              p.number 158
+              p issues
+        .u-pull-right
+          a.button.button-primary
+            span.fa.fa-github
+            = ' '
+            | GitHub
+          = ' '
+          a.button
+            | Documentação do código
+    hr
+    .container
+      .four.columns
+        h3 Delibera
+        p 
+          | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+        ul
+          li
+            a(href='#') Categoria #1
+          li
+            a(href='#') Categoria #2
+          li
+            a(href='#') Categoria #3
+          li
+            a(href='#') Categoria #4
+          li
+            a(href='#') Categoria #5
+        a.button.button-primary.u-full-width Cadastre-se a participe da discussão
+      .four.columns
+        h4 Pautas ativas
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        button.u-full-width Ver todas as pautas ativas
+      .four.columns
+        h4 Pautas pendentes
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        article
+          h5 Lorem ipsum dolor sit amet
+          p
+            | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada.
+        button.u-full-width Ver todas as pautas pendentes

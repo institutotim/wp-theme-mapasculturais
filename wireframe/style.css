@@ -108,6 +108,12 @@ p.post-meta .fa {
   left: 50%;
   right: 48%;
 }
+.sidebar .profiles {
+  height: auto;
+}
+.sidebar .profiles .profile h4 {
+  font-size: 1.2em;
+}
 .profiles {
   height: 350px;
   overflow: auto;
