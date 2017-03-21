@@ -25,17 +25,24 @@ Currently we are developing the portal's wireframe.
 
 Visit the wireframe at http://localhost:8000/html.
 
-## Setup development
+## Development setup
 
-Install:
+Install major dependencies:
 
 * [Docker](https://www.docker.com/)
+* [gettext](https://www.gnu.org/software/gettext/)
+    * Linux: `apt-get install gettext`
+    * OSX: `brew install gettext`
 
-### Clone locally
+
+### Clone locally and install modules
 
 ```
 git clone <this repository git url>
 cd wp-theme-mapasculturais
+bower install
+grunt build
+# or just "grunt" to watch for changes 
 ```
 
 ### Start local server

@@ -1,0 +1,28 @@
+{
+  "name": "wp-theme-mapasculturais",
+  "version": "0.1.0",
+  "description": "Portal do Mapas Culturais is a website that gathers information about Mapas Culturais platform, providing institutional information about the project as well serving as plataform for development and support of the project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/institutotim/wp-theme-mapasculturais.git"
+  },
+  "keywords": [
+    "mapas culturais",
+    "open data",
+    "culture",
+    "public policies"
+  ],
+  "author": "aparabólica <contato@aparabolica.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/institutotim/wp-theme-mapasculturais/issues"
+  },
+  "homepage": "https://github.com/institutotim/wp-theme-mapasculturais#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-pot": "^0.3.0"
+  }
+}

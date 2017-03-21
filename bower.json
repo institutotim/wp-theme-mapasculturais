@@ -1,0 +1,31 @@
+{
+  "name": "wp-theme-mapasculturais",
+  "description": "Portal do Mapas Culturais",
+  "main": "",
+  "authors": [
+    "aparabólica <contato@aparabolica.com.br>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mapas",
+    "culturais",
+    "open",
+    "data",
+    "culture",
+    "public",
+    "policies"
+  ],
+  "homepage": "https://github.com/institutotim/wp-theme-mapasculturais",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4",
+    "font-awesome": "^4.7.0"
+  }
+}
