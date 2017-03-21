@@ -1,0 +1,66 @@
+extends layouts/site
+
+block body
+  include parts/hero
+  hr
+  .container
+    .nine.columns
+      p
+        | Mapas Culturais &eacute; uma plataforma colaborativa que re&uacute;ne informa&ccedil;&otilde;es sobre agentes, espa&ccedil;os, eventos e projetos culturais, fornecendo ao poder p&uacute;blico uma radiografia da &aacute;rea de cultura e ao cidad&atilde;o um mapa de espa&ccedil;os e eventos culturais da regi&atilde;o.
+      .row
+        .six.columns
+          h3 &Uacute;ltimas novidades
+          article
+            h5 Lorem ipsum dolor sit amet
+            p
+              | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+          article
+            h5 Lorem ipsum dolor sit amet
+            p
+              | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+          |  
+          a.button(href='#') Mais novidades
+        .six.columns
+          h3 Blog dos gestores
+          article
+            h5 Lorem ipsum dolor sit amet
+            p.post-meta
+              i
+                span.fa.fa-user-circle
+                |  Secretaria de Cultura de S&atilde;o Paulo
+            p
+              | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+          article
+            h5 Lorem ipsum dolor sit amet
+            p.post-meta
+              i
+                span.fa.fa-user-circle
+                |  CulturaRS - Rio Grande do Sul
+            p
+              | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+          |  
+          a.button(href='#') Acesse o blog dos gestores
+    .three.columns
+      h3 Newsletter
+      |  
+      input.u-full-width(type='text', placeholder='Preencha seu e-mail')
+      p Selecione seus interesses:
+      |  
+      label
+        input(type='checkbox')
+        |  Novidades
+      |  
+      label
+        input(type='checkbox')
+        |  Gest&atilde;o cultural
+      |  
+      label
+        input(type='checkbox')
+        |  Desenvolvimento
+      p
+        button.button-primary.u-full-width Cadastrar
+      .social-buttons
+        a.fa.fa-facebook(href='#')
+        a.fa.fa-twitter(href='#')
+  hr
+  include parts/sections/community

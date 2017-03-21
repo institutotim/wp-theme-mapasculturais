@@ -1,0 +1,134 @@
+extends layouts/site
+
+block body
+  article#page
+    .container
+      .twelve.columns
+        h2 Instala&ccedil;&otilde;es pelo Brasil
+        .row
+          .six.columns
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mi et malesuada aliquet. Donec dictum lorem sit amet nunc dictum iaculis. Etiam commodo malesuada libero id feugiat. Nam nisi eros, feugiat vel diam vel, semper convallis justo. Integer lacinia placerat elit in egestas. Nam sed enim dictum, ornare sem at, tempus justo.
+          .six.columns
+            .three.columns
+              .intro-numbers
+                p.number 123456
+                p agentes
+            .three.columns
+              .intro-numbers
+                p.number 123456
+                p eventos
+            .three.columns
+              .intro-numbers
+                p.number 32165
+                p equipamentos
+            .three.columns
+              .intro-numbers
+                p.number 32165
+                p projetos
+    .container
+      .seven.columns
+        #map
+      .five.columns
+        .profiles
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura de S&atilde;o Paulo
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura do Cear&aacute;
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura de S&atilde;o Paulo
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura do Cear&aacute;
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura do Cear&aacute;
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura do Cear&aacute;
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+          .profile.row
+            span.fa.fa-user-circle.image
+            h4
+              a(href='profile.html') Secretaria de Cultura do Cear&aacute;
+            p
+              strong 321
+              |  agentes, 
+              strong 123
+              |  eventos, 
+              strong 40
+              |  projetos
+        hr
+        h3 Blog dos gestores
+        article
+          h5 Lorem ipsum dolor sit amet
+          p.post-meta
+            i
+              span.fa.fa-user-circle
+              |  Secretaria de Cultura de S&atilde;o Paulo
+          p
+            | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+        article
+          h5 Lorem ipsum dolor sit amet
+          p.post-meta
+            i
+              span.fa.fa-user-circle
+              |  CulturaRS - Rio Grande do Sul
+          p
+            | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
+        |  
+        a.button(href='blog.html') Acesse o blog dos gestores
+  hr
+  include parts/sections/community
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js')
+  script(src='../map.js')
