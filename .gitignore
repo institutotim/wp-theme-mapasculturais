@@ -1,3 +1,6 @@
 .data
 .git
 wireframe/html
+bower_components
+node_modules
+npm-debug.log
