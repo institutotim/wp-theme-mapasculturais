@@ -26,6 +26,8 @@
   ],
   "dependencies": {
     "skeleton": "^2.0.4",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "leaflet": "^1.0.3",
+    "normalize-strings": "normalize#^1.1.0"
   }
 }
