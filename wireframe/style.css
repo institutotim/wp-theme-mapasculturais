@@ -94,6 +94,12 @@ p.post-meta .fa {
   border: 1px solid #ddd;
   padding: 2rem;
 }
+.timeline .timeline-item .post-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  /*margin: -2rem -2rem 2rem;*/
+}
 .timeline .timeline-item:nth-child(odd) .post-box {
   float: left;
 }
