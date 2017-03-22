@@ -1,11 +1,19 @@
 <?php
 
+/**
+ * Setup Theme
+ */
+
 function pmc_setup_theme() {
 
   load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
 }
 add_action('after_setup_theme', 'pmc_setup_theme');
+
+/**
+ * Header
+ */
 
 function pmc_header_scripts() {
 
@@ -21,3 +29,9 @@ function pmc_header_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'pmc_header_scripts');
+
+/**
+ * Include features
+ */
+
+require_once(TEMPLATEPATH . '/inc/maintainers-posts.php');
