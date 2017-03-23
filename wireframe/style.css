@@ -17,6 +17,12 @@ h4 a {
   text-decoration: none;
   color: inherit;
 }
+.small {
+  font-size: .5em;
+}
+.block {
+  display: block;
+}
 h4 {
   font-size: 1.4em;
   font-weight: 300;
@@ -132,7 +138,7 @@ p.post-meta .fa {
   font-style: italic;
   color: #999;
 }
-.profile .fa.image {
+.fa.image {
   float: left;
   font-size: 3.4em;
   color: #999;

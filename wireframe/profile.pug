@@ -6,8 +6,10 @@ block body
       .twelve.columns
         h4.u-pull-right
           span.fa.fa-map-marker
-          |  São Paulo - SP
-        h2 Secretaria de Cultura de São Paulo
+          | São Paulo - SP
+        h2
+          span.small.block Secretaria de Cultura de São Paulo
+          | SP CULTURA
         .row
           .six.columns
             p
@@ -54,19 +56,30 @@ block body
             | Mauris elit nibh, aliquam nec maximus sit amet, vestibulum feugiat tortor. Curabitur congue sem et velit cursus malesuada. Maecenas at sapien posuere, malesuada arcu ut, tincidunt tortor. Proin volutpat ligula elit, sit amet cursus sapien mollis non. Nunc tincidunt imperdiet tincidunt.
           p
             | Donec odio dolor, interdum at eros at, vestibulum cursus ligula. Nunc scelerisque dui sit amet venenatis sodales. Curabitur aliquet nisl nisi, id varius tellus pretium sollicitudin. Quisque vestibulum sapien in nibh hendrerit, et scelerisque massa lacinia. Etiam vehicula posuere scelerisque. Donec cursus ac leo sit amet fermentum. Donec ut urna sit amet lorem egestas accumsan pellentesque ac nulla. Mauris accumsan condimentum augue quis mattis. Vivamus feugiat leo quam, ut molestie erat aliquam ac.
+        include parts/pagination
       .four.columns
         .statistics
           h3 Estat&iacute;scas
           .wireframe-box
-            h4 Agentes culturais
+            select.u-full-width
+              option Agentes culturais
+              option Eventos
+              option Espaços
+              option Projetos
             p nos últimos 30 dias
             script(async='', src='//jsfiddle.net/z0ebdbyn/7/embed/result/')
         .team
           h3 Equipe
           .wireframe-box
-            h4 Fulano
-            p Direção geral
-            h4 Ciclano
-            p Desenvolvimento
-  hr
-  include parts/sections/community
+            div.row
+              span.fa.fa-user-circle.image.u-pull-left
+              h4 Fulano
+              p Direção geral
+            div.row
+              span.fa.fa-user-circle.image.u-pull-left
+              h4 Ciclano
+              p Desenvolvimento
+        .team
+          h3 Contato
+          .wireframe-box
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ante suscipit, imperdiet sapien sit amet, imperdiet velit. Pellentesque gravida mollis dignissim.
