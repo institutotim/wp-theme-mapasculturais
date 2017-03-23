@@ -120,12 +120,12 @@ p.post-meta .fa {
 .sidebar .profiles .profile h4 {
   font-size: 1.2em;
 }
-.profiles {
-  height: 350px;
+/*.profiles {
+  height: 500px;
   overflow: auto;
-}
+}*/
 .profile h4 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin: 0;
 }
 .profile p {
@@ -134,7 +134,7 @@ p.post-meta .fa {
 }
 .profile .fa.image {
   float: left;
-  font-size: 3.8em;
+  font-size: 3.4em;
   color: #999;
   margin: 0 2rem 0 0;
 }

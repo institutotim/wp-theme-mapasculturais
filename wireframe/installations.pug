@@ -4,32 +4,35 @@ block body
   article#page
     .container
       .twelve.columns
-        h2 Instala&ccedil;&otilde;es pelo Brasil
+        h2 Mapa das Instalações
         .row
-          .six.columns
+          .eight.columns
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mi et malesuada aliquet. Donec dictum lorem sit amet nunc dictum iaculis. Etiam commodo malesuada libero id feugiat. Nam nisi eros, feugiat vel diam vel, semper convallis justo. Integer lacinia placerat elit in egestas. Nam sed enim dictum, ornare sem at, tempus justo.
           .six.columns
-            .three.columns
-              .intro-numbers
-                p.number 123456
-                p agentes
-            .three.columns
-              .intro-numbers
-                p.number 123456
-                p eventos
-            .three.columns
-              .intro-numbers
-                p.number 32165
-                p locais
-            .three.columns
-              .intro-numbers
-                p.number 32165
-                p projetos
     .container
       .seven.columns
         #map
       .five.columns
+        .row
+          .six.columns
+            .intro-numbers
+              p.number 123.456
+              p agentes
+          .six.columns
+            .intro-numbers
+              p.number 123.456
+              p eventos
+        .row
+          .six.columns
+            .intro-numbers
+              p.number 32.165
+              p espaços
+          .six.columns
+            .intro-numbers
+              p.number 32.165
+              p projetos
+        hr
         .profiles
           .profile.row
             span.fa.fa-user-circle.image
@@ -37,9 +40,9 @@ block body
               a(href='profile.html') Secretaria de Cultura de São Paulo
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -48,9 +51,9 @@ block body
               a(href='profile.html') Secretaria de Cultura do Ceará
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -59,9 +62,9 @@ block body
               a(href='profile.html') Secretaria de Cultura de São Paulo
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -70,9 +73,9 @@ block body
               a(href='profile.html') Secretaria de Cultura do Ceará
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -81,9 +84,9 @@ block body
               a(href='profile.html') Secretaria de Cultura do Ceará
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -92,9 +95,9 @@ block body
               a(href='profile.html') Secretaria de Cultura do Ceará
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
           .profile.row
@@ -103,13 +106,15 @@ block body
               a(href='profile.html') Secretaria de Cultura do Ceará
             p
               strong 321
-              |  agentes, 
+              |  agentes,
               strong 123
-              |  eventos, 
+              |  eventos,
               strong 40
               |  projetos
-        hr
-        h3 Blog dos gestores
+    hr
+    .container
+      .eight.columns
+        h3 Blog da rede
         article
           h5 Lorem ipsum dolor sit amet
           p.post-meta
@@ -126,9 +131,11 @@ block body
               |  CulturaRS - Rio Grande do Sul
           p
             | Praesent et ultricies metus. Aliquam dictum est ac odio elementum vulputate. Nulla ligula magna, facilisis maximus turpis vel, placerat suscipit ante.
-        |  
+        |
         a.button(href='blog.html') Acesse o blog dos gestores
-  hr
-  include parts/sections/community
+      .four.columns
+        .wireframe-box
+          h3 Widget de página de instalações
+          p Área para widgets personalizados para a página das instalações
   script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js')
   script(src='../js/map.js')
