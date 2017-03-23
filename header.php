@@ -7,14 +7,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <?php
-  $head_css = '';
-  $head_image = get_header_image();
-  if (is_front_page() && $head_image) {
-      $head_css = 'style="background-image:url(' . $head_image . ')"';
-  }
-  ?>
-
   <header id="masthead">
       <div class="container">
           <div class="six columns">

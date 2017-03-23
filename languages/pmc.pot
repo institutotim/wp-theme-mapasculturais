@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-22 09:32-0300\n"
+"POT-Creation-Date: 2017-03-23 17:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:63
-msgid "Header navigation"
+#: inc/maintainers-posts.php:11
+msgctxt "post type general name"
+msgid "Maintainer's Posts"
 msgstr ""
 
-#: functions.php:64
-msgid "Footer navigation"
+#: inc/maintainers-posts.php:12
+msgctxt "post type singular name"
+msgid "Maintainer Post"
 msgstr ""
 
-#: functions.php:73
-msgid "Footer widgets"
+#: inc/maintainers-posts.php:13
+msgctxt "admin menu"
+msgid "Maintainer's Posts"
+msgstr ""
+
+#: inc/maintainers-posts.php:14
+msgctxt "add new on admin bar"
+msgid "Maintainer's Post"
+msgstr ""
+
+#: inc/maintainers-posts.php:15
+msgctxt "maintainers_post"
+msgid "Add new post"
+msgstr ""
+
+#: inc/maintainers-posts.php:16
+msgid "Add new post"
+msgstr ""
+
+#: inc/maintainers-posts.php:17
+msgid "New post"
+msgstr ""
+
+#: inc/maintainers-posts.php:18
+msgid "Edit post"
+msgstr ""
+
+#: inc/maintainers-posts.php:19
+msgid "View post"
+msgstr ""
+
+#: inc/maintainers-posts.php:20
+msgid "All posts"
+msgstr ""
+
+#: inc/maintainers-posts.php:21
+msgid "Search maintainer's posts"
+msgstr ""
+
+#: inc/maintainers-posts.php:22
+msgid "No maintainer's posts found."
+msgstr ""
+
+#: inc/maintainers-posts.php:23
+msgid "No maintainer's posts found in trash."
+msgstr ""
+
+#: inc/maintainers-posts.php:27
+msgid "Maintainer's Posts"
 msgstr ""
