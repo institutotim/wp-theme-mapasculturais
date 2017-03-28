@@ -39,6 +39,10 @@ body {
 .container {
   max-width: 1280px;
 }
+.button, button, input[type=button], input[type=reset], input[type=submit] {
+  font-family: 'Tim Sans';
+  height: auto;
+}
 @media (min-width: 550px) {
   .container {
     width: 90%;
@@ -58,6 +62,9 @@ h4 {
   font-size: 1.4em;
   font-weight: 300;
   margin: 0;
+}
+input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+  border-radius: 0;
 }
 .wireframe-box {
   padding: 2rem;
@@ -170,13 +177,42 @@ p.post-meta .fa {
   margin: 0 2rem 0 0;
 }
 #masthead {
-  background: @lightblue;
-  padding: 6rem 0;
-  min-height: 400px;
+  background: @lightblue url(../img/dots-cut.png) bottom right repeat-x;
+  padding: 6rem 0 0;
+  min-height: 250px;
   color: #fff;
-  margin: 0 0 4rem;
+  margin: 0;
+  position: relative;
+  border-bottom: 2px solid @blue;
+  &:after {
+    content: '';
+    width: 231px;
+    height: 211px;
+    background: url(../img/pins-small.png) center no-repeat;
+    position: absolute;
+    bottom: -115px;
+    right: 6%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .button, button, input[type=button], input[type=reset], input[type=submit] {
+    border-color: #fff;
+    color: #fff;
+    background: @lightblue;
+    &:hover {
+      background: darken(@lightblue, 5%);
+    }
+  }
+  .button.button-primary, button.button-primary, input[type=button].button-primary, input[type=reset].button-primary, input[type=submit].button-primary {
+    background: @pink;
+    &:hover {
+      background: darken(@pink, 5%);
+    }
+  }
   h1 {
     text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 8rem;
     font-weight: 400;
     a {
       color: #fff;
@@ -186,6 +222,150 @@ p.post-meta .fa {
     color: @blue;
     text-decoration: none;
   }
+  input[type=text] {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dotted @blue;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  ::-webkit-input-placeholder {
+    color: @blue;
+  }
+  ::-moz-placeholder {
+    color: @blue;
+  }
+  ::placeholder {
+    color: @blue;
+  }
+}
+#mastnav {
+  font-family: 'Tim Sans';
+  text-transform: lowercase;
+  a {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  input[type=text] {
+    font-family: 'Tim Sans';
+  }
+}
+#hero {
+  // background: @blue url(../img/dots-beige-cut.png) top center repeat-x;
+  // background: @blue;
+  font-family: 'Tim Sans';
+  color: #fff;
+  .intro-text {
+    font-size: 2em;
+    line-height: 1.2;
+    .button {
+      margin-right: 2rem;
+      font-size: .4em;
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+    }
+  }
+  .network {
+    padding-top: 1.2rem;
+    // padding: 5rem 6rem 15rem;
+    // display: none;
+    font-size: 1.4em;
+    // background: url(../img/big-pin.png) top left no-repeat;
+    // background-size: 100%;
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      margin: 0;
+    }
+    .intro-numbers {
+      line-height: 1;
+      margin-bottom: 2rem;
+      .number {
+        float: left;
+        font-size: 4.5em;
+        margin-bottom: 1rem;
+        margin-left: 4rem;
+      }
+      .number-label {
+        float: left;
+        margin: 2rem 0 0 2rem;
+        span {
+          display: block;
+          font-size: 1.65em;
+        }
+      }
+    }
+    .button {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+    .ptns {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      a {
+        color: #fff;
+        display: block;
+        text-transform: lowercase;
+        margin: 2rem;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -2rem;
+          height: 2px;
+          background: url(../img/ptn-dot-horizontal.png);
+        }
+      }
+      &:hover {
+        .ptn-2 {
+          padding-bottom: 1.8rem;
+          margin-left: 1.8rem;
+        }
+        .ptn-3 {
+          padding-bottom: 3.6rem;
+          margin-left: 3.6rem;
+        }
+      }
+    }
+    .ptn {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      box-shadow: -2px -2px 2px rgba(0,0,0,0.1);
+      transition: all .2s linear;
+      &.ptn-1 {
+        background: @blue;
+        // background-image: url(../img/ptn-dots-beige.png);
+        z-index: 3;
+      }
+      &.ptn-2 {
+        background: @pink;
+        // background-image: url(../img/ptn-dots-white.png);
+        padding-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        z-index: 2;
+      }
+      &.ptn-3 {
+        background: @beige;
+        // background-image: url(../img/ptn-dots-darkbeige.png);
+        padding-bottom: 3rem;
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+#content {
+  padding: 6rem 0;
+  min-height: 500px;
+  background: url(../img/dots-below-header_.png) top right no-repeat;
 }
 #map {
   width: 100%;

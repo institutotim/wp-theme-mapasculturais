@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-23 17:47-0300\n"
+"POT-Creation-Date: 2017-03-28 19:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: inc/maintainers-posts.php:11
+#: functions.php:11
+msgid "Maintainer"
+msgstr ""
+
+#: inc/network-posts.php:11
 msgctxt "post type general name"
-msgid "Maintainer's Posts"
+msgid "Network's Posts"
 msgstr ""
 
-#: inc/maintainers-posts.php:12
+#: inc/network-posts.php:12
 msgctxt "post type singular name"
-msgid "Maintainer Post"
+msgid "Network Post"
 msgstr ""
 
-#: inc/maintainers-posts.php:13
+#: inc/network-posts.php:13
 msgctxt "admin menu"
-msgid "Maintainer's Posts"
+msgid "Network's Posts"
 msgstr ""
 
-#: inc/maintainers-posts.php:14
+#: inc/network-posts.php:14
 msgctxt "add new on admin bar"
-msgid "Maintainer's Post"
+msgid "Network's Post"
 msgstr ""
 
-#: inc/maintainers-posts.php:15
-msgctxt "maintainers_post"
+#: inc/network-posts.php:15
+msgctxt "network_post"
 msgid "Add new post"
 msgstr ""
 
-#: inc/maintainers-posts.php:16
+#: inc/network-posts.php:16
 msgid "Add new post"
 msgstr ""
 
-#: inc/maintainers-posts.php:17
+#: inc/network-posts.php:17
 msgid "New post"
 msgstr ""
 
-#: inc/maintainers-posts.php:18
+#: inc/network-posts.php:18
 msgid "Edit post"
 msgstr ""
 
-#: inc/maintainers-posts.php:19
+#: inc/network-posts.php:19
 msgid "View post"
 msgstr ""
 
-#: inc/maintainers-posts.php:20
+#: inc/network-posts.php:20
 msgid "All posts"
 msgstr ""
 
-#: inc/maintainers-posts.php:21
-msgid "Search maintainer's posts"
+#: inc/network-posts.php:21
+msgid "Search network's posts"
 msgstr ""
 
-#: inc/maintainers-posts.php:22
-msgid "No maintainer's posts found."
+#: inc/network-posts.php:22
+msgid "No network's posts found."
 msgstr ""
 
-#: inc/maintainers-posts.php:23
-msgid "No maintainer's posts found in trash."
+#: inc/network-posts.php:23
+msgid "No network's posts found in trash."
 msgstr ""
 
-#: inc/maintainers-posts.php:27
-msgid "Maintainer's Posts"
+#: inc/network-posts.php:36
+msgid "Network's Posts"
 msgstr ""
