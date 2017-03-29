@@ -31,6 +31,12 @@
 @pink: #C64B74;
 @beige: #DBD4B1;
 
+hr {
+  border: 0;
+  height: 2px;
+  background: url(../img/ptn-dot-horizontal.png);
+}
+
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.6em;
@@ -77,11 +83,6 @@ input.big-search {
 }
 input.search {
   margin-left: 1rem;
-}
-.intro-numbers .number {
-  font-size: 1.8em;
-  font-weight: 600;
-  margin: 0;
 }
 .fa {
   font-size: 1.5em;
@@ -177,21 +178,78 @@ p.post-meta .fa {
   margin: 0 2rem 0 0;
 }
 #masthead {
-  background: @lightblue url(../img/dots-cut.png) bottom right repeat-x;
-  padding: 6rem 0 0;
-  min-height: 250px;
+  background: @lightblue;
+  padding: 4rem 0;
   color: #fff;
   margin: 0;
   position: relative;
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+    a {
+      color: inherit;
+    }
+  }
+  a {
+    color: @blue;
+    text-decoration: none;
+  }
+  .search-input {
+    margin-left: 2rem;
+    .fa {
+      font-size: 1em;
+    }
+    input[type=text] {
+      background: transparent;
+      border: 0;
+      font-family: 'Tim Sans';
+      padding: .5rem 0;
+      height: auto;
+      color: #fff;
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: #fff;
+    text-transform: lowercase;
+  }
+  ::-moz-placeholder {
+    color: #fff;
+    text-transform: lowercase;
+  }
+  ::placeholder {
+    color: #fff;
+    text-transform: lowercase;
+  }
+}
+#mastnav {
+  font-family: 'Tim Sans';
+  text-transform: lowercase;
+  a {
+    display: inline-block;
+    margin-right: 1rem;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.page-header {
+  background: @lightblue url(../img/dots-cut.png) bottom right repeat-x;
+  font-family: 'Tim Sans';
+  color: #fff;
   border-bottom: 2px solid @blue;
+  position: relative;
+  padding-bottom: 8rem;
   &:after {
     content: '';
     width: 231px;
     height: 211px;
     background: url(../img/pins-small.png) center no-repeat;
     position: absolute;
-    bottom: -115px;
-    right: 6%;
+    bottom: -118px;
+    right: 11%;
     pointer-events: none;
     z-index: 10;
   }
@@ -209,55 +267,26 @@ p.post-meta .fa {
       background: darken(@pink, 5%);
     }
   }
-  h1 {
-    text-transform: uppercase;
-    font-size: 2em;
-    margin-bottom: 8rem;
-    font-weight: 400;
-    a {
-      color: #fff;
-    }
+  hr {
+    margin: 0;
+    padding: 0;
   }
-  a {
-    color: @blue;
-    text-decoration: none;
+  .page-header-content {
+    margin-top: 4rem;
   }
-  input[type=text] {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px dotted @blue;
-    padding-left: 0;
-    padding-right: 0;
+  h2 {
+    font-size: 3.2em;
   }
-  ::-webkit-input-placeholder {
-    color: @blue;
-  }
-  ::-moz-placeholder {
-    color: @blue;
-  }
-  ::placeholder {
-    color: @blue;
-  }
-}
-#mastnav {
-  font-family: 'Tim Sans';
-  text-transform: lowercase;
-  a {
-    display: inline-block;
-    margin-right: 1rem;
-  }
-  input[type=text] {
-    font-family: 'Tim Sans';
+  p.subtitle {
+    margin: 0;
   }
 }
 #hero {
-  // background: @blue url(../img/dots-beige-cut.png) top center repeat-x;
-  // background: @blue;
-  font-family: 'Tim Sans';
-  color: #fff;
+  padding-bottom: 0;
   .intro-text {
     font-size: 2em;
     line-height: 1.2;
+    color: rgba(255,255,255,0.9);
     .button {
       margin-right: 2rem;
       font-size: .4em;
@@ -281,15 +310,29 @@ p.post-meta .fa {
     .intro-numbers {
       line-height: 1;
       margin-bottom: 2rem;
+      margin-left: 4rem;
+      color: rgba(255,255,255,0.9);
+      &:before {
+        content: '';
+        height: 150px;
+        width: 3px;
+        display: block;
+        float: left;
+        margin-left: 2rem;
+        margin-top: -4.5rem;
+        padding-bottom: 4.5rem;
+        background: url(../img/ptn-dot-vertical.png);
+      }
       .number {
         float: left;
         font-size: 4.5em;
         margin-bottom: 1rem;
         margin-left: 4rem;
+        margin-top: 2rem;
       }
       .number-label {
         float: left;
-        margin: 2rem 0 0 2rem;
+        margin: 4rem 0 0 2rem;
         span {
           display: block;
           font-size: 1.65em;
@@ -304,7 +347,7 @@ p.post-meta .fa {
     }
     .ptns {
       width: 100%;
-      height: 220px;
+      height: 205px;
       position: relative;
       a {
         color: #fff;
@@ -312,6 +355,7 @@ p.post-meta .fa {
         text-transform: lowercase;
         margin: 2rem;
         position: relative;
+        text-decoration: none;
         &:after {
           content: '';
           position: absolute;
@@ -335,7 +379,7 @@ p.post-meta .fa {
     }
     .ptn {
       width: 100%;
-      height: 200px;
+      height: 185px;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -370,4 +414,47 @@ p.post-meta .fa {
 #map {
   width: 100%;
   height: 880px;
+}
+
+/*
+ * Template specific styles
+ */
+.page-template-page-community .page-header,
+.page-template-page-network .page-header,
+.author .page-header {
+  &:after {
+    display: none;
+  }
+}
+.page-template-page-network #masthead,
+.page-template-page-network .page-header,
+.author #masthead,
+.author .page-header {
+  background-color: @pink;
+}
+.page-template-page-community #masthead,
+.page-template-page-community .page-header {
+  background-color: @beige;
+  color: #333;
+  h1 {
+    color: #333;
+  }
+  ::-webkit-input-placeholder {
+    color: @blue;
+    text-transform: lowercase;
+  }
+  ::-moz-placeholder {
+    color: @blue;
+    text-transform: lowercase;
+  }
+  ::placeholder {
+    color: @blue;
+    text-transform: lowercase;
+  }
+  hr {
+    background-image: url(../img/ptn-dot-horizontal-darkbeige.png);
+  }
+}
+.page-template-page-community .page-header {
+  background-image: url(../img/dots-cut-darkbeige.png);
 }
