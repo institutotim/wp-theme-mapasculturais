@@ -27,7 +27,7 @@ Visit the wireframe at http://localhost:8000/html.
 
 ## Development setup
 
-Install major dependencies:
+Install dependencies:
 
 * [Docker](https://www.docker.com/)
 * [gettext](https://www.gnu.org/software/gettext/)
@@ -42,7 +42,7 @@ git clone <this repository git url>
 cd wp-theme-mapasculturais
 bower install
 grunt build
-# or just "grunt" to watch for changes 
+# or just "grunt" to watch for changes
 ```
 
 ### Start local server

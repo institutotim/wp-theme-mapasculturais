@@ -7,6 +7,9 @@
 function pmc_setup_theme() {
   load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
+  // uncomment this line to refresh maintainer's capabilities
+  // remove_role('maintainer');
+
   // create maintainer role
   $maintainer_role = add_role('maintainer', __('Maintainer'));
   if (null !== $maintainer_role) {
@@ -14,15 +17,40 @@ function pmc_setup_theme() {
     $maintainer_role->add_cap( 'upload_files' );
   }
 
-  // set network post capabilities to roles
+  // capabilities for admins, editors and maintainers
   foreach (array('administrator', 'editor', 'maintainer') as $role_name) {
     $role = get_role( $role_name );
+
+    // network posts (custom post type)
     $role->add_cap( 'edit_published_network_posts' );
     $role->add_cap( 'publish_network_posts' );
     $role->add_cap( 'delete_published_network_posts' );
     $role->add_cap( 'edit_network_posts' );
     $role->add_cap( 'delete_network_posts' );
+
+    // tutorials (custom type)
+    $role->add_cap( 'edit_published_tutorials' );
+    $role->add_cap( 'delete_published_tutorials' );
+    $role->add_cap( 'edit_tutorials' );
+    $role->add_cap( 'delete_tutorials' );
+
+    // related versions (taxonomy)
+    $role->add_cap( 'manage_related_versions' );
+    $role->add_cap( 'assign_related_versions' );
   }
+
+  // capabilities for admins, editors
+  foreach (array('administrator', 'editor') as $role_name) {
+    $role = get_role( $role_name );
+
+    // mapas culturais' versions (taxonomy)
+    $role->add_cap( 'edit_related_versions' );
+    $role->add_cap( 'delete_related_versions' );
+
+    // tutorials (custom type)
+    $role->add_cap( 'publish_tutorials' );
+  }
+
 }
 add_action('after_setup_theme', 'pmc_setup_theme');
 
@@ -52,3 +80,5 @@ add_action('wp_enqueue_scripts', 'pmc_header_scripts');
  */
 
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
+require_once(TEMPLATEPATH . '/inc/tutorials.php');
+require_once(TEMPLATEPATH . '/inc/related-versions.php');
