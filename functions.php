@@ -1,6 +1,51 @@
 <?php
 
 /**
+ * Init plugins
+ */
+
+require_once(TEMPLATEPATH . '/inc/class-tgm-plugin-activation.php');
+function pmc_register_required_plugins() {
+   $plugins = array();
+   $plugins[] = array(
+     'name' => 'Advanced Custom Fields',
+     'slug' => 'advanced-custom-fields',
+     'required' => true,
+     'force_activation' => true
+   );
+   $plugins[] = array(
+     'name' => 'ACF: Advanced Taxonomy Selector',
+     'slug' => 'acf-advanced-taxonomy-selector',
+     'required' => true,
+     'force_activation' => true
+   );
+   $plugins[] = array(
+     'name' => 'Advanced Custom Fields: Tag It Field',
+     'slug' => 'advanced-custom-fields-tag-it',
+     'required' => true,
+     'force_activation' => true
+   );
+   $plugins[] = array(
+     'name' => 'Advanced Custom Fields: Font Awesome',
+     'slug' => 'advanced-custom-fields-font-awesome',
+     'required' => true,
+     'force_activation' => true
+   );
+
+   $options = array(
+     'default_path'  => '',
+     'menu'      => 'pmc-install-plugins',
+     'has_notices'  => true,
+     'dismissable'  => true,
+     'dismiss_msg'  => '',
+     'is_automatic'  => false,
+     'message'    => ''
+   );
+   tgmpa($plugins, $options);
+ }
+ add_action('tgmpa_register', 'pmc_register_required_plugins');
+
+/**
  * Setup Theme
  */
 
@@ -37,6 +82,10 @@ function pmc_setup_theme() {
     // related versions (taxonomy)
     $role->add_cap( 'manage_related_versions' );
     $role->add_cap( 'assign_related_versions' );
+
+    // difficulties (taxonomy)
+    $role->add_cap( 'manage_difficulties' );
+    $role->add_cap( 'assign_difficulties' );
   }
 
   // capabilities for admins, editors
@@ -46,6 +95,10 @@ function pmc_setup_theme() {
     // mapas culturais' versions (taxonomy)
     $role->add_cap( 'edit_related_versions' );
     $role->add_cap( 'delete_related_versions' );
+
+    // difficulties (taxonomy)
+    $role->add_cap( 'edit_difficulties' );
+    $role->add_cap( 'delete_difficulties' );
 
     // tutorials (custom type)
     $role->add_cap( 'publish_tutorials' );
@@ -80,5 +133,6 @@ add_action('wp_enqueue_scripts', 'pmc_header_scripts');
  */
 
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
-require_once(TEMPLATEPATH . '/inc/tutorials.php');
-require_once(TEMPLATEPATH . '/inc/related-versions.php');
+require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
+require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
+require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
