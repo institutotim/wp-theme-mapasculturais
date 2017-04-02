@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-29 16:09-0300\n"
+"POT-Creation-Date: 2017-04-02 18:22-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:11
+#: functions.php:59
 msgid "Maintainer"
 msgstr ""
 
@@ -80,4 +80,81 @@ msgstr ""
 
 #: inc/network-posts.php:36
 msgid "Network's Posts"
+msgstr ""
+
+#: inc/tutorials/difficulties.php:15
+msgid "Difficulties"
+msgstr ""
+
+#: inc/tutorials/difficulties.php:16
+msgid "Difficulty level of a tutorial."
+msgstr ""
+
+#: inc/tutorials/post-type.php:11
+msgctxt "post type general name"
+msgid "Tutorials"
+msgstr ""
+
+#: inc/tutorials/post-type.php:12
+msgctxt "post type singular name"
+msgid "Tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:13
+msgctxt "admin menu"
+msgid "Tutorials"
+msgstr ""
+
+#: inc/tutorials/post-type.php:14
+msgctxt "add new on admin bar"
+msgid "Tutorials"
+msgstr ""
+
+#: inc/tutorials/post-type.php:15
+msgctxt "tutorial"
+msgid "Add new tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:16
+msgid "Add new tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:17
+msgid "New tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:18
+msgid "Edit tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:19
+msgid "View tutorial"
+msgstr ""
+
+#: inc/tutorials/post-type.php:20
+msgid "All tutorials"
+msgstr ""
+
+#: inc/tutorials/post-type.php:21
+msgid "Search tutorial's posts"
+msgstr ""
+
+#: inc/tutorials/post-type.php:22
+msgid "No tutorials found."
+msgstr ""
+
+#: inc/tutorials/post-type.php:23
+msgid "No tutorials found in trash."
+msgstr ""
+
+#: inc/tutorials/post-type.php:36
+msgid "Tutorials Posts"
+msgstr ""
+
+#: inc/tutorials/related-versions.php:15
+msgid "Related Versions"
+msgstr ""
+
+#: inc/tutorials/related-versions.php:16
+msgid "Versions of Mapas Culturais a tutorial applies to."
 msgstr ""

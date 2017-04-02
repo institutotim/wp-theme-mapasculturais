@@ -11,6 +11,6 @@
       </div>
     </div>
   </div>
-<section>
+</section>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
