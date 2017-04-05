@@ -26,10 +26,11 @@
 /*
  * Colors
  */
-@lightblue: #409ABE;
-@blue: #29354D;
+@lightblue: #596585;
+@blue: #2b3140;
 @pink: #C64B74;
 @beige: #DBD4B1;
+@yellow: #ffed7c;
 
 hr {
   border: 0;
@@ -48,13 +49,25 @@ body {
 .button, button, input[type=button], input[type=reset], input[type=submit] {
   font-family: 'Tim Sans';
   height: auto;
+  border-radius: 0;
+  border: 0;
+  .fa {
+    margin: .8rem 1rem 0 -1rem;
+    float: left;
+  }
 }
 @media (min-width: 550px) {
   .container {
     width: 90%;
   }
 }
-h1 {
+a {
+  color: @lightblue;
+}
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Tim Sans';
 }
 h1 a,
@@ -178,23 +191,27 @@ p.post-meta .fa {
   margin: 0 2rem 0 0;
 }
 #masthead {
-  background: @lightblue;
+  background: @blue;
   padding: 4rem 0;
   color: #fff;
   margin: 0;
   position: relative;
   h1 {
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 400;
     margin: 0;
     color: #fff;
+    img {
+      float: left;
+      margin: -2rem 2rem 0 0;
+    }
     a {
       color: inherit;
     }
   }
   a {
-    color: @blue;
+    color: @lightblue;
     text-decoration: none;
   }
   .search-input {
@@ -230,41 +247,31 @@ p.post-meta .fa {
   a {
     display: inline-block;
     margin-right: 1rem;
+    color: @yellow;
     &:hover {
       color: #fff;
     }
   }
 }
 .page-header {
-  background: @lightblue url(../img/dots-cut.png) bottom right repeat-x;
+  background: @blue;
   font-family: 'Tim Sans';
   color: #fff;
   border-bottom: 2px solid @blue;
   position: relative;
-  padding-bottom: 8rem;
-  &:after {
-    content: '';
-    width: 231px;
-    height: 211px;
-    background: url(../img/pins-small.png) center no-repeat;
-    position: absolute;
-    bottom: -118px;
-    right: 11%;
-    pointer-events: none;
-    z-index: 10;
-  }
+  padding-bottom: 4rem;
   .button, button, input[type=button], input[type=reset], input[type=submit] {
     border-color: #fff;
     color: #fff;
     background: @lightblue;
     &:hover {
-      background: darken(@lightblue, 5%);
+      background: lighten(@lightblue, 5%);
     }
   }
   .button.button-primary, button.button-primary, input[type=button].button-primary, input[type=reset].button-primary, input[type=submit].button-primary {
     background: @pink;
     &:hover {
-      background: darken(@pink, 5%);
+      background: lighten(@pink, 5%);
     }
   }
   hr {
@@ -281,27 +288,57 @@ p.post-meta .fa {
     margin: 0;
   }
 }
+.full-height {
+  box-sizing: border-box;
+}
 #hero {
+  .page-header-content {
+    padding-top: 6%;
+  }
   padding-bottom: 0;
+  overflow: hidden;
+  border: 0;
+  .canvas {
+    position: absolute;
+    top: 60%;
+    bottom: -10%;
+    left: -5%;
+    right: -5%;
+    // -webkit-transform: translateX(0)translateZ(30%);
+    // z-index: -1;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 45%;
+    right: -20%;
+    top: 40%;
+    background: rgba(0,0,0,0.1);
+    transform: rotate(23deg);
+  }
   .intro-text {
     font-size: 2em;
     line-height: 1.2;
     color: rgba(255,255,255,0.9);
+    .buttons {
+      margin-top: 8%;
+      background: rgba(0,0,0,0.1);
+      padding: 2rem;
+      float: left;
+    }
     .button {
-      margin-right: 2rem;
+      display: inline-block;
+      margin: 0 0 0 1rem;
       font-size: .4em;
       padding-top: .4rem;
       padding-bottom: .4rem;
     }
   }
   .network {
-    padding-top: 1.2rem;
-    // padding: 5rem 6rem 15rem;
-    // display: none;
     font-size: 1.4em;
-    // background: url(../img/big-pin.png) top left no-repeat;
-    // background-size: 100%;
-    text-align: center;
+    margin-top: -2rem;
+    padding-top: 1rem;
     h3 {
       text-transform: uppercase;
       font-size: 1em;
@@ -309,122 +346,78 @@ p.post-meta .fa {
     }
     .intro-numbers {
       line-height: 1;
-      margin-bottom: 2rem;
-      margin-left: 4rem;
-      color: rgba(255,255,255,0.9);
-      &:before {
-        content: '';
-        height: 150px;
-        width: 3px;
-        display: block;
-        float: left;
-        margin-left: 2rem;
-        margin-top: -4.5rem;
-        padding-bottom: 4.5rem;
-        background: url(../img/ptn-dot-vertical.png);
-      }
       .number {
+        width: 112px;
         float: left;
         font-size: 4.5em;
-        margin-bottom: 1rem;
-        margin-left: 4rem;
+        margin-bottom: 0;
         margin-top: 2rem;
+        box-shadow: 4rem 4rem 0 rgba(0,0,0,0.15);
+        background: @pink;
+        border-bottom: 10px solid darken(@pink, 10%);
       }
       .number-label {
         float: left;
-        margin: 4rem 0 0 2rem;
+        margin: 5rem 0 0 2rem;
         span {
           display: block;
           font-size: 1.65em;
         }
       }
     }
-    .button {
-      display: none;
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: lowercase;
+      border-bottom: 2px solid @yellow;
+      padding-bottom: 1rem;
+      font-size: 1.1em;
     }
     p {
       margin: 0;
-    }
-    .ptns {
-      width: 100%;
-      height: 205px;
-      position: relative;
-      a {
-        color: #fff;
-        display: block;
-        text-transform: lowercase;
-        margin: 2rem;
-        position: relative;
-        text-decoration: none;
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: -2rem;
-          height: 2px;
-          background: url(../img/ptn-dot-horizontal.png);
-        }
-      }
-      &:hover {
-        .ptn-2 {
-          padding-bottom: 1.8rem;
-          margin-left: 1.8rem;
-        }
-        .ptn-3 {
-          padding-bottom: 3.6rem;
-          margin-left: 3.6rem;
-        }
-      }
-    }
-    .ptn {
-      width: 100%;
-      height: 185px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      box-shadow: -2px -2px 2px rgba(0,0,0,0.1);
-      transition: all .2s linear;
-      &.ptn-1 {
-        background: @blue;
-        // background-image: url(../img/ptn-dots-beige.png);
-        z-index: 3;
-      }
-      &.ptn-2 {
-        background: @pink;
-        // background-image: url(../img/ptn-dots-white.png);
-        padding-bottom: 1.5rem;
-        margin-left: 1.5rem;
-        z-index: 2;
-      }
-      &.ptn-3 {
-        background: @beige;
-        // background-image: url(../img/ptn-dots-darkbeige.png);
-        padding-bottom: 3rem;
-        margin-left: 3rem;
-      }
     }
   }
 }
 #content {
   padding: 6rem 0;
   min-height: 500px;
-  background: url(../img/dots-below-header_.png) top right no-repeat;
+  .main-text {
+    padding: 6rem 0;
+    background: @yellow;
+    color: #333;
+    font-size: 1.6em;
+    line-height: 2;
+    margin: 0 0 4rem;
+    margin-top: -6rem;
+    font-family: 'Tim Sans';
+    position: relative;
+    // canvas {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    // }
+    strong {
+      border-bottom: 8px solid @pink;
+      font-weight: normal;
+    }
+  }
 }
 #map {
   width: 100%;
   height: 880px;
 }
 #colophon {
-  background: @blue url(../img/dots-cut-beige_ud.png) top right repeat-x;
+  background: @lightblue;
   color: #fff;
-  padding: 12rem 0 4rem;
+  padding: 6rem 0;
   font-family: 'Tim Sans';
   a {
     color: #fff;
     text-decoration: none;
     &:hover {
-      color: @lightblue;
+      color: @yellow;
     }
   }
   #footnav {
@@ -462,7 +455,7 @@ p.post-meta .fa {
               color: rgba(255,255,255,0.6);
               padding: .2rem 0;
               &:hover {
-                color: @lightblue;
+                color: #fff;
               }
             }
           }

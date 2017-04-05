@@ -10,7 +10,12 @@
   <header id="masthead">
     <div class="container">
       <div class="four columns">
-          <h1><a href="<?php echo home_url('/'); ?>">Mapas Culturais</a></h1>
+          <h1>
+            <a href="<?php echo home_url('/'); ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Portal Mapas Culturais" />
+              Portal Mapas Culturais
+            </a>
+          </h1>
       </div>
       <div class="eight columns">
         <div class="search-input u-pull-right">
@@ -28,7 +33,8 @@
     </div>
   </header>
   <?php if(is_home() || is_front_page()) : ?>
-    <section id="hero" class="page-header">
+    <section id="hero" class="page-header full-height">
+      <div class="canvas"></div>
       <div class="container">
         <div class="twelve columns">
           <hr/>
@@ -39,22 +45,25 @@
           <div class="seven columns">
             <div class="intro-text">
               <p class="big">Software livre para gestão cultural e mapeamento colaborativo.</p>
-              <p><a class="button" href="support.html">Suporte</a><a class="button button-primary" href="page.html">Saiba mais</a></p>
+              <p class="connect-border connect-left buttons">
+                <a class="button" href="support.html">
+                  <span class="fa fa-support"></span>
+                  Suporte
+                </a>
+                <a class="button button-primary" href="page.html">
+                  <span class="fa fa-star"></span>
+                  Saiba mais
+                </a>
+              </p>
             </div>
           </div>
           <div class="five columns">
-            <div class="network">
+            <div class="network full-height connect-border connect-right">
               <div class="intro-numbers row">
-                <p class="number">30</p>
+                <p class="number do-count" data-number="30">0</p>
                 <p class="number-label">plataformas <span>na rede</span></p>
               </div>
-              <div class="ptns">
-                <div class="ptn ptn-1">
-                  <a href="#">Conheça as instalações</a>
-                </div>
-                <div class="ptn ptn-2"></div>
-                <div class="ptn ptn-3"></div>
-              </div>
+              <a href="#">Conheça as instalações</a>
             </div>
           </div>
         </div>
