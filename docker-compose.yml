@@ -14,3 +14,10 @@ db:
     MYSQL_ROOT_PASSWORD: wordpress
   volumes:
     - "./.data/db:/var/lib/mysql"
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+    - db
+  ports:
+    - 3000:80
