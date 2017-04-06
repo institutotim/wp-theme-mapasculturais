@@ -60,7 +60,7 @@
           <div class="five columns">
             <div class="network full-height connect-border connect-right">
               <div class="intro-numbers row">
-                <p class="number do-count" data-number="30">0</p>
+                <p class="number do-count">30</p>
                 <p class="number-label">plataformas <span>na rede</span></p>
               </div>
               <a href="#">Conheça as instalações</a>

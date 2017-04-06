@@ -33,9 +33,8 @@
     ctx.strokeStyle = color;
 
     // var dotNum = Math.max((canvas.width*canvas.height/1500),600);
-    dotNum = canvas.width*canvas.height/10000;
+    dotNum = parseInt(canvas.width*canvas.height/10000);
     // dotNum = 50;
-    console.log(dotNum);
     //dots = { nb: 600, distance: 80, d_radius: 3000, array: [] };
     dots = { nb: dotNum, distance: 150, d_radius: 100, array: [] };
 

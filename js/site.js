@@ -49,14 +49,19 @@
    */
   $(document).ready(function() {
     var doCount = function($el, idle) {
-      var target = parseInt($el.data('number'));
+      var target = $el.data('target');
       var current = parseInt($el.text());
-      console.log(target.toString().length);
+      var steps = 30;
+      var skip = target/steps;
       if(target > current) {
-        var text = current + 1;
-        if(current.toString().length !== target.toString().length) {
-          for(var i = 1; i < target.toString().length; i++) {
-            text = '0' + text;
+        var text = current + skip;
+        if(text > target) {
+          text = target;
+        } else {
+          if(text.toString().length !== target.toString().length) {
+            for(var i = 1; i < target.toString().length; i++) {
+              text = '0' + text;
+            }
           }
         }
         $el.text(text);
@@ -66,7 +71,9 @@
     };
     $('.do-count').each(function() {
       var idle;
-      $el = $(this);
+      var $el = $(this);
+      $el.data('target', parseInt($el.text()));
+      $el.text('0');
       idle = setInterval(function() {
         doCount($el, idle);
       }, 1000/25);
