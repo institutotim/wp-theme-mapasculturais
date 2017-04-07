@@ -2,7 +2,7 @@
 
 ## Project Status
 
-Currently we are developing the portal's wireframe.
+Currently we are developing the portal's design and main features.
 
 ## Run wireframe server
 
