@@ -5,6 +5,7 @@
     <div class="container">
       <div class="eight columns">
         <p><strong>Mapas Culturais é uma ferramenta que articula agentes culturais, instituições governamentais e a sociedade de forma colaborativa.</strong> Promove o acesso e a visibilidade para o público, o governo e o mercado. O setor público ganha uma compreensão do território e de sua cultura, os agentes divulgam suas programações e a população pode entender seu espaço e se envolver em atividades culturais na vizinhança.</p>
+        <hr class="dark"/>
       </div>
     </div>
     <div id="mc_svg" class="svg">

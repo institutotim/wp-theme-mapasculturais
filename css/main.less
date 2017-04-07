@@ -23,6 +23,34 @@
         url('../fonts/tim-sans/TIMSansWeb-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
  }
 
+ @-webkit-keyframes bounce {
+  from {
+    -webit-transform: translate(0, .4rem);
+  }
+  to {
+    -webit-transform: translate(0, 0);
+  }
+}
+
+@-moz-keyframes bounce {
+  from {
+    -moz-transform: translate(0, .4rem);
+  }
+  to {
+    -moz-transform: translate(0, 0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate(0, .4rem);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+
 /*
  * Colors
  */
@@ -36,6 +64,9 @@ hr {
   border: 0;
   height: 2px;
   background: url(../img/ptn-dot-horizontal.png);
+  &.dark {
+    background: url(../img/ptn-dot-horizontal-dark.png);
+  }
 }
 
 body {
@@ -297,12 +328,41 @@ p.post-meta .fa {
   box-sizing: border-box;
 }
 #hero {
-  .page-header-content {
-    padding-top: 6%;
-  }
   padding-bottom: 0;
   overflow: hidden;
   border: 0;
+  .page-header-content {
+    padding-top: 6%;
+  }
+  .scroll-down {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    margin-left: -100px;
+    color: #fff;
+    font-size: .6em;
+    text-transform: lowercase;
+    padding: 2rem 0;
+    z-index: 10;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    .fa {
+      color: white;
+      font-size: 3em;
+      display: block;
+      -webkit-animation: bounce .5s linear infinite alternate;
+      -moz-animation: bounce .5s linear infinite alternate;
+      animation: bounce .5s linear infinite alternate;
+    }
+    &:hover {
+      color: white;
+      .fa {
+        color: @yellow;
+      }
+    }
+  }
   .canvas {
     position: absolute;
     top: 60%;
@@ -390,13 +450,13 @@ p.post-meta .fa {
     padding: 6rem 0;
     background: @yellow;
     color: #333;
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 2;
     margin: 0 0 4rem;
     margin-top: -6rem;
     font-family: 'Tim Sans';
     position: relative;
-    padding-bottom: 300px;
+    padding-bottom: 0;
     // canvas {
     //   position: absolute;
     //   top: 0;
@@ -410,7 +470,7 @@ p.post-meta .fa {
       font-size: 1.2em;
     }
     .svg {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
       padding-left: 10%;
       position: absolute;

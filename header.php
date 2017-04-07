@@ -34,6 +34,10 @@
   </header>
   <?php if(is_home() || is_front_page()) : ?>
     <section id="hero" class="page-header full-height">
+      <a class="scroll-down" href="#">
+        Role para baixo
+        <span class="fa fa-chevron-down"></span>
+      </a>
       <div class="canvas"></div>
       <div class="container">
         <div class="twelve columns">

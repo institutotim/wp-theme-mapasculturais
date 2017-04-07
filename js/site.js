@@ -1,5 +1,14 @@
 (function($) {
 
+  $(document).ready(function() {
+    $('.scroll-down').on('click', function(e) {
+      e.preventDefault();
+      $('html,body').animate({
+        scrollTop: $(window).height()
+      }, 500);
+    });
+  });
+
   /*
    * Full height element
    */

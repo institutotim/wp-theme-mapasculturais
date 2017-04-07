@@ -56,13 +56,15 @@
       checkScroll();
     };
 
-    /*
-    * Network
-    */
-
     (function() {
 
       var svg = $('#mc_svg');
+
+      svg.parent().height(svg.height());
+
+      $(window).resize(function() {
+        svg.parent().height(svg.height());
+      });
 
       svg.find('#g5467 circle').attr({'r': 0});
 
