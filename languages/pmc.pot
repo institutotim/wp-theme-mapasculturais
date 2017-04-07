@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-06 12:32-0300\n"
+"POT-Creation-Date: 2017-04-07 14:15-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: inc/network-posts.php:11
 msgctxt "post type general name"
-msgid "Network's Posts"
+msgid "Network Posts"
 msgstr ""
 
 #: inc/network-posts.php:12
@@ -33,21 +33,21 @@ msgstr ""
 
 #: inc/network-posts.php:13
 msgctxt "admin menu"
-msgid "Network's Posts"
+msgid "Network"
 msgstr ""
 
 #: inc/network-posts.php:14
 msgctxt "add new on admin bar"
-msgid "Network's Post"
+msgid "Network"
 msgstr ""
 
 #: inc/network-posts.php:15
 msgctxt "network_post"
-msgid "Add new post"
+msgid "Add network post"
 msgstr ""
 
 #: inc/network-posts.php:16
-msgid "Add new post"
+msgid "Add new network post"
 msgstr ""
 
 #: inc/network-posts.php:17
@@ -67,15 +67,15 @@ msgid "All posts"
 msgstr ""
 
 #: inc/network-posts.php:21
-msgid "Search network's posts"
+msgid "Search network posts"
 msgstr ""
 
 #: inc/network-posts.php:22
-msgid "No network's posts found."
+msgid "No network posts found."
 msgstr ""
 
 #: inc/network-posts.php:23
-msgid "No network's posts found in trash."
+msgid "No network posts found in trash."
 msgstr ""
 
 #: inc/network-posts.php:36

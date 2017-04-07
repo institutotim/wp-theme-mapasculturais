@@ -69,6 +69,7 @@ h2,
 h3,
 h4 {
   font-family: 'Tim Sans';
+  letter-spacing: 0;
 }
 h1 a,
 h2 a,
@@ -192,7 +193,7 @@ p.post-meta .fa {
 }
 #masthead {
   background: @blue;
-  padding: 4rem 0;
+  padding: 2rem 0;
   color: #fff;
   margin: 0;
   position: relative;
@@ -306,8 +307,8 @@ p.post-meta .fa {
     position: absolute;
     top: 60%;
     bottom: -10%;
-    left: -5%;
-    right: -5%;
+    left: -10%;
+    right: -10%;
     // -webkit-transform: translateX(0)translateZ(30%);
     // z-index: -1;
   }
@@ -395,6 +396,7 @@ p.post-meta .fa {
     margin-top: -6rem;
     font-family: 'Tim Sans';
     position: relative;
+    padding-bottom: 300px;
     // canvas {
     //   position: absolute;
     //   top: 0;
@@ -405,6 +407,24 @@ p.post-meta .fa {
     strong {
       border-bottom: 8px solid @pink;
       font-weight: normal;
+    }
+    .svg {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 10%;
+      position: absolute;
+      top: 0;
+      right: 10%;
+      pointer-events: none;
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        tspan {
+          font-family: "Tim Sans" !important;
+          font-weight: 200;
+        }
+      }
     }
   }
 }
