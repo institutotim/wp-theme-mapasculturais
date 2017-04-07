@@ -8,19 +8,19 @@ class PMC_Network_Posts {
 
   function register_network_post_type() {
     $labels = array(
-      'name'               => _x( 'Network\'s Posts', 'post type general name', 'pmc' ),
+      'name'               => _x( 'Network Posts', 'post type general name', 'pmc' ),
       'singular_name'      => _x( 'Network Post', 'post type singular name', 'pmc' ),
-      'menu_name'          => _x( 'Network\'s Posts', 'admin menu', 'pmc' ),
-      'name_admin_bar'     => _x( 'Network\'s Post', 'add new on admin bar', 'pmc' ),
-      'add_new'            => _x( 'Add new post', 'network_post', 'pmc' ),
-      'add_new_item'       => __( 'Add new post', 'pmc' ),
+      'menu_name'          => _x( 'Network', 'admin menu', 'pmc' ),
+      'name_admin_bar'     => _x( 'Network', 'add new on admin bar', 'pmc' ),
+      'add_new'            => _x( 'Add network post', 'network_post', 'pmc' ),
+      'add_new_item'       => __( 'Add new network post', 'pmc' ),
       'new_item'           => __( 'New post', 'pmc' ),
       'edit_item'          => __( 'Edit post', 'pmc' ),
       'view_item'          => __( 'View post', 'pmc' ),
       'all_items'          => __( 'All posts', 'pmc' ),
-      'search_items'       => __( 'Search network\'s posts', 'pmc' ),
-      'not_found'          => __( 'No network\'s posts found.', 'pmc' ),
-      'not_found_in_trash' => __( 'No network\'s posts found in trash.', 'pmc' )
+      'search_items'       => __( 'Search network posts', 'pmc' ),
+      'not_found'          => __( 'No network posts found.', 'pmc' ),
+      'not_found_in_trash' => __( 'No network posts found in trash.', 'pmc' )
     );
 
     $capabilities = array(
