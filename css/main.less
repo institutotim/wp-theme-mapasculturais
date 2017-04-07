@@ -26,9 +26,9 @@
 /*
  * Colors
  */
-@lightblue: #596585;
+@lightblue: #4588c6;
 @blue: #2b3140;
-@pink: #C64B74;
+@pink: #e94b80;
 @beige: #DBD4B1;
 @yellow: #ffed7c;
 
@@ -252,9 +252,9 @@ p.post-meta .fa {
   a {
     display: inline-block;
     margin-right: 1rem;
-    color: @yellow;
+    color: white;
     &:hover {
-      color: #fff;
+      color: @yellow;
     }
   }
 }
@@ -319,7 +319,7 @@ p.post-meta .fa {
     left: 45%;
     right: -20%;
     top: 40%;
-    background: rgba(0,0,0,0.1);
+    background: lighten(@blue, 3%);
     transform: rotate(23deg);
   }
   .intro-text {
@@ -341,8 +341,8 @@ p.post-meta .fa {
     }
   }
   .network {
-    font-size: 1.4em;
-    margin-top: -2rem;
+    font-size: 2em;
+    // margin-top: -2rem;
     padding-top: 1rem;
     h3 {
       text-transform: uppercase;
@@ -352,7 +352,7 @@ p.post-meta .fa {
     .intro-numbers {
       line-height: 1;
       .number {
-        width: 112px;
+        width: 160px;
         float: left;
         font-size: 4.5em;
         margin-bottom: 0;
@@ -407,6 +407,7 @@ p.post-meta .fa {
     strong {
       border-bottom: 8px solid @pink;
       font-weight: normal;
+      font-size: 1.2em;
     }
     .svg {
       max-width: 1200px;
