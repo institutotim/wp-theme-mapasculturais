@@ -1,6 +1,6 @@
 <footer id="colophon">
   <div class="container">
-    <div class="nine columns">
+    <div class="eight columns">
       <nav id="footnav">
         <ul class="nav">
           <li>
@@ -42,7 +42,7 @@
       <hr/>
       <p class="credits">Software livre desenvolvido pelo <a href="#">Instituto TIM</a>.</p>
     </div>
-    <div class="three columns">
+    <div class="four columns">
       <div class="newsletter-form">
         <h2>
           <span class="fa fa-envelope"></span>
