@@ -86,6 +86,13 @@ function pmc_setup_theme() {
     // difficulties (taxonomy)
     $role->add_cap( 'manage_difficulties' );
     $role->add_cap( 'assign_difficulties' );
+
+    // install stats (custom post type)
+    $role->add_cap( 'edit_published_install_stats' );
+    $role->add_cap( 'publish_install_stats' );
+    $role->add_cap( 'delete_published_install_stats' );
+    $role->add_cap( 'edit_install_stats' );
+    $role->add_cap( 'delete_install_stats' );
   }
 
   // capabilities for admins, editors
@@ -146,3 +153,4 @@ require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
+require_once(TEMPLATEPATH . '/inc/install-statistics.php');
