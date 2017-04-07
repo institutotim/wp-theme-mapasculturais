@@ -387,7 +387,7 @@ p.post-meta .fa {
     line-height: 1.2;
     color: rgba(255,255,255,0.9);
     .buttons {
-      margin-top: 8%;
+      margin-top: 4%;
       background: rgba(0,0,0,0.1);
       padding: 2rem;
       float: left;
@@ -498,6 +498,27 @@ p.post-meta .fa {
   color: #fff;
   padding: 6rem 0;
   font-family: 'Tim Sans';
+  input {
+    display: block;
+    width: 100%;
+    background: lighten(@lightblue, 5%);
+    border: 0;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: lighten(@lightblue, 7%);
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: white;
+  }
+  ::-moz-placeholder {
+    color: white;
+  }
+  ::placeholder {
+    color: white;
+  }
   a {
     color: #fff;
     text-decoration: none;
@@ -524,7 +545,7 @@ p.post-meta .fa {
         display: table-cell;
         // width: 1%;
         > a {
-          border-bottom: 1px dotted rgba(255,255,255,0.2);
+          border-bottom: 1px dotted lighten(@lightblue, 15%);
           margin-bottom: .5rem;
         }
         ul {
@@ -545,6 +566,22 @@ p.post-meta .fa {
             }
           }
         }
+      }
+    }
+  }
+  .newsletter-form {
+    border: 1px dotted lighten(@lightblue, 15%);
+    padding: 2rem;
+    h2 {
+      padding: .7rem 0;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: #fff;
+      .fa {
+        font-size: 2em;
+        float: left;
+        margin-top: -.8rem;
+        margin-right: 2rem;
       }
     }
   }
