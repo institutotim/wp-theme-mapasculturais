@@ -40,7 +40,7 @@
         </ul>
       </nav>
       <hr/>
-      <p class="credits">Software livre desenvolvido pelo <a href="#">Instituto TIM</a>.</p>
+      <p class="credits">Software livre desenvolvido pelo <a href="http://institutotim.org.br/" target="_blank" title="Instituto TIM" rel="external"><img alt="Instituto TIM" src="<?php echo get_template_directory_uri(); ?>/img/institutotim.png" /></a>.</p>
     </div>
     <div class="four columns">
       <div class="newsletter-form">
