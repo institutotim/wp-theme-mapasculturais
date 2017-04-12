@@ -5,6 +5,16 @@ class PMC_Installs_Stats {
   function __construct() {
     add_action('init', array($this, 'register_installs_data'));
     add_action('wi_create_daily_backup', array($this, 'wi_create_backup'));
+
+    // add custom recurrence
+    add_filter( 'cron_schedules', 'example_add_cron_interval' );
+    function example_add_cron_interval( $schedules ) {
+        $schedules['five_seconds'] = array(
+            'interval' => 5,
+            'display'  => esc_html__( 'Every Five Seconds' ),
+        );
+        return $schedules;
+    }
   }
 
   function register_installs_data() {
