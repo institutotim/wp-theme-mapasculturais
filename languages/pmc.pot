@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 11:19-0300\n"
+"POT-Creation-Date: 2017-04-12 17:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,63 +21,8 @@ msgstr ""
 msgid "Maintainer"
 msgstr ""
 
-#: inc/install-statistics.php:14
-msgctxt "post type general name"
-msgid "Statistics of your Mapas Culturais install"
-msgstr ""
-
-#: inc/install-statistics.php:16
-msgctxt "admin menu"
-msgid "Install Statistics"
-msgstr ""
-
-#: inc/install-statistics.php:18
-msgctxt "install_stats"
-msgid "New entry"
-msgstr ""
-
-#: inc/install-statistics.php:19 inc/install-statistics.php:20
-msgid "New entry"
-msgstr ""
-
-#: inc/install-statistics.php:21
-msgid "Edit entries"
-msgstr ""
-
-#: inc/install-statistics.php:22
-msgid "View entries"
-msgstr ""
-
-#: inc/install-statistics.php:23
-msgid "All entries"
-msgstr ""
-
-#: inc/install-statistics.php:24
-msgid "Search entries"
-msgstr ""
-
-#: inc/install-statistics.php:25
-msgid "No entries found."
-msgstr ""
-
-#: inc/install-statistics.php:26
-msgid "No entries found in trash."
-msgstr ""
-
-#: inc/install-statistics.php:39
-msgid "Install stats"
-msgstr ""
-
-#: inc/install-statistics.php:134
-msgid "Variable"
-msgstr ""
-
-#: inc/install-statistics.php:135
-msgid "Collected At"
-msgstr ""
-
-#: inc/install-statistics.php:136
-msgid "Value"
+#: inc/install-statistics.php:6
+msgid "Every five seconds"
 msgstr ""
 
 #: inc/network-posts.php:11

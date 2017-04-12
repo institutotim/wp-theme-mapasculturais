@@ -30,27 +30,26 @@
   $(document).ready(function() {
     var connect = function($el, direction) {
       var css = {};
-      if(direction.indexOf('connect-right') !== -1) {
+      if(direction.indexOf('right') !== -1) {
         var width = $(window).width() - $el.offset().left;
         css['width'] = width;
         css['padding-right'] = width - $el.originalWidth;
-      } else if(direction.indexOf('connect-left') !== -1) {
+      } else if(direction.indexOf('left') !== -1) {
         var currentOffset = $el.offset().left;
-        if(currentOffset > 0) {
-          css['padding-left'] = $el.originalOffset.left + currentOffset;
-          css['margin-left'] = -$el.originalOffset.left - currentOffset;
-        }
+        var margin = parseFloat($el.css('margin-left').split('px')[0]);
+        var padding = parseFloat($el.css('padding-left').split('px')[0]);
+        css['padding-left'] = currentOffset + padding;
+        css['margin-left'] = -currentOffset + margin;
       }
       $el.css(css);
     }
     $('.connect-border').each(function() {
       var $el = $(this);
-      $el.originalOffset = $el.offset();
       $el.originalWidth = $el.width();
       connect($el, $el.attr('class'));
       $(window).resize(function() {
         connect($el, $el.attr('class'));
-      })
+      });
     })
   });
   /*
