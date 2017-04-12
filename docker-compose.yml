@@ -1,5 +1,5 @@
 wordpress:
-  image: wordpress
+  build: .
   links:
     - db:mysql
   ports:

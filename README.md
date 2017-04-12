@@ -51,6 +51,21 @@ grunt build
   docker-compose up
 ```
 
+### Debuging
+
+Enable debug at `wp-config.php`:
+
+```php
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+```
+
+Watch debug log:
+
+```shell
+  tail -f .data/wp/wp-content/debug.log
+```
+
 ### Configure
 
 Walk through the 5-min install and enable this theme in "Apperance/Themes" at admin panel.
