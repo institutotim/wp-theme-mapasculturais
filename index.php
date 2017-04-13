@@ -1,5 +1,4 @@
-<?php get_header();
-error_log('hi'); ?>
+<?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <section id="content">
   <div class="main-text">

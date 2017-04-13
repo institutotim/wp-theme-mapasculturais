@@ -1,3 +1,14 @@
+/**
+ * Number.prototype.format(n, x)
+ *
+ * @param integer n: length of decimal
+ * @param integer x: length of sections
+ */
+Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\,' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&.');
+};
+
 (function($) {
 
   $(document).ready(function() {
@@ -33,12 +44,16 @@
       if(direction.indexOf('right') !== -1) {
         var width = $(window).width() - $el.offset().left;
         css['width'] = width;
-        css['padding-right'] = width - $el.originalWidth;
+        if(direction.indexOf('no-padding') == -1) {
+          css['padding-right'] = width - $el.originalWidth;
+        }
       } else if(direction.indexOf('left') !== -1) {
         var currentOffset = $el.offset().left;
         var margin = parseFloat($el.css('margin-left').split('px')[0]);
         var padding = parseFloat($el.css('padding-left').split('px')[0]);
-        css['padding-left'] = currentOffset + padding;
+        if(direction.indexOf('no-padding') == -1) {
+          css['padding-left'] = currentOffset + padding;
+        }
         css['margin-left'] = -currentOffset + margin;
       }
       $el.css(css);
@@ -58,16 +73,18 @@
   $(document).ready(function() {
     var doCount = function($el, idle) {
       var target = $el.data('target');
-      var current = parseInt($el.text());
+      var current = parseInt($el.data('current') || 0);
       var steps = 30;
-      var skip = target/steps;
+      var skip = parseInt(target/steps);
       if(target > current) {
         var text = current + skip;
-        if(text > target) {
-          text = target;
+        $el.data('current', text);
+        if(text >= target) {
+          text = parseInt(target).format();
         } else {
           if(text.toString().length !== target.toString().length) {
-            for(var i = 1; i < target.toString().length; i++) {
+            var amount = target.toString().length - text.toString().length;
+            for(var i = 0; i < amount; i++) {
               text = '0' + text;
             }
           }

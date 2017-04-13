@@ -331,26 +331,24 @@ p.post-meta .fa {
 .sidebar .profiles {
   height: auto;
 }
-.sidebar .profiles .profile h4 {
+.sidebar .profiles .profile h3 {
   font-size: 1.2em;
 }
 .profiles {
-  height: 350px;
+  height:500px;
   overflow: auto;
-}
-.profile h4 {
-  font-size: 1.4em;
-  margin: 0;
-}
-.profile p {
-  font-style: italic;
-  color: #999;
-}
-.profile .fa.image {
-  float: left;
-  font-size: 3.8em;
-  color: #999;
-  margin: 0 2rem 0 0;
+  .profile {
+    margin: 0 0 2rem;
+    h3 {
+      padding-top: 1.5rem;
+      font-size: 1.4em;
+      margin: 0;
+    }
+    p {
+      font-style: italic;
+      color: #999;
+    }
+  }
 }
 #masthead {
   background: @blue;
@@ -458,6 +456,25 @@ p.post-meta .fa {
 .full-height {
   box-sizing: border-box;
 }
+.intro-numbers {
+  line-height: 1;
+  .number {
+    display: inline-block;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 4rem 4rem 0 rgba(0,0,0,0.05);
+    background: @pink;
+    border-bottom: 10px solid darken(@pink, 10%);
+    color: #fff;
+    font-family: "Tim Sans";
+  }
+  p.label {
+    margin: 1rem 0 4rem 4rem;
+    font-family: "Tim Sans";
+    font-size: 1.5em;
+  }
+}
 #hero {
   padding-bottom: 0;
   overflow: hidden;
@@ -541,17 +558,21 @@ p.post-meta .fa {
       font-size: 1em;
       margin: 0;
     }
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: lowercase;
+      border-bottom: 2px solid @yellow;
+      padding-bottom: 1rem;
+      font-size: 1.1em;
+    }
     .intro-numbers {
-      line-height: 1;
       .number {
-        width: 160px;
         float: left;
-        font-size: 4.5em;
-        margin-bottom: 0;
+        width: 160px;
         margin-top: 2rem;
+        font-size: 4.5em;
         box-shadow: 4rem 4rem 0 rgba(0,0,0,0.15);
-        background: @pink;
-        border-bottom: 10px solid darken(@pink, 10%);
       }
       .number-label {
         float: left;
@@ -562,21 +583,10 @@ p.post-meta .fa {
         }
       }
     }
-    a {
-      color: #fff;
-      text-decoration: none;
-      text-transform: lowercase;
-      border-bottom: 2px solid @yellow;
-      padding-bottom: 1rem;
-      font-size: 1.1em;
-    }
-    p {
-      margin: 0;
-    }
   }
 }
 #content {
-  padding: 6rem 0;
+  padding: 4% 0;
   min-height: 500px;
   .main-text {
     padding: 6rem 0;
@@ -624,11 +634,12 @@ p.post-meta .fa {
 #map {
   width: 100%;
   height: 880px;
+  margin: -7.1% 0 0;
 }
 #colophon {
   background: @lightblue;
   color: #fff;
-  padding: 6rem 0;
+  padding: 4% 0;
   font-family: 'Tim Sans';
   input {
     display: block;
@@ -726,7 +737,10 @@ p.post-meta .fa {
     }
   }
 }
-
+.network-numbers {
+  text-align: center;
+  margin: 0 0 4rem;
+}
 /*
  * Template specific styles
  */

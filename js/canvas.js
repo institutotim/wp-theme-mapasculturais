@@ -1,7 +1,10 @@
 (function($) {
 
   $(document).ready(function() {
-    new Constellation($('#hero .canvas'));
+    var $hero = $('#hero');
+    if($hero.length) {
+      new Constellation($hero.find('.canvas'));
+    }
   });
 
   function Constellation(container, color) {
