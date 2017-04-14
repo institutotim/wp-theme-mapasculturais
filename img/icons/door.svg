@@ -6,14 +6,22 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
-   id="svg4880"
-   viewBox="0 0 71.527471 90.378093"
+   id="svg4364"
+   viewBox="0 0 71.527471 90.37809"
    height="25.506706mm"
    width="20.186642mm">
   <defs
-     id="defs4882" />
+     id="defs4366">
+    <clipPath
+       id="clipPath3741"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3743"
+         d="m 0,595.276 841.891,0 L 841.891,0 0,0 0,595.276 Z" />
+    </clipPath>
+  </defs>
   <metadata
-     id="metadata4885">
+     id="metadata4369">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -25,22 +33,26 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-190.03282,-259.32435)"
+     transform="translate(253.16309,-629.7477)"
      id="layer1">
     <g
-       transform="matrix(1.71272,0,0,1.71272,-338.2188,-99.960759)"
-       id="g4838">
-      <path
-         d="m 310.1541,260.8177 38.31125,0 0,-49.3175 -38.31125,0 0,49.3175 z"
-         style="fill:none;stroke:#c54b74;stroke-width:3.45124984;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         id="path3519" />
+       transform="translate(-443.19591,370.42335)"
+       id="layer1-6">
       <g
-         id="g3521"
-         transform="matrix(1.25,0,0,-1.25,340.55535,242.47445)">
+         transform="matrix(1.71272,0,0,1.71272,-338.2188,-99.960759)"
+         id="g4838">
         <path
-           d="M 0,0 C 0.761,0 1.378,0.618 1.378,1.378 1.378,2.14 0.761,2.757 0,2.757 -0.761,2.757 -1.379,2.14 -1.379,1.378 -1.379,0.618 -0.761,0 0,0"
-           style="fill:#c54b74;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="path3523" />
+           id="path3519"
+           d="m 308.42773,209.77539 0,52.76758 1.72657,0 40.03711,0 0,-52.76758 -41.76368,0 z m 3.45118,3.45117 34.86132,0 0,45.86524 -34.86132,0 0,-45.86524 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#c54b74;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.45124984;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+        <g
+           id="g3521"
+           transform="matrix(1.25,0,0,-1.25,340.55535,242.47445)">
+          <path
+             d="M 0,0 C 0.761,0 1.378,0.618 1.378,1.378 1.378,2.14 0.761,2.757 0,2.757 -0.761,2.757 -1.379,2.14 -1.379,1.378 -1.379,0.618 -0.761,0 0,0"
+             style="fill:#c54b74;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path3523" />
+        </g>
       </g>
     </g>
   </g>

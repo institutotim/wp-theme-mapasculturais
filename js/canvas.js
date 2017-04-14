@@ -1,9 +1,9 @@
 (function($) {
 
   $(document).ready(function() {
-    var $hero = $('#hero');
-    if($hero.length) {
-      new Constellation($hero.find('.canvas'));
+    var $canvas = $('.page-header .cavas');
+    if($canvas.length) {
+      new Constellation($canvas);
     }
   });
 
