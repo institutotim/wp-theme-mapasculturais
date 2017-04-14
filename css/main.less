@@ -355,11 +355,14 @@ p.post-meta .fa {
   font-size: 1.2em;
 }
 .profiles {
+  background: #f7f7f7;
+  margin: -4rem 0 0 -4rem;
+  padding-left: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-bottom: -4rem;
   .profile {
-    margin: 0 0 -1px;
-    // background: #f7f7f7;
-    border: 1px solid #eee;
-    padding: 2rem;
+    margin: 0 0 4rem;
     h3 {
       padding-top: 0;
       font-size: 2.5em;
@@ -373,8 +376,8 @@ p.post-meta .fa {
       margin: 0 0 1rem;
     }
     .profile-data {
-      background: #f7f7f7;
-      padding: 1.5rem 5%;
+      background: #f0f0f0;
+      padding: 1rem 5%;
       display: table;
       width: 100%;
       margin: 0;
@@ -392,6 +395,7 @@ p.post-meta .fa {
       }
     }
     .network-author {
+      margin-bottom: 2rem;
       .author-thumb {
         &:after {
         }
@@ -497,11 +501,12 @@ p.post-meta .fa {
     margin-top: 4rem;
     font-size: 1.2em;
     .page-header-text {
-      background: @yellow;
-      color: #000;
+      // background: darken(@blue, 5%);
+      background: rgba(0,0,0,0.15);
+      // color: #000;
       padding: 4rem 4rem 4rem 0;
       margin: 4rem 0 0;
-      box-shadow: 1rem 1rem 0 @pink;
+      box-shadow: 1rem 1rem 0 rgba(0,0,0,0.25);
     }
   }
   h2 {
@@ -703,7 +708,8 @@ p.post-meta .fa {
   box-sizing: border-box;
   // border-top: 10px solid @yellow;
   // border-right: 10px solid @yellow;
-  box-shadow: .5rem .5rem 0 @pink;
+  // box-shadow: .5rem .5rem 0 darken(@lightblue, 15%);
+  box-shadow: 1rem 1rem 0 rgba(0,0,0,0.15);
   // border-right: 1px solid darken(@blue, 10%);
 }
 #colophon {
@@ -809,12 +815,14 @@ p.post-meta .fa {
 }
 .network-numbers {
   margin: -4rem 0 4rem;
-  padding: 4rem 0 2rem;
+  padding: 10rem 0 2rem;
   background: @blue;
   box-shadow: -6rem 0rem 0 @blue;
   // border-bottom: 10px solid @yellow;
   color: #fff;
   // color: @yell;
+  position: relative;
+  z-index: 1;
   hr {
     margin-top: -4rem;
   }

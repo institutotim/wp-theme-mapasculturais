@@ -69,7 +69,7 @@
             </div>
           </div>
         </div>
-        <div class="profiles content-section">
+        <div class="profiles content-section connect-border connect-right">
           <header class="content-section-header">
             <h2>Conheça as iniciativas</h2>
           </header>
