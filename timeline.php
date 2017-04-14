@@ -23,6 +23,7 @@
   </header>
   <section id="content">
     <div class="timeline">
+      <hr class="top" />
       <div class="timeline-item row">
         <div class="post-box">
           <p class="date">2015</p>
