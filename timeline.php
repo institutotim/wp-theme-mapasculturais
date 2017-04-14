@@ -16,14 +16,15 @@
       <div class="container">
         <div class="eight columns">
           <h2><?php the_title(); ?></h2>
-          <p>Mapas Culturais é uma plataforma colaborativa que reúne informações sobre agentes, espaços, eventos e projetos culturais, fornecendo ao poder público uma radiografia da área de cultura e ao cidadão um mapa de espaços e eventos culturais da região.</p>
+          <div class="page-header-text connect-border connect-left">
+            <p>Mapas Culturais é uma plataforma colaborativa que reúne informações sobre agentes, espaços, eventos e projetos culturais, fornecendo ao poder público uma radiografia da área de cultura e ao cidadão um mapa de espaços e eventos culturais da região.</p>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <section id="content">
     <div class="timeline">
-      <hr class="top" />
       <div class="timeline-item row">
         <div class="post-box">
           <p class="date">2015</p>

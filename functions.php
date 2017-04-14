@@ -140,11 +140,13 @@ function pmc_header_scripts() {
   wp_register_script('svg', get_template_directory_uri() . '/js/svg.js', array('jquery', 'snapsvg', 'underscore'), '0.0.1');
   wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.1');
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.1');
+  wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery'), '0.0.1');
 
   wp_enqueue_script('site');
   wp_enqueue_script('canvas');
   wp_enqueue_script('svg');
   wp_enqueue_script('map');
+  wp_enqueue_script('github');
 
 }
 add_action('wp_enqueue_scripts', 'pmc_header_scripts');
