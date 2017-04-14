@@ -339,57 +339,46 @@ p.post-meta .fa {
 }
 .profiles {
   .profile {
-    margin: 0 0 2rem;
+    margin: 0 0 -1px;
+    // background: #f7f7f7;
+    border: 1px solid #eee;
+    padding: 2rem;
     h3 {
       padding-top: 0;
-      font-size: 1.4em;
-      margin: 0 0 .5rem;
+      font-size: 2.5em;
+      margin: 0 0 1rem;
     }
     p {
       margin: 0;
       font-size: .9em;
       font-style: italic;
       color: #999;
-      margin: 0 0 .5rem;
+      margin: 0 0 1rem;
     }
     .profile-data {
       background: #f7f7f7;
-      padding: .5rem;
+      padding: 1.5rem 5%;
+      display: table;
+      width: 100%;
+      margin: 0;
+      font-size: 1em;
+      text-align: center;
+      box-sizing: border-box;
       // color: @pink;
-      border-bottom: 2px solid @pink;
+      // border-bottom: 2px solid @pink;
     }
     .profile-data-item {
-      margin-right: 2rem;
+      display: table-cell;
       font-style: normal;
       .icon {
-        margin-right: .5rem;
-        // font-size: 1.5em;
+        margin-right: 1rem;
       }
     }
     .network-author {
-      margin-top: 1rem;
       .author-thumb {
-        width: 70px;
-        height: 70px;
-        border-width: 3px;
-        box-shadow: 2px 2px 0 @pink;
-        border-color: @blue;
-        transition: all .2s linear;
         &:after {
-          background: @blue;
-          top: 50%;
-          margin-top: -5px;
-          transform: rotate(45deg);
         }
         img {
-          width: 64px !important;
-        }
-      }
-      &:hover {
-        .network-author {
-          .author-thumb {
-            box-shadow: 3px 3px 0 @pink;
-          }
         }
       }
     }

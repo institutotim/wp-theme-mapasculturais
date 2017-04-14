@@ -1,7 +1,7 @@
 (function($) {
 
   $(document).ready(function() {
-    var $canvas = $('.page-header .cavas');
+    var $canvas = $('.page-header .canvas');
     if($canvas.length) {
       new Constellation($canvas);
     }
