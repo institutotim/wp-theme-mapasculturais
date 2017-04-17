@@ -70,13 +70,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-hr {
+hr,
+.hr {
   border: 0;
   height: 2px;
   background: url(../img/ptn-dot-horizontal.png);
-  &.dark {
-    background: url(../img/ptn-dot-horizontal-dark.png);
-  }
+}
+hr.dark,
+.hr.dark,
+.hr-dark {
+  background: url(../img/ptn-dot-horizontal-dark.png);
 }
 .container {
   max-width: 1280px;
@@ -858,6 +861,79 @@ p.post-meta .fa {
       background: url(../img/ptn-dot-horizontal-dark.png);
       margin-top: 1rem;
       // opacity: .3;
+    }
+  }
+}
+.code-chart-container {
+  margin: -4rem 0 4rem;
+  overflow: hidden;
+  background: @blue;
+  h3 {
+    font-size: .6em;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0 4rem 0 0;
+    color: #999;
+    padding-bottom: 4rem;
+  }
+  .gh-chart {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+.gh-chart {
+  .highcharts-tooltip-box,
+  .highcharts-background {
+    fill: @blue;
+  }
+  .highcharts-area {
+    fill: @blue;
+    fill-opacity: 1;
+  }
+}
+
+.page-template-page-community {
+  .page-header {
+    .community-numbers {
+      margin-top: 4rem;
+      font-size: .9em;
+      float: right;
+      .intro-numbers {
+        float: right;
+        margin-left: 2rem;
+        max-width: 300px;
+        .icon {
+          margin-right: 0;
+        }
+        p.label {
+          margin-left: 6rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+  .delibera-categories {
+    font-family: "Tim Sans";
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 1rem;
+        color: @lightblue;
+        &:after {
+          .hr();
+          .hr-dark();
+          margin-top: 1rem;
+          display: block;
+          content: '';
+          opacity: .5;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

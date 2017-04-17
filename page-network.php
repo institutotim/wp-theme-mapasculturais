@@ -17,7 +17,7 @@
         <div class="eight columns">
           <h2><?php the_title(); ?></h2>
           <div class="page-header-text connect-border connect-left">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mi et malesuada aliquet. Donec dictum lorem sit amet nunc dictum iaculis. Etiam commodo malesuada libero id feugiat. Nam nisi eros, feugiat vel diam vel, semper convallis justo. Integer lacinia placerat elit in egestas. Nam sed enim dictum, ornare sem at, tempus justo.</p>
+            <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <div class="six columns">
         <div class="network-numbers connect-border connect-right">
           <hr />
-          <p class="numbers-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis mi et malesuada aliquet. Donec dictum lorem sit amet nunc dictum iaculis.</p>
+          <p class="numbers-intro">Consulte o mapa e a lista abaixo para conhecer as instalações da ferramenta Mapas Culturais.</p>
           <div class="row">
             <div class="six columns">
               <div class="intro-numbers">

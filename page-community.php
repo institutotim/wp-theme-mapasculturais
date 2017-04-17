@@ -30,16 +30,63 @@
             </div>
           </div>
           <div class="seven columns">
-
+            <div class="community-numbers">
+              <div class="intro-numbers">
+                <p class="icon fa fa-code"></p>
+                <p class="number do-count">4681</p>
+                <p class="label">contribuições no código</p>
+              </div>
+              <div class="intro-numbers">
+                <p class="icon fa fa-code-fork"></p>
+                <p class="number do-count">29</p>
+                <p class="label">desenvolvedores colaborando</p>
+              </div>
+              <div class="intro-numbers">
+                <p class="icon fa fa-comments-o"></p>
+                <p class="number do-count">161</p>
+                <p class="label">questões em discussão no GitHub</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </header>
   <section id="content">
+    <div class="code-chart-container">
+      <div class="gh-chart">
+      </div>
+      <h3>Atividade recente do repositório</h3>
+    </div>
     <div class="container">
-      <div class="six columns">
-        <?php the_content(); ?>
+      <div class="four columns">
+        <h2>Delibera</h2>
+        <p>In at est ac magna suscipit fermentum. Sed efficitur nisl a tristique malesuada. Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</p>
+        <div class="delibera-categories">
+          <ul>
+            <li>
+              <a href="#">Categoria #1</a>
+            </li>
+            <li>
+              <a href="#">Categoria #2</a>
+            </li>
+            <li>
+              <a href="#">Categoria #3</a>
+            </li>
+            <li>
+              <a href="#">Categoria #4</a>
+            </li>
+            <li>
+              <a href="#">Categoria #5</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="four columns">
+        <h3>Pautas ativas</h3>
+      </div>
+      <div class="four columns">
+        <h3>Pautas pendentes</h3>
       </div>
     </div>
   <section>

@@ -76,7 +76,7 @@ Number.prototype.format = function(n, x) {
       var target = $el.data('target');
       var current = parseInt($el.data('current') || 0);
       var steps = 30;
-      var skip = parseInt(target/steps);
+      var skip = parseInt(target/steps) || 1;
       if(target > current) {
         var text = current + skip;
         $el.data('current', text);

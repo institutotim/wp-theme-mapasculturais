@@ -126,21 +126,27 @@ function pmc_header_scripts() {
   wp_register_style('skeleton', '//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css');
   wp_register_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
   wp_register_style('leaflet', '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css');
+  wp_register_style('highcharts', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/css/highcharts.css');
 
-  wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('webfonts', 'pmc-icons', 'normalize', 'skeleton', 'fontawesome', 'leaflet'), '0.0.10');
+  wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('webfonts', 'pmc-icons', 'normalize', 'skeleton', 'fontawesome', 'leaflet', 'highcharts'), '0.0.10');
   wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css', array('main'), '0.0.2');
 
   wp_enqueue_style('main');
   wp_enqueue_style('responsive');
 
   wp_register_script('snapsvg', 'https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js');
-  // wp_register_script('underscore', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js');
   wp_register_script('leaflet', '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js');
+  wp_register_script('highcharts', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/highcharts.js');
+  wp_register_script('highcharts-more', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/highcharts-more.js');
+  wp_register_script('moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js');
   wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery'), '0.0.1');
   wp_register_script('svg', get_template_directory_uri() . '/js/svg.js', array('jquery', 'snapsvg', 'underscore'), '0.0.1');
   wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.1');
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.1');
-  wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery'), '0.0.1');
+  wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.1');
+
+  $gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
+  wp_localize_script('github', 'ghData', json_decode($gh_data));
 
   wp_enqueue_script('site');
   wp_enqueue_script('canvas');
