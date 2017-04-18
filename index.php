@@ -20,23 +20,37 @@
             <header class="content-section-header">
               <h2>Notícias</h2>
             </header>
-            <article>
+            <article class="post">
+              <div class="post-thumbnail" style="background-image:url(http://lorempixel.com/700/700/);"></div>
               <h3>Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</h3>
-              <p> Mauris luctus lobortis diam, quis aliquet velit sollicitudin quis. Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa, ultrices imperdiet nunc tempor ac. Quisque accumsan lectus ac orci interdum, id pretium nulla tempus. Vestibulum lorem velit, ultricies et faucibus et, lacinia non felis.</p>
+              <div class="meta">
+                <p class="author">
+                  <img src="http://lorempixel.com/30/30/" />
+                  Raimundo Nonato
+                </p>
+                <p class="date">
+                  <span class="fa fa-clock-o"></span>
+                  10 de abril de 2017
+                </p>
+              </div>
             </article>
           </div>
           <div class="content-section-content">
-            <article>
-              <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa.</h3>
-              <p>Quisque accumsan lectus ac orci interdum, id pretium nulla tempus. Vestibulum lorem velit, ultricies et faucibus et, lacinia non felis.</p>
+            <article class="post">
+              <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa. In interdum facilisis.</h3>
+              <div class="meta">
+                <p class="author">
+                  <img src="http://lorempixel.com/30/30/" />
+                  Raimundo Nonato
+                </p>
+                <p class="date">
+                  <span class="fa fa-clock-o"></span>
+                  10 de abril de 2017
+                </p>
+              </div>
             </article>
-            <hr class="dark" />
-            <article>
-              <h3>Vestibulum lorem velit, ultricies et faucibus et, lacinia non felis.</h3>
-              <p>Mauris luctus lobortis diam, quis aliquet velit sollicitudin quis. Ultrices imperdiet nunc tempor ac. Quisque accumsan lectus ac orci interdum, id pretium nulla tempus.</p>
-            </article>
-            <hr class="dark" />
           </div>
+          <p><a class="button block">Veja mais notícias</a></p>
         </section>
       </div>
       <div class="seven columns">
@@ -46,4 +60,5 @@
   </div>
 </section>
 <?php endwhile; endif; ?>
+<?php get_template_part('parts/community-section'); ?>
 <?php get_footer(); ?>

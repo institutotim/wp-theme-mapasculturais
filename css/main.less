@@ -89,6 +89,25 @@ hr.dark,
   height: auto;
   border-radius: 0;
   border: 0;
+  background: @lightblue;
+  color: #fff;
+  // line-height: inherit;
+  padding: 1rem 4rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background: lighten(@lightblue, 10%);
+    color: #fff;
+  }
+  &.block {
+    display: block;
+  }
+  &.button-primary {
+    background: @pink;
+    &:hover {
+      background: lighten(@pink, 5%);
+    }
+  }
   .fa {
     margin: .8rem 1rem 0 -1rem;
     float: left;
@@ -137,7 +156,11 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 }
 
 .content-section {
+  font-size: .9em;
   .content-section-header {
+    &.align {
+      padding-top: 1.5rem;
+    }
     h2,
     h3 {
       color: @lightblue;
@@ -149,14 +172,53 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     }
   }
   article {
+    margin: 0 0 4rem;
+    .post-thumbnail {
+      width: calc(~"100% + 4rem");
+      margin: 0 0 2rem;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
     h2,h3 {
       font-size: 2em;
+    }
+    .meta {
+      color: #999;
+      font-size: .9em;
+      display: table;
+      width: 100%;
+      margin: 0 0 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px dotted #d7d7d7;
+      &:last-child {
+        margin: 0;
+        padding-bottom: 0;
+        border: 0;
+      }
+      p {
+        display: table-cell;
+        margin-right: 2rem;
+        img,
+        .fa {
+          margin: 0 1rem 0 0;
+        }
+      }
+      .author {
+        line-height: 30px;
+        img {
+          float: left;
+          border-radius: 100%;
+          width: 30px;
+          height: auto;
+        }
+      }
     }
     .network-author {
       float: left;
       color: #999;
       font-style: italic;
-      margin: 0 2rem 0 0;
+      margin: 0 4rem 0 0;
       text-align: center;
       .author-thumb {
         display: block;
@@ -192,12 +254,17 @@ input[type=email], input[type=number], input[type=password], input[type=search],
         font-size: .9em;
       }
     }
+    .network-post-content {
+      float: left;
+      width: calc(~"100% - 100px - 4rem - 2rem");
+    }
   }
   .first-content {
     background: @pink;
     padding: 4rem 4rem 4rem 0;
     margin: -4rem 0 4rem;
     color: #fff;
+    font-size: 1.2em;
     .content-section-header {
       h2,
       h3 {
@@ -207,6 +274,16 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     }
     &:hover {
       background: darken(@pink, 5%);
+    }
+    article {
+      margin: 0;
+      .post-thumbnail {
+
+      }
+      .meta {
+        color: rgba(255,255,255,0.6);
+        border-color: rgba(255,255,255,0.3);
+      }
     }
   }
 }
@@ -482,20 +559,6 @@ p.post-meta .fa {
   position: relative;
   padding-bottom: 0;
   z-index: 1000;
-  .button, button, input[type=button], input[type=reset], input[type=submit] {
-    border-color: #fff;
-    color: #fff;
-    background: @lightblue;
-    &:hover {
-      background: lighten(@lightblue, 5%);
-    }
-  }
-  .button.button-primary, button.button-primary, input[type=button].button-primary, input[type=reset].button-primary, input[type=submit].button-primary {
-    background: @pink;
-    &:hover {
-      background: lighten(@pink, 5%);
-    }
-  }
   hr {
     margin: 0;
     padding: 0;
@@ -618,8 +681,6 @@ p.post-meta .fa {
       display: inline-block;
       margin: 0 0 0 1rem;
       font-size: .4em;
-      padding-top: .4rem;
-      padding-bottom: .4rem;
     }
   }
   .network {
@@ -836,9 +897,10 @@ p.post-meta .fa {
   }
 }
 .feature-list {
+  margin: 0;
   list-style-type: none;
   li {
-    padding: 1rem 0 0;
+    padding: 0;
   	text-indent: -3em;
     margin-left: 3em;
     &:last-child {
@@ -858,9 +920,9 @@ p.post-meta .fa {
       display: block;
       width: 100%;
       height: 3px;
-      background: url(../img/ptn-dot-horizontal-dark.png);
+      background: url(../img/ptn-dot-horizontal.png);
       margin-top: 1rem;
-      // opacity: .3;
+      opacity: .3;
     }
   }
 }
@@ -935,5 +997,44 @@ p.post-meta .fa {
         }
       }
     }
+  }
+}
+
+.delibera-issue {
+  h4 {
+    margin: 0 0 2rem;
+
+  }
+  .issue-meta {
+    margin: 0 0 2rem;
+    font-size: .8em;
+    color: #999;
+  }
+  button,
+  .button {
+    background: @lightblue;
+    color: #fff;
+  }
+}
+
+#community-section {
+  background: @blue;
+  color: #fff;
+  padding: 6rem 0;
+  h2 {
+    border-bottom: 1rem solid @pink;
+    display: inline-block;
+    padding-bottom: 1rem;
+    margin-bottom: 4rem;
+  }
+  .buttons {
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+  .button {
+    font-size: 1em;
+    height: auto;
   }
 }

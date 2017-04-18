@@ -83,10 +83,60 @@
         </div>
       </div>
       <div class="four columns">
-        <h3>Pautas ativas</h3>
+        <section class="content-section">
+          <header class="content-section-header align">
+            <h3>Pautas em discussão</h3>
+          </header>
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <button>Votar</button>
+          </article>
+          <hr class="dark" />
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <button>Votar</button>
+          </article>
+          <hr class="dark" />
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <button>Votar</button>
+          </article>
+          <hr class="dark" />
+        </section>
       </div>
       <div class="four columns">
-        <h3>Pautas pendentes</h3>
+        <section class="content-section">
+          <header class="content-section-header align">
+            <h3>Propostas de pauta</h3>
+          </header>
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <div class="issue-meta">
+              <span class="pending-meta">
+                <span class="up">
+                  <span class="fa fa-thumbs-up"></span>
+                  0
+                </span>
+                <span class="down">
+                  <span class="fa fa-thumbs-down"></span>
+                  0
+                </span>
+              </span>
+            </div>
+            <button>Gostaria de ver essa pauta em discussão</button>
+          </article>
+          <hr class="dark" />
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <button>Gostaria de ver essa pauta em discussão</button>
+          </article>
+          <hr class="dark" />
+          <article class="delibera-issue">
+            <h4>Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</h4>
+            <button>Gostaria de ver essa pauta em discussão</button>
+          </article>
+          <hr class="dark" />
+        </section>
       </div>
     </div>
   <section>

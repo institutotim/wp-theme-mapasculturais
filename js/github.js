@@ -16,7 +16,6 @@
           week.total
         ])
       });
-      console.log(data);
       $chart = $('.gh-chart');
       if($chart.length) {
         $chart.highcharts({
