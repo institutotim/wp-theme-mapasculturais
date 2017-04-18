@@ -48,7 +48,7 @@
           <span class="fa fa-envelope"></span>
           Newsletter
         </h2>
-        <input type="email" placeholder="Email" />
+        <input type="email" placeholder="Preencha seu email" />
         <input type="submit" value="Cadastrar" />
       </div>
     </div>
