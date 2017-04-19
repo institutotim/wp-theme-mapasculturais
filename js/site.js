@@ -43,10 +43,11 @@ Number.prototype.format = function(n, x) {
       var css = {};
       if(direction.indexOf('right') !== -1) {
         var width = $(window).width() - $el.offset().left;
+        var padding = parseFloat($el.css('padding-left').split('px')[0]);
         console.log(width);
         css['width'] = width;
         if(direction.indexOf('no-padding') == -1) {
-          css['padding-right'] = width - $el.originalWidth;
+          css['padding-right'] = width - $el.originalWidth - padding;
         }
       } else if(direction.indexOf('left') !== -1) {
         var currentOffset = $el.offset().left;

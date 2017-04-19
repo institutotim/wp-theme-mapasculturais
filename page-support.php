@@ -155,7 +155,7 @@
           </p>
         </div>
         <div class="four columns">
-          <div class="sidebar">
+          <div class="sidebar regular-sidebar connect-border connect-right">
             <h4>Qual o seu perfil?</h4>
             <nav class="target-group-nav">
               <a>

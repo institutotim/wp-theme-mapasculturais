@@ -53,7 +53,7 @@
           <p><a class="button block">Veja mais notícias</a></p>
         </section>
       </div>
-      <div class="seven columns">
+      <div class="six columns offset-by-one">
         <?php get_template_part('parts/network-blog'); ?>
       </div>
     </div>
