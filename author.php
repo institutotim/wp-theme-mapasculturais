@@ -10,7 +10,7 @@
     <div class="page-header-content">
       <div class="container">
         <div class="seven columns">
-          <p class="over-title">Secretaria Municipal de Cultura de São Paulo</p>
+          <p class="over-title subtitle">Secretaria Municipal de Cultura de São Paulo</p>
           <h2>SPCultura</h2>
           <div class="page-header-text connect-border connect-left">
             <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</p>
