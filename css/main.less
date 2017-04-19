@@ -146,7 +146,7 @@ h4 a {
 h4 {
   font-size: 1.4em;
   font-weight: 300;
-  margin: 0;
+  margin: 0 0 2rem;
 }
 input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
   border-radius: 0;
@@ -1037,6 +1037,10 @@ p.post-meta .fa {
   }
 }
 
+.sidebar {
+  margin-top: 1rem;
+}
+
 .featured-categories {
   font-family: "Tim Sans";
   font-size: 1.2em;
@@ -1044,14 +1048,20 @@ p.post-meta .fa {
   ul {
     list-style: none;
     li {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: @lightblue;
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
       &:after {
         .hr();
         .hr-dark();
-        margin-top: 2rem;
+        margin-top: 1rem;
         display: block;
         content: '';
+        opacity: .3;
       }
       a {
         color: inherit;
@@ -1151,7 +1161,7 @@ p.post-meta .fa {
           font-size: 1em;
         }
       }
-      p {
+      .meta-item {
         margin: 0;
         padding-right: 1rem;
         span.label {
@@ -1169,6 +1179,16 @@ p.post-meta .fa {
           padding: 0 0 1rem;
           color: #666;
         }
+        &.target-group {
+          font-size: .8em;
+          color: @pink;
+          .fa {
+            float: right;
+            margin-left: 1rem;
+            margin-top: .3rem;
+            font-size: 1.5em;
+          }
+        }
       }
     }
     .tutorial-content {
@@ -1177,6 +1197,22 @@ p.post-meta .fa {
       p {
         color: #666;
       }
+    }
+  }
+}
+
+.target-group-nav {
+  display: table;
+  margin: 0 0 4rem;
+  width: 100%;
+  color: @pink;
+  font-family: 'Tim Sans';
+  font-size: 1.2em;
+  a {
+    color: @pink;
+    display: table-cell;
+    .fa {
+      margin-right: 1rem;
     }
   }
 }

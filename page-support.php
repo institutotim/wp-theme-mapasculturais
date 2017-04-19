@@ -97,6 +97,10 @@
                   <span class="label">Complexidade</span>
                   <span class="meta-val complex-item complex-item-2">Média</span>
                 </p>
+                <p class="meta-item target-group">
+                  <span class="fa fa-gear"></span>
+                  para o gestor
+                </p>
               </div>
               <div class="tutorial-content">
                 <h3>Como fazer uma instalação local da plataforma</h3>
@@ -114,6 +118,10 @@
                   <span class="label">Complexidade</span>
                   <span class="meta-val complex-item complex-item-2">Média</span>
                 </p>
+                <p class="meta-item target-group">
+                  <span class="fa fa-gear"></span>
+                  para o gestor
+                </p>
               </div>
               <div class="tutorial-content">
                 <h3>Gerenciamento de usuários</h3>
@@ -129,7 +137,11 @@
                 </a>
                 <p class="meta-item">
                   <span class="label">Complexidade</span>
-                  <span class="meta-val complex-item complex-item-2">Média</span>
+                  <span class="meta-val complex-item complex-item-2">Baixa</span>
+                </p>
+                <p class="meta-item target-group">
+                  <span class="fa fa-user"></span>
+                  para o agente cultural
                 </p>
               </div>
               <div class="tutorial-content">
@@ -143,39 +155,52 @@
           </p>
         </div>
         <div class="four columns">
-          <div class="featured-categories">
-            <ul>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
+          <div class="sidebar">
+            <h4>Qual o seu perfil?</h4>
+            <nav class="target-group-nav">
+              <a>
+                <span class="fa fa-gear"></span>
+                gestor
+              </a>
+              <a>
+                <span class="fa fa-user"></span>
+                agente cultural
+              </a>
+            </nav>
+            <nav class="featured-categories">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-bookmark-o"></span>
+                    Categoria #1
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-bookmark-o"></span>
+                    Categoria #2
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-bookmark-o"></span>
+                    Categoria #3
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-bookmark-o"></span>
+                    Categoria #4
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-bookmark-o"></span>
+                    Categoria #4
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
