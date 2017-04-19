@@ -7,7 +7,7 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content">
+    <div class="page-header-content no-text">
       <div class="container">
         <div class="eight columns">
           <h2><?php the_title(); ?></h2>
@@ -17,8 +17,7 @@
   </header>
   <section id="content">
     <div class="container">
-      <div class="six columns">
-        <p><?php the_author_posts_link(); ?></p>
+      <div class="eight columns">
         <?php the_content(); ?>
       </div>
     </div>
