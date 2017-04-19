@@ -11,9 +11,9 @@
       <div class="container">
         <div class="twelve columns">
           <p class="over-title category">
-            <a href="#" class="area">Notícias</a>
+            <a href="#" class="area">Tutoriais</a>
             <span class="fa fa-chevron-right"></span>
-            <a href="#" class="cat">Categoria #2</a>
+            <a href="#" class="cat">Categoria #1</a>
           </p>
           <h2><?php the_title(); ?></h2>
         </div>
@@ -24,17 +24,18 @@
     <div class="container">
       <div class="twelve columns">
         <div id="meta">
-          <p class="author">
-            <img src="http://lorempixel.com/60/60/" />
-            Raimundo Nonato
+          <p class="target-group">
+            <span class="fa fa-gear"></span>
+            para gestores
           </p>
-          <p class="tags">
-            <span class="fa fa-tags"></span>
-            <a>interatividade</a>, <a>cinema</a>
+          <p class="complex">
+            <span class="fa fa-certificate"></span>
+            <span class="label">Complexidade:</span>
+            Média
           </p>
-          <p class="date">
-            <span class="fa fa-clock-o"></span>
-            10 de abril de 2017
+          <p class="valid">
+            <span class="fa fa-check-circle"></span>
+            Válido para todas as versões da plataforma
           </p>
         </div>
       </div>
@@ -55,34 +56,45 @@
       <div class="four columns">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <div class="widget">
-            <h2>Exemplo de widget</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod lectus a cursus dictum. Nulla at metus id elit volutpat ornare ut quis nisl. Sed pellentesque leo in massa ornare, eu tincidunt nibh cursus. Nulla vestibulum, enim in vulputate imperdiet, felis arcu dignissim ipsum, at laoreet urna lectus at metus. Phasellus vitae massa ac ligula placerat sagittis. Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
-          </div>
-          <div class="widget">
-            <h2>Categorias</h2>
+            <h2>Navegar pelos tutoriais</h2>
+            <nav class="target-group-nav">
+              <a>
+                <span class="fa fa-gear"></span>
+                gestor
+              </a>
+              <a>
+                <span class="fa fa-user"></span>
+                agente cultural
+              </a>
+            </nav>
             <ul>
               <li>
                 <a href="#">
+                  <span class="fa fa-bookmark-o"></span>
                   Categoria #1
                 </a>
               </li>
               <li>
                 <a href="#">
+                  <span class="fa fa-bookmark-o"></span>
                   Categoria #2
                 </a>
               </li>
               <li>
                 <a href="#">
+                  <span class="fa fa-bookmark-o"></span>
                   Categoria #3
                 </a>
               </li>
               <li>
                 <a href="#">
+                  <span class="fa fa-bookmark-o"></span>
                   Categoria #4
                 </a>
               </li>
               <li>
                 <a href="#">
+                  <span class="fa fa-bookmark-o"></span>
                   Categoria #4
                 </a>
               </li>

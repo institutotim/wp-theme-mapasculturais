@@ -9,17 +9,98 @@
     </div>
     <div class="page-header-content">
       <div class="container">
-        <div class="eight columns">
-          <p class="subtitle">Secretaria Municipal de Cultura de São Paulo</p>
+        <div class="seven columns">
+          <p class="over-title">Secretaria Municipal de Cultura de São Paulo</p>
           <h2>SPCultura</h2>
+          <div class="page-header-text connect-border connect-left">
+            <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</p>
+          </div>
+        </div>
+        <div class="five columns">
+          <div class="author-numbers">
+            <div class="row">
+              <div class="six columns">
+                <div class="intro-numbers">
+                  <p class="icon pmc-icon-person"></p>
+                  <p class="number do-count">123456</p>
+                  <p class="label">agentes</p>
+                </div>
+              </div>
+              <div class="six columns">
+                <div class="intro-numbers">
+                  <p class="icon pmc-icon-calendar"></p>
+                  <p class="number do-count">123456</p>
+                  <p class="label">eventos</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                <div class="intro-numbers">
+                  <p class="icon pmc-icon-door"></p>
+                  <p class="number do-count">123456</p>
+                  <p class="label">espaços</p>
+                </div>
+              </div>
+              <div class="six columns">
+                <div class="intro-numbers">
+                  <p class="icon pmc-icon-paper"></p>
+                  <p class="number do-count">123456</p>
+                  <p class="label">projetos</p>
+                </div>
+              </div>
+            </div>
+            <p><a class="button block"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <section id="content">
     <div class="container">
-      <div class="six columns">
-        <?php the_content(); ?>
+      <div class="eight columns">
+        <?php get_template_part('parts/network-blog-2'); ?>
+      </div>
+      <div class="four columns">
+        <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
+          <div class="widget">
+            <div class="statistics">
+              <h3>Estatísticas</h3>
+              <p class="filter">
+                <select>
+                  <option>Agentes culturais</option>
+                  <option>Eventos</option>
+                  <option>Epaços</option>
+                  <option>Projetos</option>
+                </select>
+                nos últimos 30 dias
+              </p>
+              <div class="gh-chart chart"></div>
+              <p class="result">123 agentes culturais cadastrados nos últimos 30 dias</p>
+            </div>
+          </div>
+          <div class="widget">
+            <div class="team">
+              <h3>Equipe</h3>
+              <ul>
+                <li class="row">
+                  <img src="http://lorempixel.com/100/100/" class="li-img" />
+                  <h4>Lorem Ipsum</h4>
+                  <p>Direção geral</p>
+                </li>
+                <li class="row">
+                  <img src="http://lorempixel.com/100/100/" class="li-img" />
+                  <h4>Dolor Sit</h4>
+                  <p>Desenvolvimento</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="widget">
+            <h3>Contato</h3>
+            <p>Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
+          </div>
+        </div>
       </div>
     </div>
   <section>

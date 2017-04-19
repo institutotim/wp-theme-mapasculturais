@@ -187,8 +187,6 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     .meta {
       color: #999;
       font-size: .9em;
-      display: table;
-      width: 100%;
       margin: 0 0 2rem;
       padding-bottom: 2rem;
       border-bottom: 1px dotted #d7d7d7;
@@ -198,8 +196,8 @@ input[type=email], input[type=number], input[type=password], input[type=search],
         border: 0;
       }
       p {
-        display: table-cell;
-        margin-right: 2rem;
+        margin: 0 4rem 0 0;
+        display: inline-block;
         img,
         .fa {
           margin: 0 1rem 0 0;
@@ -559,7 +557,7 @@ p.post-meta .fa {
   text-transform: lowercase;
   a {
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem .5rem;
     color: white;
     &:hover {
       color: @yellow;
@@ -624,6 +622,22 @@ p.post-meta .fa {
     &.no-text {
       padding-bottom: 6rem;
     }
+    &.compos-title {
+      h2 {
+        float: left;
+        margin: 0 6rem 0 0;
+      }
+      h3 {
+        margin: 1.4rem 0 0;
+        float: left;
+        color: @pink;
+        font-size: 2em;
+        .fa {
+          font-size: 1em;
+          margin-right: 1rem;
+        }
+      }
+    }
     .page-header-text {
       // background: darken(@blue, 5%);
       background: rgba(0,0,0,0.15);
@@ -635,9 +649,21 @@ p.post-meta .fa {
   }
   p.over-title {
     margin: 0 0 1rem;
-    color: @pink;
+    color: @lightblue;
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom: 1rem;
+    border-bottom: .5rem solid rgba(0,0,0,0.10);
+    > * {
+      display: inline-block;
+    }
+    .area {
+      text-transform: uppercase;
+      color: #fff;
+      margin-right: 1rem;
+    }
     .fa {
-      font-size: 1em;
+      font-size: .6em;
       margin-right: 1rem;
     }
     a {
@@ -1054,12 +1080,14 @@ p.post-meta .fa {
   }
 }
 .gh-chart {
-  .highcharts-tooltip-box,
-  .highcharts-background {
+  .highcharts-tooltip-box {
     fill: @blue;
   }
+  .highcharts-background {
+    fill:transparent;
+  }
   .highcharts-area {
-    fill: @blue;
+    fill:transparent;
     fill-opacity: 1;
   }
 }
@@ -1112,6 +1140,11 @@ p.post-meta .fa {
     content: '';
     opacity: .3;
   }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -1120,11 +1153,52 @@ p.post-meta .fa {
       margin: 0;
       padding: 1rem 0;
       border-bottom: 1px solid #ddd;
+      .fa {
+        margin-right: 1.5rem;
+        font-size: 1em;
+      }
       a {
         text-decoration: none;
       }
       &:last-child {
         border-bottom: 0;
+      }
+    }
+  }
+}
+
+.widget .statistics {
+  .filter {
+    select {
+      margin-right: .5rem;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      color: #333;
+    }
+  }
+  .chart {
+    margin: 0 0 3rem;
+  }
+  .result {
+    font-family: 'Tim Sans';
+    font-size: 1.4em;
+  }
+}
+
+.widget .team {
+  ul {
+    li {
+      padding: 2rem 0;
+      img {
+        float: left;
+        border-radius: 100%;
+        width: 70px;
+        height: auto;
+        margin: 0 2rem 0 0;
+      }
+      h4,p {
+        margin: 0;
       }
     }
   }
@@ -1230,57 +1304,53 @@ p.post-meta .fa {
   .tutorial-item {
     .tutorial-meta {
       font-family: 'Tim Sans';
-      float: left;
-      width: 200px;
-      margin: -1rem 4rem 0 0;
-      padding: 2rem 0 0;
-      text-align: right;
+      float: right;
+      width: 27%;
+      margin: 0;
+      padding: 2rem 0;
       box-sizing: border-box;
-      border-right: 1px dotted lighten(@lightblue, 30%);
+      font-size: .8em;
+      .fa {
+        font-size: 1em;
+      }
       .category {
-        text-align: center;
-        font-size: .9em;
         display: block;
-        padding-bottom: 2rem;
-        border-bottom: 1px dotted lighten(@lightblue, 30%);
         text-transform: lowercase;
+        padding-left: 2rem;
+        margin: 0 0 1rem;
         .fa {
-          margin-right: 2rem;
-          font-size: 1em;
+          margin-right: 1rem;
         }
       }
       .meta-item {
-        margin: 0;
-        padding-right: 2rem;
+        margin: 0 0 1rem;
+        padding-left: 2rem;
         span.label {
-          margin: 0;
-          font-size: .7em;
-          display: block;
+          margin: 0 1rem 0 0;
           padding: 2rem 0 0;
           text-transform: uppercase;
           color: #bbb;
+          font-size: .8em;
+          .fa {
+            margin-right: 1rem;
+            font-size: 1.2em;
+          }
         }
         span.meta-val {
-          // background: @lightblue;
-          // color: #fff;
-          display: block;
           padding: 0 0 2rem;
           color: #666;
         }
         &.target-group {
-          font-size: .8em;
           color: @pink;
           .fa {
-            float: right;
-            margin-left: 1rem;
+            margin-right: 1rem;
             margin-top: .3rem;
-            font-size: 1.5em;
           }
         }
       }
     }
     .tutorial-content {
-      width: calc(~"100% - 200px - 4rem");
+      width: calc(~"100% - 27% - 6rem");
       float: left;
       p {
         color: #666;
@@ -1291,7 +1361,7 @@ p.post-meta .fa {
 
 .target-group-nav {
   display: table;
-  margin: 0 0 4rem;
+  margin: 0 0 2rem;
   width: 100%;
   color: @pink;
   font-family: 'Tim Sans';
@@ -1314,11 +1384,11 @@ p.post-meta .fa {
     position: absolute;
     left: 0;
     top: 0;
-    line-height: 130px;
+    line-height: 120px;
   }
   input[type=text] {
     width: 100%;
-    padding: 7rem 0 6rem 6rem;
+    padding: 6rem 0 6rem 6rem;
     background: transparent;
     border: 0;
     margin: 0;
@@ -1380,6 +1450,19 @@ p.post-meta .fa {
   }
 }
 
+#archive,
+.single,
+.author {
+  #content {
+    font-size: 1.2em;
+    padding: 6rem 0;
+    .sidebar {
+      padding-top: 6rem;
+    }
+  }
+}
+
+#archive,
 .single {
   .page-header {
     .page-header-text {
@@ -1387,13 +1470,6 @@ p.post-meta .fa {
       box-shadow: 0 0 0;
       margin: 6rem 0 6rem;
       padding: 0;
-    }
-  }
-  #content {
-    font-size: 1.2em;
-    padding: 6rem 0;
-    .sidebar {
-      padding-top: 6rem;
     }
   }
 }
@@ -1418,6 +1494,15 @@ p.post-meta .fa {
     .fa {
       margin: 0 1rem 0 0;
       font-size: 1em;
+      color: #bbb;
+    }
+    .label {
+      font-family: 'Tim Sans';
+      text-transform: uppercase;
+      font-size: .7em;
+      margin-right: 1rem;
+      display: inline-block;
+      color: #bbb;
     }
   }
   .author {
@@ -1428,6 +1513,49 @@ p.post-meta .fa {
       width: 60px;
       height: auto;
       margin-right: 2rem;
+    }
+  }
+  .target-group {
+    color: @pink;
+    .fa {
+      color: inherit;
+    }
+  }
+  .valid {
+    float: right;
+    margin-right: 0;
+    color: #43be57;
+    .fa {
+      color: inherit;
+    }
+  }
+}
+
+.paging {
+  margin: 0 0 4rem;
+  a {
+    float: left;
+  }
+  a:last-child {
+    float: right;
+  }
+}
+
+.author {
+  .author-numbers {
+    margin-top: 8rem;
+    .intro-numbers {
+      font-size: .7em;
+    }
+  }
+  .chart {
+    .highcharts-tooltip-box {
+      fill: #fff;
+    }
+    .highcharts-tooltip {
+      text {
+        color: #333;
+      }
     }
   }
 }
