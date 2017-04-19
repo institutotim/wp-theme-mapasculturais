@@ -265,7 +265,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     padding: 4rem 4rem 4rem 0;
     margin: -4rem 0 4rem;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     .content-section-header {
       h2,
       h3 {
@@ -287,11 +287,14 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     }
     article {
       margin: 0;
+      h3 {
+        margin-bottom: 3rem;
+      }
       .post-thumbnail {
         // margin-top: -4rem;
       }
       .meta {
-        color: rgba(255,255,255,0.6);
+        color: rgba(255,255,255,0.7);
         border-color: rgba(255,255,255,0.3);
       }
     }
@@ -1032,27 +1035,181 @@ p.post-meta .fa {
       }
     }
   }
-  .delibera-categories {
-    font-family: "Tim Sans";
-    ul {
-      list-style: none;
-      li {
-        margin-bottom: 1rem;
-        color: @lightblue;
-        &:after {
-          .hr();
-          .hr-dark();
-          margin-top: 1rem;
-          display: block;
-          content: '';
-          opacity: .5;
-        }
-        a {
-          color: inherit;
-          text-decoration: none;
+}
+
+.featured-categories {
+  font-family: "Tim Sans";
+  font-size: 1.2em;
+  text-transform: lowercase;
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 2rem;
+      color: @lightblue;
+      &:after {
+        .hr();
+        .hr-dark();
+        margin-top: 2rem;
+        display: block;
+        content: '';
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        .fa {
+          font-size: 1em;
+          margin-right: 2rem;
         }
       }
     }
+  }
+}
+
+.page-template-page-support {
+  .page-header {
+    .small-buttons {
+      // position: absolute;
+      // bottom: 0;
+      // margin: 0;
+      // width: 100%;
+      margin: 4rem 0;
+      .button, button, input[type=button], input[type=reset], input[type=submit] {
+        background: transparent;
+        padding: 2rem 5rem;
+        font-size: .7em;
+        border: 1px solid rgba(255,255,255,0.1);
+        margin: 0 0 0 -1px;
+        display: block;
+        // text-align: left;
+        .fa {
+          margin-right: 3rem;
+        }
+        &:hover {
+          background: rgba(0,0,0,0.1);
+        }
+      }
+    }
+  }
+  .download-user-guide {
+    padding: 4rem;
+    background: url(../img/manual.png) center no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin: 4rem 0 6rem;
+    position: relative;
+    // border-radius: 20px;
+    box-shadow: 1rem 1rem 0 @lightblue;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.5);
+    }
+    .button {
+      position: absolute;
+      width: 50%;
+      left: 50%;
+      top: 50%;
+      margin-left: -25%;
+      margin-top: -38px;
+      display: block;
+      padding: 2rem 4rem;
+      font-size: .8em;
+    }
+  }
+  #support-chat {
+    margin-top: 10rem;
+  }
+}
+
+.tutorial-list {
+  margin: 0 0 2rem;
+  .tutorial-item {
+    .tutorial-meta {
+      font-family: 'Tim Sans';
+      float: left;
+      width: 200px;
+      margin: 0 4rem 0 0;
+      padding: 1rem 0 0;
+      text-align: right;
+      box-sizing: border-box;
+      border-top: 1px dotted lighten(@lightblue, 30%);
+      border-right: 1px dotted lighten(@lightblue, 30%);
+      .category {
+        text-align: center;
+        font-size: .9em;
+        display: block;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted lighten(@lightblue, 30%);
+        text-transform: lowercase;
+        .fa {
+          margin-right: 1rem;
+          font-size: 1em;
+        }
+      }
+      p {
+        margin: 0;
+        padding-right: 1rem;
+        span.label {
+          margin: 0;
+          font-size: .7em;
+          display: block;
+          padding: 1rem 0 0;
+          text-transform: uppercase;
+          color: #bbb;
+        }
+        span.meta-val {
+          // background: @lightblue;
+          // color: #fff;
+          display: block;
+          padding: 0 0 1rem;
+          color: #666;
+        }
+      }
+    }
+    .tutorial-content {
+      width: calc(~"100% - 200px - 4rem");
+      float: left;
+      p {
+        color: #666;
+      }
+    }
+  }
+}
+
+#big-search {
+  background: @yellow;
+  .big-search-container {
+    position: relative;
+  }
+  .fa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 120px;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 6rem 0 6rem 6rem;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    font-family: "Tim Sans";
+    font-size: 1.4em;
+    color: #000;
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.7);
+  }
+  ::-moz-placeholder {
+    color: rgba(0,0,0,0.7);
+  }
+  ::placeholder {
+    color: rgba(0,0,0,0.7);
   }
 }
 
@@ -1090,7 +1247,11 @@ p.post-meta .fa {
     }
   }
   .button {
-    font-size: 1em;
+    margin: 0 0 1rem;
+    font-size: .8em;
     height: auto;
+    .fa {
+      font-size: 2em;
+    }
   }
 }

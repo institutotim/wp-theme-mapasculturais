@@ -62,7 +62,7 @@
       <div class="four columns">
         <h2>Delibera</h2>
         <p>In at est ac magna suscipit fermentum. Sed efficitur nisl a tristique malesuada. Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</p>
-        <div class="delibera-categories">
+        <div class="featured-categories">
           <ul>
             <li>
               <a href="#">Categoria #1</a>
