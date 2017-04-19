@@ -8,7 +8,7 @@
 Install:
 
 * [Docker](https://www.docker.com/)
-* [gettext](https://www.gnu.org/software/gettext/).
+* [gettext](https://www.gnu.org/software/gettext/)
 
 
 ### Clone locally and install modules
@@ -27,13 +27,15 @@ grunt build
   docker-compose up
 ```
 
-### Init cron service
+### Populate statistics
 
 ```
-  docker exec -it wpthememapasculturais_wordpress_1 service cron start
+  docker exec -it wpthememapasculturais_wordpress_1 /usr/local/bin/php /var/www/html/wp-cron.php
 ```
 
-WP Cron doesn't run properly when running the site as a Docker container, so we are using system cron to fetch statistics from Mapas Culturais installations.
+This step is needed only when running the server with Docker. To use system cron instead of WP Cron, add [cron.conf](cron.conf) to your crontab.
+
+This cron task will add to every user with role "maintainer" and defined "instance_url" the following meta properties, which contain time series of elements count: `events_count`, `spaces_count`, `projects_count` and `agents_count`.
 
 ### Debuging
 
