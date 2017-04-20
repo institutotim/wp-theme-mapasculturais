@@ -165,4 +165,4 @@ require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
-require_once(TEMPLATEPATH . '/inc/install-statistics.php');
+require_once(TEMPLATEPATH . '/inc/platform-statistics.php');
