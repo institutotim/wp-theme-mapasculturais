@@ -25,26 +25,22 @@
         <nav id="mastnav" class="u-pull-right">
           <ul>
             <li>
-              <a href="page.html">Mapas Culturais</a>
+              <a href="page.html">Sobre a iniciativa</a>
               <ul>
-                <li><a href="#">Test submenu</a></li>
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">Dolor sit</a></li>
+                <li><a href="#">O que é</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Parceiros</a></li>
               </ul>
             </li>
             <li>
-              <a href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="page.html">Parceiros</a>
+              <a href="blog.html">Sobre o sistema</a>
               <ul>
-                <li><a href="#">Test submenu</a></li>
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">Dolor sit</a></li>
+                <li><a href="#">Mapas como serviço</a></li>
+                <li><a href="#">Suporte ao usuário</a></li>
               </ul>
             </li>
             <li>
-              <a href="support.html">Suporte</a>
+              <a href="page.html">Notícias</a>
             </li>
             <li>
               <a href="page.html">Contato</a>
