@@ -15,8 +15,8 @@
   <div class="container">
     <div class="row">
       <div class="five columns">
-        <section class="content-section">
-          <div class="content-section-content first-content connect-border connect-left">
+        <section class="content-section pink-section connect-border connect-left">
+          <div class="content-section-content first-content">
             <header class="content-section-header">
               <h2>Notícias</h2>
             </header>
@@ -35,9 +35,23 @@
               </div>
             </article>
           </div>
-          <div class="content-section-content">
+          <hr />
+          <div class="content-section-content secondary-content">
             <article class="post">
               <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa. In interdum facilisis.</h3>
+              <div class="meta">
+                <p class="author">
+                  <img src="http://lorempixel.com/30/30/" />
+                  Raimundo Nonato
+                </p>
+                <p class="date">
+                  <span class="fa fa-clock-o"></span>
+                  10 de abril de 2017
+                </p>
+              </div>
+            </article>
+            <article class="post">
+              <h3>Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</h3>
               <div class="meta">
                 <p class="author">
                   <img src="http://lorempixel.com/30/30/" />
