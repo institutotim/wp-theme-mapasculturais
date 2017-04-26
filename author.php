@@ -98,7 +98,32 @@
           </div>
           <div class="widget">
             <h3>Contato</h3>
-            <p>Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
+            <ul>
+              <li>
+                <a href="#">
+                  <span class="fa fa-envelope"></span>
+                  cultura@sp.gov.br
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="fa fa-telegram"></span>
+                  @spcultura
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="fa fa-whatsapp"></span>
+                  @spcultura
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="fa fa-github"></span>
+                  secult
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

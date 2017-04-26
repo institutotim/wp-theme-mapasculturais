@@ -216,6 +216,9 @@ input[type=email], input[type=number], input[type=password], input[type=search],
         padding-bottom: 0;
         border: 0;
       }
+      a {
+        text-decoration: none;
+      }
       p {
         margin: 0 4rem 0 0;
         display: inline-block;
@@ -666,7 +669,7 @@ p.post-meta .fa {
     padding-bottom: 1rem;
     border-bottom: .5rem solid rgba(0,0,0,0.10);
     &.subtitle {
-      color: #fff;
+      color: @yellow;
       border: 0;
     }
     > * {
@@ -1170,7 +1173,7 @@ p.post-meta .fa {
       border-bottom: 1px solid #ddd;
       .fa {
         margin-right: 1.5rem;
-        font-size: 1em;
+        font-size: 1.2em;
       }
       a {
         text-decoration: none;
@@ -1185,11 +1188,15 @@ p.post-meta .fa {
 .widget .statistics {
   .filter {
     select {
+      margin-bottom: 0;
       margin-right: .5rem;
       background: transparent;
       border: 0;
       padding: 0;
-      color: #333;
+      color: @lightblue;
+      option {
+        color: #333;
+      }
     }
   }
   .chart {
@@ -1197,7 +1204,22 @@ p.post-meta .fa {
   }
   .result {
     font-family: 'Tim Sans';
-    font-size: 1.4em;
+    font-size: 1.2em;
+    background: @lightblue;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 25%;
+      top: 0;
+      transform: rotate(45deg);
+      margin-top: -5px;
+      background: @lightblue;
+    }
   }
 }
 
@@ -1214,6 +1236,9 @@ p.post-meta .fa {
       }
       h4,p {
         margin: 0;
+      }
+      p {
+        color: #999;
       }
     }
   }
