@@ -88,16 +88,6 @@
               </li>
             </ul>
           </div>
-          <div class="widget">
-            <div class="newsletter-form">
-              <h2>
-                <span class="fa fa-envelope"></span>
-                Newsletter
-              </h2>
-              <input type="email" placeholder="Preencha seu email" />
-              <input type="submit" value="Cadastrar" />
-            </div>
-          </div>
         </div>
       </div>
     </div>
