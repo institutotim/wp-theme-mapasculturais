@@ -5,8 +5,10 @@
         <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa. In interdum facilisis.</h3>
         <div class="meta">
           <p class="author">
-            <img src="http://lorempixel.com/30/30/" />
-            Raimundo Nonato
+            <a href="#">
+              <img src="http://lorempixel.com/30/30/" />
+              Raimundo Nonato
+            </a>
           </p>
           <p class="date">
             <span class="fa fa-clock-o"></span>
