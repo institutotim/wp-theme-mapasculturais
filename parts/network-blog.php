@@ -18,8 +18,10 @@
             10 de abril de 2017
           </p>
           <p class="comments">
-            <span class="fa fa-comments-o"></span>
-            10 comentários
+            <a href="#">
+              <span class="fa fa-comments-o"></span>
+              10 comentários
+            </a>
           </p>
         </div>
       </div>
@@ -40,8 +42,10 @@
             10 de abril de 2017
           </p>
           <p class="comments">
-            <span class="fa fa-comments-o"></span>
-            10 comentários
+            <a href="#">
+              <span class="fa fa-comments-o"></span>
+              10 comentários
+            </a>
           </p>
         </div>
       </div>
@@ -62,8 +66,10 @@
             10 de abril de 2017
           </p>
           <p class="comments">
-            <span class="fa fa-comments-o"></span>
-            10 comentários
+            <a href="#">
+              <span class="fa fa-comments-o"></span>
+              10 comentários
+            </a>
           </p>
         </div>
       </div>
@@ -84,8 +90,10 @@
             10 de abril de 2017
           </p>
           <p class="comments">
-            <span class="fa fa-comments-o"></span>
-            10 comentários
+            <a href="#">
+              <span class="fa fa-comments-o"></span>
+              10 comentários
+            </a>
           </p>
         </div>
       </div>

@@ -35,26 +35,6 @@
         animatePath($(this), fps);
       });
     };
-    var scrollLocate = function(block, cb) {
-      var halfWindow = $(window).height() / 2;
-      var checkScroll = function() {
-        if(block.is(':visible')) {
-          var relTop = block.offset().top - $(window).scrollTop();
-          var relBottom = relTop + block.innerHeight();
-          if(relTop <= (halfWindow - (block.height()/2) + 100) && relBottom >= halfWindow) {
-            block.addClass('onscreen');
-            setTimeout(function() {
-              block.addClass('appeared');
-            }, 500);
-            cb();
-          } else {
-            block.removeClass('onscreen');
-          }
-        }
-      };
-      $(window).scroll(checkScroll);
-      checkScroll();
-    };
 
     (function() {
 

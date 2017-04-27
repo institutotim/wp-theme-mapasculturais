@@ -16,59 +16,66 @@
       <div class="container">
         <div class="eight columns">
           <h2><?php the_title(); ?></h2>
-          <div class="page-header-text connect-border connect-left">
-            <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+        </div>
+      </div>
+      <div class="sub-header">
+        <div class="container">
+          <div class="six columns">
+            <div class="connect-border connect-left connect-no-padding">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="six columns">
+            <div class="page-header-text connect-border connect-right">
+              <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+            </div>
+            <div class="network-numbers connect-border connect-right">
+              <hr />
+              <p class="numbers-intro">Consulte o mapa e a lista abaixo para conhecer as instalações da ferramenta Mapas Culturais.</p>
+              <div class="row">
+                <div class="six columns">
+                  <div class="intro-numbers">
+                    <p class="icon pmc-icon-person"></p>
+                    <p class="number do-count">123456</p>
+                    <p class="label">agentes</p>
+                  </div>
+                </div>
+                <div class="six columns">
+                  <div class="intro-numbers">
+                    <p class="icon pmc-icon-calendar"></p>
+                    <p class="number do-count">123456</p>
+                    <p class="label">eventos</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="six columns">
+                  <div class="intro-numbers">
+                    <p class="icon pmc-icon-door"></p>
+                    <p class="number do-count">123456</p>
+                    <p class="label">espaços</p>
+                  </div>
+                </div>
+                <div class="six columns">
+                  <div class="intro-numbers">
+                    <p class="icon pmc-icon-paper"></p>
+                    <p class="number do-count">123456</p>
+                    <p class="label">projetos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- <div class="canvas"></div> -->
     </div>
   </header>
   <section id="content">
     <div class="container">
       <div class="six columns">
-        <div class="connect-border connect-left connect-no-padding">
-          <div id="map"></div>
-        </div>
-        <?php get_template_part('parts/network-blog'); ?>
+      <?php get_template_part('parts/network-blog'); ?>
       </div>
       <div class="six columns">
-        <div class="network-numbers connect-border connect-right">
-          <hr />
-          <p class="numbers-intro">Consulte o mapa e a lista abaixo para conhecer as instalações da ferramenta Mapas Culturais.</p>
-          <div class="row">
-            <div class="six columns">
-              <div class="intro-numbers">
-                <p class="icon pmc-icon-person"></p>
-                <p class="number do-count">123456</p>
-                <p class="label">agentes</p>
-              </div>
-            </div>
-            <div class="six columns">
-              <div class="intro-numbers">
-                <p class="icon pmc-icon-calendar"></p>
-                <p class="number do-count">123456</p>
-                <p class="label">eventos</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="six columns">
-              <div class="intro-numbers">
-                <p class="icon pmc-icon-door"></p>
-                <p class="number do-count">123456</p>
-                <p class="label">espaços</p>
-              </div>
-            </div>
-            <div class="six columns">
-              <div class="intro-numbers">
-                <p class="icon pmc-icon-paper"></p>
-                <p class="number do-count">123456</p>
-                <p class="label">projetos</p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="profiles content-section connect-border connect-right">
           <header class="content-section-header">
             <h2>Conheça as iniciativas</h2>
