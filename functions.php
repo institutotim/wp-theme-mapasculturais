@@ -150,6 +150,10 @@ function pmc_header_scripts() {
   $gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
   wp_localize_script('github', 'ghData', json_decode($gh_data));
 
+  wp_localize_script('map', 'mapData', array(
+    'iconUrl' => get_template_directory_uri() . '/img/marker.png'
+  ));
+
   wp_enqueue_script('site');
   wp_enqueue_script('canvas');
   wp_enqueue_script('svg');

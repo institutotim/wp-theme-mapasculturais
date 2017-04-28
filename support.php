@@ -15,7 +15,10 @@
     <div class="page-header-content">
       <div class="container">
         <div class="eight columns">
-          <h2><?php the_title(); ?></h2>
+          <h2>
+            <span class="fa fa-support"></span>
+            <?php the_title(); ?>
+          </h2>
           <div class="page-header-text connect-border connect-left">
             <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
           </div>

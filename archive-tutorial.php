@@ -9,7 +9,10 @@
     <div class="page-header-content no-text compos-title">
       <div class="container">
         <div class="twelve columns">
-          <h2>Tutoriais</h2>
+          <h2>
+            <span class="fa fa-bookmark-o"></span>
+            Tutoriais
+          </h2>
           <h3 class="complete">
             <span class="fa fa-gear"></span>
             para gestores
@@ -83,9 +86,11 @@
               </li>
             </ul>
           </div>
-          <div class="widget">
+          <div class="widget text-widget">
             <h2>Exemplo de widget de texto</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod lectus a cursus dictum. Nulla at metus id elit volutpat ornare ut quis nisl. Sed pellentesque leo in massa ornare, eu tincidunt nibh cursus. Nulla vestibulum, enim in vulputate imperdiet, felis arcu dignissim ipsum, at laoreet urna lectus at metus. Phasellus vitae massa ac ligula placerat sagittis. Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
+            <div class="widget-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod lectus a cursus dictum. Nulla at metus id elit volutpat ornare ut quis nisl. Sed pellentesque leo in massa ornare, eu tincidunt nibh cursus. Nulla vestibulum, enim in vulputate imperdiet, felis arcu dignissim ipsum, at laoreet urna lectus at metus. Phasellus vitae massa ac ligula placerat sagittis. Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
+            </div>
           </div>
           <div class="widget">
             <h2>Categorias</h2>

@@ -14,8 +14,11 @@
     </div>
     <div class="page-header-content">
       <div class="container">
-        <div class="eight columns">
-          <h2><?php the_title(); ?></h2>
+        <div class="twelve columns">
+          <h2>
+            <span class="fa fa-map"></span>
+            <?php the_title(); ?>
+          </h2>
         </div>
       </div>
       <div class="sub-header">

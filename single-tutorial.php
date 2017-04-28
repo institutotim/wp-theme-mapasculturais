@@ -15,7 +15,10 @@
             <span class="fa fa-chevron-right"></span>
             <a href="#" class="cat">Categoria #1</a>
           </p>
-          <h2><?php the_title(); ?></h2>
+          <h2>
+            <span class="fa fa-bookmark-o"></span>
+            <?php the_title(); ?>
+          </h2>
         </div>
       </div>
     </div>

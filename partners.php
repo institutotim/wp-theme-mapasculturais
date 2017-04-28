@@ -14,9 +14,13 @@
     </div>
     <div class="page-header-content">
       <div class="container">
-        <div class="eight columns">
+        <div class="twelve columns">
           <h2><?php the_title(); ?></h2>
-          <div class="page-header-text connect-border connect-left">
+        </div>
+      </div>
+      <div class="container">
+        <div class="eight columns offset-by-two">
+          <div class="page-header-text">
             <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
           </div>
         </div>
@@ -34,50 +38,36 @@
               'g46.png'
             ),
             array(
+              'g132.png',
+              'g158.png',
+              'g174.png',
+              'g312.png'
+            ),
+            array(
               'g62.png',
               'g90.png',
               'g116.png'
             ),
             array(
-              'g132.png',
-              'g158.png'
-            ),
-            array(
-              'g174.png'
-            ),
-            array(
               'g190.png',
-              'g216.png'
+              'g338.png',
+              'g364.png',
+              'g432.png',
+              'g438.png',
+              'g474.png',
+              'g526.png',
+              'g500.png'
             ),
             array(
+              'g216.png',
               'g238.png',
               'g264.png',
-              'g280.png'
-            ),
-            array(
+              'g280.png',
               'g296.png',
-              'g312.png',
-              'g338.png'
-            ),
-            array(
-              'g364.png',
-              'g390.png'
-            ),
-            array(
               'g416.png',
-              'g432.png',
-              'g458.png'
-            ),
-            array(
-              'g474.png'
-            ),
-            array(
-              'g500.png',
-              'g526.png',
-              'g552.png'
-            ),
-            array(
-              'g4723.png'
+              'g390.png',
+              'g552.png',
+              'g4723.png',
             )
           );
           foreach($images as $row) :

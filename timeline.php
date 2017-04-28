@@ -25,6 +25,7 @@
   </header>
   <section id="content">
     <div class="timeline">
+      <a class="timeline-init fa fa-chevron-down" href="#"></a>
       <div class="timeline-item row">
         <div class="post-box">
           <p class="date">2015</p>
