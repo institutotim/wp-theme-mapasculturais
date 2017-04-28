@@ -128,8 +128,8 @@ function pmc_header_scripts() {
   wp_register_style('leaflet', '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css');
   wp_register_style('highcharts', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/css/highcharts.css');
 
-  wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('webfonts', 'pmc-icons', 'normalize', 'skeleton', 'fontawesome', 'leaflet', 'highcharts'), '0.0.10');
-  wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css', array('main'), '0.0.2');
+  wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('webfonts', 'pmc-icons', 'normalize', 'skeleton', 'fontawesome', 'leaflet', 'highcharts'), '0.0.11');
+  wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css', array('main'), '0.0.21');
 
   wp_enqueue_style('main');
   wp_enqueue_style('responsive');
@@ -139,13 +139,13 @@ function pmc_header_scripts() {
   wp_register_script('highcharts', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/highcharts.js');
   wp_register_script('highcharts-more', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/highcharts-more.js');
   wp_register_script('moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js');
-  wp_register_script('scroll-locate', get_template_directory_uri() . '/js/scroll-locate.js', array('jquery'), '0.0.1');
-  wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery'), '0.0.1');
-  wp_register_script('svg', get_template_directory_uri() . '/js/svg.js', array('jquery', 'scroll-locate', 'snapsvg', 'underscore'), '0.0.1');
-  wp_register_script('timeline', get_template_directory_uri() . '/js/timeline.js', array('jquery', 'scroll-locate'), '0.0.1');
-  wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.1');
-  wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.1');
-  wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.1');
+  wp_register_script('scroll-locate', get_template_directory_uri() . '/js/scroll-locate.js', array('jquery'), '0.0.2');
+  wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery'), '0.0.2');
+  wp_register_script('svg', get_template_directory_uri() . '/js/svg.js', array('jquery', 'scroll-locate', 'snapsvg', 'underscore'), '0.0.2');
+  wp_register_script('timeline', get_template_directory_uri() . '/js/timeline.js', array('jquery', 'scroll-locate'), '0.0.2');
+  wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.2');
+  wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
+  wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
 
   $gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
   wp_localize_script('github', 'ghData', json_decode($gh_data));
