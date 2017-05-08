@@ -10,13 +10,16 @@
     <div class="page-header-content no-text">
       <div class="container">
         <div class="twelve columns">
+          <span class="page-icon">
+            <span class="fa fa-bookmark-o"></span>
+          </span>
           <p class="over-title category">
             <a href="#" class="area">Tutoriais</a>
             <span class="fa fa-chevron-right"></span>
             <a href="#" class="cat">Categoria #1</a>
           </p>
           <h2>
-            <span class="fa fa-bookmark-o"></span>
+            <!-- <span class="fa fa-bookmark-o"></span> -->
             <?php the_title(); ?>
           </h2>
         </div>

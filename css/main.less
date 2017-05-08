@@ -113,6 +113,9 @@ hr.dark,
     float: left;
   }
 }
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea {
+  height: auto;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -335,21 +338,8 @@ input[type=email], input[type=number], input[type=password], input[type=search],
   margin: 0 0 2em;
   border: 1px solid #ccc;
 }
-input.big-search {
-  font-size: 1.2em;
-  height: auto;
-}
-input.search {
-  margin-left: 1rem;
-}
 .fa {
   font-size: 1.5em;
-}
-p.big {
-  font-size: 1.6em;
-}
-article h5 {
-  margin: 0;
 }
 p.post-meta {
   margin: 0;
@@ -709,7 +699,7 @@ p.post-meta .fa {
     padding: 0;
   }
   .page-header-content {
-    margin-top: 4rem;
+    margin-top: 6rem;
     font-size: 1.2em;
     .sub-header {
       font-size: .8em;
@@ -733,6 +723,33 @@ p.post-meta .fa {
         }
       }
     }
+    .page-icon {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      float: left;
+      position: relative;
+      padding: 1.5rem;
+      margin-right: 4rem;
+      margin-bottom: 2rem;
+      border-radius: 100%;
+      line-height: 1;
+      border: 1px solid #fff;
+      background: rgba(0,0,0,0.1);
+      &:before {
+        content: '';
+        position: absolute;
+        top: -6rem;
+        height: 6rem;
+        width: 3px;
+        left: 50%;
+        background: url(../img/ptn-dot-vertical.png) bottom center;
+        opacity: .5;
+      }
+      .fa {
+        font-size: 1em;
+      }
+    }
     .sub-header {
       .page-header-text {
         font-size: 1.2em;
@@ -752,12 +769,13 @@ p.post-meta .fa {
     }
   }
   p.over-title {
-    margin: 0 0 1rem;
+    margin: 0;
     color: @lightblue;
     font-size: .8em;
     display: inline-block;
-    padding-bottom: 1rem;
-    border-bottom: .5rem solid rgba(0,0,0,0.10);
+    padding-bottom: .5rem;
+    // border-bottom: .5rem solid rgba(0,0,0,0.10);
+    position: relative;
     &.subtitle {
       color: @yellow;
       border: 0;
@@ -766,7 +784,6 @@ p.post-meta .fa {
       display: inline-block;
     }
     .area {
-      text-transform: uppercase;
       color: #fff;
       margin-right: 1rem;
     }
@@ -1504,11 +1521,11 @@ p.post-meta .fa {
     position: absolute;
     left: 0;
     top: 0;
-    line-height: 120px;
+    line-height: 105px;
   }
   input[type=text] {
     width: 100%;
-    padding: 6rem 0 6rem 6rem;
+    padding: 4rem 0 4rem 6rem;
     background: transparent;
     border: 0;
     margin: 0;

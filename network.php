@@ -15,8 +15,10 @@
     <div class="page-header-content">
       <div class="container">
         <div class="twelve columns">
-          <h2>
+          <span class="page-icon">
             <span class="fa fa-map"></span>
+          </span>
+          <h2>
             <?php the_title(); ?>
           </h2>
         </div>

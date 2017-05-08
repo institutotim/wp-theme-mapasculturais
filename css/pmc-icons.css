@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'pmc';
-  src:  url('../fonts/pmc-icons/pmc.eot?36ihq1');
-  src:  url('../fonts/pmc-icons/pmc.eot?36ihq1#iefix') format('embedded-opentype'),
-    url('../fonts/pmc-icons/pmc.ttf?36ihq1') format('truetype'),
-    url('../fonts/pmc-icons/pmc.woff?36ihq1') format('woff'),
-    url('../fonts/pmc-icons/pmc.svg?36ihq1#pmc') format('svg');
+  src:  url('../fonts/pmc-icons/pmc.eot?paghvm');
+  src:  url('../fonts/pmc-icons/pmc.eot?paghvm#iefix') format('embedded-opentype'),
+    url('../fonts/pmc-icons/pmc.ttf?paghvm') format('truetype'),
+    url('../fonts/pmc-icons/pmc.woff?paghvm') format('woff'),
+    url('../fonts/pmc-icons/pmc.svg?paghvm#pmc') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pmc-icon-marker:before {
+  content: "\e905";
+}
 .pmc-icon-paper:before {
   content: "\e900";
 }
@@ -39,3 +42,4 @@
 .pmc-icon-hand:before {
   content: "\e904";
 }
+

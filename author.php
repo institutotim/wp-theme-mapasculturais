@@ -10,6 +10,9 @@
     <div class="page-header-content">
       <div class="container">
         <div class="seven columns">
+          <span class="page-icon">
+            <span class="pmc-icon-marker"></span>
+          </span>
           <p class="over-title subtitle">Secretaria Municipal de Cultura de São Paulo</p>
           <h2>SPCultura</h2>
           <div class="page-header-text connect-border connect-left">

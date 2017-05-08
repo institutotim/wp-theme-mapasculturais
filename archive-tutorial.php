@@ -9,8 +9,10 @@
     <div class="page-header-content no-text compos-title">
       <div class="container">
         <div class="twelve columns">
-          <h2>
+          <span class="page-icon">
             <span class="fa fa-bookmark-o"></span>
+          </span>
+          <h2>
             Tutoriais
           </h2>
           <h3 class="complete">
