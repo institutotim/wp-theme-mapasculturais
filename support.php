@@ -16,7 +16,7 @@
       <div class="container">
         <div class="eight columns">
           <span class="page-icon">
-            <span class="fa fa-support"></span>
+            <span class="fa fa-wrench"></span>
           </span>
           <h2>
             <?php the_title(); ?>

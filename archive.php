@@ -8,8 +8,43 @@
     </div>
     <div class="page-header-content no-text">
       <div class="container">
-        <div class="twelve columns">
-          <h2>Notícias</h2>
+        <div class="six columns">
+          <span class="page-icon">
+            <span class="fa fa-newspaper-o"></span>
+          </span>
+          <h2><?php
+          if( is_tag() || is_category() || is_tax() ) :
+            $term = get_queried_object();
+            $link = get_term_link($term);
+            if($term->parent) :
+              $parent = get_term($term->parent);
+              $link = get_term_link($parent);
+              $title = sprintf( __( '%s', 'arp' ), $parent->name );
+            else :
+              $title = sprintf( __( '%s', 'arp' ), single_term_title() );
+            endif;
+            echo '<a href="' . $link . '">' . $title . '</a>';
+          elseif( is_search() ) :
+            printf( __( 'Search results for: %s', 'arp' ), $_GET['s'] );
+          elseif ( is_day() ) :
+            printf( __( 'Daily Archives: %s', 'arp' ), get_the_date() );
+          elseif ( is_month() ) :
+            printf( __( 'Monthly Archives: %s', 'arp' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'arp' ) ) );
+          elseif ( is_year() ) :
+            printf( __( 'Yearly Archives: %s', 'arp' ), get_the_date( _x( 'Y', 'yearly archives date format', 'arp' ) ) );
+          else :
+            // _e( 'Archives', 'arp' );
+            echo 'Notícias';
+          endif;
+          ?></h2>
+          <p class="page-description">Saiba o que está acontecendo no mundo do Mapas Culturais</p>
+        </div>
+        <div class="six columns">
+          <nav class="button-nav u-pull-right">
+            <a class="button">Categoria #1</a>
+            <a class="button">Categoria #2</a>
+            <a class="button">Categoria #3</a>
+          </nav>
         </div>
       </div>
     </div>
@@ -61,7 +96,7 @@
         </div>
       </div>
     </div>
-  <section>
+  </section>
 </section>
 <?php get_template_part('parts/community-section'); ?>
 <?php get_footer(); ?>

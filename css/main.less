@@ -130,15 +130,22 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 }
 .alignright {
   float: right;
-  margin: 0 0 4rem 4rem;
+  margin: 0 -5% 4rem 4rem;
 }
 .wp-caption {
+  box-sizing: border-box;
+  max-width: 110%;
+  margin-left: -5%;
   font-size: .8em;
   background: #f0f0f0;
   padding: 0;
+  margin-bottom: 2rem;
   box-shadow: .5rem .5rem 0 rgba(0,0,0,0.03);
+  &:first-child {
+    margin-top: -8rem;
+  }
   img {
-    margin: .5rem .5rem 0;
+    margin: 0;
     display: block;
   }
   p {
@@ -176,6 +183,9 @@ h4 {
 }
 input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
   border-radius: 0;
+}
+p.big {
+  font-size: 1.6em;
 }
 .connect-border {
   box-sizing: border-box;
@@ -219,6 +229,12 @@ input[type=email], input[type=number], input[type=password], input[type=search],
   }
   article {
     margin: 0 0 4rem;
+    .featured-image {
+      margin: 0 0 2rem;
+      img {
+        display: block;
+      }
+    }
     .post-thumbnail {
       width: 100%;
       margin: 0 0 2rem;
@@ -549,6 +565,17 @@ p.post-meta .fa {
       color: #999;
       margin: 0 0 1rem;
     }
+    .network-author {
+      margin: 0 2rem 1rem 0;
+      .author-thumb {
+        width: 80px;
+        height: 80px;
+        &:after {
+          top: 16px;
+          // right: -7px;
+        }
+      }
+    }
     .profile-data {
       background: #f0f0f0;
       padding: 1rem 5%;
@@ -567,9 +594,6 @@ p.post-meta .fa {
       .icon {
         margin-right: 1rem;
       }
-    }
-    .network-author {
-      margin-bottom: 2rem;
     }
   }
 }
@@ -807,8 +831,29 @@ p.post-meta .fa {
       margin:  0 1rem 0 0;
     }
   }
+  p.page-description {
+    font-style: italic;
+    margin: 0;
+    color: rgba(255,255,255,0.5);
+    font-size: .9em;
+  }
   p.subtitle {
     margin: 0;
+  }
+  .button-nav {
+    margin: 3rem 0 0;
+    a.button {
+      margin: 0 0 0 1px;
+      padding: .3rem 2rem;
+      display: block;
+      background: @pink;
+      float: left;
+      &:hover,
+      &:active,
+      &:focus {
+        background: lighten(@pink, 5%);
+      }
+    }
   }
   .canvas {
     position: absolute;
@@ -1600,7 +1645,7 @@ p.post-meta .fa {
     margin-top: -6rem;
     margin-bottom: 6rem;
     color: #fff;
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: @pink;
     font-size: 1.2em;
   }
@@ -1770,21 +1815,22 @@ p.post-meta .fa {
   .page-header {
     text-align: center;
     h2 {
-      font-size: 1.5em;
+      font-size: 2em;
       text-transform: uppercase;
-      margin: 4rem 0;
+      margin: 2rem 0;
     }
     .page-header-text {
       background: @pink;
       color: #fff;
       padding: 4rem;
+      margin-bottom: -4rem;
       box-shadow: 0 0 0;
     }
   }
 }
 
 .partner-list {
-  margin-top: 6rem;
+  margin-top: 8rem;
   .partner-row {
     display: table;
     width: 100%;

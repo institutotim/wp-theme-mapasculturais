@@ -23,13 +23,13 @@
   <section id="content">
     <div class="page-excerpt">
       <div class="container">
-        <div class="twelve columns">
+        <div class="ten columns offset-by-one">
           <p>In tempor lacus nec lorem ornare egestas. Morbi auctor placerat dolor, at bibendum ex tempor luctus. Nulla tellus nibh, ullamcorper non finibus eget, volutpat et sapien. Phasellus ac ipsum vitae orci tempor viverra nec vel sapien.</p>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="twelve columns">
+      <div class="ten columns offset-by-one">
         <?php the_content(); ?>
       </div>
     </div>
