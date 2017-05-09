@@ -9,7 +9,7 @@
     </div>
     <div class="page-header-content no-text has-icon">
       <div class="container">
-        <div class="twelve columns">
+        <div class="eight columns">
           <span class="page-icon">
             <span class="fa fa-bookmark-o"></span>
           </span>
