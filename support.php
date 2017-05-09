@@ -12,7 +12,7 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content">
+    <div class="page-header-content has-icon">
       <div class="container">
         <div class="eight columns">
           <span class="page-icon">

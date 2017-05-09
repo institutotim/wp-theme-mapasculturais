@@ -7,7 +7,7 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text">
+    <div class="page-header-content no-text has-icon">
       <div class="container">
         <div class="twelve columns">
           <span class="page-icon">
@@ -19,7 +19,6 @@
             <a href="#" class="cat">Categoria #1</a>
           </p>
           <h2>
-            <!-- <span class="fa fa-bookmark-o"></span> -->
             <?php the_title(); ?>
           </h2>
         </div>

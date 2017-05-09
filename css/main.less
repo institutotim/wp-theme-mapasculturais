@@ -733,6 +733,10 @@ p.post-meta .fa {
   .page-header-content {
     margin-top: 6rem;
     font-size: 1.2em;
+    position: relative;
+    &.has-icon  {
+      padding-left: 9rem;
+    }
     .sub-header {
       font-size: .8em;
     }
@@ -759,15 +763,15 @@ p.post-meta .fa {
       width: 20px;
       height: 20px;
       text-align: center;
-      float: left;
-      position: relative;
       padding: 1.5rem;
       margin-right: 4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0;
       border-radius: 100%;
       line-height: 1;
       border: 1px solid #fff;
       background: rgba(0,0,0,0.1);
+      position: absolute;
+      left: -9rem;
       &:before {
         content: '';
         position: absolute;
@@ -831,7 +835,6 @@ p.post-meta .fa {
   h2 {
     font-size: 2em;
     margin: 0;
-    // text-transform: uppercase;
     .fa {
       width: 50px;
       text-align: center;

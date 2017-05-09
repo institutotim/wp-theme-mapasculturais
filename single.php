@@ -7,7 +7,7 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text">
+    <div class="page-header-content no-text has-icon">
       <div class="container">
         <div class="twelve columns">
           <span class="page-icon">
