@@ -66,7 +66,7 @@
                 $posts_query->the_post();
                 ?>
                 <article class="post">
-                  <h3><?php the_title(); ?></h3>
+                  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="meta">
                     <p class="author">
                       <img src="http://lorempixel.com/30/30/" />

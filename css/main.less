@@ -203,6 +203,14 @@ p.big {
         color: rgba(255,255,255,0.7);
         border-color: rgba(255,255,255,0.3);
       }
+      a {
+        color: inherit;
+        &:hover,
+        &:active,
+        &:focus {
+          color: rgba(255,255,255,0.6);
+        }
+      }
     }
     .button, button, input[type=button], input[type=reset], input[type=submit] {
       background: #fff;
@@ -794,7 +802,7 @@ p.post-meta .fa {
   }
   p.over-title {
     margin: 0;
-    color: @lightblue;
+    color: @pink;
     font-size: .8em;
     display: inline-block;
     padding-bottom: .5rem;
