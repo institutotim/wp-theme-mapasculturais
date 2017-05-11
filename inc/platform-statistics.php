@@ -4,8 +4,8 @@ class PMC_Platform_Statistics {
 
   function __construct() {
 
-    add_action('init', array($this, 'create_fetch_event'));
-    add_action('pmc_create_fetch_event', array($this, 'update_statistics'));
+    add_action('init', array($this, 'create_get_event'));
+    add_action('pmc_create_get_event', array($this, 'update_statistics'));
 
     // "Instance URL" property for maintainers
     if(function_exists("register_field_group"))
@@ -48,49 +48,92 @@ class PMC_Platform_Statistics {
     		'menu_order' => 0,
     	));
     }
-
-
   }
 
-  function create_fetch_event() {
+  function create_get_event() {
     // Uncomment lines bellow to reschedule task
-    // $timestamp = wp_next_scheduled( 'pmc_create_fetch_event' );
+    // $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
     // if($timestamp) {
-    //   wp_unschedule_event($timestamp, 'pmc_create_fetch_event');
+    //   wp_unschedule_event($timestamp, 'pmc_create_get_event');
     // }
 
-    $timestamp = wp_next_scheduled( 'pmc_create_fetch_event' );
+    $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
     if( $timestamp == false ) {
       error_log('scheduling');
-      wp_schedule_event( time(), 'daily', 'pmc_create_fetch_event' );
+      wp_schedule_event( time(), 'daily', 'pmc_create_get_event' );
     } else {
       error_log('already scheduled');
     }
   }
 
-  public function update_statistics(){
-    $maintainers = get_users( 'role=maintainer' );
+  function get_maintainers() {
+    $result = array();
 
-    if ($maintainers) {
+    $all_maintainers = get_users( 'role=maintainer' );
 
-      foreach ($maintainers as $maintainer) {
-        // Get instance URL
+    if ($all_maintainers) {
+
+      foreach ($all_maintainers as $maintainer) {
+
+        // Get maintainer's instance URL
         $maintainer_id = $maintainer->ID;
         $instance_url = get_user_meta($maintainer_id, 'instance_url', true);
 
+        // Check if URL is valid
         if (filter_var($instance_url, FILTER_VALIDATE_URL) === FALSE) {
-          error_log('Invalid or missing instance URL (User[ID]=' . $maintainer->ID .')');
+          error_log('Maintainer ' . $maintainer->ID . ': no URL.');
         } else {
-            error_log('Fetching statistics of user ' . $maintainer->ID .' ('. $instance_url .')');
-          $this->update_instance($maintainer_id, $instance_url);
+          // push maintainer to result
+          $result[] = $maintainer;
+          error_log('Maintainer ' . $maintainer->ID . ': ' . $instance_url);
         }
       }
     } else {
       error_log('No maintainers found.');
     }
-   }
 
-   function get_element_count_series($instance_url, $element_type, $months_ago = 0, $series = array()) {
+    return $result;
+  }
+
+  public function update_statistics(){
+
+    $maintainers = $this->get_maintainers();
+
+    $element_types = array('event', 'agent', 'space', 'project');
+
+    foreach ($element_types as $element_type) {
+
+      // clear count for this $element_type
+      $global_count_series = array();
+
+      // for each maintainer
+      foreach ($maintainers as $maintainer) {
+
+        // get its count series
+        $count_series = $this->get_element_count_series($maintainer->instance_url, $element_type);
+
+        // if result is valid
+        if ($count_series != false) {
+
+          // update instance count series
+          update_user_meta($maintainer_id, $element_type . 's_count', $count_series);
+
+          // update global count
+          foreach ($count_series as $date => $value) {
+
+            if (!isset($global_count_series[$date])) {
+              $global_count_series[$date] = 0;
+            }
+
+            $global_count_series[$date] = $value + $global_count_series[$date];
+          }
+          update_option($element_type . 's_count', $global_count_series);
+        }
+      }
+    }
+  }
+
+  function get_element_count_series($instance_url, $element_type, $months_ago = 0, $series = array()) {
 
      // get date in the month being fetched
      $current_date = strtotime('-' . $months_ago       . ' month');
@@ -103,9 +146,9 @@ class PMC_Platform_Statistics {
      }
 
      // get element count for this month
-     $result = $this->fetch_element_count($instance_url, $element_type, $timestamp);
+     $result = $this->get_element_count($instance_url, $element_type, $timestamp);
 
-     // if there was an error with fetch_element_count, return false
+     // if there was an error with get_element_count, return false
      if (!is_numeric($result)) {
        return false;
      }
@@ -126,7 +169,7 @@ class PMC_Platform_Statistics {
      }
    }
 
-   function fetch_element_count($instance_url, $element_type, $date_limit) {
+   function get_element_count($instance_url, $element_type, $date_limit) {
      // format API query
      $api_url = rtrim($instance_url, '/') . '/api/' . $element_type . '/find' ;
 
@@ -154,20 +197,7 @@ class PMC_Platform_Statistics {
      } else return false;
    }
 
-   function update_instance($maintainer_id, $instance_url){
 
-      $element_types = array('event', 'agent', 'space', 'project');
-      foreach ($element_types as $element_type) {
-
-        // get count series for this element
-        $result = $this->get_element_count_series($instance_url, $element_type);
-
-        // do not update series meta if result is invalid
-        if ($result != false) {
-          update_user_meta($maintainer_id, $element_type . 's_count', $result);
-        }
-      }
-   }
 }
 
 $pmc_get_statistics = new PMC_Platform_Statistics();
