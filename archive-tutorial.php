@@ -6,9 +6,9 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text has-icon compos-title">
-      <div class="container">
-        <div class="twelve columns">
+    <div class="container">
+      <div class="twelve columns">
+        <div class="page-header-content no-text has-icon compos-title row">
           <span class="page-icon">
             <span class="fa fa-bookmark-o"></span>
           </span>

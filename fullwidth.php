@@ -12,9 +12,9 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text">
-      <div class="container">
-        <div class="eight columns">
+    <div class="container">
+      <div class="eight columns">
+        <div class="page-header-content no-text">
           <h2><?php the_title(); ?></h2>
         </div>
       </div>

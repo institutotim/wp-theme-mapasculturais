@@ -7,9 +7,9 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text has-icon">
-      <div class="container">
-        <div class="eight columns">
+    <div class="container">
+      <div class="eight columns">
+        <div class="page-header-content no-text has-icon row">
           <span class="page-icon">
             <span class="fa fa-newspaper-o"></span>
           </span>

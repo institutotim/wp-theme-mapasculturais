@@ -12,16 +12,16 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content">
-      <div class="container">
-        <div class="twelve columns">
+    <div class="container">
+      <div class="twelve columns">
+        <div class="page-header-content row">
           <h2><?php the_title(); ?></h2>
-        </div>
-      </div>
-      <div class="container">
-        <div class="eight columns offset-by-two">
-          <div class="page-header-text">
-            <p>Mapas Culturais foi criado pelo Instituto TIM em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+          <div class="row">
+            <div class="eight columns offset-by-two">
+              <div class="page-header-text">
+                <p>Mapas Culturais foi criado pelo Instituto TIM em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

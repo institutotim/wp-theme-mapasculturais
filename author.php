@@ -7,53 +7,57 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content has-icon">
-      <div class="container">
-        <div class="seven columns">
-          <span class="page-icon">
-            <span class="pmc-icon-marker"></span>
-          </span>
-          <p class="over-title subtitle">Secretaria Municipal de Cultura de São Paulo</p>
-          <h2>SPCultura</h2>
-          <div class="page-header-text connect-border connect-left">
-            <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</p>
-          </div>
-        </div>
-        <div class="five columns">
-          <div class="author-numbers">
-            <div class="row">
-              <div class="six columns">
-                <div class="intro-numbers">
-                  <p class="icon pmc-icon-person"></p>
-                  <p class="number do-count">123456</p>
-                  <p class="label">agentes</p>
-                </div>
-              </div>
-              <div class="six columns">
-                <div class="intro-numbers">
-                  <p class="icon pmc-icon-calendar"></p>
-                  <p class="number do-count">123456</p>
-                  <p class="label">eventos</p>
-                </div>
+    <div class="container">
+      <div class="twelve columns">
+        <div class="page-header-content has-icon row">
+          <div class="row">
+            <div class="seven columns">
+              <span class="page-icon">
+                <span class="pmc-icon-marker"></span>
+              </span>
+              <p class="over-title subtitle">Secretaria Municipal de Cultura de São Paulo</p>
+              <h2>SPCultura</h2>
+              <div class="page-header-text connect-border connect-left">
+                <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</p>
               </div>
             </div>
-            <div class="row">
-              <div class="six columns">
-                <div class="intro-numbers">
-                  <p class="icon pmc-icon-door"></p>
-                  <p class="number do-count">123456</p>
-                  <p class="label">espaços</p>
+            <div class="five columns">
+              <div class="author-numbers">
+                <div class="row">
+                  <div class="six columns">
+                    <div class="intro-numbers">
+                      <p class="icon pmc-icon-person"></p>
+                      <p class="number do-count">123456</p>
+                      <p class="label">agentes</p>
+                    </div>
+                  </div>
+                  <div class="six columns">
+                    <div class="intro-numbers">
+                      <p class="icon pmc-icon-calendar"></p>
+                      <p class="number do-count">123456</p>
+                      <p class="label">eventos</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="six columns">
-                <div class="intro-numbers">
-                  <p class="icon pmc-icon-paper"></p>
-                  <p class="number do-count">123456</p>
-                  <p class="label">projetos</p>
+                <div class="row">
+                  <div class="six columns">
+                    <div class="intro-numbers">
+                      <p class="icon pmc-icon-door"></p>
+                      <p class="number do-count">123456</p>
+                      <p class="label">espaços</p>
+                    </div>
+                  </div>
+                  <div class="six columns">
+                    <div class="intro-numbers">
+                      <p class="icon pmc-icon-paper"></p>
+                      <p class="number do-count">123456</p>
+                      <p class="label">projetos</p>
+                    </div>
+                  </div>
                 </div>
+                <p><a class="button block"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
               </div>
             </div>
-            <p><a class="button block"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
           </div>
         </div>
       </div>

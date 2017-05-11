@@ -12,34 +12,38 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content has-icon">
-      <div class="container">
-        <div class="eight columns">
-          <span class="page-icon">
-            <span class="fa fa-wrench"></span>
-          </span>
-          <h2>
-            <?php the_title(); ?>
-          </h2>
-          <div class="page-header-text connect-border connect-left">
-            <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+    <div class="container">
+      <div class="twelve columns">
+        <div class="page-header-content has-icon row">
+          <div class="row">
+            <div class="eight columns">
+              <span class="page-icon">
+                <span class="fa fa-wrench"></span>
+              </span>
+              <h2>
+                <?php the_title(); ?>
+              </h2>
+              <div class="page-header-text connect-border connect-left">
+                <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+              </div>
+            </div>
+            <div class="four columns">
+              <p class="buttons small-buttons u-pull-right">
+                <a class="button">
+                  <span class="fa fa-bookmark-o"></span>
+                  Tutoriais
+                </a>
+                <a class="button">
+                  <span class="fa fa-comments-o"></span>
+                  Chat
+                </a>
+                <a class="button">
+                  <span class="fa fa-book"></span>
+                  Manual
+                </a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="four columns">
-          <p class="buttons small-buttons u-pull-right">
-            <a class="button">
-              <span class="fa fa-bookmark-o"></span>
-              Tutoriais
-            </a>
-            <a class="button">
-              <span class="fa fa-comments-o"></span>
-              Chat
-            </a>
-            <a class="button">
-              <span class="fa fa-book"></span>
-              Manual
-            </a>
-          </p>
         </div>
       </div>
     </div>

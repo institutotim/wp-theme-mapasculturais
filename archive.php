@@ -6,9 +6,14 @@
         <hr/>
       </div>
     </div>
-    <div class="page-header-content no-text has-icon">
-      <div class="container">
-        <div class="six columns">
+    <div class="container">
+      <div class="twelve columns">
+        <div class="page-header-content no-text has-icon row">
+          <nav class="button-nav u-pull-right">
+            <a class="button">Categoria #1</a>
+            <a class="button">Categoria #2</a>
+            <a class="button">Categoria #3</a>
+          </nav>
           <span class="page-icon">
             <span class="fa fa-newspaper-o"></span>
           </span>
@@ -38,13 +43,6 @@
           endif;
           ?></h2>
           <p class="page-description">Saiba o que está acontecendo no mundo do Mapas Culturais</p>
-        </div>
-        <div class="six columns">
-          <nav class="button-nav u-pull-right">
-            <a class="button">Categoria #1</a>
-            <a class="button">Categoria #2</a>
-            <a class="button">Categoria #3</a>
-          </nav>
         </div>
       </div>
     </div>
