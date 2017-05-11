@@ -58,7 +58,7 @@
         <p>Nulla facilisi. Nullam nulla diam, pharetra in sem id, gravida bibendum ex. Morbi leo elit, ornare tempor facilisis vitae, mollis vel elit. Fusce consequat et mi sit amet sollicitudin. Sed tincidunt luctus nisl id dictum. Fusce elit ligula, rhoncus eget felis sed, pellentesque egestas erat. Nulla at erat quis orci eleifend commodo. Vestibulum a odio neque. Nullam sit amet risus sit amet magna accumsan feugiat. Vestibulum ut consequat augue, vel tempor lacus. Ut sit amet dolor in lorem elementum congue. Phasellus non dui ac nibh elementum rutrum eget et orci.</p>
 
       </div>
-      <div class="four columns">
+      <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <div class="widget">
             <h2>Navegar pelos tutoriais</h2>

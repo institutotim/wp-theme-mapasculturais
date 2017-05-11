@@ -41,7 +41,7 @@
         <?php get_template_part('parts/tutorials'); ?>
         <?php get_template_part('parts/pagination'); ?>
       </div>
-      <div class="four columns">
+      <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <div class="widget">
             <h2>Navegar pelos tutoriais</h2>
