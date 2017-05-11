@@ -80,7 +80,7 @@
       <div class="six columns">
       <?php get_template_part('parts/network-blog'); ?>
       </div>
-      <div class="six columns">
+      <div class="five columns offset-by-one">
         <div class="profiles content-section connect-border connect-right">
           <header class="content-section-header">
             <h2>Conheça as iniciativas</h2>
