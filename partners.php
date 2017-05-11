@@ -21,7 +21,7 @@
       <div class="container">
         <div class="eight columns offset-by-two">
           <div class="page-header-text">
-            <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+            <p>Mapas Culturais foi criado pelo Instituto TIM em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
           </div>
         </div>
       </div>
@@ -35,21 +35,19 @@
           $images = array(
             array(
               'g20.png',
+              'g190.png',
               'g46.png'
             ),
             array(
               'g132.png',
               'g158.png',
               'g174.png',
-              'g312.png'
-            ),
-            array(
+              'g312.png',
               'g62.png',
               'g90.png',
               'g116.png'
             ),
             array(
-              'g190.png',
               'g338.png',
               'g364.png',
               'g432.png',
