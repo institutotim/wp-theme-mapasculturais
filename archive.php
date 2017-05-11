@@ -55,7 +55,7 @@
         <?php get_template_part('parts/blog'); ?>
         <?php get_template_part('parts/pagination'); ?>
       </div>
-      <div class="four columns">
+      <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <div class="widget text-widget">
             <h2>Exemplo de widget de texto</h2>
