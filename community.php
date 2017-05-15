@@ -109,6 +109,7 @@
           <section class="content-section">
             <header class="content-section-header">
               <h3>Pautas em discussão</h3>
+              <p class="section-description">Acompanhe e participe do debate das pautas em discussão.</p>
             </header>
             <?php
             if($debating_query->have_posts()) :
@@ -116,7 +117,6 @@
                 $debating_query->the_post();
                 ?>
                 <?php get_template_part('parts/topic-item'); ?>
-                <hr class="dark" />
                 <?php
                 wp_reset_postdata();
               endwhile;
@@ -128,6 +128,7 @@
             ?>
           </section>
         </div>
+        <hr class="dark" />
         <div class="row">
           <div class="six columns">
             <?php
@@ -145,6 +146,7 @@
             <section class="content-section">
               <header class="content-section-header">
                 <h3>Propostas de pauta</h3>
+                <p class="section-description">Vote para abrir discussão sobre as pautas propostas.</p>
               </header>
               <?php
               if($proposal_query->have_posts()) :
@@ -152,7 +154,6 @@
                   $proposal_query->the_post();
                   ?>
                   <?php get_template_part('parts/topic-item'); ?>
-                  <hr class="dark" />
                   <?php
                   wp_reset_postdata();
                 endwhile;
@@ -180,6 +181,7 @@
             <section class="content-section">
               <header class="content-section-header">
                 <h3>Pautas com resolução</h3>
+                <p class="section-description">Veja as resoluções das pautas concluídas.</p>
               </header>
               <?php
               if($debating_query->have_posts()) :
@@ -187,7 +189,6 @@
                   $debating_query->the_post();
                   ?>
                   <?php get_template_part('parts/topic-item'); ?>
-                  <hr class="dark" />
                   <?php
                   wp_reset_postdata();
                 endwhile;
