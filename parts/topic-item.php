@@ -1,4 +1,7 @@
-<article <?php post_class(); ?>>
+<?php
+$status_pauta = delibera_get_situacao($post->ID)->slug;
+?>
+<article <?php post_class($status_pauta); ?>>
   <p class="topic-deadline">
     <span class="fa fa-clock-o"></span>
     <?php
@@ -9,17 +12,13 @@
     ?>
   </p>
   <h4><?php the_title(); ?></h4>
-  <div class="topic-meta">
-    <span class="topic-vote">
-      <span class="up">
-        <span class="fa fa-thumbs-up"></span>
-        <?php echo get_post_meta($post->ID, 'delibera_numero_curtir', true); ?>
-      </span>
-      <span class="down">
-        <span class="fa fa-thumbs-down"></span>
-        <?php echo get_post_meta($post->ID, 'delibera_numero_discordar', true); ?>
-      </span>
-    </span>
+  <div class="topic-meta row">
+    <div class="topic-vote">
+      <?php
+      echo delibera_gerar_curtir($post->ID, 'pauta');
+      echo delibera_gerar_discordar($post->ID, 'pauta');
+      ?>
+    </div>
     <?php if(has_term('discussao', 'situacao')) : ?>
       <span class="topic-comment">
         <a href="#">
@@ -36,5 +35,13 @@
         </a>
       </span>
     <?php endif; ?>
+    <?php /*
+    <div class="topic-follow entry-seguir">
+      <a href="javascript:void(0);">
+        <span class="fa fa-feed"></span>
+        <?php echo delibera_gerar_seguir($post->ID); ?>
+      </a>
+    </div>
+    */ ?>
   </div>
 </article>

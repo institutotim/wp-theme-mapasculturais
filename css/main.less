@@ -1627,20 +1627,30 @@ p.post-meta .fa {
       margin: 0;
       font-size: .7em;
       color: #999;
-      > span {
-        margin: 0 1rem 0 0;
+      > * {
+        display: inline-block;
+        float: left;
+        margin: 0 1.5rem 0 0;
         a {
           text-decoration: none;
         }
         .fa {
           font-size: 1em;
-          margin-right: 1rem;
+          margin-right: .5rem;
         }
       }
       .topic-vote {
-        span {
+        div {
+          display: inline-block;
           margin: 0 1rem 0 0;
-          .fa {
+          span {
+            line-height: 1.5em;
+            float: right;
+            font-size: 1.2em;
+            font-weight: 700;
+          }
+          i {
+            float: left;
             border-radius: 100%;
             background: @pink;
             color: #fff;
@@ -1651,9 +1661,35 @@ p.post-meta .fa {
             line-height: 1;
             text-align: center;
             padding: .5rem;
-            margin: 0 .5rem 0 0;
+            margin: 0 1rem 0 0;
             &:hover {
               background: lighten(@pink, 5%);
+            }
+          }
+        }
+      }
+      .topic-follow {
+        div {
+          display: inline-block;
+        }
+      }
+    }
+    &.validacao {
+      .topic-meta {
+        font-size: 1em;
+        > * {
+          float: none;
+          text-align: center;
+          display: block;
+        }
+        .topic-vote {
+          div {
+            margin: 0 1rem;
+            span {
+              line-height: 2.5em;
+            }
+            i {
+              padding: 1em;
             }
           }
         }

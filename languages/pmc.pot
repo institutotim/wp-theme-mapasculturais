@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-15 17:29-0300\n"
+"POT-Creation-Date: 2017-05-15 18:20-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,11 +195,11 @@ msgstr ""
 msgid "Versions of Mapas Culturais a tutorial applies to."
 msgstr ""
 
-#: parts/topic-item.php:6
+#: parts/topic-item.php:9
 msgid "prazo encerrado"
 msgstr ""
 
-#: parts/topic-item.php:8
+#: parts/topic-item.php:11
 #, php-format
 msgid "por mais <span class=\"numero\">1</span> dia"
 msgid_plural "por mais <span class=\"numero\">%1$s</span> dias"

@@ -164,6 +164,15 @@ function pmc_header_scripts() {
 }
 add_action('wp_enqueue_scripts', 'pmc_header_scripts');
 
+// Delibera hooks
+function pmc_is_pauta($is_pauta) {
+  if(is_page('comunidade')) {
+    return true;
+  }
+  return $is_pauta;
+}
+add_filter('delibera_is_pauta', 'pmc_is_pauta');
+
 /**
  * Include features
  */
