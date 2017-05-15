@@ -8,7 +8,7 @@ $status_pauta = delibera_get_situacao($post->ID)->slug;
     if ( \Delibera\Flow::getDeadlineDays( $post->ID ) <= -1 )
     _e( 'prazo encerrado', 'delibera' );
     else
-    printf( _n( 'por mais <span class="numero">1</span> dia', 'por mais <span class="numero">%1$s</span> dias', \Delibera\Flow::getDeadlineDays( $post->ID ), 'delibera' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
+    printf( _n( '<span class="numero">1</span> dia restante', '<span class="numero">%1$s</span> dias restantes', \Delibera\Flow::getDeadlineDays( $post->ID ), 'delibera' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
     ?>
   </p>
   <h4><?php the_title(); ?></h4>
