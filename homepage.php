@@ -50,7 +50,7 @@
                   </div>
                 </article>
                 <?php
-              wp_reset_postdata();
+                wp_reset_postdata();
               endwhile;
               ?>
             </div>
@@ -78,7 +78,7 @@
                   </div>
                 </article>
                 <?php
-              wp_reset_postdata();
+                wp_reset_postdata();
               endwhile;
               ?>
             </div>

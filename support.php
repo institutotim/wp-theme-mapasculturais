@@ -185,7 +185,7 @@
                 agente cultural
               </a>
             </nav>
-            <nav class="featured-categories">
+            <nav class="featured-categories dark">
               <ul>
                 <li>
                   <a href="#">
