@@ -2,15 +2,21 @@
 $status_pauta = delibera_get_situacao($post->ID)->slug;
 ?>
 <article <?php post_class($status_pauta); ?>>
-  <p class="topic-deadline">
-    <span class="fa fa-clock-o"></span>
-    <?php
-    if ( \Delibera\Flow::getDeadlineDays( $post->ID ) <= -1 )
-    _e( 'prazo encerrado', 'delibera' );
-    else
-    printf( _n( '<span class="numero">1</span> dia restante', '<span class="numero">%1$s</span> dias restantes', \Delibera\Flow::getDeadlineDays( $post->ID ), 'delibera' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
+  <?php
+  if($status_pauta !== 'comresolucao') :
     ?>
-  </p>
+    <p class="topic-deadline">
+      <span class="fa fa-clock-o"></span>
+      <?php
+      if ( \Delibera\Flow::getDeadlineDays( $post->ID ) <= -1 )
+        _e( 'prazo encerrado', 'delibera' );
+      else
+        printf( _n( '<span class="numero">1</span> dia restante', '<span class="numero">%1$s</span> dias restantes', \Delibera\Flow::getDeadlineDays( $post->ID ), 'delibera' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
+      ?>
+    </p>
+    <?php
+  endif;
+  ?>
   <h4><?php the_title(); ?></h4>
   <div class="topic-meta row">
     <div class="topic-vote">
