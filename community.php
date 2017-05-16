@@ -63,7 +63,7 @@
     </div>
     <div class="container">
       <div class="four columns">
-        <div class="community-intro connect-border connect-left">
+        <div class="community-intro connect-border connect-left parent-height" data-parent=".container">
           <h2>Discussões</h2>
           <p>In at est ac magna suscipit fermentum. Sed efficitur nisl a tristique malesuada. Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</p>
           <div class="featured-categories">

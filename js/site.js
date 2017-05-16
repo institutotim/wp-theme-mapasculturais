@@ -35,6 +35,24 @@ Number.prototype.format = function(n, x) {
       });
     })
   });
+
+  /*
+   * Parent height element
+   */
+  $(document).ready(function() {
+    var doHeight = function($el, parent) {
+      $el.height($el.parents(parent).height());
+    }
+    $('.parent-height').each(function() {
+      var $el = $(this);
+      var parent = $el.data('parent');
+      doHeight($el, parent);
+      $(window).resize(function() {
+        doHeight($el, parent);
+      });
+    })
+  });
+
   /*
    * Connect border
    */
