@@ -143,7 +143,7 @@
               )
             ));
             ?>
-            <section class="content-section">
+            <section class="content-section community-section topic-proposal-section">
               <header class="content-section-header">
                 <h3>Propostas de pauta</h3>
                 <p class="section-description">Vote para abrir discussão sobre as pautas propostas.</p>
@@ -178,7 +178,7 @@
               )
             ));
             ?>
-            <section class="content-section">
+            <section class="content-section community-section topic-resolved-section">
               <header class="content-section-header">
                 <h3>Pautas com resolução</h3>
                 <p class="section-description">Veja as resoluções das pautas concluídas.</p>

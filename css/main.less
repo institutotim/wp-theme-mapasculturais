@@ -152,6 +152,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
   float: right;
   margin: 0 -5% 4rem 4rem;
 }
+
 @media (min-width: 550px) {
   .container {
     width: 90%;
@@ -1603,6 +1604,31 @@ p.post-meta .fa {
   }
 }
 .content-section {
+  &.topic-resolved-section {
+    position: relative;
+    padding-left: calc(~"8% + 3px");
+    &:before {
+      content: '';
+      background: url('../img/ptn-dot-vertical-dark.png') repeat-y top center;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &.topic-proposal-section {
+    position: relative;
+    &:after {
+      content: '';
+      background: url('../img/ptn-dot-vertical-dark.png') repeat-y top center;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: calc(~"-8% - 4px");
+    }
+  }
   .type-pauta {
     background: #f9f9f9;
     padding: 2rem;
@@ -1687,7 +1713,7 @@ p.post-meta .fa {
         }
         .topic-vote {
           div {
-            margin: 0 1rem;
+            margin: 0 3rem;
             span {
               line-height: 2.5em;
             }
