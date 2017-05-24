@@ -2,8 +2,10 @@ wordpress:
   build: .
   links:
     - db:mysql
+  environment:
+    ACF_PRO_KEY:
   ports:
-    - 80:80
+    - 8080:80
   volumes:
     - ../delibera:/var/www/html/wp-content/plugins/delibera
     - .:/var/www/html/wp-content/themes/mapasculturais

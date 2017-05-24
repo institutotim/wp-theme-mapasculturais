@@ -23,6 +23,8 @@ grunt build
 
 ### Start local server
 
+Change environment variable `ACF_PRO_KEY` with your Advanced Custom Fields Pro Key in `docker-compose.yml`. Then, start the containers:
+
 ```shell
   docker-compose up
 ```

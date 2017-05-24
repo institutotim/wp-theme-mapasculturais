@@ -6,44 +6,53 @@
 
 require_once(TEMPLATEPATH . '/inc/class-tgm-plugin-activation.php');
 function pmc_register_required_plugins() {
-   $plugins = array();
-   $plugins[] = array(
-     'name' => 'Advanced Custom Fields',
-     'slug' => 'advanced-custom-fields',
-     'required' => true,
-     'force_activation' => true
-   );
-   $plugins[] = array(
-     'name' => 'ACF: Advanced Taxonomy Selector',
-     'slug' => 'acf-advanced-taxonomy-selector',
-     'required' => true,
-     'force_activation' => true
-   );
-   $plugins[] = array(
-     'name' => 'Advanced Custom Fields: Tag It Field',
-     'slug' => 'advanced-custom-fields-tag-it',
-     'required' => true,
-     'force_activation' => true
-   );
-   $plugins[] = array(
-     'name' => 'Advanced Custom Fields: Font Awesome',
-     'slug' => 'advanced-custom-fields-font-awesome',
-     'required' => true,
-     'force_activation' => true
-   );
+  $plugins = array();
 
-   $options = array(
-     'default_path'  => '',
-     'menu'      => 'pmc-install-plugins',
-     'has_notices'  => true,
-     'dismissable'  => true,
-     'dismiss_msg'  => '',
-     'is_automatic'  => false,
-     'message'    => ''
-   );
-   tgmpa($plugins, $options);
- }
- add_action('tgmpa_register', 'pmc_register_required_plugins');
+  $ACF_PRO_KEY = getenv('ACF_PRO_KEY');
+
+  // Check ACP_PRO_KEY environment var
+  if (is_string($ACF_PRO_KEY) && (strlen($ACF_PRO_KEY) == 72)) {
+    $plugins[] = array(
+      'name' => 'Advanced Custom Fields PRO',
+      'slug' => 'advanced-custom-fields-pro',
+      'required' => true,
+      'force_activation' => true,
+      'source' => 'https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=' . $ACF_PRO_KEY
+    );
+    $plugins[] = array(
+      'name' => 'ACF: Advanced Taxonomy Selector',
+      'slug' => 'acf-advanced-taxonomy-selector',
+      'required' => true,
+      'force_activation' => true
+    );
+    $plugins[] = array(
+      'name' => 'Advanced Custom Fields: Tag It Field',
+      'slug' => 'advanced-custom-fields-tag-it',
+      'required' => true,
+      'force_activation' => true
+    );
+    $plugins[] = array(
+      'name' => 'Advanced Custom Fields: Font Awesome',
+      'slug' => 'advanced-custom-fields-font-awesome',
+      'required' => true,
+      'force_activation' => true
+    );
+  } else {
+   error_log('Error: Environment variable ACF_PRO_KEY is not defined.');
+  }
+
+  $options = array(
+   'default_path'  => '',
+   'menu'      => 'pmc-install-plugins',
+   'has_notices'  => true,
+   'dismissable'  => true,
+   'dismiss_msg'  => '',
+   'is_automatic'  => false,
+   'message'    => ''
+  );
+  tgmpa($plugins, $options);
+}
+add_action('tgmpa_register', 'pmc_register_required_plugins');
 
 /**
  * Setup Theme
