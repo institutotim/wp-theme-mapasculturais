@@ -2,8 +2,6 @@ wordpress:
   build: .
   links:
     - db:mysql
-  environment:
-    ACF_PRO_KEY:
   ports:
     - 8080:80
   volumes:
@@ -11,7 +9,6 @@ wordpress:
     - .:/var/www/html/wp-content/themes/mapasculturais
     - ./.data/wp:/var/www/html/
     - ./.data/php:/usr/local/php/conf.d
-
 db:
   image: mariadb
   environment:
