@@ -11,7 +11,7 @@
             </ul>
           </li>
           <li>
-            <a href="#">Linha do Tempo</a>
+            <a href="<?php echo get_post_type_archive_link('pmc_timeline_item'); ?>">Linha do Tempo</a>
             <ul>
               <li><a href="#">Proin egestas</a></li>
               <li><a href="#">Mauris luctus lobortis</a></li>

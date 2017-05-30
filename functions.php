@@ -82,6 +82,13 @@ function pmc_setup_theme() {
     $role->add_cap( 'edit_network_posts' );
     $role->add_cap( 'delete_network_posts' );
 
+    // network posts (custom post type)
+    $role->add_cap( 'edit_published_timeline_items' );
+    $role->add_cap( 'publish_timeline_items' );
+    $role->add_cap( 'delete_published_timeline_items' );
+    $role->add_cap( 'edit_timeline_items' );
+    $role->add_cap( 'delete_timeline_items' );
+
     // tutorials (custom type)
     $role->add_cap( 'edit_published_tutorials' );
     $role->add_cap( 'delete_published_tutorials' );
@@ -122,6 +129,12 @@ function pmc_setup_theme() {
 
 }
 add_action('after_setup_theme', 'pmc_setup_theme');
+
+/**
+ * Enable Thumbnails for all posts
+ */
+
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Header
@@ -186,6 +199,7 @@ add_filter('delibera_is_pauta', 'pmc_is_pauta');
  * Include features
  */
 
+require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
