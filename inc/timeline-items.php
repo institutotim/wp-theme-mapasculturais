@@ -14,15 +14,12 @@ class PMC_Timeline_Items {
     		'fields' => array (
     			array (
     				'key' => 'field_5925d734986b5',
-    				'label' => 'Informe a data do evento na linha do tempo:',
+    				'label' => _('Event date:'),
     				'name' => 'event_date',
     				'type' => 'text',
-    				'instructions' => 'Formatos válidos: YYYY-MM-DD, YYYY-MM e YYYY, onde YYYY = ano, MM = mês e DD = dia.',
+    				'instructions' => _('Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = month and DD = day.', 'pmc'),
     				'required' => 1,
-    				'default_value' => '',
-    				'placeholder' => 'Exemplos: 2015-07, 2014, 2017-03-01',
-    				'prepend' => '',
-    				'append' => '',
+    				'placeholder' => _('Examples: 2015-07, 2014, 2017-03-01', 'pmc'),
     				'formatting' => 'html',
     				'maxlength' => 10,
     			),
@@ -39,34 +36,11 @@ class PMC_Timeline_Items {
     			),
     		),
     		'options' => array (
-    			'position' => 'acf_after_title',
-    			'layout' => 'default',
-    			'hide_on_screen' => array (
-    			),
-    		),
-    		'menu_order' => 0,
+          'style' => 'seamless',
+          'menu_order' => 0
+    		)
     	));
     }
-
-    //
-    // add_filter('acf/validate_value', 'pmc_acf_validate_event_date', 10, 4);
-    // function pmc_acf_validate_event_date( $valid, $value, $field, $input ){
-    //
-    //   error_log('yo')
-    //
-    //   // bail early if value is already invalid
-    //   if( !$valid ) {
-    //
-    //     return $valid;
-    //
-    //   }
-    //
-    //   // return
-    //   return $valid;
-    // }
-
-
-
 
   }
 

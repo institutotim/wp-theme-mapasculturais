@@ -30,7 +30,8 @@
         $posts_query = new WP_Query(array(
           'post_type' => 'pmc_timeline_item',
           'meta_key' => 'event_date',
-          'orderby' => 'meta_value_num'
+          'orderby' => 'meta_value',
+          'order' => 'ASC'
         ));
         while($posts_query->have_posts()) :
           $posts_query->the_post();
@@ -48,14 +49,10 @@
                       echo $event_date;
                       break;
                     case 7: // year-month
-                      echo date_i18n('F \d\e Y', strtotime($event_date));
+                      echo date_i18n(_x('F Y', 'Pattern for YYYY-MM in timeline items', 'pmc'), strtotime($event_date));
                       break;
                     case 10: // year-month-day
-                      echo date_i18n('j \d\e F \d\e Y', strtotime($event_date));
-                      break;
-
-                    default:
-                      echo 'undefined';
+                      echo date_i18n(_x('F j, Y', 'Pattern for YYYY-MM-DD in timeline items', 'pmc'), strtotime($event_date));
                       break;
                   }
 
