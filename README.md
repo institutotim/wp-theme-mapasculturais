@@ -23,7 +23,11 @@ grunt build
 
 ### Start local server
 
-Change environment variable `ACF_PRO_KEY` with your Advanced Custom Fields Pro Key in `docker-compose.yml`. Then, start the containers:
+Add the following line to `wp-config.php`, changing `<your-key>` to [ACF PRO](https://www.advancedcustomfields.com/pro/) key:
+
+    define("ACF_PRO_KEY", "<your-key>");
+
+Start services:
 
 ```shell
   docker-compose up

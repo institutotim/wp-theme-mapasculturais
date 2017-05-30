@@ -8,16 +8,14 @@ require_once(TEMPLATEPATH . '/inc/class-tgm-plugin-activation.php');
 function pmc_register_required_plugins() {
   $plugins = array();
 
-  $ACF_PRO_KEY = getenv('ACF_PRO_KEY');
-
   // Check ACP_PRO_KEY environment var
-  if (is_string($ACF_PRO_KEY) && (strlen($ACF_PRO_KEY) == 72)) {
+  if (defined('ACF_PRO_KEY')) {
     $plugins[] = array(
       'name' => 'Advanced Custom Fields PRO',
       'slug' => 'advanced-custom-fields-pro',
       'required' => true,
       'force_activation' => true,
-      'source' => 'https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=' . $ACF_PRO_KEY
+      'source' => 'https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=' . ACF_PRO_KEY
     );
     $plugins[] = array(
       'name' => 'ACF: Advanced Taxonomy Selector',
