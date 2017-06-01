@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-30 15:03-0300\n"
-"PO-Revision-Date: 2017-05-30 15:03-0300\n"
+"POT-Creation-Date: 2017-06-01 16:55-0300\n"
+"PO-Revision-Date: 2017-06-01 16:57-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.1\n"
 
 #: archive-pmc_timeline_item.php:52
 msgctxt "Pattern for YYYY-MM in timeline items"
@@ -63,7 +63,7 @@ msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:66
 msgid "Maintainer"
 msgstr ""
 
@@ -128,67 +128,75 @@ msgstr ""
 msgid "Network's Posts"
 msgstr ""
 
+#: inc/timeline-items.php:17
+msgid "Event date:"
+msgstr "Data do ocorrência:"
+
 #: inc/timeline-items.php:20
 msgid ""
 "Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = "
 "month and DD = day."
 msgstr ""
-"Formatos válidos: YYYY-MM-DD, YYYY-MM e YYYY, onde YYYY = ano, MM = mês e "
-"DD = dia."
+"Formatos válidos: YYYY-MM-DD, YYYY-MM e YYYY, onde YYYY = ano, MM = mês e DD "
+"= dia."
 
-#: inc/timeline-items.php:55
+#: inc/timeline-items.php:22
+msgid "Examples: 2014 or 2014-05 or 2014-05-01"
+msgstr "Exemplos: 2014 ou 2014-05 ou 2014-05-01"
+
+#: inc/timeline-items.php:49
 msgctxt "post type general name"
 msgid "Timeline Items"
 msgstr ""
 
-#: inc/timeline-items.php:56
+#: inc/timeline-items.php:50
 msgctxt "post type singular name"
 msgid "Timeline Item"
 msgstr ""
 
-#: inc/timeline-items.php:57
+#: inc/timeline-items.php:51
 msgctxt "admin menu"
 msgid "Timeline"
 msgstr ""
 
-#: inc/timeline-items.php:58
+#: inc/timeline-items.php:52
 msgctxt "add new on admin bar"
 msgid "Timeline"
 msgstr ""
 
-#: inc/timeline-items.php:60
+#: inc/timeline-items.php:54
 msgid "Add new timeline item"
 msgstr ""
 
-#: inc/timeline-items.php:61
+#: inc/timeline-items.php:55
 msgid "New item"
 msgstr ""
 
-#: inc/timeline-items.php:62
+#: inc/timeline-items.php:56
 msgid "Edit item"
 msgstr ""
 
-#: inc/timeline-items.php:63
+#: inc/timeline-items.php:57
 msgid "View item"
 msgstr ""
 
-#: inc/timeline-items.php:64
+#: inc/timeline-items.php:58
 msgid "All items"
 msgstr ""
 
-#: inc/timeline-items.php:65
+#: inc/timeline-items.php:59
 msgid "Search timeline items"
 msgstr ""
 
-#: inc/timeline-items.php:66
+#: inc/timeline-items.php:60
 msgid "No timeline items found."
 msgstr ""
 
-#: inc/timeline-items.php:67
+#: inc/timeline-items.php:61
 msgid "No timeline items found in trash."
 msgstr ""
 
-#: inc/timeline-items.php:80
+#: inc/timeline-items.php:74
 msgid "Timeline's Posts"
 msgstr ""
 

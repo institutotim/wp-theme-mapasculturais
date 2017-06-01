@@ -14,12 +14,12 @@ class PMC_Timeline_Items {
     		'fields' => array (
     			array (
     				'key' => 'field_5925d734986b5',
-    				'label' => _('Event date:'),
+    				'label' => __('Event date:', 'pmc'),
     				'name' => 'event_date',
     				'type' => 'text',
-    				'instructions' => _('Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = month and DD = day.', 'pmc'),
+    				'instructions' => __('Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = month and DD = day.', 'pmc'),
     				'required' => 1,
-    				'placeholder' => _('Examples: 2015-07, 2014, 2017-03-01', 'pmc'),
+    				'placeholder' => __('Examples: 2014 or 2014-05 or 2014-05-01', 'pmc'),
     				'formatting' => 'html',
     				'maxlength' => 10,
     			),

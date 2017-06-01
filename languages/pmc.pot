@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-30 15:29-0300\n"
+"POT-Creation-Date: 2017-06-01 16:54-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,7 +63,7 @@ msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:66
 msgid "Maintainer"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 
 #: inc/timeline-items.php:22
-msgid "Examples: 2015-07, 2014, 2017-03-01"
+msgid "Examples: 2014 or 2014-05 or 2014-05-01"
 msgstr ""
 
 #: inc/timeline-items.php:49
