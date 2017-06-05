@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 16:54-0300\n"
+"POT-Creation-Date: 2017-06-05 19:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,8 +63,8 @@ msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:66
-msgid "Maintainer"
+#: functions.php:65
+msgid "Instance"
 msgstr ""
 
 #: inc/network-posts.php:11
@@ -126,6 +126,58 @@ msgstr ""
 
 #: inc/network-posts.php:36
 msgid "Network's Posts"
+msgstr ""
+
+#: inc/platform-statistics.php:14
+msgid "Instance details"
+msgstr ""
+
+#: inc/platform-statistics.php:18
+msgid "Instance URL"
+msgstr ""
+
+#: inc/platform-statistics.php:34
+msgid "Public E-mail"
+msgstr ""
+
+#: inc/platform-statistics.php:53
+msgid "Team Members"
+msgstr ""
+
+#: inc/platform-statistics.php:72
+msgid "Name"
+msgstr ""
+
+#: inc/platform-statistics.php:91
+msgid "Position"
+msgstr ""
+
+#: inc/platform-statistics.php:110
+msgid "E-mail"
+msgstr ""
+
+#: inc/platform-statistics.php:130
+msgid "Facebook"
+msgstr ""
+
+#: inc/platform-statistics.php:149
+msgid "Twitter"
+msgstr ""
+
+#: inc/platform-statistics.php:168
+msgid "Github"
+msgstr ""
+
+#: inc/platform-statistics.php:187
+msgid "Telegram"
+msgstr ""
+
+#: inc/platform-statistics.php:199 inc/platform-statistics.php:218
+msgid "ID or phone number"
+msgstr ""
+
+#: inc/platform-statistics.php:206
+msgid "WhatsApp"
 msgstr ""
 
 #: inc/timeline-items.php:17

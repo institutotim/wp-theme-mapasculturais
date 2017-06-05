@@ -7,55 +7,249 @@ class PMC_Platform_Statistics {
     add_action('init', array($this, 'create_get_event'));
     add_action('pmc_create_get_event', array($this, 'update_statistics'));
 
-    // "Instance URL" property for maintainers
-    if(function_exists("register_field_group"))
-    {
-    	register_field_group(array (
-    		'id' => 'acf_instance-url',
-    		'title' => 'Instance URL',
-    		'fields' => array (
-    			array (
-    				'key' => 'field_58eff2997be7d',
-    				'label' => 'instance_url',
-    				'name' => 'instance_url',
-    				'type' => 'text',
-    				'instructions' => 'URL of your instance of Mapas Culturais Platform',
-    				'default_value' => '',
-    				'placeholder' => '',
-    				'prepend' => '',
-    				'append' => '',
-    				'formatting' => 'none',
-    				'maxlength' => '',
-    			),
-    		),
-    		'location' => array (
-    			array (
-    				array (
-    					'param' => 'ef_user',
-    					'operator' => '==',
-    					'value' => 'all',
-    					'order_no' => 0,
-    					'group_no' => 0,
-    				),
-    			),
-    		),
-    		'options' => array (
-    			'position' => 'side',
-    			'layout' => 'default',
-    			'hide_on_screen' => array (
-    			),
-    		),
-    		'menu_order' => 0,
-    	));
-    }
+    if( function_exists('acf_add_local_field_group') ):
+
+      acf_add_local_field_group(array (
+      	'key' => 'group_59359b3543d28',
+      	'title' => __('Instance details', 'pmc'),
+      	'fields' => array (
+      		array (
+      			'key' => 'field_5935a251ce25c',
+      			'label' => __('Instance URL', 'pmc'),
+      			'name' => 'instance_url',
+      			'type' => 'url',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      		),
+      		array (
+      			'key' => 'field_5935a5e0948b5',
+      			'label' => __('Public E-mail', 'pmc'),
+      			'name' => 'public_email',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array (
+      			'key' => 'field_59359b4ecc202',
+      			'label' => __('Team Members', 'pmc'),
+      			'name' => 'team_members',
+      			'type' => 'repeater',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'collapsed' => 'field_59359e11cc206',
+      			'min' => 0,
+      			'max' => 0,
+      			'layout' => 'table',
+      			'button_label' => '',
+      			'sub_fields' => array (
+      				array (
+      					'key' => 'field_59359e11cc206',
+      					'label' => __('Name', 'pmc'),
+      					'name' => 'name',
+      					'type' => 'text',
+      					'instructions' => '',
+      					'required' => 1,
+      					'conditional_logic' => 0,
+      					'wrapper' => array (
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => '',
+      					'prepend' => '',
+      					'append' => '',
+      					'maxlength' => '',
+      				),
+      				array (
+      					'key' => 'field_59359e3dcc207',
+      					'label' => __('Position', 'pmc'),
+      					'name' => 'position',
+      					'type' => 'text',
+      					'instructions' => '',
+      					'required' => 0,
+      					'conditional_logic' => 0,
+      					'wrapper' => array (
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => '',
+      					'prepend' => '',
+      					'append' => '',
+      					'maxlength' => '',
+      				),
+      				array (
+      					'key' => 'field_59359e7dcc208',
+      					'label' => __('E-mail', 'pmc'),
+      					'name' => 'email',
+      					'type' => 'email',
+      					'instructions' => '',
+      					'required' => 0,
+      					'conditional_logic' => 0,
+      					'wrapper' => array (
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => '',
+      					'prepend' => '',
+      					'append' => '',
+      				),
+      			),
+      		),
+      		array (
+      			'key' => 'field_59359b97cc204',
+      			'label' => __('Facebook', 'pmc'),
+      			'name' => 'facebook',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array (
+      			'key' => 'field_59359b81cc203',
+      			'label' => __('Twitter', 'pmc'),
+      			'name' => 'twitter',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array (
+      			'key' => 'field_59359c0dcc205',
+      			'label' => __('Github', 'pmc'),
+      			'name' => 'github',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array (
+      			'key' => 'field_59359f61cc209',
+      			'label' => __('Telegram', 'pmc'),
+      			'name' => 'telegram',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => __('ID or phone number', 'pmc'),
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array (
+      			'key' => 'field_59359f75cc20a',
+      			'label' => __('WhatsApp', 'pmc'),
+      			'name' => 'whatsapp',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array (
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => __('ID or phone number', 'pmc'),
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      	),
+      	'location' => array (
+      		array (
+      			array (
+      				'param' => 'user_role',
+      				'operator' => '==',
+      				'value' => 'instance',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
+    endif;
+
   }
 
   function create_get_event() {
     // Uncomment lines bellow to reschedule task
-    // $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
-    // if($timestamp) {
-    //   wp_unschedule_event($timestamp, 'pmc_create_get_event');
-    // }
+    $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
+    if ($timestamp) {
+      wp_unschedule_event($timestamp, 'pmc_create_get_event');
+    }
 
     $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
     if( $timestamp == false ) {
@@ -66,30 +260,32 @@ class PMC_Platform_Statistics {
     }
   }
 
-  function get_maintainers() {
+  function get_instances() {
     $result = array();
 
-    $all_maintainers = get_users( 'role=maintainer' );
+    error_log('alou');
 
-    if ($all_maintainers) {
+    $all_instances = get_users( 'role=instance' );
 
-      foreach ($all_maintainers as $maintainer) {
+    if ($all_instances) {
 
-        // Get maintainer's instance URL
-        $maintainer_id = $maintainer->ID;
-        $instance_url = get_user_meta($maintainer_id, 'instance_url', true);
+      foreach ($all_instances as $instance) {
+
+        // Get instance's instance URL
+        $instance_id = $instance->ID;
+        $instance_url = get_user_meta($instance_id, 'instance_url', true);
 
         // Check if URL is valid
         if (filter_var($instance_url, FILTER_VALIDATE_URL) === FALSE) {
-          error_log('Maintainer ' . $maintainer->ID . ': no URL.');
+          error_log('Maintainer ' . $instance->ID . ': no URL.');
         } else {
-          // push maintainer to result
-          $result[] = $maintainer;
-          error_log('Maintainer ' . $maintainer->ID . ': ' . $instance_url);
+          // push instance to result
+          $result[] = $instance;
+          error_log('Maintainer ' . $instance->ID . ': ' . $instance_url);
         }
       }
     } else {
-      error_log('No maintainers found.');
+      error_log('No instances found.');
     }
 
     return $result;
@@ -97,9 +293,10 @@ class PMC_Platform_Statistics {
 
   public function update_statistics(){
 
-    $maintainers = $this->get_maintainers();
+    $instances = $this->get_instances();
 
     $element_types = array('event', 'agent', 'space', 'project');
+    // $element_types = array('event');
 
     foreach ($element_types as $element_type) {
 
@@ -107,16 +304,16 @@ class PMC_Platform_Statistics {
       $global_count_series = array();
 
       // for each maintainer
-      foreach ($maintainers as $maintainer) {
+      foreach ($instances as $instance) {
 
         // get its count series
-        $count_series = $this->get_element_count_series($maintainer->instance_url, $element_type);
+        $count_series = $this->get_element_count_series($instance->instance_url, $element_type);
 
         // if result is valid
         if ($count_series != false) {
 
           // update instance count series
-          update_user_meta($maintainer_id, $element_type . 's_count', $count_series);
+          update_user_meta($instance->ID, $element_type . 's_count', $count_series);
 
           // update global count
           foreach ($count_series as $date => $value) {

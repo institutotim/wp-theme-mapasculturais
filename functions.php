@@ -57,20 +57,20 @@ add_action('tgmpa_register', 'pmc_register_required_plugins');
  */
 
 function pmc_setup_theme() {
-  load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
   // uncomment this line to refresh maintainer's capabilities
-  // remove_role('maintainer');
+  // remove_role('instance');
 
-  // create maintainer role
-  $maintainer_role = add_role('maintainer', __('Maintainer'));
-  if (null !== $maintainer_role) {
-    $maintainer_role->add_cap( 'read' );
-    $maintainer_role->add_cap( 'upload_files' );
+  // create instance role
+  $instance_role = add_role('instance', __('Instance', 'pmc'));
+
+  if (null !== $instance_role) {
+    $instance_role->add_cap( 'read' );
+    $instance_role->add_cap( 'upload_files' );
   }
 
-  // capabilities for admins, editors and maintainers
-  foreach (array('administrator', 'editor', 'maintainer') as $role_name) {
+  // capabilities for admins, editors and instances
+  foreach (array('administrator', 'editor', 'instance') as $role_name) {
     $role = get_role( $role_name );
 
     // network posts (custom post type)
@@ -197,6 +197,8 @@ add_filter('delibera_is_pauta', 'pmc_is_pauta');
 /**
  * Include features
  */
+
+load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
 require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
