@@ -263,8 +263,6 @@ class PMC_Platform_Statistics {
   function get_instances() {
     $result = array();
 
-    error_log('alou');
-
     $all_instances = get_users( 'role=instance' );
 
     if ($all_instances) {

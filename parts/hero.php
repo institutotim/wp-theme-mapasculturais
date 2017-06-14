@@ -12,7 +12,7 @@
     <div class="container">
       <div class="seven columns">
         <div class="intro-text">
-          <p class="big">Software livre para gestão cultural e mapeamento colaborativo.</p>
+          <p class="big"><?php echo get_post_meta(get_the_ID(), 'introduction_text', true); ?></p>
           <p class="connect-border connect-left buttons">
             <a class="button" href="support.html">
               <span class="fa fa-wrench"></span>
@@ -28,7 +28,12 @@
       <div class="five columns">
         <div class="network full-height connect-border connect-right">
           <div class="intro-numbers row">
-            <p class="number do-count">30</p>
+            <p class="number do-count">
+              <?php
+                $instances = get_users('role=instance');
+                echo count($instances);
+              ?>
+            </p>
             <p class="number-label">plataformas <span>na rede</span></p>
           </div>
           <a href="#">Conheça as instalações</a>

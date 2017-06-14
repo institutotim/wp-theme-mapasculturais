@@ -10,7 +10,17 @@
     <div class="main-text">
       <div class="container">
         <div class="eight columns">
-          <p><strong>Mapas Culturais é uma ferramenta que articula agentes culturais, instituições governamentais e a sociedade de forma colaborativa.</strong> Promove o acesso e a visibilidade para o público, o governo e o mercado. O setor público ganha uma compreensão do território e de sua cultura, os agentes divulgam suas programações e a população pode entender seu espaço e se envolver em atividades culturais na vizinhança.</p>
+          <p>
+            <?php
+              // get and split project_description, first phrase will be highlighted
+              $project_description = get_post_meta(get_the_ID(), 'project_description', true);
+              $project_description = explode('.', $project_description, 2);
+            ?>
+            <strong>
+              <?php echo $project_description[0] ?>.
+            </strong>
+            <?php echo $project_description[1] ?>
+          </p>
           <hr class="dark"/>
         </div>
       </div>
@@ -27,6 +37,9 @@
                 <h2>Notícias</h2>
               </header>
               <?php
+
+              // First post, which should display a featured image
+
               $first_post_query = new WP_Query(array(
                 'posts_per_page' => 1,
                 'post__in' => get_option('sticky_posts'),
@@ -40,8 +53,10 @@
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="meta">
                     <p class="author">
-                      <img src="http://lorempixel.com/30/30/" />
-                      Raimundo Nonato
+                      <?php
+                       echo get_avatar(get_the_author_meta('ID'), $size = '30');
+                      ?>
+                      <?php echo get_the_author(); ?>
                     </p>
                     <p class="date">
                       <span class="fa fa-clock-o"></span>
@@ -69,11 +84,14 @@
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="meta">
                     <p class="author">
-                      <img src="http://lorempixel.com/30/30/" />
-                      Raimundo Nonato
+                      <?php
+                       echo get_avatar(get_the_author_meta('ID'), $size = '30');
+                      ?>
+                      <?php echo get_the_author(); ?>
                     </p>
                     <p class="date">
-                      <span class="fa fa-clock-o"></span>                      <?php echo get_the_date(); ?>
+                      <span class="fa fa-clock-o"></span>
+                      <?php echo get_the_date(); ?>
                     </p>
                   </div>
                 </article>

@@ -200,6 +200,7 @@ add_filter('delibera_is_pauta', 'pmc_is_pauta');
 
 load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
+require_once(TEMPLATEPATH . '/inc/homepage-config.php');
 require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
