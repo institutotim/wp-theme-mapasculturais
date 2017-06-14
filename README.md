@@ -1,6 +1,15 @@
 > **Portal do Mapas Culturais** is a website that gathers information about *Mapas Culturais* platform, providing institutional information about the project as well serving as plataform for development and support of the project.
 
 
+# Install
+
+* Copy this repository to `wp-content` directory of your Wordpress install;
+* Activate this theme at the menu 'Apperance/Themes';
+* Install suggested plugins (ACF and others) at the menu 'Plugins';
+* Create the following pages:
+  * Homepage, using model 'Homepage';
+  * News;
+
 ## Development setup
 
 ### Requirements
@@ -57,7 +66,3 @@ To watch debug log file, run:
 ```shell
   tail -f .data/wp/wp-content/debug.log
 ```
-
-### Site configuration
-
-Walk through the 5-min install and enable this theme in "Apperance/Themes" at admin panel.
