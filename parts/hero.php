@@ -12,6 +12,7 @@
     <div class="container">
       <div class="seven columns">
         <div class="intro-text">
+          <h2>Mapas Culturais</h2>
           <p class="big"><?php echo get_post_meta(get_the_ID(), 'introduction_text', true); ?></p>
           <p class="connect-border connect-left buttons">
             <a class="button" href="support.html">

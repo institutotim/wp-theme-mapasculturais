@@ -20,7 +20,7 @@
       <div class="eight columns">
         <div class="search-input u-pull-right">
           <label class="fa fa-search" for="search"></label>
-          <input id="search" class="search" type="text" placeholder="Busque qualquer coisa">
+          <input id="search" class="search" type="text" placeholder="Busca...">
         </div>
         <nav id="mastnav" class="u-pull-right">
           <ul>
