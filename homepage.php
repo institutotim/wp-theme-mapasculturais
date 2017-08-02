@@ -69,7 +69,6 @@
               endwhile;
               ?>
             </div>
-            <hr />
             <div class="content-section-content secondary-content">
               <?php
               $posts_query = new WP_Query(array(
