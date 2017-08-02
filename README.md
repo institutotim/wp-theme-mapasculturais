@@ -1,4 +1,4 @@
->   Mapas Culturais Wordpress Theme
+    Mapas Culturais Wordpress Theme
     Copyright (C) <2016> <Instituto TIM>
 
     This program is free software: you can redistribute it and/or modify
