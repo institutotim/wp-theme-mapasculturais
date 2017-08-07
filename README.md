@@ -65,6 +65,10 @@ To watch debug log file, run:
   tail -f .data/wp/wp-content/debug.log
 ```
 
+### Translations
+
+Run `grunt pot` to update the `languages/pmc.pot` and then translate the strings with Poedit. 
+
 ## License
 
 Mapas Culturais Wordpress Theme

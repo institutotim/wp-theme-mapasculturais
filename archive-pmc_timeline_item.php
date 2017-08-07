@@ -2,6 +2,22 @@
 /*
  * Template name: Timeline
  */
+
+// format date according to length
+function formatTimelineDate($date) {
+ switch (strlen($date)) {
+   case 4: // year only
+     return $date;
+     break;
+   case 7: // year-month
+     return date_i18n(_x('F Y', 'Pattern for YYYY-MM in timeline items', 'pmc'), strtotime($date));
+     break;
+   case 10: // year-month-day
+     return date_i18n(_x('F j, Y', 'Pattern for YYYY-MM-DD in timeline items', 'pmc'), strtotime($date));
+     break;
+ }
+}
+
 ?>
 <?php get_header(); ?>
 <article>
@@ -30,7 +46,7 @@
         $posts_query = new WP_Query(array(
           'post_type' => 'pmc_timeline_item',
           'posts_per_page' => -1,
-          'meta_key' => 'event_date',
+          'meta_key' => 'start_date',
           'orderby' => 'meta_value',
           'order' => 'ASC'
         ));
@@ -42,21 +58,16 @@
             <div class="post-box">
               <p class="date">
                 <?php
-                  $event_date = get_post_meta($posts_query->post->ID, 'event_date', true);
+                  $start_date = get_post_meta($posts_query->post->ID, 'start_date', true);
+                  $finish_date = get_post_meta($posts_query->post->ID, 'finish_date', true);
 
-                  // format date according to length
-                  switch (strlen($event_date)) {
-                    case 4: // year only
-                      echo $event_date;
-                      break;
-                    case 7: // year-month
-                      echo date_i18n(_x('F Y', 'Pattern for YYYY-MM in timeline items', 'pmc'), strtotime($event_date));
-                      break;
-                    case 10: // year-month-day
-                      echo date_i18n(_x('F j, Y', 'Pattern for YYYY-MM-DD in timeline items', 'pmc'), strtotime($event_date));
-                      break;
+                  echo formatTimelineDate($start_date);
+
+                  // display finish_date if defined
+                  if ( ! empty( $finish_date ) ) {
+                    echo '&nbsp' . _x('to', 'Conjunction for timeline periods', 'pmc') . '&nbsp';
+                    echo formatTimelineDate($finish_date);
                   }
-
                 ?>
               </p>
               <div class="post-box-body">

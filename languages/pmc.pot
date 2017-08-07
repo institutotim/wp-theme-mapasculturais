@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 19:50-0300\n"
+"POT-Creation-Date: 2017-08-07 15:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: archive-pmc_timeline_item.php:52
+#: archive-pmc_timeline_item.php:13
 msgctxt "Pattern for YYYY-MM in timeline items"
 msgid "F Y"
 msgstr ""
 
-#: archive-pmc_timeline_item.php:55
+#: archive-pmc_timeline_item.php:16
 msgctxt "Pattern for YYYY-MM-DD in timeline items"
 msgid "F j, Y"
+msgstr ""
+
+#: archive-pmc_timeline_item.php:68
+msgctxt "Conjunction for timeline periods"
+msgid "to"
 msgstr ""
 
 #: archive.php:27 archive.php:29
@@ -181,73 +186,45 @@ msgid "WhatsApp"
 msgstr ""
 
 #: inc/timeline-items.php:17
-msgid "Event date:"
+msgid "Start date:"
 msgstr ""
 
 #: inc/timeline-items.php:20
 msgid ""
-"Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = "
-"month and DD = day."
+"Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
 msgstr ""
 
 #: inc/timeline-items.php:22
-msgid "Examples: 2014 or 2014-05 or 2014-05-01"
+msgid "Examples: 2014, 2014-05, 2014-05-01"
 msgstr ""
 
-#: inc/timeline-items.php:49
-msgctxt "post type general name"
-msgid "Timeline Items"
+#: inc/timeline-items.php:28
+msgid "Finish date:"
 msgstr ""
 
-#: inc/timeline-items.php:50
-msgctxt "post type singular name"
-msgid "Timeline Item"
+#: inc/timeline-items.php:31
+msgid "Leave blank if same as above."
 msgstr ""
 
-#: inc/timeline-items.php:51
-msgctxt "admin menu"
+#: inc/timeline-items.php:62
+msgctxt "pmc_timeline_item"
+msgid "Add event"
+msgstr ""
+
+#: inc/timeline-items.php:65
+msgid "Edit event"
+msgstr ""
+
+#: inc/timeline-items.php:67
+msgid "All events"
+msgstr ""
+
+#: inc/timeline-items.php:83
 msgid "Timeline"
 msgstr ""
 
-#: inc/timeline-items.php:52
-msgctxt "add new on admin bar"
-msgid "Timeline"
-msgstr ""
-
-#: inc/timeline-items.php:54
-msgid "Add new timeline item"
-msgstr ""
-
-#: inc/timeline-items.php:55
-msgid "New item"
-msgstr ""
-
-#: inc/timeline-items.php:56
-msgid "Edit item"
-msgstr ""
-
-#: inc/timeline-items.php:57
-msgid "View item"
-msgstr ""
-
-#: inc/timeline-items.php:58
-msgid "All items"
-msgstr ""
-
-#: inc/timeline-items.php:59
-msgid "Search timeline items"
-msgstr ""
-
-#: inc/timeline-items.php:60
-msgid "No timeline items found."
-msgstr ""
-
-#: inc/timeline-items.php:61
-msgid "No timeline items found in trash."
-msgstr ""
-
-#: inc/timeline-items.php:74
-msgid "Timeline's Posts"
+#: inc/timeline-items.php:84
+msgid "Historical events of Mapas Culturais platform."
 msgstr ""
 
 #: inc/tutorials/difficulties.php:15

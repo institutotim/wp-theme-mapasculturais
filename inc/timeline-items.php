@@ -13,13 +13,22 @@ class PMC_Timeline_Items {
     		'title' => 'Data do Evento',
     		'fields' => array (
     			array (
-    				'key' => 'field_5925d734986b5',
-    				'label' => __('Event date:', 'pmc'),
-    				'name' => 'event_date',
+    				'key' => 'field_5925d734986d7',
+    				'label' => __('Date of occurrence or start date (if a period):', 'pmc'),
+    				'name' => 'start_date',
     				'type' => 'text',
-    				'instructions' => __('Valid date formats: YYYY-MM-DD, YYYY-MM and YYYY, where YYYY = year, MM = month and DD = day.', 'pmc'),
+    				'instructions' => __('Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required).', 'pmc'),
     				'required' => 1,
-    				'placeholder' => __('Examples: 2014 or 2014-05 or 2014-05-01', 'pmc'),
+    				'placeholder' => __('Examples: 2014, 2014-05, 2014-05-01', 'pmc'),
+    				'formatting' => 'html',
+    				'maxlength' => 10,
+    			),
+    			array (
+    				'key' => 'field_5925d734986a2',
+    				'label' => __('Finish date (optional):', 'pmc'),
+    				'name' => 'finish_date',
+    				'type' => 'text',
+    				'placeholder' => __('Leave blank if same as above.', 'pmc'),
     				'formatting' => 'html',
     				'maxlength' => 10,
     			),
@@ -46,19 +55,8 @@ class PMC_Timeline_Items {
 
   function register_timeline_item_type() {
     $labels = array(
-      'name'               => _x( 'Timeline Items', 'post type general name', 'pmc' ),
-      'singular_name'      => _x( 'Timeline Item', 'post type singular name', 'pmc' ),
-      'menu_name'          => _x( 'Timeline', 'admin menu', 'pmc' ),
-      'name_admin_bar'     => _x( 'Timeline', 'add new on admin bar', 'pmc' ),
-      // 'add_new'            => _x( 'Add item', 'pmc_timeline_item', 'pmc' ),
-      'add_new_item'       => __( 'Add new timeline item', 'pmc' ),
-      'new_item'           => __( 'New item', 'pmc' ),
-      'edit_item'          => __( 'Edit item', 'pmc' ),
-      'view_item'          => __( 'View item', 'pmc' ),
-      'all_items'          => __( 'All items', 'pmc' ),
-      'search_items'       => __( 'Search timeline items', 'pmc' ),
-      'not_found'          => __( 'No timeline items found.', 'pmc' ),
-      'not_found_in_trash' => __( 'No timeline items found in trash.', 'pmc' )
+      'edit_item'          => __( 'Edit event', 'pmc' ),
+      'all_items'          => __( 'All events', 'pmc' ),
     );
 
     $capabilities = array(
@@ -71,7 +69,8 @@ class PMC_Timeline_Items {
 
     $args = array(
       'labels'             => $labels,
-      'description'        => __( 'Timeline\'s Posts', 'pmc' ),
+      'label'              => __( 'Timeline', 'pmc' ),
+      'description'        => __( 'Historical events of Mapas Culturais platform.', 'pmc' ),
       'public'             => true,
       'publicly_queryable' => true,
       'show_ui'            => true,
