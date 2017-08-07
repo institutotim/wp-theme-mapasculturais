@@ -29,6 +29,7 @@
       <?php
         $posts_query = new WP_Query(array(
           'post_type' => 'pmc_timeline_item',
+          'posts_per_page' => -1,
           'meta_key' => 'event_date',
           'orderby' => 'meta_value',
           'order' => 'ASC'
