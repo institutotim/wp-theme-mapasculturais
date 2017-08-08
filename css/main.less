@@ -55,7 +55,7 @@
  * Colors
  */
 @lightblue: #4588c6;
-@blue: #2f3649;
+@blue: #373f57;
 @pink: #e94b80;
 @beige: #DBD4B1;
 @yellow: #ffed7c;
@@ -348,7 +348,7 @@ p.big {
     article {
       h2,
       h3 {
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         font-size: 1.85em;
       }
     }
@@ -358,6 +358,7 @@ p.big {
       h2,
       h3 {
         font-size: 1.5em;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -617,7 +618,8 @@ p.post-meta .fa {
   z-index: 1001;
   h1 {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1em;
+    line-height: 1.5;
     font-weight: 400;
     margin: 2rem 0 0;
     color: #fff;
@@ -634,20 +636,25 @@ p.post-meta .fa {
     text-decoration: none;
   }
   .search-input {
+    width: 150px;
     margin-left: 2rem;
     margin-top: 1rem;
     padding: .7rem 1.5rem;
     background: rgba(255,255,255,0.07);
+    position: relative;
     .fa {
       font-size: 1em;
-      margin-right: 1rem;
+      position: absolute;
+      left: 0;
+      margin: .5rem 1rem;
     }
     input[type=text] {
+      width: 100%;
       margin: 0;
       background: transparent;
       border: 0;
       font-family: 'Tim Sans';
-      padding: .5rem 0;
+      padding: .5rem 0 0 2rem;
       height: auto;
       color: #fff;
     }
@@ -955,7 +962,7 @@ p.post-meta .fa {
     transform: rotate(23deg);
   }
   .intro-text {
-    font-size: 2em;
+    font-size: 1.6em;
     line-height: 1.2;
     color: rgba(255,255,255,0.9);
     h2 {
@@ -978,8 +985,8 @@ p.post-meta .fa {
   }
   .network {
     font-size: 2em;
-    // margin-top: -2rem;
-    padding-top: 1rem;
+    margin-top: -2rem;
+    padding-top: 0;
     h3 {
       text-transform: uppercase;
       font-size: 1em;
@@ -1009,6 +1016,34 @@ p.post-meta .fa {
           font-size: 1.65em;
         }
       }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    .intro-text {
+      font-size: 1.8em;
+    }
+  }
+}
+@media (min-height: 700px) {
+  #hero {
+    .page-header-content {
+      padding-top: 8%;
+    }
+  }
+}
+@media (min-height: 900px) {
+  #hero {
+    .page-header-content {
+      padding-top: 10%;
+    }
+  }
+}
+@media (min-height: 1100px) {
+  #hero {
+    .page-header-content {
+      padding-top: 12%;
     }
   }
 }
