@@ -24,7 +24,7 @@
                 <?php the_title(); ?>
               </h2>
               <div class="page-header-text connect-border connect-left">
-                <p>Mapas Culturais foi criado em parceria com a Secretaria de Cultura do Município de São Paulo, o primeiro a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior.</p>
+                <p>Mapas Culturais foi criado pelo <a href="http://institutotim.org.br" rel="external" target="_blank">Instituto TIM</a> em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior. Em 2015, Mapas Culturais passou a ser a plataforma oficial do Sistema Nacional de Informações e Indicadores Culturais (SNIIC), sendo o sistema oficial para mapeamento colaborativo e gestão da cultura do Ministério da Cultura.</p>
               </div>
             </div>
             <div class="four columns">
@@ -35,7 +35,7 @@
                 </a>
                 <a class="button">
                   <span class="fa fa-comments-o"></span>
-                  Chat
+                  Rocket Chat
                 </a>
                 <a class="button">
                   <span class="fa fa-book"></span>
@@ -54,7 +54,7 @@
         <div class="big-search-container">
           <label for="big_search_input">
             <span class="fa fa-search"></span>
-            <input id="big_search_input" type="text" placeholder="Busque por tutoriais..." />
+            <input id="big_search_input" type="text" placeholder="Busque por informações de suporte..." />
           </label>
         </div>
       </div>
@@ -63,7 +63,7 @@
   <section id="content">
     <div class="container">
       <div class="eight columns">
-        <h2>Manual</h2>
+        <h3>Manual</h3>
         <p>Acesse abaixo os Manuais de Uso do sistema</p>
       </div>
     </div>
@@ -92,9 +92,12 @@
         <hr class="dark" />
       </div>
     </div>
-    <section id="support-tutorials">
+    <section id="support-tutorials" class="content-section">
       <div class="container">
         <div class="eight columns">
+          <div class="content-section-header">
+            <h3>Tutoriais</h3>
+          </div>
           <div class="tutorial-list">
             <article class="tutorial-item row">
               <div class="tutorial-meta">

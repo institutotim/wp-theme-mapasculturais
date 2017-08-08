@@ -167,6 +167,7 @@ h3,
 h4 {
   font-family: 'Tim Sans';
   letter-spacing: 0;
+  margin-bottom: 1.5rem;
 }
 h1 a,
 h2 a,
@@ -178,7 +179,7 @@ h4 a {
 h4 {
   font-size: 1.4em;
   font-weight: 300;
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
 }
 input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
   border-radius: 0;
@@ -736,6 +737,14 @@ p.post-meta .fa {
   position: relative;
   padding-bottom: 0;
   z-index: 1000;
+  a {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    &:hover {
+      color: rgba(255,255,255,0.8);
+    }
+  }
   hr {
     margin: 0;
     padding: 0;
@@ -802,9 +811,8 @@ p.post-meta .fa {
       }
     }
     .page-header-text {
-      // background: darken(@blue, 5%);
       background: rgba(0,0,0,0.15);
-      // color: #000;
+      color: rgba(255,255,255,0.8);
       padding: 4rem 4rem 4rem 0;
       margin: 4rem 0 0;
       box-shadow: 1rem 1rem 0 rgba(0,0,0,0.25);
@@ -1500,11 +1508,10 @@ p.post-meta .fa {
     }
   }
   .download-user-guide {
-    padding: 4rem;
     background: url(../img/manual.png) center no-repeat;
     background-size: cover;
-    height: 400px;
-    margin: 4rem 0 6rem;
+    height: 390px;
+    margin: 2rem 0 4rem;
     position: relative;
     // border-radius: 20px;
     box-shadow: 1rem 1rem 0 @lightblue;
@@ -1531,21 +1538,43 @@ p.post-meta .fa {
     }
   }
   #support-chat {
-    margin-top: 10rem;
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    padding: 3rem;
+    // border-radius: 10px;
+    box-shadow: 1rem 1rem 0 rgba(0,0,0,0.08);
+    p:last-child {
+      margin: 0;
+    }
+  }
+  #support-tutorials {
+    font-size: 1em;
+    article {
+      margin: 0 0 1rem;
+      .tutorial-meta {
+        margin: 1rem 0;
+      }
+    }
+    .sidebar {
+      font-size: .75em;
+    }
+    hr {
+      margin: 1rem 0 2rem;
+    }
   }
 }
 
 .tutorial-list {
   margin: 0 0 2rem;
+  font-size: .9em;
   .tutorial-item {
     .tutorial-meta {
       font-family: 'Tim Sans';
       float: right;
       width: 27%;
-      margin: 0;
-      padding: 2rem 0;
+      margin: 2rem 0;
       box-sizing: border-box;
-      font-size: .8em;
+      font-size: .9em;
       .fa {
         font-size: 1em;
       }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 15:52-0300\n"
+"POT-Creation-Date: 2017-08-08 16:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -186,7 +186,7 @@ msgid "WhatsApp"
 msgstr ""
 
 #: inc/timeline-items.php:17
-msgid "Start date:"
+msgid "Date of occurrence or start date (if a period):"
 msgstr ""
 
 #: inc/timeline-items.php:20
@@ -199,31 +199,26 @@ msgid "Examples: 2014, 2014-05, 2014-05-01"
 msgstr ""
 
 #: inc/timeline-items.php:28
-msgid "Finish date:"
+msgid "Finish date (optional):"
 msgstr ""
 
 #: inc/timeline-items.php:31
 msgid "Leave blank if same as above."
 msgstr ""
 
-#: inc/timeline-items.php:62
-msgctxt "pmc_timeline_item"
-msgid "Add event"
-msgstr ""
-
-#: inc/timeline-items.php:65
+#: inc/timeline-items.php:58
 msgid "Edit event"
 msgstr ""
 
-#: inc/timeline-items.php:67
+#: inc/timeline-items.php:59
 msgid "All events"
 msgstr ""
 
-#: inc/timeline-items.php:83
+#: inc/timeline-items.php:72
 msgid "Timeline"
 msgstr ""
 
-#: inc/timeline-items.php:84
+#: inc/timeline-items.php:73
 msgid "Historical events of Mapas Culturais platform."
 msgstr ""
 

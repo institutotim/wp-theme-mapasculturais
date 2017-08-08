@@ -10,7 +10,7 @@
       var map = L.map('map', {
         scrollWheelZoom: false
       }).setView([-14.235004, -51.92528], 4);
-      L.tileLayer('http://{s}.sm.mapstack.stamen.com/($2b3140[@p],toner-background[screen])/{z}/{x}/{y}.png', {
+      L.tileLayer('http://{s}.sm.mapstack.stamen.com/($373f57[@p],toner-background[screen])/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
       var popup = '';
