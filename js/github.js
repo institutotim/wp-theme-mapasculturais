@@ -8,7 +8,7 @@
     var url = 'https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity';
     var res = ghData;
     // $.get(url, function(res) {
-      console.log(res);
+      // console.log(res);
       res.forEach(function(week) {
         data.commit_count += week.total;
         data.chart_data.push([

@@ -456,10 +456,13 @@ p.post-meta .fa {
       .date {
         color: #fff;
         margin: 0 0 1rem;
-        font-size: 2em;
-        padding: 0 4rem;
+        font-size: 1.6em;
+        line-height: 1.5;
+        padding: 1rem 2rem 1rem;
         border-bottom: 1px solid @pink;
         font-family: "Tim Sans";
+        background: @pink;
+        transition: all .2s linear;
       }
       .post-box-body {
         padding: 4rem;
@@ -481,6 +484,7 @@ p.post-meta .fa {
         float: left;
         .date {
           text-align: right;
+          margin: 0 -2rem 0 2rem;
         }
         .post-box-body {
           box-shadow: 2rem -8rem 0 @pink, -2rem 2rem darken(@blue, 5%);
@@ -494,6 +498,9 @@ p.post-meta .fa {
       }
       .post-box {
         float: right;
+        .date {
+          margin: 0 2rem 0 -2rem;
+        }
         .post-box-body {
           box-shadow: -2rem -8rem 0 @pink, 2rem 2rem darken(@blue, 5%);
         }
@@ -502,6 +509,9 @@ p.post-meta .fa {
     &:hover {
       &:nth-child(odd) {
         .post-box {
+          .date {
+            margin: 0 -2.5rem 0 2.5rem;
+          }
           .post-box-body {
             box-shadow: 2.5rem -8.5rem 0 @pink, -3rem 3rem darken(@blue, 5%);
           }
@@ -509,6 +519,9 @@ p.post-meta .fa {
       }
       &:nth-child(even) {
         .post-box {
+          .date {
+            margin: 0 2.5rem 0 -2.5rem;
+          }
           .post-box-body {
             box-shadow: -2.5rem -8.5rem 0 @pink, 3rem 3rem darken(@blue, 5%);
           }

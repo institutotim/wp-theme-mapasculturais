@@ -66,6 +66,7 @@ function formatTimelineDate($date) {
                   // display finish_date if defined
                   if ( ! empty( $finish_date ) ) {
                     echo '&nbsp' . _x('to', 'Conjunction for timeline periods', 'pmc') . '&nbsp';
+                    echo '<br />';
                     echo formatTimelineDate($finish_date);
                   }
                 ?>
