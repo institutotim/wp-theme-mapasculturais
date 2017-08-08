@@ -43,23 +43,17 @@ function formatTimelineDate($date) {
       <a class="timeline-init fa fa-chevron-down" href="#"></a>
 
       <?php
-        $posts_query = new WP_Query(array(
-          'post_type' => 'pmc_timeline_item',
-          'posts_per_page' => -1,
-          'meta_key' => 'start_date',
-          'orderby' => 'meta_value',
-          'order' => 'ASC'
-        ));
-        while($posts_query->have_posts()) :
-          $posts_query->the_post();
+
+        while(have_posts()) :
+          the_post();
           ?>
 
           <div class="timeline-item row">
             <div class="post-box">
               <p class="date">
                 <?php
-                  $start_date = get_post_meta($posts_query->post->ID, 'start_date', true);
-                  $finish_date = get_post_meta($posts_query->post->ID, 'finish_date', true);
+                  $start_date = get_post_meta(get_the_ID(), 'start_date', true);
+                  $finish_date = get_post_meta(get_the_ID(), 'finish_date', true);
 
                   echo formatTimelineDate($start_date);
 

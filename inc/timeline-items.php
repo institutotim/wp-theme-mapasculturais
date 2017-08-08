@@ -4,6 +4,7 @@ class PMC_Timeline_Items {
 
   function __construct() {
     add_action('init', array($this, 'register_timeline_item_type'));
+    add_action('pre_get_posts', array($this, 'pre_get_posts'));
 
     // Create "event date" custom field via ACF
     if(function_exists("register_field_group"))
@@ -85,10 +86,21 @@ class PMC_Timeline_Items {
       'supports'           => array( 'title', 'editor', 'thumbnail')
     );
 
-
     register_post_type( 'pmc_timeline_item', $args );
     add_post_type_support( 'pmc_timeline_item', 'thumbnail' );
   }
+
+  function pre_get_posts ($query) {
+    $post_type = $query->get('post_type');
+
+    if($post_type == 'pmc_timeline_item' || $post_type == array('pmc_timeline_item')) {
+      $query->set('posts_per_page', -1);
+      $query->set('meta_key', 'start_date');
+      $query->set('orderby', 'meta_value');
+      $query->set('order', 'ASC');
+    }
+  }
+
 }
 
 $pmc_timeline_posts = new PMC_Timeline_Items();
