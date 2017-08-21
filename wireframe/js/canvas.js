@@ -22,7 +22,6 @@
   ctx.strokeStyle = color;
 
   var dotNum = Math.min((window.innerWidth/2),600);
-  console.log(dotNum);
   var mousePosition = { x: 30 * canvas.width / 100, y: 30 * canvas.height / 100 },
       //dots = { nb: 600, distance: 80, d_radius: 3000, array: [] };
   dots = { nb: dotNum, distance: 80, d_radius: 3000, array: [] };
