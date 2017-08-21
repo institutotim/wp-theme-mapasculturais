@@ -78,7 +78,7 @@
       </div>
       <div class="four columns offset-by-one">
         <section id="support-chat">
-          <h2>Participe do chat</h2>
+          <h3>Participe do chat</h3>
           <p>Se tiver dúvidas durante o processo de instalação de Mapas Culturais, entre em contato com a equipe do projeto no chat de Suporte Técnico.</p>
           <p><a class="button button-primary block">
             <span class="fa fa-comments-o"></span>
@@ -95,7 +95,7 @@
     <section id="support-tutorials" class="content-section">
       <div class="container">
         <div class="eight columns">
-          <div class="content-section-header">
+          <div class="content-section-header-big">
             <h3>Tutoriais</h3>
           </div>
           <div class="tutorial-list">
