@@ -15,27 +15,34 @@ Base dependencies:
 
 * [Docker](https://www.docker.com/)
 * [gettext](https://www.gnu.org/software/gettext/)
-
+* [Yarn](https://yarnpkg.com/lang/en/docs/install/)
 
 Clone locally and install modules
 
 ```
 git clone <this repository git url>
 cd wp-theme-mapasculturais
+yarn
 bower install
 grunt build
 # or just "grunt" to watch for changes
 ```
-
-Add the following line to `wp-config.php`, changing `<your-key>` to [ACF PRO](https://www.advancedcustomfields.com/pro/) key:
-
-    define("ACF_PRO_KEY", "<your-key>");
 
 Start services:
 
 ```shell
   docker-compose up
 ```
+
+Visit http://localhost:8080 to configure your Wordpress install.
+ 
+Activate "Portal do Mapas Culturais" theme at http://localhost:8080/wp-admin/themes.php.
+
+Install "Advanced Custom Fields" at the [plugins page](http://localhost:8080/wp-admin/plugin-install.php?s=acf+pro&tab=search&type=term).
+
+Add the following line to `<repository_root>/.data/wp/wp-config.php`, changing `<your-key>` to [ACF PRO](https://www.advancedcustomfields.com/pro/) key:
+
+    define("ACF_PRO_KEY", "<your-key>");
 
 ### Populating statistics
 
