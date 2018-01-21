@@ -72,29 +72,6 @@ class PMC_Tutorials {
         'query_var'         => true,
       )
     );
-
-    $labels = array(
-      'name'              => esc_html__( 'Target Group', 'pmc' ),
-      'singular_name'     => esc_html__( 'Target Groups', 'pmc' ),
-      'search_items'      => esc_html__( 'Search Target Groups', 'pmc' ),
-      'all_items'         => esc_html__( 'All Target Groups', 'pmc' ),
-      'parent_item'       => esc_html__( 'Parent Target Group', 'pmc' ),
-      'parent_item_colon' => esc_html__( 'Parent Target Group:', 'pmc' ),
-      'edit_item'         => esc_html__( 'Edit Target Group', 'pmc' ),
-      'update_item'       => esc_html__( 'Update Target Group', 'pmc' ),
-      'add_new_item'      => esc_html__( 'Add New Target Group', 'pmc' ),
-      'new_item_name'     => esc_html__( 'New Target Group Name', 'pmc' ),
-      'menu_name'         => esc_html__( 'Target Groups', 'pmc' ),
-    );
-
-    register_taxonomy( 'target_group', array( 'tutorial' ), array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-      )
-    );
   }
 }
 
