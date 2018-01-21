@@ -15,20 +15,24 @@
 
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <article class="tutorial-item row">
-
-
       <div class="tutorial-meta">
-        <a class="category">
-          <span class="fa fa-bookmark-o"></span>
-          Categoria #1
-        </a>
+        <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
+          if ( $terms && !is_wp_error( $terms ) ) : 
+
+            foreach ( $terms as $term ) { ?>
+              <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                <span class="fa fa-bookmark-o"></span>
+                <?php echo $term->name; ?>
+              </a>
+      <?php } ?>
+    <?php endif; ?>
         <p class="meta-item">
           <span class="label">
             <span class="fa fa-certificate"></span>
             Complexidade
           </span>
           <span class="meta-val complex-item complex-item-2">
-            <?php echo get_the_terms( get_the_ID(), 'difficulty' )[0]->name; ?>
+            Média
           </span>
         </p>
         <p class="meta-item target-group">
