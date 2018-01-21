@@ -24,16 +24,18 @@
     </div>
   </header>
   <section id="big-search">
-    <div class="container">
-      <div class="twelve columns">
-        <div class="big-search-container">
-          <label for="big_search_input">
-            <span class="fa fa-search"></span>
-            <input id="big_search_input" type="text" placeholder="Busque por tutoriais..." />
-          </label>
+    <form method="get" id="searchform" action="<?php echo bloginfo('url'); ?>/tutorials/">
+      <div class="container">
+        <div class="twelve columns">
+          <div class="big-search-container">
+            <label for="big_search_input">
+              <span class="fa fa-search"></span>
+              <input value="<?php the_search_query(); ?>" name="s" id="big_search_input" type="text" placeholder="Busque por tutoriais..." />
+            </label>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </section>
   <section id="content">
     <div class="container">

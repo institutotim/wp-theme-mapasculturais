@@ -1,7 +1,8 @@
 <div class="tutorial-list">
   <?php
     $args = array(
-      'post_type' => 'tutorial' 
+      'post_type' => 'tutorial',
+       's' => esc_html( get_search_query( false ) )
     );
     $query = new WP_Query( $args );
   ?>
