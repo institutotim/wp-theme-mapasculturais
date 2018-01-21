@@ -48,8 +48,53 @@ class PMC_Tutorials {
       'supports'           => array( 'title', 'editor', 'related_version', 'thumbnail', 'revisions' )
     );
 
-
     register_post_type( 'tutorial', $args );
+
+    $labels = array(
+      'name'              => esc_html__( 'Categories', 'pmc' ),
+      'singular_name'     => esc_html__( 'Category', 'pmc' ),
+      'search_items'      => esc_html__( 'Search Categories', 'pmc' ),
+      'all_items'         => esc_html__( 'All Categories', 'pmc' ),
+      'parent_item'       => esc_html__( 'Parent Category', 'pmc' ),
+      'parent_item_colon' => esc_html__( 'Parent Category:', 'pmc' ),
+      'edit_item'         => esc_html__( 'Edit Category', 'pmc' ),
+      'update_item'       => esc_html__( 'Update Category', 'pmc' ),
+      'add_new_item'      => esc_html__( 'Add New Category', 'pmc' ),
+      'new_item_name'     => esc_html__( 'New Category Name', 'pmc' ),
+      'menu_name'         => esc_html__( 'Categories', 'pmc' ),
+    );
+
+    register_taxonomy( 'category_tutorial', array( 'tutorial' ), array(
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+      )
+    );
+
+    $labels = array(
+      'name'              => esc_html__( 'Target Group', 'pmc' ),
+      'singular_name'     => esc_html__( 'Target Groups', 'pmc' ),
+      'search_items'      => esc_html__( 'Search Target Groups', 'pmc' ),
+      'all_items'         => esc_html__( 'All Target Groups', 'pmc' ),
+      'parent_item'       => esc_html__( 'Parent Target Group', 'pmc' ),
+      'parent_item_colon' => esc_html__( 'Parent Target Group:', 'pmc' ),
+      'edit_item'         => esc_html__( 'Edit Target Group', 'pmc' ),
+      'update_item'       => esc_html__( 'Update Target Group', 'pmc' ),
+      'add_new_item'      => esc_html__( 'Add New Target Group', 'pmc' ),
+      'new_item_name'     => esc_html__( 'New Target Group Name', 'pmc' ),
+      'menu_name'         => esc_html__( 'Target Groups', 'pmc' ),
+    );
+
+    register_taxonomy( 'target_group', array( 'tutorial' ), array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+      )
+    );
   }
 }
 

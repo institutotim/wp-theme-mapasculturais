@@ -18,10 +18,12 @@
           </h1>
       </div>
       <div class="eight columns">
-        <div class="search-input u-pull-right">
-          <label class="fa fa-search" for="search"></label>
-          <input id="search" class="search" type="text" placeholder="Busca...">
-        </div>
+        <form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+          <div class="search-input u-pull-right">
+            <label class="fa fa-search" for="search"></label>
+            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="search" type="text" placeholder="Busca..." />
+          </div>
+        </form>
         <nav id="mastnav" class="u-pull-right">
           <ul>
             <li>
