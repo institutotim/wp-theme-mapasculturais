@@ -32,12 +32,12 @@
             Complexidade
           </span>
           <span class="meta-val complex-item complex-item-2">
-            Média
+            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty')[0]; ?>
           </span>
         </p>
         <p class="meta-item target-group">
           <span class="fa fa-gear"></span>
-          para gestores
+          <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target')[0]; ?>
         </p>
       </div>
       <div class="tutorial-content">
