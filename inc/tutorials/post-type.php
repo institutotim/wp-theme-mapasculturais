@@ -4,6 +4,8 @@ class PMC_Tutorials {
 
   function __construct() {
     add_action('init', array($this, 'register_post_type'));
+    add_action('admin_menu', array($this, 'tutorial_add_meta_box'));
+    add_action('save_post', array($this, 'save_tutorial_meta_box'), 10, 2);
   }
 
   function register_post_type() {
@@ -72,7 +74,87 @@ class PMC_Tutorials {
         'query_var'         => true,
       )
     );
+
+    
+
   }
+
+  function tutorial_add_meta_box() {
+    add_meta_box('tutorial-meta-box', 
+      __('More Info\'s', 'pmc'), 
+      array($this, 'display_tutorial_meta_box'), 
+      'tutorial', 
+      'normal', 
+      'high'
+    );
+  }
+
+  function display_tutorial_meta_box($object, $box){
+    $metas = $this->tutorial_get_metas();
+
+    foreach($metas as $meta) { ?>
+      <?php 
+      if ( $meta['html']['tag'] == 'input' ) { ?>
+        <p>
+          <label for="<?php echo $meta['slug'] ?>"><?php echo $meta['label'] ?></label>
+          <br>
+         <input type="<?php echo $meta['html']['type'] ?>" name="<?php echo $meta['slug'] ?>"
+           id="<?php echo $meta['slug'] ?>" style="width:50%"
+           value="<?php echo get_post_meta($object->ID, $meta['slug'] , true); ?>">
+          </p>
+      <?php
+      }
+    }
+
+  }
+
+  function tutorial_get_metas(){
+    $metas = [];
+    $metas[] = array ( 
+      'label' => 'Group Target', 
+      'slug'=>'tutorial_group_target' ,
+      'info' => __('No target group was informed', 'pmc') , 
+      'html' => array (
+        'tag'=> 'input', 
+        'type' => 'text' 
+      )
+    );
+
+    $metas[] = array ( 
+      'label' => 'Difficulty', 
+      'slug'=>'tutorial_difficulty' ,
+      'info' => __('No difficulty was informed', 'pmc') , 
+      'html' => array (
+        'tag'=> 'input',
+        'type' => 'text' 
+      )
+    );
+
+    return $metas;
+  }
+
+  function save_tutorial_meta_box($post_id, $post) {
+    if (!current_user_can('edit_post', $post_id))
+      return;
+
+    $metas = $this->tutorial_get_metas();
+    foreach ( $metas as $meta) {
+      if (isset($_POST[$meta['slug']])) {
+        $meta_striped = stripslashes($_POST[$meta['slug']]);
+
+        if ($meta_striped && '' == get_post_meta($post_id, $meta['slug'], true))
+          add_post_meta($post_id, $meta['slug'], $meta_striped, true);
+
+        elseif ($meta_striped != get_post_meta($post_id, $meta['slug'], true))
+          update_post_meta($post_id, $meta['slug'], $meta_striped);
+
+        elseif ('' == $meta_striped && get_post_meta($post_id, $meta['slug'], true))
+          delete_post_meta($post_id, $meta['slug'], get_post_meta($post_id, $meta['slug'], true));
+      }
+    }
+  }
+
+
 }
 
 $pmc_tutorials = new PMC_Tutorials();
