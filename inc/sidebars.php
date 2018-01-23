@@ -30,6 +30,18 @@ class PMC_Sidebars {
       'after_title'   => '</h2>' );
 
     register_sidebar( $args );
+
+    $args = array(
+      'name'          => __( 'Archive Tutorials', 'pmc' ), //time-line
+      'id'            => 'archive-tutorials-pmc', 
+      'description'   => '',
+      'class'         => 'widget text-widget',
+      'before_widget' => '<div id="%1$s" class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>' );
+
+    register_sidebar( $args );
   }
 }
 
