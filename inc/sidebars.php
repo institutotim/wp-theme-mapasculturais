@@ -8,7 +8,7 @@ class PMC_Sidebars {
 
   function register_sidebars() {
     $args = array(
-      'name'          => __( 'News', 'pmc' ), //linha do tempo
+      'name'          => __( 'News', 'pmc' ), //time-line
       'id'            => 'news-pmc', 
       'description'   => '',
       'class'         => 'widget text-widget',
