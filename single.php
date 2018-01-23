@@ -33,7 +33,14 @@
           </p>
           <p class="tags">
             <span class="fa fa-tags"></span>
-            <a>interatividade</a>, <a>cinema</a>
+            <?php $terms = get_the_terms( get_the_ID(), 'category' );      
+              if ( $terms && !is_wp_error( $terms ) ) : 
+                foreach ( $terms as $term ) { ?>
+                  <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                    <?php echo $term->name; ?>
+                  </a>
+          <?php } ?>
+        <?php endif; ?>
           </p>
           <p class="date">
             <span class="fa fa-clock-o"></span>
