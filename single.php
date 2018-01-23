@@ -40,15 +40,16 @@
           </p>
           <p class="tags">
             <span class="fa fa-tags"></span>
-            <?php $terms = get_the_terms( get_the_ID(), 'category' );      
+           <?php $terms = get_the_terms( get_the_ID(), 'category' );      
               if ( $terms && !is_wp_error( $terms ) ) : 
-                foreach ( $terms as $term ) { ?>
-                  <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
-                    <?php echo $term->name; ?>
-                  </a>
-          <?php } ?>
-        <?php endif; ?>
-          </p>
+                $aux = array();
+                foreach ( $terms as $term ) {
+                  $aux[] = '<a href="<?php echo get_term_link($term->term_id); ?>" class="category">'.$term->name.'</a>';
+                }
+                endif; 
+                echo join( ", ", $aux );
+                ?>
+                  </p>
           <p class="date">
             <span class="fa fa-clock-o"></span>
             <?php the_date(); ?>
@@ -62,45 +63,7 @@
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-
          <?php dynamic_sidebar('news-pmc') ?>
-         <!-- TODO: I need this information to configure this sidebar's -->
-         <!--  <div class="widget text-widget">
-            <h2>Exemplo de widget</h2>
-            <div class="widget-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod lectus a cursus dictum. Nulla at metus id elit volutpat ornare ut quis nisl. Sed pellentesque leo in massa ornare, eu tincidunt nibh cursus. Nulla vestibulum, enim in vulputate imperdiet, felis arcu dignissim ipsum, at laoreet urna lectus at metus. Phasellus vitae massa ac ligula placerat sagittis. Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
-            </div>
-          </div>
-          <div class="widget">
-            <h2>Categorias</h2>
-            <ul>
-              <li>
-                <a href="#">
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>
