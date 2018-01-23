@@ -32,7 +32,7 @@
             </ul>
           </li>
           <li>
-            <a href="#">
+            <a href="https://github.com/hacklabr/mapasculturais">
               <span class="fa fa-github"></span>
               GitHub
             </a>
