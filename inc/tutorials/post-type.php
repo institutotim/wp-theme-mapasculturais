@@ -75,8 +75,6 @@ class PMC_Tutorials {
       )
     );
 
-    
-
   }
 
   function tutorial_add_meta_box() {
