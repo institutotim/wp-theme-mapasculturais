@@ -24,31 +24,15 @@
             <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="search" type="text" placeholder="Busca..." />
           </div>
         </form>
-        <nav id="mastnav" class="u-pull-right">
-          <ul>
-            <li>
-              <a href="page.html">Sobre a iniciativa</a>
-              <ul>
-                <li><a href="#">O que é</a></li>
-                <li><a href="#">Histórico</a></li>
-                <li><a href="#">Parceiros</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="blog.html">Sobre o sistema</a>
-              <ul>
-                <li><a href="#">Mapas como serviço</a></li>
-                <li><a href="/suporte">Suporte ao usuário</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Notícias</a>
-            </li>
-            <li>
-              <a href="page.html">Contato</a>
-            </li>
-          </u>
-        </nav>
+          <?php wp_nav_menu(array(
+            "theme_location" => "header",
+            "menu_class" => "",
+            "menu_id" => "",
+            "container_class" => "u-pull-right",
+            "container_id" => "mastnav"
+            )
+          ); 
+          ?>
       </div>
     </div>
   </header>
