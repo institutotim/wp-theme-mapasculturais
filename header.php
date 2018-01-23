@@ -42,7 +42,7 @@
               </ul>
             </li>
             <li>
-              <a href="page.html">Notícias</a>
+              <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Notícias</a>
             </li>
             <li>
               <a href="page.html">Contato</a>

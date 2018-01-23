@@ -99,7 +99,7 @@
               endwhile;
               ?>
             </div>
-            <p><a class="button block">Veja mais notícias</a></p>
+            <p><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="button block">Veja mais notícias</a></p>
           </section>
         </div>
         <?php query_posts('post_type=network_post'); ?>
