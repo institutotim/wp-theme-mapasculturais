@@ -19,7 +19,6 @@
       <div class="tutorial-meta">
         <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
           if ( $terms && !is_wp_error( $terms ) ) : 
-
             foreach ( $terms as $term ) { ?>
               <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
                 <span class="fa fa-bookmark-o"></span>
@@ -45,7 +44,9 @@
         <div class="featured-image">
           <?php echo get_the_post_thumbnail(); ?>
         </div>
-        <h3><?php the_title(); ?></h3>
+        <a href="<?php echo get_permalink();?>">
+          <h3><?php the_title(); ?></h3>
+        </a>
         <?php echo the_content(); ?>
       </div>
     </article>
