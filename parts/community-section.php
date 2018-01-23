@@ -18,7 +18,7 @@
       <div class="four columns">
         <div class="buttons">
           <p>
-            <a  href="https://github.com/hacklabr/mapasculturais"class="button block">
+            <a  href="https://github.com/hacklabr/mapasculturais" class="button block">
               <span class="fa fa-github"></span>
               GitHub
             </a>
