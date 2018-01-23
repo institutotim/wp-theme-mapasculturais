@@ -38,7 +38,7 @@
               <a href="blog.html">Sobre o sistema</a>
               <ul>
                 <li><a href="#">Mapas como serviço</a></li>
-                <li><a href="#">Suporte ao usuário</a></li>
+                <li><a href="/suporte">Suporte ao usuário</a></li>
               </ul>
             </li>
             <li>
