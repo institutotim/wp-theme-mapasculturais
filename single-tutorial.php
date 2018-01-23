@@ -60,7 +60,7 @@
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-          <?php dynamic_sidebar('tutorial-pmc') ?>
+          <?php dynamic_sidebar('tutorials-pmc') ?>
           <div class="widget">
             <h2>Navegar pelos tutoriais</h2>
             <nav class="target-group-nav">
