@@ -97,10 +97,6 @@ function pmc_setup_theme() {
     $role->add_cap( 'manage_related_versions' );
     $role->add_cap( 'assign_related_versions' );
 
-    // difficulties (taxonomy)
-    $role->add_cap( 'manage_difficulties' );
-    $role->add_cap( 'assign_difficulties' );
-
     // install stats (custom post type)
     $role->add_cap( 'edit_published_install_stats' );
     $role->add_cap( 'publish_install_stats' );
@@ -116,10 +112,6 @@ function pmc_setup_theme() {
     // mapas culturais' versions (taxonomy)
     $role->add_cap( 'edit_related_versions' );
     $role->add_cap( 'delete_related_versions' );
-
-    // difficulties (taxonomy)
-    $role->add_cap( 'edit_difficulties' );
-    $role->add_cap( 'delete_difficulties' );
 
     // tutorials (custom type)
     $role->add_cap( 'publish_tutorials' );
@@ -216,6 +208,5 @@ require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
-require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
 require_once(TEMPLATEPATH . '/inc/platform-statistics.php');
 require_once(TEMPLATEPATH . '/inc/sidebars.php');
