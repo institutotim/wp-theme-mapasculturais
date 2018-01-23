@@ -12,8 +12,8 @@ class PMC_Sidebars {
       'id'            => 'news-pmc', 
       'description'   => '',
       'class'         => 'widget text-widget',
-      'before_widget' => '<p id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</p>',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
       'before_title'  => '<h2>',
       'after_title'   => '</h2>' );
 
@@ -24,8 +24,8 @@ class PMC_Sidebars {
       'id'            => 'tutorials-pmc', 
       'description'   => '',
       'class'         => 'widget text-widget',
-      'before_widget' => '<p id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</p>',
+      'before_widget' => '<div id="%1$s" class="widget">',
+      'after_widget'  => '</div>',
       'before_title'  => '<h2>',
       'after_title'   => '</h2>' );
 
