@@ -182,8 +182,6 @@ function pmc_header_scripts() {
     wp_localize_script('github', 'ghData', $gh_data);
   }
 
-
-
   wp_localize_script('map', 'mapData', array(
     'iconUrl' => get_template_directory_uri() . '/img/marker.png'
   ));
@@ -220,3 +218,4 @@ require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
 require_once(TEMPLATEPATH . '/inc/platform-statistics.php');
+require_once(TEMPLATEPATH . '/inc/sidebars.php');
