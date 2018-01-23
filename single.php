@@ -28,8 +28,8 @@
       <div class="twelve columns">
         <div id="meta">
           <p class="author">
-            <img src="http://lorempixel.com/60/60/" />
-            Raimundo Nonato
+            <img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>" />
+            <?php the_author(); ?>
           </p>
           <p class="tags">
             <span class="fa fa-tags"></span>

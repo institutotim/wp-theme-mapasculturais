@@ -168,8 +168,21 @@ function pmc_header_scripts() {
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
   wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
 
-  $gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
-  wp_localize_script('github', 'ghData', json_decode($gh_data));
+
+
+  $gh_request = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity'));
+
+  if( is_wp_error( $gh_request ) ) {
+    return false;
+  }
+  $gh_body = wp_remote_retrieve_body( $gh_request );
+  $gh_data = json_decode( $gh_body );
+  if( ! empty( $gh_data ) ) {
+    //$gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
+    wp_localize_script('github', 'ghData', $gh_data);
+  }
+
+
 
   wp_localize_script('map', 'mapData', array(
     'iconUrl' => get_template_directory_uri() . '/img/marker.png'
