@@ -52,52 +52,6 @@
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <?php dynamic_sidebar('tutorials-pmc') ?>
-          <div class="widget">
-            <h2>Navegar pelos tutoriais</h2>
-            <nav class="target-group-nav">
-              <a>
-                <span class="fa fa-gear"></span>
-                gestor
-              </a>
-              <a>
-                <span class="fa fa-user"></span>
-                agente cultural
-              </a>
-            </nav>
-            <ul>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   <section>
