@@ -30,7 +30,7 @@ after_success:
 - echo -e "Host  $ssh_host\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
 - provider: script
-  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_portal_master"
   skip_cleanup: true
   on:  
   branch: master
