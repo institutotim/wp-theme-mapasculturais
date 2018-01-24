@@ -29,13 +29,13 @@ after_success:
 - ssh-add deploy_rsa
 - echo -e "Host  $ssh_host\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
-deploy:
-- provider: script
-  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
-  skip_cleanup: true
-  branches:
-    only:
-    - to-validate
+#deploy:
+#- provider: script
+#  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+ # skip_cleanup: true
+ # branches:
+  #  only:
+   # - to-validate
 cache:
   directories:
   - vendor
