@@ -177,51 +177,7 @@
         </div>
         <div class="four columns">
           <div class="sidebar regular-sidebar connect-border connect-right">
-            <h4>Qual o seu perfil?</h4>
-            <nav class="target-group-nav">
-              <a>
-                <span class="fa fa-gear"></span>
-                gestor
-              </a>
-              <a>
-                <span class="fa fa-user"></span>
-                agente cultural
-              </a>
-            </nav>
-            <nav class="featured-categories dark">
-              <ul>
-                <li>
-                  <a href="#">
-                    <span class="fa fa-bookmark-o"></span>
-                    Categoria #1
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="fa fa-bookmark-o"></span>
-                    Categoria #2
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="fa fa-bookmark-o"></span>
-                    Categoria #3
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="fa fa-bookmark-o"></span>
-                    Categoria #4
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="fa fa-bookmark-o"></span>
-                    Categoria #4
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <?php dynamic_sidebar('tutorials-pmc') ?>
           </div>
         </div>
       </div>

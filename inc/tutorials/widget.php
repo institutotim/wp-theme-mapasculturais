@@ -45,7 +45,7 @@ class tutorials_widget extends WP_Widget {
         </a>
       </nav>
       <ul>
-      <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
+      <?php $terms = get_terms( 'category_tutorial' );      
           if ( $terms && !is_wp_error( $terms ) ) : 
             foreach ( $terms as $term ) { ?>
 	            <li>
