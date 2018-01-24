@@ -92,7 +92,29 @@ class PMC_Tutorials {
 
     foreach($metas as $meta) { ?>
       <?php 
-      if ( $meta['html']['tag'] == 'input' ) { ?>
+
+    if ($meta['html']['tag'] == 'select')
+      {
+        ?>
+          <p>
+          <label for="<?php echo $meta['slug'] ?>"><?php echo $meta['label'] ?>:</label>
+          <br>
+          <select name="<?php echo $meta['slug'] ?>">
+          <?php
+          setlocale(LC_ALL, "en_US.utf8");
+        foreach ($meta['html']['options'] as $option) {
+          $content = iconv("utf-8", "ascii//TRANSLIT", $option['content']);
+          ?>
+            <option value="<?php echo $option['value'] ?>" <?php echo esc_html(get_post_meta($object->ID, $meta['slug'] , true), 1) === $option['value'] ? 'selected' : ''; ?> ><?php echo ucwords(strtolower($content)) ?></option>
+            <?php 
+        }
+        ?>
+          </select>
+          </p>
+          <?php
+
+      }
+      else if ( $meta['html']['tag'] == 'input' ) { ?>
         <p>
           <label for="<?php echo $meta['slug'] ?>"><?php echo $meta['label'] ?></label>
           <br>
@@ -113,8 +135,11 @@ class PMC_Tutorials {
       'slug'=>'tutorial_group_target' ,
       'info' => __('No target group was informed', 'pmc') , 
       'html' => array (
-        'tag'=> 'input', 
-        'type' => 'text' 
+        'tag'=> 'select', 
+        'options' => array(
+          array('content' => __('for agent\'s', 'pmc'), 'value' => '0'),
+          array('content' => __('for manager\'s'), 'value' => '1')
+        )
       )
     );
 
@@ -136,18 +161,46 @@ class PMC_Tutorials {
       return;
 
     $metas = $this->tutorial_get_metas();
+
     foreach ( $metas as $meta) {
       if (isset($_POST[$meta['slug']])) {
         $meta_striped = stripslashes($_POST[$meta['slug']]);
 
-        if ($meta_striped && '' == get_post_meta($post_id, $meta['slug'], true))
+        if ($meta_striped && '' == get_post_meta($post_id, $meta['slug'], true)){
           add_post_meta($post_id, $meta['slug'], $meta_striped, true);
+          if ($meta['slug'] == 'tutorial_group_target'){
+            if ($meta_striped == '0') {
+              add_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc') , true);
+            }
+            else {
+              add_post_meta($post_id, $meta['slug'].'_label', __('for manager\'s') , true);
+            }
+          }
+        }
 
-        elseif ($meta_striped != get_post_meta($post_id, $meta['slug'], true))
+        elseif ($meta_striped != get_post_meta($post_id, $meta['slug'], true)){
           update_post_meta($post_id, $meta['slug'], $meta_striped);
+          if ($meta['slug'] == 'tutorial_group_target'){
+            if ($meta_striped == '0') {
+              update_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc'));
+            }
+            else {
+              update_post_meta($post_id, $meta['slug'].'_label', __('for manager\'s'));
+            }
+          }
+        }
 
-        elseif ('' == $meta_striped && get_post_meta($post_id, $meta['slug'], true))
+        elseif ('' == $meta_striped && get_post_meta($post_id, $meta['slug'], true)){
           delete_post_meta($post_id, $meta['slug'], get_post_meta($post_id, $meta['slug'], true));
+          if ($meta['slug'] == 'tutorial_group_target'){
+            if ($meta_striped == '0') {
+              delete_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have group target', 'pmc'));
+            }
+            else {
+              delete_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have group target', 'pmc'));
+            }
+          }
+        }
       }
     }
   }

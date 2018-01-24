@@ -139,7 +139,7 @@
                   </p>
                   <p class="meta-item target-group">
                     <span class="fa fa-gear"></span>
-                    <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target')[0]; ?>
+                    <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target_label')[0]; ?>
                   </p>
                 </div>
                 <div class="tutorial-content">
