@@ -23,6 +23,15 @@
               }
               else if ($target_group == 1){
                 echo '<span class="fa fa-gear"></span>para gestores';
+              } 
+              else { ?>
+                <span class="fa fa-gear"></span>
+                <select  onchange="if (this.value) window.location.href=this.value">
+                  <option value=""><?php _e('Select Target Group','pmc') ?></option>
+                  <option value="<?php echo add_query_arg(array('target_group' => '1') , get_post_type_archive_link( 'tutorial' )); ?>">para gestores</option>
+                  <option value="<?php echo add_query_arg(array('target_group' => '2') , get_post_type_archive_link( 'tutorial' )); ?>">para agentes</option>
+                </select>
+              <?php
               }
 
             ?>
