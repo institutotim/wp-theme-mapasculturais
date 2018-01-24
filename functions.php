@@ -197,6 +197,15 @@ function pmc_is_pauta($is_pauta) {
 }
 add_filter('delibera_is_pauta', 'pmc_is_pauta');
 
+// next and previous post links class
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="button"';
+}
+
 /**
  * Include features
  */
