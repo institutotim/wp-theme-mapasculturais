@@ -26,7 +26,7 @@ after_success:
 - chmod 600 deploy_rsa
 - ssh-add deploy_rsa
 - echo -e "Host  $ssh_host\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+- sudo sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
 #deploy:
 #- provider: script
 #  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
