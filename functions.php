@@ -227,6 +227,14 @@ function pmc_settings()
         <label>The network link's page</label>
         <input id="network_url" name="network_url" type="text" value="<?php echo get_option('network_url') ? get_option('network_url'):""; ?>">
       </p>
+      <p>
+        <label>The manual link's page</label>
+        <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
+      </p>
+      <p>
+        <label>The rocket link's page</label>
+        <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
+      </p>
   </div>
   <?php submit_button(__("Save", 'pmc')); ?>
   </form>
@@ -248,13 +256,17 @@ function save_settings_fields(){
 
   $github_url = isset( $_POST["github_url"]) ? $_POST["github_url"]:"";
   $network_url = isset( $_POST["network_url"]) ? $_POST["network_url"]:"";
+  $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
+  $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
 
   update_option( "github_url", $github_url);
   update_option( "network_url", $network_url);
+  update_option( "manual_url", $manual_url);
+  update_option( "rocket_url", $rocket_url);
 
 
-    wp_redirect( "admin.php?page=pmc_menu" );
-    exit;
+  wp_redirect( "admin.php?page=pmc_menu" );
+  exit;
 }
 
 /**
