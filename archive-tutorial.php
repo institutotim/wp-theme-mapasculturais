@@ -41,7 +41,6 @@
     <div class="container">
       <div class="eight columns">
         <?php get_template_part('parts/tutorials'); ?>
-        <?php get_template_part('parts/pagination'); ?>
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">

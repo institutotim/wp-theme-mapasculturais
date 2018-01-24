@@ -35,8 +35,10 @@
       <div class="twelve columns">
         <div id="meta">
           <p class="author">
-            <img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>" />
-            <?php the_author(); ?>
+            <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
+              <img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>" />
+              <?php the_author(); ?>
+              </a>
           </p>
           <p class="tags">
             <span class="fa fa-tags"></span>
@@ -44,7 +46,7 @@
               if ( $terms && !is_wp_error( $terms ) ) : 
                 $aux = array();
                 foreach ( $terms as $term ) {
-                  $aux[] = '<a href="<?php echo get_term_link($term->term_id); ?>" class="category">'.$term->name.'</a>';
+                  $aux[] = '<a href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
                 }
                 endif; 
                 echo join( ", ", $aux );

@@ -1,9 +1,13 @@
 <div class="content-section">
   <div class="content-section-content">
     <?php
+
+      $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
         'post_type' => 'post', 
-        's' => esc_html( get_search_query( false ) ) 
+        's' => esc_html( get_search_query( false ) ),
+        'posts_per_page' => 3,
+        'paged' => $paged
       );
       $query = new WP_Query( $args );
     ?>
@@ -24,7 +28,7 @@
         </a>
         <div class="meta">
           <p class="author">
-            <a href="#">
+            <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
               <img src='<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>' />
               <?php the_author(); ?>
             </a>
@@ -41,12 +45,19 @@
 
     <!-- end of the loop -->
 
-    <!-- pagination here -->
+    <nav class="paging row">
+      <?php if( get_next_posts_link('', $query->max_num_pages) ) : ?>
+        <?php echo get_next_posts_link( 'Older Entries', $query->max_num_pages); ?>
+      <?php endif; ?>
+      <?php if( get_previous_posts_link() ) : ?>
+        <?php echo get_previous_posts_link( 'Newer posts' ); ?>
+      <?php endif; ?>
+    </nav>
 
     <?php wp_reset_postdata(); ?>
 
     <?php else : ?>
-      <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'pmc' ); ?></p>
     <?php endif; ?> 
   </div>
 </div>

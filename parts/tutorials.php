@@ -1,8 +1,11 @@
 <div class="tutorial-list">
   <?php
+    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
     $args = array(
       'post_type' => 'tutorial',
-       's' => esc_html( get_search_query( false ) )
+       's' => esc_html( get_search_query( false ) ),
+       'posts_per_page' => 3,
+       'paged' => $paged
     );
     $query = new WP_Query( $args );
   ?>
@@ -55,7 +58,14 @@
 
   <!-- end of the loop -->
 
-  <!-- pagination here -->
+  <nav class="paging row">
+    <?php if( get_next_posts_link('', $query->max_num_pages) ) : ?>
+      <?php echo get_next_posts_link( 'Older Entries', $query->max_num_pages); ?>
+    <?php endif; ?>
+    <?php if( get_previous_posts_link() ) : ?>
+      <?php echo get_previous_posts_link( 'Newer posts' ); ?>
+    <?php endif; ?>
+  </nav>
 
   <?php wp_reset_postdata(); ?>
 
