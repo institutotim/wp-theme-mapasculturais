@@ -16,14 +16,13 @@
             Tutoriais
           </h2>
           <h3 class="complete">
-            <span class="fa fa-gear"></span>
             <?php 
               $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
               if($target_group == 2){
-                echo 'para agentes';
+                echo '<span class="fa fa-gear"></span>para agentes';
               }
               else if ($target_group == 1){
-                echo 'para gestores';
+                echo '<span class="fa fa-gear"></span>para gestores';
               }
 
             ?>
