@@ -11,17 +11,17 @@ matrix:
   - php: nightly
   fast_finish: true
 addons:
-- ssh_know_hosts: 
+- ssh_know_hosts:
   - "$ssh_host"
 apt:
   packages:
   - sshpass
 before_install:
-- openssl aes-256-cbc -K $encrypted_bbba74f7c321_key -iv $encrypted_bbba74f7c321_iv 
+- openssl aes-256-cbc -K $encrypted_d3ab20633711_key -iv $encrypted_d3ab20633711_iv
   -in deploy_rsa.enc -out deploy_rsa -d
 - sudo apt-get install sshpass
 install:
-- echo -e "Install" 
+- echo -e "Install"
 script: phpunit --version
 after_success:
 - eval "$(ssh-agent -s)"
@@ -32,7 +32,7 @@ deploy:
 - provider: script
   script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_portal_master"
   skip_cleanup: true
-  on:  
+  on: 
   branch: master
 cache:
   directories:
