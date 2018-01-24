@@ -1,12 +1,15 @@
 <div class="content-section">
   <div class="content-section-content">
     <?php
+
+      $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
         'post_type' => 'post', 
         's' => esc_html( get_search_query( false ) ),
         'posts_per_page' => 3,
-        'paged' => $paged
+        'paged' => $paged,
+        'author' => $author->ID
       );
       $query = new WP_Query( $args );
     ?>
@@ -15,7 +18,7 @@
       <?php while ( $query->have_posts() ) : $query->the_post(); ?>
       <article class="post">
         <div class="featured-image">
-          <?php echo get_the_post_thumbnail(); ?>
+          <?php get_the_post_thumbnail(); ?>
         </div>
         <a href="<?php echo get_permalink();?>">
           <h3><?php the_title(); ?></h3>
@@ -23,7 +26,7 @@
         <div class="meta">
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            <?php echo the_date(); ?>
+            <?php the_date(); ?>
           </p>
           <p class="comments">
             <a href="<?php comments_link(); ?>">
@@ -32,7 +35,7 @@
             </a>
           </p>
         </div>
-        <?php echo the_content(); ?>
+        <?php the_content(); ?>
       </article>
       <hr class="dark" />
     <?php endwhile; ?>
