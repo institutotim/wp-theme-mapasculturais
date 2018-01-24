@@ -37,11 +37,11 @@ class tutorials_widget extends WP_Widget {
       <nav class="target-group-nav">
         <a>
           <span class="fa fa-gear"></span>
-          gestor
+          <a href="<?php echo add_query_arg(array('target_group' => '1') , get_post_type_archive_link( 'tutorial' )); ?>">gestor</a>
         </a>
         <a>
           <span class="fa fa-user"></span>
-          agente cultural
+          <a href="<?php echo add_query_arg(array('target_group' => '2') , get_post_type_archive_link( 'tutorial' )); ?>">agente cultural</a>
         </a>
       </nav>
       <ul>

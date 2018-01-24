@@ -17,7 +17,16 @@
           </h2>
           <h3 class="complete">
             <span class="fa fa-gear"></span>
-            para gestores
+            <?php 
+              $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
+              if($target_group == 2){
+                echo 'para agentes';
+              }
+              else if ($target_group == 1){
+                echo 'para gestores';
+              }
+
+            ?>
           </h3>
         </div>
       </div>

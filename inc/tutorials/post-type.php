@@ -137,7 +137,7 @@ class PMC_Tutorials {
       'html' => array (
         'tag'=> 'select', 
         'options' => array(
-          array('content' => __('for agent\'s', 'pmc'), 'value' => '0'),
+          array('content' => __('for agent\'s', 'pmc'), 'value' => '2'),
           array('content' => __('for manager\'s'), 'value' => '1')
         )
       )
@@ -169,7 +169,7 @@ class PMC_Tutorials {
         if ($meta_striped && '' == get_post_meta($post_id, $meta['slug'], true)){
           add_post_meta($post_id, $meta['slug'], $meta_striped, true);
           if ($meta['slug'] == 'tutorial_group_target'){
-            if ($meta_striped == '0') {
+            if ($meta_striped == '2') {
               add_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc') , true);
             }
             else {
@@ -181,7 +181,7 @@ class PMC_Tutorials {
         elseif ($meta_striped != get_post_meta($post_id, $meta['slug'], true)){
           update_post_meta($post_id, $meta['slug'], $meta_striped);
           if ($meta['slug'] == 'tutorial_group_target'){
-            if ($meta_striped == '0') {
+            if ($meta_striped == '2') {
               update_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc'));
             }
             else {
@@ -193,7 +193,7 @@ class PMC_Tutorials {
         elseif ('' == $meta_striped && get_post_meta($post_id, $meta['slug'], true)){
           delete_post_meta($post_id, $meta['slug'], get_post_meta($post_id, $meta['slug'], true));
           if ($meta['slug'] == 'tutorial_group_target'){
-            if ($meta_striped == '0') {
+            if ($meta_striped == '2') {
               delete_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have group target', 'pmc'));
             }
             else {

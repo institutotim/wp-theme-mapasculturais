@@ -1,11 +1,14 @@
 <div class="tutorial-list">
   <?php
     $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+    $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
     $args = array(
       'post_type' => 'tutorial',
        's' => esc_html( get_search_query( false ) ),
        'posts_per_page' => 3,
-       'paged' => $paged
+       'paged' => $paged,
+       'meta_key' => 'tutorial_group_target', 
+       'meta_value' => esc_html($target_group)
     );
     $query = new WP_Query( $args );
   ?>
