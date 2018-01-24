@@ -1,7 +1,6 @@
 <div class="content-section">
   <div class="content-section-content">
     <?php
-
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
         'post_type' => 'post', 
@@ -13,10 +12,6 @@
     ?>
     
     <?php if ( $query->have_posts() ) : ?>
-
-    <!-- pagination here -->
-
-    <!-- the loop -->
 
     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
       <article class="post">
@@ -42,8 +37,6 @@
       </article>
       <hr class="dark" />
     <?php endwhile; ?>
-
-    <!-- end of the loop -->
 
     <nav class="paging row">
       <?php if( get_next_posts_link('', $query->max_num_pages) ) : ?>

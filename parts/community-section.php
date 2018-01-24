@@ -18,13 +18,13 @@
       <div class="four columns">
         <div class="buttons">
           <p>
-            <a  href="https://github.com/hacklabr/mapasculturais" class="button block">
+            <a  href="<?php echo get_option('github_url') ?>" class="button block">
               <span class="fa fa-github"></span>
               GitHub
             </a>
           </p>
           <p>
-            <a href="/comunidade" class="button button-primary block">
+            <a href="<?php echo get_option('network_url') ?>" class="button button-primary block">
               <span class="fa fa-star"></span>
               Participe da discussão
             </a>
