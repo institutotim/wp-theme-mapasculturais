@@ -14,7 +14,7 @@
             <span class="fa fa-bookmark-o"></span>
           </span>
           <p class="over-title category">
-            <a href="<?php echo get_site_url(null, '/tutorials'); ?>" class="area">Tutoriais</a>
+            <a href="<?php echo get_post_type_archive_link( 'tutorial' ); ?>" class="area">Tutoriais</a>
             <span class="fa fa-chevron-right"></span>
             <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
               if ( $terms && !is_wp_error( $terms ) ) : 
