@@ -38,18 +38,24 @@
               </header>
               <?php
 
-              // First post, which should display a featured image
-
               $first_post_query = new WP_Query(array(
                 'posts_per_page' => 1,
                 'post__in' => get_option('sticky_posts'),
-                'ignore_sticky_posts' => 1
+                'ignore_sticky_posts' => 1,
+                'meta_query' => array(
+                    array(
+                     'key' => '_thumbnail_id',
+                     'compare' => 'EXISTS'
+                    ),
+                )
               ));
+              $firstPosts = array();
               while($first_post_query->have_posts()) :
+                $firstPosts[] = $post->ID;
                 $first_post_query->the_post();
                 ?>
                 <article class="post">
-                  <div class="post-thumbnail" style="background-image:url(http://lorempixel.com/700/700/);"></div>
+                  <div class="post-thumbnail" style="background-image:url(<?php echo get_the_post_thumbnail_url() ?>);"></div>
                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <div class="meta">
                     <p class="author">
@@ -74,7 +80,8 @@
               $posts_query = new WP_Query(array(
                 'ignore_sticky_posts' => 1,
                 'post__not_in' => get_option('sticky_posts'),
-                'posts_per_page' => 2
+                'posts_per_page' => 2,
+                'post__not_in' => $firstPosts
               ));
               while($posts_query->have_posts()) :
                 $posts_query->the_post();
