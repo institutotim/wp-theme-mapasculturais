@@ -32,6 +32,31 @@
       </div>
     </div>
   </header>
+
+  <?php
+
+    $all_terms = get_terms( 'related_version' );
+    $terms = get_the_terms( get_the_ID(), 'related_version' );
+
+   
+
+    if ( $all_terms && !is_wp_error( $all_terms ) && $terms && !is_wp_error( $terms ) ) {
+
+      if (count($all_terms) == count($terms)){
+         $valid = "Válido para todas as versões da plataforma";
+      }
+      if (count($terms) < count($all_terms)){
+        foreach ( $terms as $term ) {
+          $valid = '<a href="' . get_term_link($term->term_id) . '" class="category">' . $term->name . '</a>';
+        }
+      }
+
+    }
+    if (!$terms) {
+      $valid = "Nenhuma versão foi definida no tutorial";
+    }
+  ?>
+
   <section id="content">
     <div class="container">
       <div class="twelve columns">
@@ -47,7 +72,7 @@
           </p>
           <p class="valid">
             <span class="fa fa-check-circle"></span>
-            Válido para todas as versões da plataforma
+            <?php echo $valid; ?>
           </p>
         </div>
       </div>
