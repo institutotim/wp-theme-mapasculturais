@@ -11,7 +11,7 @@ matrix:
   - php: nightly
   fast_finish: true
 addons:
-- ssh_know_hosts:
+- ssh_know_hosts: 
   - "$ssh_host"
 apt:
   packages:
