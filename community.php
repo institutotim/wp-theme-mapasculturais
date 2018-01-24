@@ -33,8 +33,10 @@
             </div>
             <?php 
 
-              $request_contributors = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/contributors'));
-
+              if ( false === ( $request_contributors = get_transient( 'request_contributors' ) ) ) {
+                   $request_contributors = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/contributors'));
+                   set_transient( 'request_contributors', $request_contributors, 3 * HOUR_IN_SECONDS );
+              }
 
               if( is_wp_error( $request_contributors ) ) {
                 return false;
@@ -45,8 +47,10 @@
                 $contributors = count($data_contributors)+1;
               }
 
-
-              $request_latest_commit = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/git/refs/heads/master'));
+              if ( false === ( $request_latest_commit = get_transient( 'request_latest_commit' ) ) ) {
+                   $request_latest_commit = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/git/refs/heads/master'));
+                   set_transient( 'request_latest_commit', $request_latest_commit, 3 * HOUR_IN_SECONDS );
+              }
 
               if( is_wp_error( $request_latest_commit ) ) {
                 return false; 
@@ -54,8 +58,11 @@
               $body_latest_commit = wp_remote_retrieve_body( $request_latest_commit );
               $data_latest_commit = json_decode( $body_latest_commit );
               if( ! empty( $data_latest_commit ) ) {
-                $request_commits = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/compare/917c0cc5ea17cb8961efe7486eccb9d450d3c8cd...'.$data_latest_commit->object->sha));
 
+                if ( false === ( $request_commits = get_transient( 'request_commits' ) ) ) {
+                     $request_commits = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/compare/917c0cc5ea17cb8961efe7486eccb9d450d3c8cd...'.$data_latest_commit->object->sha));
+                     set_transient( 'request_commits', $request_commits, 3 * HOUR_IN_SECONDS );
+                }
 
                 if( is_wp_error( $request_commits ) ) {
                   return false;
@@ -67,8 +74,12 @@
                 }
               }
 
-              $request_issues = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais'));
 
+              if ( false === ( $request_issues = get_transient( 'request_issues' ) ) ) {
+                   $request_issues = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais'));
+
+                   set_transient( 'request_issues', $request_issues, 3 * HOUR_IN_SECONDS );
+              }
 
               if( is_wp_error( $request_issues ) ) {
                 return false;
