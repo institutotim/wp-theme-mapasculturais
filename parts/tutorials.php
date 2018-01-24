@@ -70,6 +70,6 @@
   <?php wp_reset_postdata(); ?>
 
   <?php else : ?>
-    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'pmc' ); ?></p>
   <?php endif; ?>
 </div>

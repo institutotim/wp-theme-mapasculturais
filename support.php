@@ -29,7 +29,7 @@
             </div>
             <div class="four columns">
               <p class="buttons small-buttons u-pull-right">
-                <a class="button">
+                <a href="/tutorials"  class="button">
                   <span class="fa fa-bookmark-o"></span>
                   Tutoriais
                 </a>
@@ -99,7 +99,70 @@
             <h3>Tutoriais</h3>
           </div>
           <div class="tutorial-list">
-            <article class="tutorial-item row">
+
+            <?php
+              $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+              $args = array(
+                'post_type' => 'tutorial',
+                 'posts_per_page' => 3
+              );
+              $query = new WP_Query( $args );
+            ?>
+
+
+            <?php if ( $query->have_posts() ) : ?>
+
+            <!-- pagination here -->
+
+            <!-- the loop -->
+
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+              <article class="tutorial-item row">
+                <div class="tutorial-meta">
+                  <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
+                    if ( $terms && !is_wp_error( $terms ) ) : 
+                      foreach ( $terms as $term ) { ?>
+                        <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                          <span class="fa fa-bookmark-o"></span>
+                          <?php echo $term->name; ?>
+                        </a>
+                <?php } ?>
+              <?php endif; ?>
+                  <p class="meta-item">
+                    <span class="label">
+                      <span class="fa fa-certificate"></span>
+                      Complexidade
+                    </span>
+                    <span class="meta-val complex-item complex-item-2">
+                      <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty')[0]; ?>
+                    </span>
+                  </p>
+                  <p class="meta-item target-group">
+                    <span class="fa fa-gear"></span>
+                    <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target')[0]; ?>
+                  </p>
+                </div>
+                <div class="tutorial-content">
+                  <div class="featured-image">
+                    <?php echo get_the_post_thumbnail(); ?>
+                  </div>
+                  <a href="<?php echo get_permalink();?>">
+                    <h3><?php the_title(); ?></h3>
+                  </a>
+                  <?php echo the_content(); ?>
+                </div>
+              </article>
+              <hr class="dark" />
+            <?php endwhile; ?>
+
+            <!-- end of the loop -->
+
+            <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+              <p><?php esc_html_e( 'Sorry, no posts found.', 'pmc' ); ?></p>
+            <?php endif; ?>
+            <!-- <article class="tutorial-item row">
               <div class="tutorial-meta">
                 <a class="category">
                   <span class="fa fa-bookmark-o"></span>
@@ -169,10 +232,10 @@
                 <h3>Editando seu perfil</h3>
                 <p>In in velit in nibh ullamcorper lobortis nec eu ante. Curabitur vitae mauris ut quam elementum posuere vel ac quam.</p>
               </div>
-            </article>
+            </article> -->
           </div>
           <p>
-            <a class="button block">Veja mais tutoriais</a>
+            <a href="/tutorials" class="button block">Veja mais tutoriais</a>
           </p>
         </div>
         <div class="four columns">
