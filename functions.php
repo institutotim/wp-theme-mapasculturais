@@ -206,6 +206,56 @@ function posts_link_attributes() {
     return 'class="button"';
 }
 
+
+// settings page
+
+
+function pmc_settings()
+{
+  ?>
+  <h1><?php _e('Settings Page','pmc'); ?></h1>
+  <h3><?php _e("Add the button's link:");?><h3>
+  <form method="post" action="admin-post.php" >
+    <input type="hidden" name="action" value="update_options">
+    <div>
+      <p>
+        <label>The github link of Mapas Culturais</label>
+        <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
+      </p>
+      <p>
+        <label>The network link's page</label>
+        <input id="network_url" name="network_url" type="text" value="<?php echo get_option('network_url') ? get_option('network_url'):""; ?>">
+      </p>
+  </div>
+  <?php submit_button(__("Save", 'pmc')); ?>
+  </form>
+
+  <?php
+  
+}
+
+
+function add_admin_menu(){
+  add_menu_page( __('Mapas Theme','pmc'), __('Mapas Theme','pmc'), 'manage_options', 'pmc_menu', 'pmc_settings', 'dashicons-megaphone', 100);
+}
+
+add_action('admin_menu', 'add_admin_menu');
+
+add_action( 'admin_post_update_options', 'save_settings_fields' );
+
+function save_settings_fields(){
+
+  $github_url = isset( $_POST["github_url"]) ? $_POST["github_url"]:"";
+  $network_url = isset( $_POST["network_url"]) ? $_POST["network_url"]:"";
+
+  update_option( "github_url", $github_url);
+  update_option( "network_url", $network_url);
+
+
+    wp_redirect( "admin.php?page=pmc_menu" );
+    exit;
+}
+
 /**
  * Include features
  */

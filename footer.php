@@ -32,7 +32,7 @@
             </ul>
           </li>
           <li>
-            <a href="https://github.com/hacklabr/mapasculturais">
+            <a href="<?php echo get_option('github_url') ?>">
               <span class="fa fa-github"></span>
               GitHub
             </a>
