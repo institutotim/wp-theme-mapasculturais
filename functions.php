@@ -35,6 +35,12 @@ function pmc_register_required_plugins() {
       'required' => true,
       'force_activation' => true
     );
+    $plugins[] = array(
+      'name' => 'MailChimp for WordPress',
+      'slug' => 'mailchimp-for-wp',
+      'required' => true,
+      'force_activation' => true
+    );
   } else {
    error_log('Error: Environment variable ACF_PRO_KEY is not defined.');
   }

@@ -163,7 +163,7 @@
       <div class="eight columns">
         <div class="row">
           <section class="community-session">
-            <p>Você não está conectado, <a href="#">cadastre-se</a> ou efetue <a href="#">login</a>.</p>
+            <p>Você não está conectado, <a href="<?php echo wp_registration_url(); ?> ">cadastre-se</a> ou efetue <a href="<?php echo wp_login_url( home_url() ); ?>">login</a>.</p>
           </section>
         </div>
         <div class="row">
