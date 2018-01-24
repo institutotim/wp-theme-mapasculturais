@@ -31,7 +31,7 @@
         <div id="meta">
           <p class="target-group">
             <span class="fa fa-gear"></span>
-            <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target')[0]; ?>
+            <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target_label')[0]; ?>
           </p>
           <p class="complex">
             <span class="fa fa-certificate"></span>
