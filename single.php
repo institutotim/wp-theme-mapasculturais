@@ -14,7 +14,7 @@
             <span class="fa fa-newspaper-o"></span>
           </span>
           <p class="over-title category">
-            <a href="#" class="area">Notícias</a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="area">Notícias</a>
             <span class="fa fa-chevron-right"></span>
             <?php $terms = get_the_terms( get_the_ID(), 'category' );      
               if ( $terms && !is_wp_error( $terms ) ) : 
