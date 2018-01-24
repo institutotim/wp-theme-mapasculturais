@@ -33,7 +33,7 @@ deploy:
 - provider: script
   script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
   skip_cleanup: true
-  on: 
+  on:  
   branch: master
 cache:
   directories:
