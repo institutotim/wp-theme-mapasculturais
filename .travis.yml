@@ -31,7 +31,7 @@ after_success:
 - ssh $ssh_user@$ssh_host "ls"
 deploy:
 - provider: script
-  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sudo sh $path_script_deploy_server"
   skip_cleanup: true
   on:  
   branch: master
