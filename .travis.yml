@@ -21,7 +21,7 @@ before_install:
   -in deploy_rsa.enc -out deploy_rsa -d
 - sudo apt-get install sshpass
 install:
-- echo -e "Install"
+- echo -e "Install" 
 script: phpunit --version
 after_success:
 - eval "$(ssh-agent -s)"
