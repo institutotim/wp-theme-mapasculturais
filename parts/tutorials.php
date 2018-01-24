@@ -44,10 +44,10 @@
         </p>
       </div>
       <div class="tutorial-content">
-        <div class="featured-image">
-          <?php echo get_the_post_thumbnail(); ?>
-        </div>
         <a href="<?php echo get_permalink();?>">
+          <div class="featured-image">
+            <?php echo get_the_post_thumbnail(); ?>
+          </div>
           <h3><?php the_title(); ?></h3>
         </a>
         <?php echo the_content(); ?>
