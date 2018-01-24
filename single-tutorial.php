@@ -14,9 +14,16 @@
             <span class="fa fa-bookmark-o"></span>
           </span>
           <p class="over-title category">
-            <a href="#" class="area">Tutoriais</a>
+            <a href="<?php echo get_site_url(null, '/tutorials'); ?>" class="area">Tutoriais</a>
             <span class="fa fa-chevron-right"></span>
-            <a href="#" class="cat">Categoria #1</a>
+            <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
+              if ( $terms && !is_wp_error( $terms ) ) : 
+                foreach ( $terms as $term ) { ?>
+                  <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                    <?php echo $term->name; ?>
+                  </a>
+          <?php } ?>
+        <?php endif; ?>
           </p>
           <h2>
             <?php the_title(); ?>
