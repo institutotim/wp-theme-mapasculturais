@@ -17,8 +17,6 @@ apt:
   packages:
   - sshpass
 before_install:
-- openssl aes-256-cbc -K $encrypted_bbba74f7c321_key -iv $encrypted_bbba74f7c321_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
 - sudo apt-get install sshpass
 install:
 - echo -e "Install" 
