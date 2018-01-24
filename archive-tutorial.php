@@ -33,7 +33,7 @@
     </div>
   </header>
   <section id="big-search">
-    <form method="get" id="searchform" action="<?php echo bloginfo('url'); ?>/tutorials/">
+    <form method="get" id="searchform" action="<?php echo get_post_type_archive_link( 'tutorial' ); ?>">
       <div class="container">
         <div class="twelve columns">
           <div class="big-search-container">
