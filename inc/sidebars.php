@@ -10,7 +10,7 @@ class PMC_Sidebars {
     $args = array(
       'name'          => __( 'News', 'pmc' ), //time-line
       'id'            => 'news-pmc', 
-      'description'   => '',
+      'description'   => 'Archive Newspage sidebar',
       'class'         => 'widget text-widget',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget'  => '</div>',
@@ -22,7 +22,7 @@ class PMC_Sidebars {
     $args = array(
       'name'          => __( 'Tutorials', 'pmc' ), //time-line
       'id'            => 'tutorials-pmc', 
-      'description'   => '',
+      'description'   => 'Single Tutorials page sidebar',
       'class'         => 'widget text-widget',
       'before_widget' => '<div id="%1$s" class="widget">',
       'after_widget'  => '</div>',
@@ -34,7 +34,7 @@ class PMC_Sidebars {
     $args = array(
       'name'          => __( 'Archive Tutorials', 'pmc' ), //time-line
       'id'            => 'archive-tutorials-pmc', 
-      'description'   => '',
+      'description'   => 'Archive Tutorials page sidebar',
       'class'         => 'widget text-widget',
       'before_widget' => '<div id="%1$s" class="widget">',
       'after_widget'  => '</div>',

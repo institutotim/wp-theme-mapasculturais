@@ -35,12 +35,6 @@ function pmc_register_required_plugins() {
       'required' => true,
       'force_activation' => true
     );
-    $plugins[] = array(
-      'name' => 'MailChimp for WordPress',
-      'slug' => 'mailchimp-for-wp',
-      'required' => true,
-      'force_activation' => true
-    );
   } else {
    error_log('Error: Environment variable ACF_PRO_KEY is not defined.');
   }
@@ -54,6 +48,14 @@ function pmc_register_required_plugins() {
    'is_automatic'  => false,
    'message'    => ''
   );
+
+  $plugins[] = array(
+    'name' => 'MailChimp for WordPress',
+    'slug' => 'mailchimp-for-wp',
+    'required' => true,
+    'force_activation' => true
+  );
+
   tgmpa($plugins, $options);
 }
 add_action('tgmpa_register', 'pmc_register_required_plugins');
@@ -166,6 +168,7 @@ function pmc_header_scripts() {
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
   wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
 
+
   if ( false === ( $gh_request = get_transient( 'gh_request' ) ) ) {
     $gh_request = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity'));
     set_transient( 'gh_request', $gh_request, 3 * HOUR_IN_SECONDS );
@@ -247,8 +250,7 @@ function pmc_settings()
   <?php
   
 }
-
-
+  
 function add_admin_menu(){
   add_menu_page( __('Mapas Theme','pmc'), __('Mapas Theme','pmc'), 'manage_options', 'pmc_menu', 'pmc_settings', 'dashicons-megaphone', 100);
 }
@@ -269,7 +271,6 @@ function save_settings_fields(){
   update_option( "manual_url", $manual_url);
   update_option( "rocket_url", $rocket_url);
 
-
   wp_redirect( "admin.php?page=pmc_menu" );
   exit;
 }
@@ -279,6 +280,18 @@ function pmc_custom_query_vars_filter($vars) {
   return $vars;
 }
 add_filter( 'query_vars', 'pmc_custom_query_vars_filter' );
+
+function custom_rewrite_rule() {
+    add_rewrite_rule('^tutorials/page/([0-9]+)/?','index.php?post_type=tutorial&page=$matches[1]','top');
+    add_rewrite_rule('^noticias/page/([0-9]+)/?','index.php?post_type=post&page=$matches[1]','top');
+    add_rewrite_rule('^tutorials/?','index.php?post_type=tutorial','top');
+}
+add_action('init', 'custom_rewrite_rule', 10, 0);
+
+function custom_rewrite_tag() {
+  add_rewrite_tag('%page%', '([0-9]+)');
+}
+add_action('init', 'custom_rewrite_tag', 10, 0);
 
 /**
  * Include features
