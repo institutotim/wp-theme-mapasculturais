@@ -34,7 +34,7 @@
               $title = sprintf( __( '%s', 'arp' ), single_term_title() );
             endif;
             echo '<a href="' . $link . '">' . $title . '</a>';
-          elseif( is_search() ) :
+          elseif( get_search_query( false ) ) :
             printf( __( 'Search results for: %s', 'arp' ), $_GET['s'] );
           elseif ( is_day() ) :
             printf( __( 'Daily Archives: %s', 'arp' ), get_the_date() );
@@ -60,37 +60,6 @@
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
           <?php dynamic_sidebar('news-pmc') ?>
-         <!--  
-          <div class="widget">
-            <h2>Categorias</h2>
-            <ul>
-              <li>
-                <a href="#">
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>

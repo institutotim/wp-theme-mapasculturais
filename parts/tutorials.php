@@ -1,24 +1,28 @@
 <div class="tutorial-list">
   <?php
-    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+    $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
     $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
     $args = array(
       'post_type' => 'tutorial',
-       's' => esc_html( get_search_query( false ) ),
-       'posts_per_page' => 3,
        'paged' => $paged,
        'meta_key' => 'tutorial_group_target', 
        'meta_value' => esc_html($target_group)
     );
+
+
+    if (get_search_query( false )) {
+      $args['s'] = esc_html( get_search_query( false ) );
+      $args['posts_per_page'] = -1;
+    } else {
+      $args['posts_per_page'] = 1;
+    }
+
+
     $query = new WP_Query( $args );
   ?>
 
-
   <?php if ( $query->have_posts() ) : ?>
-
-  <!-- pagination here -->
-
-  <!-- the loop -->
 
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <article class="tutorial-item row">
@@ -59,15 +63,31 @@
     <hr class="dark" />
   <?php endwhile; ?>
 
-  <!-- end of the loop -->
-
   <nav class="paging row">
-    <?php if( get_next_posts_link('', $query->max_num_pages) ) : ?>
-      <?php echo get_next_posts_link( 'Older Entries', $query->max_num_pages); ?>
-    <?php endif; ?>
-    <?php if( get_previous_posts_link() ) : ?>
-      <?php echo get_previous_posts_link( 'Newer posts' ); ?>
-    <?php endif; ?>
+   <?php
+
+      $pagination = array(
+          'base' => @add_query_arg('page','%#%'),
+          'format' => '',
+          'total' => $query->max_num_pages,
+          'current' => $page,
+          'type' => 'plain',
+          'prev_next'          => true,
+          'prev_text'          => __('« Previous'),
+          'next_text'          => __('Next »'),
+          'show_all' => get_theme_mod( 'all-links', false ),
+          'before_page_number' => "<!--",
+          'after_page_number' => '-->'
+      );
+
+      if ( $wp_rewrite->using_permalinks() ) 
+        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+
+      if ( !empty($query->query_vars['s']) ) 
+        $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
+        
+      echo paginate_links( $pagination );
+    ?>
   </nav>
 
   <?php wp_reset_postdata(); ?>

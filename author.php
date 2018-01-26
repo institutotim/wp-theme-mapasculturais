@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php if(have_posts()) : ?>
 <article>
   <header class="page-header">
     <div class="container">
@@ -137,5 +136,4 @@
     </div>
   <section>
 </article>
-<?php endif; ?>
 <?php get_footer(); ?>

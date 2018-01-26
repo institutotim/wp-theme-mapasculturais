@@ -113,6 +113,38 @@ hr.dark,
     float: left;
   }
 }
+
+.prev, .next {
+  font-family: 'Tim Sans';
+  height: auto;
+  border-radius: 0;
+  border: 0;
+  background: @lightblue;
+  color: #fff;
+  // line-height: inherit;
+  padding: 1rem 4rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background: lighten(@lightblue, 10%);
+    color: #fff;
+  }
+  &.block {
+    display: block;
+  }
+  &.button-primary {
+    background: @pink;
+    &:hover {
+      background: lighten(@pink, 5%);
+    }
+  }
+  .fa {
+    margin: .8rem 1rem 0 -1rem;
+    float: left;
+  }
+}
+
+
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea {
   height: auto;
 }
