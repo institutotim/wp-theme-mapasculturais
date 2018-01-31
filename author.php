@@ -90,16 +90,15 @@
             <div class="team">
               <h3>Equipe</h3>
               <ul>
-                <li class="row">
-                  <img src="http://lorempixel.com/100/100/" class="li-img" />
-                  <h4>Lorem Ipsum</h4>
-                  <p>Direção geral</p>
-                </li>
-                <li class="row">
-                  <img src="http://lorempixel.com/100/100/" class="li-img" />
-                  <h4>Dolor Sit</h4>
-                  <p>Desenvolvimento</p>
-                </li>
+                <?php if(get_field('team_members')): ?>
+                  <?php while(has_sub_field('team_members')): ?>
+                    <li class="row">
+                      <?php echo get_avatar( get_sub_field('email'), 100 ); ?>
+                      <h4><?php the_sub_field('name'); ?></h4>
+                      <p><?php the_sub_field('position'); ?></p>
+                    </li>
+                  <?php endwhile; ?>
+                <?php endif; ?>
               </ul>
             </div>
           </div>
