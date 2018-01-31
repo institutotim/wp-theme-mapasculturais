@@ -18,12 +18,12 @@
           </h1>
       </div>
       <div class="eight columns">
-        <form method="get" id="searchform" action="<?php echo get_post_type_archive_link("post") ?>/">
-          <div class="search-input u-pull-right">
-            <label class="fa fa-search" for="search"></label>
-            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="search" type="text" placeholder="Busca..." />
-          </div>
-        </form>
+        <div class="search-input u-pull-right">
+          <form method="get" id="searchform" action="<?php echo get_post_type_archive_link("post") ?>/">
+              <label class="fa fa-search" for="search"></label>
+              <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="search" type="text" placeholder="Busca..." />
+          </form>
+        </div>
           <?php wp_nav_menu(array(
             "theme_location" => "header",
             "menu_class" => "",
