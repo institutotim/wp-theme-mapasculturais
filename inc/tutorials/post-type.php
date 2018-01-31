@@ -148,8 +148,12 @@ class PMC_Tutorials {
       'slug'=>'tutorial_difficulty' ,
       'info' => __('No difficulty was informed', 'pmc') , 
       'html' => array (
-        'tag'=> 'input',
-        'type' => 'text' 
+        'tag'=> 'select', 
+        'options' => array(
+          array('content' => __('easy'), 'value' => '1'),
+          array('content' => __('medium', 'pmc'), 'value' => '2'),
+          array('content' => __('advanced', 'pmc'), 'value' => '3')
+        )
       )
     );
 
@@ -173,7 +177,19 @@ class PMC_Tutorials {
               add_post_meta($post_id, $meta['slug'].'_label', __('agents', 'pmc') , true);
             }
             else {
-              add_post_meta($post_id, $meta['slug'].'_label', __('maintainers') , true);
+              add_post_meta($post_id, $meta['slug'].'_label', __('maintainers', 'preg_match(pattern, subject)') , true);
+            }
+          }
+
+          if ($meta['slug'] == 'tutorial_difficulty'){
+            if ($meta_striped == '1') {
+              update_post_meta($post_id, $meta['slug'].'_label', __('easy', 'pmc'));
+            }
+            else if ($meta_striped == '2'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('medium', 'pmc'));
+            }
+            else if ($meta_striped == '3'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('advanced', 'pmc'));
             }
           }
         }
@@ -185,7 +201,18 @@ class PMC_Tutorials {
               update_post_meta($post_id, $meta['slug'].'_label', __('agents', 'pmc'));
             }
             else {
-              update_post_meta($post_id, $meta['slug'].'_label', __('maintainers'));
+              update_post_meta($post_id, $meta['slug'].'_label', __('maintainers', 'pmc'));
+            }
+          }
+          if ($meta['slug'] == 'tutorial_difficulty'){
+            if ($meta_striped == '1') {
+              update_post_meta($post_id, $meta['slug'].'_label', __('easy', 'pmc'));
+            }
+            else if ($meta_striped == '2'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('medium', 'pmc'));
+            }
+            else if ($meta_striped == '3'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('advanced', 'pmc'));
             }
           }
         }
@@ -198,6 +225,18 @@ class PMC_Tutorials {
             }
             else {
               delete_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have group target', 'pmc'));
+            }
+          }
+
+          if ($meta['slug'] == 'tutorial_difficulty'){
+            if ($meta_striped == '1') {
+              update_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have difficulty', 'pmc'));
+            }
+            else if ($meta_striped == '2'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have difficulty', 'pmc'));
+            }
+            else if ($meta_striped == '3'){
+              update_post_meta($post_id, $meta['slug'].'_label', __('The content don\'t have difficulty', 'pmc'));
             }
           }
         }

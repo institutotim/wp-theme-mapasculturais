@@ -291,7 +291,7 @@ add_filter( 'query_vars', 'pmc_custom_query_vars_filter' );
 function custom_rewrite_rule() {
     add_rewrite_rule('^tutorials/page/([0-9]+)/?','index.php?post_type=tutorial&page=$matches[1]','top');
     add_rewrite_rule('^noticias/page/([0-9]+)/?','index.php?post_type=post&page=$matches[1]','top');
-    add_rewrite_rule('^tutorials/?','index.php?post_type=tutorial','top');
+    //add_rewrite_rule('^tutorials/?','index.php?post_type=tutorial','top');
 }
 add_action('init', 'custom_rewrite_rule', 10, 0);
 

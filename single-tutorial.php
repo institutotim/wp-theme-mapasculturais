@@ -68,7 +68,7 @@
           <p class="complex">
             <span class="fa fa-certificate"></span>
             <span class="label">Complexidade:</span>
-            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty')[0]; ?>
+            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
           </p>
           <p class="valid">
             <span class="fa fa-check-circle"></span>

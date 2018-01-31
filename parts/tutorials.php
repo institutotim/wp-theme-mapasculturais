@@ -42,7 +42,7 @@
             Complexidade
           </span>
           <span class="meta-val complex-item complex-item-2">
-            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty')[0]; ?>
+            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
           </span>
         </p>
         <p class="meta-item target-group">
