@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 15:52-0300\n"
-"PO-Revision-Date: 2017-08-07 16:02-0300\n"
+"POT-Creation-Date: 2018-01-30 21:40-0200\n"
+"PO-Revision-Date: 2018-01-30 22:11-0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: archive-pmc_timeline_item.php:13
 msgctxt "Pattern for YYYY-MM in timeline items"
@@ -28,49 +28,98 @@ msgctxt "Pattern for YYYY-MM-DD in timeline items"
 msgid "F j, Y"
 msgstr "j \\d\\e F \\d\\e Y"
 
-#: archive-pmc_timeline_item.php:68
+#: archive-pmc_timeline_item.php:62
 msgctxt "Conjunction for timeline periods"
 msgid "to"
 msgstr "a"
 
-#: archive.php:27 archive.php:29
+#: archive-tutorial.php:30
+msgid "Select Target Group"
+msgstr "Selecionar Grupo"
+
+#: archive.php:32 archive.php:34
 #, php-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
-#: archive.php:33
+#: archive.php:38
 #, php-format
 msgid "Search results for: %s"
 msgstr "Resultados de busca para: %s"
 
-#: archive.php:35
+#: archive.php:40
 #, php-format
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "Arquivo do dia: %s"
 
-#: archive.php:37
+#: archive.php:42
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Arquivo Mensal: %s"
 
-#: archive.php:37
+#: archive.php:42
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F \\d\\e Y"
 
-#: archive.php:39
+#: archive.php:44
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr ""
+msgstr "Arquivo Anual: %s"
 
-#: archive.php:39
+#: archive.php:44
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
-#: functions.php:65
+#: functions.php:73
 msgid "Instance"
 msgstr "Instância"
+
+#: functions.php:225
+msgid "Settings Page"
+msgstr "Página de configurações"
+
+#: functions.php:226
+msgid "Add the button's link:"
+msgstr "Adicione o link do botão:"
+
+#: functions.php:252
+msgid "Save"
+msgstr "Salvar"
+
+#: functions.php:260
+msgid "Mapas Theme"
+msgstr "Tema do Mapas Culturais"
+
+#: inc/404.php:11
+msgid "404 Error "
+msgstr "Erro 404 "
+
+#: inc/404.php:12
+msgid "This is somewhat embarrassing, isn’t it?"
+msgstr "Isso é um pouco embaraçoso, não é?"
+
+#: inc/404.php:21
+msgid ""
+"\"Oops, I screwed up and you discovered my fatal flaw. \n"
+"\t\t\t\t\t\t\tWell, we're not all perfect, but we try.  Can you try this\n"
+"\t\t\t\t\t\t\tagain or maybe visit our <a \n"
+"\t\t\t\t\t\t\ttitle=\"Our Site\" href=\"/\">Home \n"
+"\t\t\t\t\t\t\tPage</a> to start fresh.  We'll do better next time.\""
+msgstr ""
+"“Ops, me ferrei e você descobriu minha falha.\n"
+"Bem, não somos perfeitos, mas tentamos. Você pode tentar isso?\n"
+"novamente ou talvez visite nossa <a title=“Nosso Site” href = “/“> Página Inicial </a>\n"
+"para começar de novo. Faremos melhor na próxima.“"
+
+#: inc/menus.php:12
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: inc/menus.php:13
+msgid "Footer"
+msgstr "Rodapé"
 
 #: inc/network-posts.php:11
 msgctxt "post type general name"
@@ -90,48 +139,48 @@ msgstr "Rede"
 #: inc/network-posts.php:14
 msgctxt "add new on admin bar"
 msgid "Network"
-msgstr ""
+msgstr "Rede"
 
 #: inc/network-posts.php:15
 msgctxt "network_post"
 msgid "Add network post"
-msgstr ""
+msgstr "Adicionar post da Rede"
 
 #: inc/network-posts.php:16
 msgid "Add new network post"
-msgstr ""
+msgstr "Adicionar novo post da Rede"
 
 #: inc/network-posts.php:17
 msgid "New post"
-msgstr ""
+msgstr "Novo post"
 
 #: inc/network-posts.php:18
 msgid "Edit post"
-msgstr ""
+msgstr "Editar post"
 
 #: inc/network-posts.php:19
 msgid "View post"
-msgstr ""
+msgstr "Visualizar post"
 
 #: inc/network-posts.php:20
 msgid "All posts"
-msgstr ""
+msgstr "Todos os posts"
 
 #: inc/network-posts.php:21
 msgid "Search network posts"
-msgstr ""
+msgstr "Buscar posts da rede"
 
 #: inc/network-posts.php:22
 msgid "No network posts found."
-msgstr ""
+msgstr "Nenhum post da Rede foi encontrado."
 
 #: inc/network-posts.php:23
 msgid "No network posts found in trash."
-msgstr ""
+msgstr "Nenhum post da Rede foi encontrado na Lixeira."
 
 #: inc/network-posts.php:36
 msgid "Network's Posts"
-msgstr ""
+msgstr "Posts da Rede"
 
 #: inc/platform-statistics.php:14
 msgid "Instance details"
@@ -159,23 +208,23 @@ msgstr "Posição"
 
 #: inc/platform-statistics.php:110
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: inc/platform-statistics.php:130
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: inc/platform-statistics.php:149
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: inc/platform-statistics.php:168
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: inc/platform-statistics.php:187
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: inc/platform-statistics.php:199 inc/platform-statistics.php:218
 msgid "ID or phone number"
@@ -183,136 +232,191 @@ msgstr "ID ou número de telefone"
 
 #: inc/platform-statistics.php:206
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
-#: inc/timeline-items.php:17
-msgid "Start date:"
-msgstr "Data de início:"
+#: inc/sidebars.php:11
+msgid "News"
+msgstr "Noticias"
 
-#: inc/timeline-items.php:20
-msgid ""
-"Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
-msgstr ""
-"Formato: AAAA-MM-DD (AAAA = ano, MM = mês, DD = dia, o ano é "
-"obrigatório)."
+#: inc/sidebars.php:23
+msgid "Tutorials"
+msgstr "Tutoriais"
 
-#: inc/timeline-items.php:22
+#: inc/sidebars.php:35
+msgid "Archive Tutorials"
+msgstr "Arquivo de Tutoriais"
+
+#: inc/timeline-items.php:18
+msgid "Date of occurrence or start date (if a period):"
+msgstr "Date de ocorrência ou data de inicio (se um período):"
+
+#: inc/timeline-items.php:21
+msgid "Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
+msgstr "Formato: AAAA-MM-DD (AAAA = ano, MM = mês, DD = dia, o ano é obrigatório)."
+
+#: inc/timeline-items.php:23
 msgid "Examples: 2014, 2014-05, 2014-05-01"
 msgstr "Exemplos: 2014 ou 2014-05 ou 2014-05-01"
 
-#: inc/timeline-items.php:28
-msgid "Finish date:"
+#: inc/timeline-items.php:29
+#, fuzzy
+#| msgid "Finish date:"
+msgid "Finish date (optional):"
 msgstr "Final do evento:"
 
-#: inc/timeline-items.php:31
+#: inc/timeline-items.php:32
 msgid "Leave blank if same as above."
 msgstr "Deixe em branco se o evento terminou no dentro do período acima."
 
-#: inc/timeline-items.php:62
-msgctxt "pmc_timeline_item"
-msgid "Add event"
-msgstr "Adicionar evento"
-
-#: inc/timeline-items.php:65
+#: inc/timeline-items.php:59
 msgid "Edit event"
 msgstr "Editar evento"
 
-#: inc/timeline-items.php:67
+#: inc/timeline-items.php:60
 msgid "All events"
 msgstr "Todos os eventos"
 
-#: inc/timeline-items.php:83
+#: inc/timeline-items.php:73
 msgid "Timeline"
 msgstr "Linha do tempo"
 
-#: inc/timeline-items.php:84
+#: inc/timeline-items.php:74
 msgid "Historical events of Mapas Culturais platform."
-msgstr ""
-
-#: inc/tutorials/difficulties.php:15
-msgid "Difficulties"
-msgstr ""
-
-#: inc/tutorials/difficulties.php:16
-msgid "Difficulty level of a tutorial."
-msgstr ""
-
-#: inc/tutorials/post-type.php:11
-msgctxt "post type general name"
-msgid "Tutorials"
-msgstr ""
-
-#: inc/tutorials/post-type.php:12
-msgctxt "post type singular name"
-msgid "Tutorial"
-msgstr ""
+msgstr "Eventos históricos da plataforma Mapas Culturais."
 
 #: inc/tutorials/post-type.php:13
-msgctxt "admin menu"
+msgctxt "post type general name"
 msgid "Tutorials"
-msgstr ""
+msgstr "Tutoriais"
 
 #: inc/tutorials/post-type.php:14
-msgctxt "add new on admin bar"
-msgid "Tutorials"
-msgstr ""
+msgctxt "post type singular name"
+msgid "Tutorial"
+msgstr "Tutoriais"
 
 #: inc/tutorials/post-type.php:15
-msgctxt "tutorial"
-msgid "Add new tutorial"
-msgstr ""
+msgctxt "admin menu"
+msgid "Tutorials"
+msgstr "Tutoriais"
 
 #: inc/tutorials/post-type.php:16
-msgid "Add new tutorial"
-msgstr ""
+msgctxt "add new on admin bar"
+msgid "Tutorials"
+msgstr "Tutoriais"
 
 #: inc/tutorials/post-type.php:17
-msgid "New tutorial"
-msgstr ""
+msgctxt "tutorial"
+msgid "Add new tutorial"
+msgstr "Adicionar novo Tutorial"
 
 #: inc/tutorials/post-type.php:18
-msgid "Edit tutorial"
-msgstr ""
+msgid "Add new tutorial"
+msgstr "Adicionar novo Tutorial"
 
 #: inc/tutorials/post-type.php:19
-msgid "View tutorial"
-msgstr ""
+msgid "New tutorial"
+msgstr "Novo Tutorial"
 
 #: inc/tutorials/post-type.php:20
-msgid "All tutorials"
-msgstr ""
+msgid "Edit tutorial"
+msgstr "Editar Tutorial"
 
 #: inc/tutorials/post-type.php:21
-msgid "Search tutorial's posts"
-msgstr ""
+msgid "View tutorial"
+msgstr "Ver Tutorial"
 
 #: inc/tutorials/post-type.php:22
-msgid "No tutorials found."
-msgstr ""
+msgid "All tutorials"
+msgstr "Todos os Tutoriais"
 
 #: inc/tutorials/post-type.php:23
-msgid "No tutorials found in trash."
-msgstr ""
+msgid "Search tutorial's posts"
+msgstr "Buscar Tutoriais"
 
-#: inc/tutorials/post-type.php:36
+#: inc/tutorials/post-type.php:24
+msgid "No tutorials found."
+msgstr "Nenhum Tutorial encontrado."
+
+#: inc/tutorials/post-type.php:25
+msgid "No tutorials found in trash."
+msgstr "Nenhum Tutorial encontrado na Lixeira."
+
+#: inc/tutorials/post-type.php:38
 msgid "Tutorials Posts"
-msgstr ""
+msgstr "Tutoriais"
+
+#: inc/tutorials/post-type.php:82
+msgid "Additional info"
+msgstr "Informação adicional"
+
+#: inc/tutorials/post-type.php:136
+msgid "No target group was informed"
+msgstr "Nenhum grupo foi informado"
+
+#: inc/tutorials/post-type.php:140 inc/tutorials/post-type.php:173
+#: inc/tutorials/post-type.php:185
+msgid "agents"
+msgstr "agentes"
+
+#: inc/tutorials/post-type.php:141 inc/tutorials/post-type.php:176
+#: inc/tutorials/post-type.php:188
+msgid "maintainers"
+msgstr "gestores"
+
+#: inc/tutorials/post-type.php:149
+msgid "No difficulty was informed"
+msgstr "Nenhuma dificuldade foi informada"
+
+#: inc/tutorials/post-type.php:197 inc/tutorials/post-type.php:200
+msgid "The content don't have group target"
+msgstr "O conteúdo não pertence a nenhum grupo"
+
+#: inc/tutorials/related-versions.php:14
+msgid "Related Versions"
+msgstr "Versões relacionadas"
 
 #: inc/tutorials/related-versions.php:15
-msgid "Related Versions"
-msgstr ""
-
-#: inc/tutorials/related-versions.php:16
 msgid "Versions of Mapas Culturais a tutorial applies to."
-msgstr ""
+msgstr "Versões do Mapas Culturais que o Tutorial aplica-se."
+
+#: inc/tutorials/widget.php:18
+msgid "Browse on Tutorials"
+msgstr "Navegar nos Tutoriais"
+
+#: inc/tutorials/widget.php:21
+msgid "Navigate on tutorials categories"
+msgstr "Navegar nas categorias de Tutoriais"
+
+#: inc/tutorials/widget.php:70
+msgid "New title"
+msgstr "Novo titúlo"
+
+#: inc/tutorials/widget.php:76
+msgid "Title:"
+msgstr "Titúlo:"
+
+#: parts/blog.php:60 parts/tutorials.php:76
+msgid "« Previous"
+msgstr "« Anterior"
+
+#: parts/blog.php:61 parts/tutorials.php:77
+msgid "Next »"
+msgstr "Próximo »"
 
 #: parts/topic-item.php:12
 msgid "prazo encerrado"
-msgstr ""
+msgstr "prazo encerrado"
 
 #: parts/topic-item.php:14
 #, php-format
 msgid "<span class=\"numero\">1</span> dia restante"
 msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<span class=“numero”>1</span> dia restante"
+msgstr[1] "<span class=“numero”>%1$s</span> dias restantes"
+
+#~ msgid "Start date:"
+#~ msgstr "Data de início:"
+
+#~ msgctxt "pmc_timeline_item"
+#~ msgid "Add event"
+#~ msgstr "Adicionar evento"

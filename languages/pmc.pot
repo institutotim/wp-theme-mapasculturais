@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-19 20:08-0200\n"
+"POT-Creation-Date: 2018-01-30 21:40-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
@@ -33,43 +33,88 @@ msgctxt "Conjunction for timeline periods"
 msgid "to"
 msgstr ""
 
-#: archive.php:27 archive.php:29
+#: archive-tutorial.php:30
+msgid "Select Target Group"
+msgstr ""
+
+#: archive.php:32 archive.php:34
 #, php-format
 msgid "%s"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:38
 #, php-format
 msgid "Search results for: %s"
 msgstr ""
 
-#: archive.php:35
+#: archive.php:40
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:42
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:42
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:39
+#: archive.php:44
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:39
+#: archive.php:44
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:65
+#: functions.php:73
 msgid "Instance"
+msgstr ""
+
+#: functions.php:225
+msgid "Settings Page"
+msgstr ""
+
+#: functions.php:226
+msgid "Add the button's link:"
+msgstr ""
+
+#: functions.php:252
+msgid "Save"
+msgstr ""
+
+#: functions.php:260
+msgid "Mapas Theme"
+msgstr ""
+
+#: inc/404.php:11
+msgid "404 Error "
+msgstr ""
+
+#: inc/404.php:12
+msgid "This is somewhat embarrassing, isn’t it?"
+msgstr ""
+
+#: inc/404.php:21
+msgid ""
+"\"Oops, I screwed up and you discovered my fatal flaw. \n"
+"\t\t\t\t\t\t\tWell, we're not all perfect, but we try.  Can you try this\n"
+"\t\t\t\t\t\t\tagain or maybe visit our <a \n"
+"\t\t\t\t\t\t\ttitle=\"Our Site\" href=\"/\">Home \n"
+"\t\t\t\t\t\t\tPage</a> to start fresh.  We'll do better next time.\""
+msgstr ""
+
+#: inc/menus.php:12
+msgid "Header"
+msgstr ""
+
+#: inc/menus.php:13
+msgid "Footer"
 msgstr ""
 
 #: inc/network-posts.php:11
@@ -185,6 +230,18 @@ msgstr ""
 msgid "WhatsApp"
 msgstr ""
 
+#: inc/sidebars.php:11
+msgid "News"
+msgstr ""
+
+#: inc/sidebars.php:23
+msgid "Tutorials"
+msgstr ""
+
+#: inc/sidebars.php:35
+msgid "Archive Tutorials"
+msgstr ""
+
 #: inc/timeline-items.php:18
 msgid "Date of occurrence or start date (if a period):"
 msgstr ""
@@ -222,81 +279,123 @@ msgstr ""
 msgid "Historical events of Mapas Culturais platform."
 msgstr ""
 
-#: inc/tutorials/difficulties.php:15
-msgid "Difficulties"
-msgstr ""
-
-#: inc/tutorials/difficulties.php:16
-msgid "Difficulty level of a tutorial."
-msgstr ""
-
-#: inc/tutorials/post-type.php:11
+#: inc/tutorials/post-type.php:13
 msgctxt "post type general name"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:12
+#: inc/tutorials/post-type.php:14
 msgctxt "post type singular name"
 msgid "Tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:13
+#: inc/tutorials/post-type.php:15
 msgctxt "admin menu"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:14
+#: inc/tutorials/post-type.php:16
 msgctxt "add new on admin bar"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:15
+#: inc/tutorials/post-type.php:17
 msgctxt "tutorial"
 msgid "Add new tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:16
+#: inc/tutorials/post-type.php:18
 msgid "Add new tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:17
+#: inc/tutorials/post-type.php:19
 msgid "New tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:18
+#: inc/tutorials/post-type.php:20
 msgid "Edit tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:19
+#: inc/tutorials/post-type.php:21
 msgid "View tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:20
+#: inc/tutorials/post-type.php:22
 msgid "All tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:21
+#: inc/tutorials/post-type.php:23
 msgid "Search tutorial's posts"
 msgstr ""
 
-#: inc/tutorials/post-type.php:22
+#: inc/tutorials/post-type.php:24
 msgid "No tutorials found."
 msgstr ""
 
-#: inc/tutorials/post-type.php:23
+#: inc/tutorials/post-type.php:25
 msgid "No tutorials found in trash."
 msgstr ""
 
-#: inc/tutorials/post-type.php:36
+#: inc/tutorials/post-type.php:38
 msgid "Tutorials Posts"
 msgstr ""
 
-#: inc/tutorials/related-versions.php:15
+#: inc/tutorials/post-type.php:82
+msgid "Additional info"
+msgstr ""
+
+#: inc/tutorials/post-type.php:136
+msgid "No target group was informed"
+msgstr ""
+
+#: inc/tutorials/post-type.php:140 inc/tutorials/post-type.php:173
+#: inc/tutorials/post-type.php:185
+msgid "agents"
+msgstr ""
+
+#: inc/tutorials/post-type.php:141 inc/tutorials/post-type.php:176
+#: inc/tutorials/post-type.php:188
+msgid "maintainers"
+msgstr ""
+
+#: inc/tutorials/post-type.php:149
+msgid "No difficulty was informed"
+msgstr ""
+
+#: inc/tutorials/post-type.php:197 inc/tutorials/post-type.php:200
+msgid "The content don't have group target"
+msgstr ""
+
+#: inc/tutorials/related-versions.php:14
 msgid "Related Versions"
 msgstr ""
 
-#: inc/tutorials/related-versions.php:16
+#: inc/tutorials/related-versions.php:15
 msgid "Versions of Mapas Culturais a tutorial applies to."
+msgstr ""
+
+#: inc/tutorials/widget.php:18
+msgid "Browse on Tutorials"
+msgstr ""
+
+#: inc/tutorials/widget.php:21
+msgid "Navigate on tutorials categories"
+msgstr ""
+
+#: inc/tutorials/widget.php:70
+msgid "New title"
+msgstr ""
+
+#: inc/tutorials/widget.php:76
+msgid "Title:"
+msgstr ""
+
+#: parts/blog.php:60 parts/tutorials.php:76
+msgid "« Previous"
+msgstr ""
+
+#: parts/blog.php:61 parts/tutorials.php:77
+msgid "Next »"
 msgstr ""
 
 #: parts/topic-item.php:12
