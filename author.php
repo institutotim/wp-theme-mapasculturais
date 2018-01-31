@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $author = get_user_by( 'slug', get_query_var( 'author_name' ) ); ?>
 <article>
   <header class="page-header">
     <div class="container">
@@ -105,30 +106,46 @@
           <div class="widget">
             <h3>Contato</h3>
             <ul>
+              <?php if (get_the_author_meta( 'public_email', $author->ID )): ?>
               <li>
-                <a href="#">
+                <a href="mailto:<?php the_author_meta( 'public_email', $author->ID ) ?>" target="_blank">
                   <span class="fa fa-envelope"></span>
-                  cultura@sp.gov.br
+                  <?php the_author_meta( 'public_email', $author->ID ) ?>
                 </a>
               </li>
+              <?php endif; ?>
+              <?php if (get_the_author_meta( 'telegram', $author->ID )): ?>
               <li>
-                <a href="#">
+                <a href="https://telegram.me/<?php the_author_meta( 'telegram', $author->ID ) ?>" target="_blank">
                   <span class="fa fa-telegram"></span>
-                  @spcultura
+                  Telegram
                 </a>
               </li>
+              <?php endif; ?>
+              <?php if (get_the_author_meta( 'whatsapp', $author->ID )): ?>
               <li>
-                <a href="#">
+                <a href="https://api.whatsapp.com/send?phone=<?php the_author_meta( 'whatsapp', $author->ID ) ?>">
                   <span class="fa fa-whatsapp"></span>
-                  @spcultura
+                  WhatsApp
                 </a>
               </li>
+              <?php endif; ?>
+              <?php if (get_the_author_meta( 'github', $author->ID )): ?>
               <li>
-                <a href="#">
+                <a href="<?php the_author_meta( 'github', $author->ID ) ?>">
                   <span class="fa fa-github"></span>
-                  secult
+                  Github
                 </a>
               </li>
+              <?php endif; ?>
+              <?php if (get_the_author_meta( 'facebook', $author->ID )): ?>
+              <li>
+                <a href="<?php the_author_meta( 'facebook', $author->ID ) ?>">
+                  <span class="fa fa-facebook"></span>
+                  Facebook
+                </a>
+              </li>
+              <?php endif; ?>
             </ul>
           </div>
         </div>
