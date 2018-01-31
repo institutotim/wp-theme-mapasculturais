@@ -13,18 +13,24 @@
           <span class="page-icon">
             <span class="fa fa-newspaper-o"></span>
           </span>
-          <p class="over-title category">
-            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="area">Notícias</a>
-            <span class="fa fa-chevron-right"></span>
-            <?php $terms = get_the_terms( get_the_ID(), 'category' );      
-              if ( $terms && !is_wp_error( $terms ) ) : 
-                foreach ( $terms as $term ) { ?>
-                  <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
-                    <?php echo $term->name; ?>
-                  </a>
-          <?php } ?>
-        <?php endif; ?>
+          <?php if (get_post_type() != 'network_post'): ?>
+            <p class="over-title category">
+              <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="area">Notícias</a>
+              <span class="fa fa-chevron-right"></span>
+              <?php $terms = get_the_terms( get_the_ID(), 'category' );
+                if ( $terms && !is_wp_error( $terms ) ) :
+                  foreach ( $terms as $term ) { ?>
+                    <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                      <?php echo $term->name; ?>
+                    </a>
+            <?php } ?>
+            <?php endif; ?>
+          <?php else: ?>
+            <p class="over-title category">
+              <a href="<?php echo get_post_type_archive_link( $post_type ); ?>" class="area">Notícias da Rede</a>
+            </p>
           </p>
+          <?php endif; ?>
           <h2><?php the_title(); ?></h2>
         </div>
       </div>
@@ -40,10 +46,11 @@
               <?php the_author(); ?>
               </a>
           </p>
+          <?php if (get_post_type() != 'network_post'): ?>
           <p class="tags">
             <span class="fa fa-tags"></span>
-           <?php $terms = get_the_terms( get_the_ID(), 'category' );      
-              if ( $terms && !is_wp_error( $terms ) ) : 
+           <?php $terms = get_the_terms( get_the_ID(), 'category');
+              if ( $terms && !is_wp_error( $terms ) && is_post()) :
                 $aux = array();
                 foreach ( $terms as $term ) {
                   $aux[] = '<a href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
@@ -51,7 +58,8 @@
                 endif; 
                 echo join( ", ", $aux );
                 ?>
-                  </p>
+          </p>
+          <?php endif; ?>
           <p class="date">
             <span class="fa fa-clock-o"></span>
             <?php the_date(); ?>

@@ -42,12 +42,13 @@
             printf( __( 'Monthly Archives: %s', 'arp' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'arp' ) ) );
           elseif ( is_year() ) :
             printf( __( 'Yearly Archives: %s', 'arp' ), get_the_date( _x( 'Y', 'yearly archives date format', 'arp' ) ) );
+          elseif (get_post_type() == 'network_post') :
+            _e('Network Blog', 'pmc');
           else :
-            // _e( 'Archives', 'arp' );
-            echo 'Notícias';
+            _e('News', 'pmc');
           endif;
           ?></h2>
-          <p class="page-description">Saiba o que está acontecendo no mundo do Mapas Culturais</p>
+          <p class="page-description"><?php _e('Saiba o que está acontecendo no mundo do Mapas Culturais', 'pmc') ?></p>
         </div>
       </div>
     </div>

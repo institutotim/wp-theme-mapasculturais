@@ -5,9 +5,9 @@
       $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
-        'post_type' => 'post', 
+        'post_type' => 'network_post',
         's' => esc_html( get_search_query( false ) ),
-        'posts_per_page' => 3,
+        'posts_per_page' => 5,
         'paged' => $paged,
         'author' => $author->ID
       );
