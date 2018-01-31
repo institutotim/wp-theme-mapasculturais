@@ -220,6 +220,17 @@ class PMC_Platform_Statistics {
       			'append' => '',
       			'maxlength' => '',
       		),
+          array (  
+          'key' => 'field_position',
+          'label' => __('Position on the map', 'pmc'),
+          'name' => 'position',
+          'type' => 'google_map',
+          'required' => 1,
+          'center_lat' => -14.235004,
+          'center_lng' => -51.92528,
+          'zoom' => 4,
+          'height' => 400
+        ),
       	),
       	'location' => array (
       		array (
@@ -235,7 +246,6 @@ class PMC_Platform_Statistics {
       	'style' => 'default',
       	'label_placement' => 'top',
       	'instruction_placement' => 'label',
-      	'hide_on_screen' => '',
       	'active' => 1,
       	'description' => '',
       ));
