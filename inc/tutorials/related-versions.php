@@ -7,16 +7,15 @@ class PMC_RelatedVersions {
   }
 
   function register_related_version() {
-    // create a new taxonomy
     register_taxonomy(
       'related_version',
       'tutorial',
       array(
-        'label' => __( 'Related Versions' ),
-        'description' => __( 'Versions of Mapas Culturais a tutorial applies to.' ),
-        'capabilities' => array(
+        'label'          => __( 'Related Versions' ),
+        'description'    => __( 'Versions of Mapas Culturais a tutorial applies to.' ),
+        'capabilities'   => array(
           'manage_terms' => 'manage_related_versions',
-          'edit_terms' => 'edit_related_versions',
+          'edit_terms'   => 'edit_related_versions',
           'delete_terms' => 'delete_related_versions',
           'assign_terms' => 'assign_related_versions'
         )

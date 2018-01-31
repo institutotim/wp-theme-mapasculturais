@@ -243,6 +243,11 @@ function pmc_settings()
         <label>The rocket link's page</label>
         <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
       </p>
+
+      <p>
+        <label>The rocket link's page</label>
+        <textarea id="delibera" name="delibera"><?php echo get_option('delibera') ? get_option('delibera'):""; ?></textarea>
+      </p>
   </div>
   <?php submit_button(__("Save", 'pmc')); ?>
   </form>
@@ -265,11 +270,13 @@ function save_settings_fields(){
   $network_url = isset( $_POST["network_url"]) ? $_POST["network_url"]:"";
   $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
   $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
+  $delibera = isset( $_POST["delibera"]) ? $_POST["delibera"]:"";
 
   update_option( "github_url", $github_url);
   update_option( "network_url", $network_url);
   update_option( "manual_url", $manual_url);
   update_option( "rocket_url", $rocket_url);
+  update_option("delibera", $delibera);
 
   wp_redirect( "admin.php?page=pmc_menu" );
   exit;
@@ -292,6 +299,13 @@ function custom_rewrite_tag() {
   add_rewrite_tag('%page%', '([0-9]+)');
 }
 add_action('init', 'custom_rewrite_tag', 10, 0);
+
+
+function pmc_remove_delibera_style(){
+  wp_dequeue_style('delibera_style');
+}
+
+add_action('wp_print_scripts', 'pmc_remove_delibera_style', 10, 0);
 
 /**
  * Include features

@@ -14,7 +14,7 @@
         $args['s'] = esc_html( get_search_query( false ) );
         $args['posts_per_page'] = -1;
       } else {
-        $args['posts_per_page'] = 1;
+        $args['posts_per_page'] = 5;
       }
 
       $query = new WP_Query( $args );

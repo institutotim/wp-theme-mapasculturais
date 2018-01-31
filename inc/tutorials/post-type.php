@@ -79,7 +79,7 @@ class PMC_Tutorials {
 
   function tutorial_add_meta_box() {
     add_meta_box('tutorial-meta-box', 
-      __('More Info\'s', 'pmc'), 
+      __('Additional info', 'pmc'), 
       array($this, 'display_tutorial_meta_box'), 
       'tutorial', 
       'normal', 
@@ -137,8 +137,8 @@ class PMC_Tutorials {
       'html' => array (
         'tag'=> 'select', 
         'options' => array(
-          array('content' => __('for agent\'s', 'pmc'), 'value' => '2'),
-          array('content' => __('for manager\'s'), 'value' => '1')
+          array('content' => __('agents', 'pmc'), 'value' => '2'),
+          array('content' => __('maintainers'), 'value' => '1')
         )
       )
     );
@@ -170,10 +170,10 @@ class PMC_Tutorials {
           add_post_meta($post_id, $meta['slug'], $meta_striped, true);
           if ($meta['slug'] == 'tutorial_group_target'){
             if ($meta_striped == '2') {
-              add_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc') , true);
+              add_post_meta($post_id, $meta['slug'].'_label', __('agents', 'pmc') , true);
             }
             else {
-              add_post_meta($post_id, $meta['slug'].'_label', __('for manager\'s') , true);
+              add_post_meta($post_id, $meta['slug'].'_label', __('maintainers') , true);
             }
           }
         }
@@ -182,10 +182,10 @@ class PMC_Tutorials {
           update_post_meta($post_id, $meta['slug'], $meta_striped);
           if ($meta['slug'] == 'tutorial_group_target'){
             if ($meta_striped == '2') {
-              update_post_meta($post_id, $meta['slug'].'_label', __('for agent\'s', 'pmc'));
+              update_post_meta($post_id, $meta['slug'].'_label', __('agents', 'pmc'));
             }
             else {
-              update_post_meta($post_id, $meta['slug'].'_label', __('for manager\'s'));
+              update_post_meta($post_id, $meta['slug'].'_label', __('maintainers'));
             }
           }
         }

@@ -138,34 +138,31 @@
       <div class="four columns">
         <div class="community-intro connect-border connect-left parent-height" data-parent=".container">
           <h2>Discussões</h2>
-          <p>In at est ac magna suscipit fermentum. Sed efficitur nisl a tristique malesuada. Etiam tempor lorem vel sapien congue volutpat. Nulla luctus felis ut diam congue, nec dignissim quam placerat.</p>
+          <p><?php echo get_option('delibera') ?></p>
           <div class="featured-categories">
+
             <ul>
-              <li>
-                <a href="#">Categoria #1</a>
-              </li>
-              <li>
-                <a href="#">Categoria #2</a>
-              </li>
-              <li>
-                <a href="#">Categoria #3</a>
-              </li>
-              <li>
-                <a href="#">Categoria #4</a>
-              </li>
-              <li>
-                <a href="#">Categoria #5</a>
-              </li>
+            <?php 
+              $terms = get_terms( 'tema');
+                if ( $terms && !is_wp_error( $terms ) ) :
+                  foreach ( $terms as $term ) { ?>
+                    <li><a href="<?php echo get_term_link($term->term_id); ?>">
+                      <?php echo $term->name; ?>
+                    </a></li>
+                <?php } ?>
+              <?php endif; ?>
             </ul>
           </div>
         </div>
       </div>
       <div class="eight columns">
+        <?php if ( !is_user_logged_in() ) : ?>
         <div class="row">
           <section class="community-session">
             <p>Você não está conectado, <a href="<?php echo wp_registration_url(); ?> ">cadastre-se</a> ou efetue <a href="<?php echo wp_login_url( home_url() ); ?>">login</a>.</p>
           </section>
         </div>
+      <?php endif; ?>
         <div class="row">
           <?php
           $debating_query = new WP_Query(array(
