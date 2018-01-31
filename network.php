@@ -85,19 +85,23 @@
           <header class="content-section-header">
             <h2>Conheça as iniciativas</h2>
           </header>
-          <?php for($i = 0; $i < 10; $i++) : ?>
+
+          <?php $blogusers = get_users( 'orderby=nicename&role=instance' );
+          // Array of WP_User objects.
+          foreach ( $blogusers as $user ) : ?>
             <article class="profile row">
               <div class="author network-author">
                 <div class="author-thumb">
-                  <img src="http://lorempixel.com/100/100/?1" />
+                  <?php echo get_avatar( $user->ID, 100 ); ?>
                 </div>
               </div>
-              <p class="profile-label">Secretaria de Cultura de São Paulo</p>
-              <h3><a href="#">SPCultura</a></h3>
+              <?php //var_dump($user); ?>
+              <p class="profile-label"><?php echo esc_html($user->display_name); ?></p>
+              <h3><a href="#"><?php echo esc_html($user->user_nicename); ?></a></h3>
               <p class="profile-data">
                 <span class="profile-data-item">
                   <span class="pmc-icon-person icon"></span>
-                  321
+                  321 <?php //var_dump(get_the_author_meta( 'agent', $user->ID )) ?>
                 </span>
                 <span class="profile-data-item">
                   <span class="pmc-icon-paper icon"></span>
@@ -113,7 +117,7 @@
                 </span>
               </p>
             </article>
-          <?php endfor; ?>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>

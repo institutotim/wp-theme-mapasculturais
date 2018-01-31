@@ -1,5 +1,6 @@
-<?php get_header(); ?>
 <?php $author = get_user_by( 'slug', get_query_var( 'author_name' ) ); ?>
+
+<?php get_header(); ?>
 <article>
   <header class="page-header">
     <div class="container">
@@ -15,10 +16,14 @@
               <span class="page-icon">
                 <span class="pmc-icon-marker"></span>
               </span>
-              <p class="over-title subtitle">Secretaria Municipal de Cultura de São Paulo</p>
-              <h2>SPCultura</h2>
+              <p class="over-title subtitle">
+                <?php echo esc_html($author->display_name); ?>
+              </p>
+              <h2><?php echo esc_html($author->user_nicename); ?></h2>
               <div class="page-header-text connect-border connect-left">
-                <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</p>
+                <p>
+                  <?php echo get_the_author_meta( 'description', $author->ID ) ?>
+                </p>
               </div>
             </div>
             <div class="five columns">
@@ -27,14 +32,18 @@
                   <div class="six columns">
                     <div class="intro-numbers">
                       <p class="icon pmc-icon-person"></p>
-                      <p class="number do-count">123456</p>
+                      <p class="number do-count">
+                        <?php echo array_values(get_the_author_meta( 'agents_count', $author->ID ))[0] ?>
+                      </p>
                       <p class="label">agentes</p>
                     </div>
                   </div>
                   <div class="six columns">
                     <div class="intro-numbers">
                       <p class="icon pmc-icon-calendar"></p>
-                      <p class="number do-count">123456</p>
+                      <p class="number do-count">
+                        <?php echo array_values(get_the_author_meta( 'events_count', $author->ID ))[0] ?>
+                      </p>
                       <p class="label">eventos</p>
                     </div>
                   </div>
@@ -43,19 +52,23 @@
                   <div class="six columns">
                     <div class="intro-numbers">
                       <p class="icon pmc-icon-door"></p>
-                      <p class="number do-count">123456</p>
+                      <p class="number do-count">
+                        <?php echo array_values(get_the_author_meta( 'spaces_count', $author->ID ))[0] ?>
+                      </p>
                       <p class="label">espaços</p>
                     </div>
                   </div>
                   <div class="six columns">
                     <div class="intro-numbers">
                       <p class="icon pmc-icon-paper"></p>
-                      <p class="number do-count">123456</p>
+                      <p class="number do-count">
+                        <?php echo array_values(get_the_author_meta( 'projects_count', $author->ID ))[0] ?>
+                      </p>
                       <p class="label">projetos</p>
                     </div>
                   </div>
                 </div>
-                <p><a class="button block"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
+                <p><a class="button block" href="<?php echo get_the_author_meta( 'url', $author->ID ) ?>"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
               </div>
             </div>
           </div>
@@ -90,8 +103,8 @@
             <div class="team">
               <h3>Equipe</h3>
               <ul>
-                <?php if(get_field('team_members')): ?>
-                  <?php while(has_sub_field('team_members')): ?>
+                <?php if(get_field('team_members', 'user_'.$author->ID)): ?>
+                  <?php while(has_sub_field('team_members', 'user_'.$author->ID)): ?>
                     <li class="row">
                       <?php echo get_avatar( get_sub_field('email'), 100 ); ?>
                       <h4><?php the_sub_field('name'); ?></h4>
