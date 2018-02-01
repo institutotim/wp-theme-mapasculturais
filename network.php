@@ -39,14 +39,18 @@
                     <div class="six columns">
                       <div class="intro-numbers">
                         <p class="icon pmc-icon-person"></p>
-                        <p class="number do-count">123456</p>
+                        <p class="number do-count">
+                          <?php get_agents_count() ?>
+                        </p>
                         <p class="label">agentes</p>
                       </div>
                     </div>
                     <div class="six columns">
                       <div class="intro-numbers">
                         <p class="icon pmc-icon-calendar"></p>
-                        <p class="number do-count">123456</p>
+                        <p class="number do-count">
+                          <?php get_events_count() ?>
+                        </p>
                         <p class="label">eventos</p>
                       </div>
                     </div>
@@ -55,14 +59,18 @@
                     <div class="six columns">
                       <div class="intro-numbers">
                         <p class="icon pmc-icon-door"></p>
-                        <p class="number do-count">123456</p>
+                        <p class="number do-count">
+                          <?php get_spaces_count() ?>
+                        </p>
                         <p class="label">espaços</p>
                       </div>
                     </div>
                     <div class="six columns">
                       <div class="intro-numbers">
                         <p class="icon pmc-icon-paper"></p>
-                        <p class="number do-count">123456</p>
+                        <p class="number do-count">
+                          <?php get_projects_count() ?>
+                        </p>
                         <p class="label">projetos</p>
                       </div>
                     </div>
@@ -95,13 +103,12 @@
                   <?php echo get_avatar( $user->ID, 100 ); ?>
                 </div>
               </div>
-              <?php //var_dump($user); ?>
               <p class="profile-label"><?php echo esc_html($user->display_name); ?></p>
               <h3><a href="#"><?php echo esc_html($user->user_nicename); ?></a></h3>
               <p class="profile-data">
                 <span class="profile-data-item">
                   <span class="pmc-icon-person icon"></span>
-                  321 <?php //var_dump(get_the_author_meta( 'agent', $user->ID )) ?>
+                  321
                 </span>
                 <span class="profile-data-item">
                   <span class="pmc-icon-paper icon"></span>

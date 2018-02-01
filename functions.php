@@ -307,6 +307,58 @@ function pmc_remove_delibera_style(){
 
 add_action('wp_print_scripts', 'pmc_remove_delibera_style', 10, 0);
 
+
+// get count total for all instances
+
+function get_agents_count(){
+
+  $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
+
+  $sum = 0;
+
+  foreach ($users as $user) { 
+    $sum += array_values(get_the_author_meta( 'agents_count', $user->id ))[0];
+  }
+  echo $sum;
+}
+
+function get_events_count(){
+
+  $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
+
+  $sum = 0;
+  
+  foreach ($users as $user) { 
+    $sum += array_values(get_the_author_meta( 'events_count', $user->id ))[0];
+  }
+  echo $sum;
+}
+
+
+function get_spaces_count(){
+
+  $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
+
+  $sum = 0;
+  
+  foreach ($users as $user) { 
+    $sum += array_values(get_the_author_meta( 'spaces_count', $user->id ))[0];
+  }
+  echo $sum;
+}
+
+function get_projects_count(){
+
+  $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
+
+  $sum = 0;
+  
+  foreach ($users as $user) { 
+    $sum += array_values(get_the_author_meta( 'projects_count', $user->id ))[0];
+  }
+  echo $sum;
+}
+
 /**
  * Include features
  */
