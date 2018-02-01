@@ -1,79 +1,48 @@
+<?php
+  $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+  $args = array(
+    'post_type' => 'network_post',
+    's' => esc_html( get_search_query( false ) ),
+    'posts_per_page' => 5,
+    'paged' => $paged,
+    'author' => $author->ID
+  );
+  $query = new WP_Query( $args );
+?>
 <section class="content-section">
   <header class="content-section-header">
     <h2>Blog da rede</h2>
   </header>
   <div class="content-section-content">
+    <?php if ( $query->have_posts() ) : ?>
+    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <article class="row">
       <div class="author network-author">
         <div class="author-thumb">
-          <img src="http://lorempixel.com/100/100/?1" />
+          <?php get_the_post_thumbnail(); ?>
         </div>
-        <h4>SPCultura</h4>
+        <h4><?php echo esc_html($author->user_nicename); ?></h4>
       </div>
       <div class="network-post-content">
-        <h3>Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</h3>
+        <a href="<?php echo get_permalink();?>"><h3><?php the_title() ?></h3></a>
         <div class="meta">
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            10 de abril de 2017
+            <?php echo get_the_date(); ?> 
           </p>
           <p class="comments">
-            <a href="#">
+            <a href="<?php comments_link(); ?>">
               <span class="fa fa-comments-o"></span>
-              10 comentários
+              <?php comments_number( __('no comments', 'pmc'), __('one comment', 'pmc'), __('% comments', 'pmc') ); ?>.
             </a>
           </p>
         </div>
       </div>
     </article>
     <hr class="dark" />
-    <article class="row">
-      <div class="author network-author">
-        <div class="author-thumb">
-          <img src="http://lorempixel.com/100/100/?2" />
-        </div>
-        <h4>SPCultura</h4>
-      </div>
-      <div class="network-post-content">
-        <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa.</h3>
-        <div class="meta">
-          <p class="date">
-            <span class="fa fa-clock-o"></span>
-            10 de abril de 2017
-          </p>
-          <p class="comments">
-            <a href="#">
-              <span class="fa fa-comments-o"></span>
-              10 comentários
-            </a>
-          </p>
-        </div>
-      </div>
-    </article>
-    <hr class="dark" />
-    <article class="row">
-      <div class="author network-author">
-        <div class="author-thumb">
-          <img src="http://lorempixel.com/100/100/?1" />
-        </div>
-        <h4>SPCultura</h4>
-      </div>
-      <div class="network-post-content">
-        <h3>Proin egestas ante sapien, et venenatis felis luctus a. In interdum facilisis augue quis tempor.</h3>
-        <div class="meta">
-          <p class="date">
-            <span class="fa fa-clock-o"></span>
-            10 de abril de 2017
-          </p>
-          <p class="comments">
-            <a href="#">
-              <span class="fa fa-comments-o"></span>
-              10 comentários
-            </a>
-          </p>
-        </div>
-      </div>
-    </article>
+    <?php endwhile; ?>
+    <?php endif; ?>
   </div>
-  <p><a class="button block">Conheça o blog da rede</a></p>
+  <p><a class="button block" href="<?php echo get_post_type_archive_link( 'network_post' ); ?>">Conheça o blog da rede</a></p>
 </section>

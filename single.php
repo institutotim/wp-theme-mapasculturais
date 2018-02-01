@@ -27,7 +27,7 @@
             <?php endif; ?>
           <?php else: ?>
             <p class="over-title category">
-              <a href="<?php echo get_post_type_archive_link( 'network_post' ); ?>" class="area">Notícias da Rede</a>
+              <a href="<?php echo get_post_type_archive_link( 'network_post' ); ?>" class="area"><?php _e('Network Blog', 'pmc'); ?></a>
             </p>
           </p>
           <?php endif; ?>
