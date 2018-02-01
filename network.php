@@ -108,19 +108,19 @@
               <p class="profile-data">
                 <span class="profile-data-item">
                   <span class="pmc-icon-person icon"></span>
-                  321
+                  <?php echo array_values(get_the_author_meta( 'agents_count', $user->ID ))[0] ?>
                 </span>
                 <span class="profile-data-item">
                   <span class="pmc-icon-paper icon"></span>
-                  321
+                  <?php echo array_values(get_the_author_meta( 'projects_count', $user->ID ))[0] ?>
                 </span>
                 <span class="profile-data-item">
                   <span class="pmc-icon-door icon"></span>
-                  321
+                  <?php echo array_values(get_the_author_meta( 'spaces_count', $user->ID ))[0] ?>
                 </span>
                 <span class="profile-data-item">
                   <span class="pmc-icon-calendar icon"></span>
-                  321
+                  <?php echo array_values(get_the_author_meta( 'events_count', $user->ID ))[0] ?>
                 </span>
               </p>
             </article>
