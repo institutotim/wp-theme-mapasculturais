@@ -50,7 +50,7 @@
           <p class="tags">
             <span class="fa fa-tags"></span>
            <?php $terms = get_the_terms( get_the_ID(), 'category');
-              if ( $terms && !is_wp_error( $terms ) && is_post()) :
+              if ( $terms && !is_wp_error( $terms ) ) :
                 $aux = array();
                 foreach ( $terms as $term ) {
                   $aux[] = '<a href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
