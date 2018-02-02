@@ -183,8 +183,29 @@ function pmc_header_scripts() {
     wp_localize_script('github', 'ghData', $gh_data);
   }
 
+  $users = get_users( array( 'fields' => array( 'id', 'user_nicename', 'user_url' ), 'role' => 'instance') );
+
+  $markers = array();
+
+  foreach ($users as $user) {
+    $markers[$user->user_nicename] = array(
+      'position'       => get_the_author_meta( 'position', $user->id ),
+      'agents_count'   =>
+      array_values(get_the_author_meta( 'agents_count', $user->id ))[0],
+      'events_count'   =>
+      array_values(get_the_author_meta( 'events_count', $user->id ))[0],
+      'spaces_count'   =>
+      array_values(get_the_author_meta( 'spaces_count', $user->id ))[0],
+      'projects_count' =>
+      array_values(get_the_author_meta( 'projects_count', $user->id))[0],
+      'url' => $user->user_url,
+      'instance' => $user->user_nicename
+    );
+  }
+
   wp_localize_script('map', 'mapData', array(
-    'iconUrl' => get_template_directory_uri() . '/img/marker.png'
+    'iconUrl' => get_template_directory_uri() . '/img/marker.png',
+    'markers' => $markers
   ));
 
   wp_enqueue_script('site');

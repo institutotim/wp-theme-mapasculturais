@@ -1,7 +1,6 @@
 <div class="content-section">
   <div class="content-section-content">
     <?php
-
       $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       $args = array(
