@@ -228,25 +228,30 @@ function pmc_settings()
     <input type="hidden" name="action" value="update_options">
     <div>
       <p>
-        <label>The github link of Mapas Culturais</label>
+        <label><?php _e('The github link\'s of Mapas Culturais', 'pmc') ?></label>
         <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
       </p>
       <p>
-        <label>The network link's page</label>
+        <label><?php _e('The network link\'s page', 'pmc') ?></label>
         <input id="network_url" name="network_url" type="text" value="<?php echo get_option('network_url') ? get_option('network_url'):""; ?>">
       </p>
       <p>
-        <label>The manual link's page</label>
+        <label><?php _e('The manual link\'s page', 'pmc') ?></label>
         <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
       </p>
       <p>
-        <label>The rocket link's page</label>
+        <label><?php _e('The rocket link\'s page', 'pmc') ?></label>
         <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
       </p>
 
       <p>
-        <label>The rocket link's page</label>
+        <label><?php _e('The delibera link\'s page', 'pmc') ?></label>
         <textarea id="delibera" name="delibera"><?php echo get_option('delibera') ? get_option('delibera'):""; ?></textarea>
+      </p>
+
+      <p>
+        <label><?php _e('Know More link\'s page', 'pmc') ?></label>
+        <input id="know" name="know" value="<?php echo get_option('know') ? get_option('know'):""; ?>">
       </p>
   </div>
   <?php submit_button(__("Save", 'pmc')); ?>
@@ -271,12 +276,14 @@ function save_settings_fields(){
   $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
   $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
   $delibera = isset( $_POST["delibera"]) ? $_POST["delibera"]:"";
+  $know = isset( $_POST["know"]) ? $_POST["know"]:"";
 
-  update_option( "github_url", $github_url);
-  update_option( "network_url", $network_url);
-  update_option( "manual_url", $manual_url);
-  update_option( "rocket_url", $rocket_url);
-  update_option("delibera", $delibera);
+  update_option( "github_url", $github_url );
+  update_option( "network_url", $network_url );
+  update_option( "manual_url", $manual_url );
+  update_option( "rocket_url", $rocket_url );
+  update_option( "delibera", $delibera );
+  update_option( "know", $know );
 
   wp_redirect( "admin.php?page=pmc_menu" );
   exit;
@@ -357,6 +364,24 @@ function get_projects_count(){
     $sum += array_values(get_the_author_meta( 'projects_count', $user->id ))[0];
   }
   echo $sum;
+}
+
+function get_instances_link(){
+  $pages = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'network.php'
+  ));
+
+  echo $pages[0]->guid;
+}
+
+function get_support_link(){
+  $pages = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'support.php'
+  ));
+
+  echo $pages[0]->guid;
 }
 
 /**
