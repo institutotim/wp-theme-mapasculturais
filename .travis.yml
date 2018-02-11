@@ -29,6 +29,7 @@ after_success:
 - ssh-add deploy_rsa
 - echo -e "Host  $ssh_host\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+- awk "/WP_DEBUG/ { print; print \"define('ACF_PRO_KEY', '${ACF_PRO_KEY}');\"; next }1" wp-config-sample.php > wp-config.php
 #deploy:
 #- provider: script
 #  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
