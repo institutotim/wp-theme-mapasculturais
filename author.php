@@ -87,20 +87,34 @@
             <div class="statistics">
               <h3>Estatísticas</h3>
               <p class="filter">
-                <select>
-                  <option>Agentes culturais</option>
-                  <option>Eventos</option>
-                  <option>Epaços</option>
-                  <option>Projetos</option>
+                <select id="types" >
+                  <option value="agents">Agentes culturais</option>
+                  <option value="events">Eventos</option>
+                  <option value="spaces">Epaços</option>
+                  <option value="projects">Projetos</option>
                 </select>
                 nos últimos 30 dias
               </p>
-              <div class="gh-chart chart"></div>
-              <p class="result">123 agentes culturais cadastrados nos últimos 30 dias</p>
+
+              <div class="agents-chart chart" ></div>
+              <div class="events-chart chart" ></div>
+              <div class="projects-chart chart" ></div>
+              <div class="spaces-chart chart" ></div>
+
+              <p id="agents-result" class="result"><?php echo array_values(get_the_author_meta( 'agents_count', $author->ID ))[0] ?> agentes culturais cadastrados nos últimos 30 dias</p>
+
+              <p id="events-result" class="result"><?php echo array_values(get_the_author_meta( 'events_count', $author->ID ))[0] ?> eventos culturais cadastrados nos últimos 30 dias</p>
+
+              <p id="projects-result" class="result"><?php echo array_values(get_the_author_meta( 'projects_count', $author->ID ))[0] ?>  projetos culturais cadastrados nos últimos 30 dias</p>
+
+              <p id="spaces-result" class="result"><?php echo array_values(get_the_author_meta( 'spaces_count', $author->ID ))[0] ?> espaços culturais cadastrados nos últimos 30 dias</p>
+
+              
             </div>
           </div>
           <div class="widget">
             <div class="team">
+
               <h3>Equipe</h3>
               <ul>
                 <?php if(get_field('team_members', 'user_'.$author->ID)): ?>

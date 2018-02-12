@@ -183,6 +183,9 @@ function pmc_header_scripts() {
     wp_localize_script('github', 'ghData', $gh_data);
   }
 
+  // var_dump($gh_data);
+  // exit();
+
   $users = get_users( array( 'fields' => array( 'id', 'user_nicename', 'user_url' ), 'role' => 'instance') );
 
   $markers = array();
@@ -207,6 +210,23 @@ function pmc_header_scripts() {
     'iconUrl' => get_template_directory_uri() . '/img/marker.png',
     'markers' => $markers
   ));
+
+
+  if (is_author()){
+    $author = get_queried_object();
+
+    if (in_array('instance', $author->caps)){
+
+      $instanceData = array(
+        'agents'   => get_the_author_meta( 'agents_count', $author->ID ),
+        'events'   => get_the_author_meta( 'events_count', $author->ID ),
+        'spaces'   => get_the_author_meta( 'spaces_count', $author->ID ),
+        'projects' => get_the_author_meta( 'projects_count', $author->ID )
+      );
+
+      wp_localize_script('github', 'instanceData', $instanceData);
+    }
+  }
 
   wp_enqueue_script('site');
   wp_enqueue_script('canvas');
