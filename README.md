@@ -2,7 +2,7 @@
 
 ## Install
 
-* Copy this repository to `wp-content` directory of your Wordpress install;
+* Copy this repository to `wp-content/themes/` directory of your Wordpress install;
 * Activate this theme at the menu 'Apperance/Themes';
 * Install suggested plugins (ACF and others) at the menu 'Plugins';
 * Create the following pages:
