@@ -1,3 +1,10 @@
+<?php
+  global $wp_query;
+  var_dump($wp_query->query_vars);
+?>
+
+
+
 <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <article id="page-<?php the_ID(); ?>">

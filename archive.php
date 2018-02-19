@@ -9,16 +9,6 @@
     <div class="container">
       <div class="twelve columns">
         <div class="page-header-content no-text has-icon row">
-          <nav class="button-nav u-pull-right">
-            <?php $terms = get_the_terms( get_the_ID(), 'category' );      
-              if ( $terms && !is_wp_error( $terms ) ) : 
-                foreach ( $terms as $term ) { ?>
-                  <a href="<?php echo get_term_link($term->term_id); ?>" class="button">
-                    <?php echo $term->name; ?>
-                  </a>
-          <?php } ?>
-        <?php endif; ?>
-          </nav>
           <span class="page-icon">
             <span class="fa fa-newspaper-o"></span>
           </span>
@@ -29,19 +19,19 @@
             if($term->parent) :
               $parent = get_term($term->parent);
               $link = get_term_link($parent);
-              $title = sprintf( __( '%s', 'arp' ), $parent->name );
+              $title = sprintf( __( '%s', 'pmc' ), $parent->name );
             else :
-              $title = sprintf( __( '%s', 'arp' ), single_term_title() );
+              $title = sprintf( __( '%s', 'pmc' ), single_term_title() );
             endif;
             echo '<a href="' . $link . '">' . $title . '</a>';
           elseif( get_search_query( false ) ) :
-            printf( __( 'Search results for: %s', 'arp' ), $_GET['s'] );
+            printf( __( 'Search results for: %s', 'pmc' ), $_GET['s'] );
           elseif ( is_day() ) :
-            printf( __( 'Daily Archives: %s', 'arp' ), get_the_date() );
+            printf( __( 'Daily Archives: %s', 'pmc' ), get_the_date() );
           elseif ( is_month() ) :
-            printf( __( 'Monthly Archives: %s', 'arp' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'arp' ) ) );
+            printf( __( 'Monthly Archives: %s', 'pmc' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'pmc' ) ) );
           elseif ( is_year() ) :
-            printf( __( 'Yearly Archives: %s', 'arp' ), get_the_date( _x( 'Y', 'yearly archives date format', 'arp' ) ) );
+            printf( __( 'Yearly Archives: %s', 'pmc' ), get_the_date( _x( 'Y', 'yearly archives date format', 'pmc' ) ) );
           elseif (get_post_type() == 'network_post') :
             _e('Network Blog', 'pmc');
           else :

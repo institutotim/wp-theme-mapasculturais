@@ -124,4 +124,28 @@ Number.prototype.format = function(n, x) {
     })
   });
 
+
+  // drag and drop add pauta
+  $(document).ready(function () {
+    $('.sort-container').sortable({
+        placeholder: "ui-state-highlight",
+        handle: ".dragdrop-handle",
+        opacity: 0.5,
+        cursor: "move",
+        update: function (event, ui) {
+            $('.sort-order-value').each(function (index, element) {
+                console.log(index);
+                console.log(element);
+                if (0 == index) {
+                    $(element).parent().find('.delete-handle').hide();
+                } else {
+                    $(element).parent().find('.delete-handle').show();
+                }
+                $(element).val(element.value);
+            });
+        }
+    });
+    $('.sort-container').disableSelection();
+  });
+
 })(jQuery);

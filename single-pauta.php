@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+
 <article id="page-<?php the_ID(); ?>">
   <header class="page-header">
     <div class="container">
@@ -18,7 +19,7 @@
             <p class="over-title category">
               <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="area">Pauta</a>
               <span class="fa fa-chevron-right"></span>
-              <?php $terms = get_the_terms( get_the_ID(), 'category' );
+              <?php $terms = get_the_terms( get_the_ID(), 'tema' );
                 if ( $terms && !is_wp_error( $terms ) ) :
                   foreach ( $terms as $term ) { ?>
                     <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
@@ -149,12 +150,8 @@
 					  </ul>
 					 <?php endif; ?>
 
+					<?php echo $current_module->getCommentListLabel(); ?> 		
 
-					<h6>
-						<strong>
-						 	<?php echo $current_module->getCommentListLabel(); ?> 		
-						</strong>
-					</h6>
 
 
 					<?php
@@ -162,7 +159,7 @@
 					?>
 
 					
-
+				</div>
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">

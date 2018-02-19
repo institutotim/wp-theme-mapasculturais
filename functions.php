@@ -1,5 +1,8 @@
 <?php
 
+ob_clean(); 
+ob_start();
+
 /**
  * Init plugins
  */
@@ -152,8 +155,18 @@ function pmc_header_scripts() {
   wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('webfonts', 'pmc-icons', 'normalize', 'skeleton', 'fontawesome', 'leaflet', 'highcharts'), '0.1.1');
   wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css', array('main'), '0.0.1');
 
+  wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+  wp_register_style('bootstrap-theme', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css');
+  wp_register_style('jquery-ui', '//code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css');
+  
+
   wp_enqueue_style('main');
   wp_enqueue_style('responsive');
+
+  wp_register_script('jquery-ui', 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js', array('jquery'), '0.0.2');
+
+  wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
+
 
   wp_register_script('snapsvg', 'https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js');
   wp_register_script('leaflet', '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js');
@@ -226,6 +239,7 @@ function pmc_header_scripts() {
 
       wp_localize_script('github', 'instanceData', $instanceData);
     }
+
   }
 
   wp_enqueue_script('site');
@@ -234,6 +248,16 @@ function pmc_header_scripts() {
   wp_enqueue_script('timeline');
   wp_enqueue_script('map');
   wp_enqueue_script('github');
+
+
+
+  if (is_page_template( 'front_add_pauta.php')){
+    wp_enqueue_style('bootstrap');
+    wp_enqueue_style('bootstrap-theme');
+    wp_enqueue_style('jquery-ui');
+    wp_enqueue_script('bootstrap');
+    wp_enqueue_script('jquery-ui');
+  }
 
 }
 add_action('wp_enqueue_scripts', 'pmc_header_scripts');
@@ -423,6 +447,23 @@ function get_support_link(){
   ));
 
   echo $pages[0]->guid;
+}
+
+
+function page_template_redirect(){
+  if( is_page_template( 'front_add_pauta.php') && ! is_user_logged_in() )
+  {
+      wp_redirect( home_url( '/wp-login.php' ) );
+      die;
+  }
+}
+add_action( 'template_redirect', 'page_template_redirect' );
+
+
+function add_pauta_template_redirect($post_id){
+  var_dump($post_id);
+  wp_redirect(get_permalink( $post_id ));
+  die;
 }
 
 /**

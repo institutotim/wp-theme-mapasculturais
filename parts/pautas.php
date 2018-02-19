@@ -2,16 +2,13 @@
   <div class="content-section-content">
     <?php
 
-
-
-
       $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
-
       $args = array(
-        'post_type' => 'post', 
+        'post_type' => 'pauta', 
         's' => esc_html( get_search_query( false ) ),
         'paged' => $page
       );
+
 
       if (get_search_query( false )) {
         $args['s'] = esc_html( get_search_query( false ) );
@@ -19,28 +16,6 @@
       } else {
         $args['posts_per_page'] = 5;
       }
-
-
-
-      if( is_tag() || is_category() || is_tax() ) {
-        $tax = get_query_var( 'taxonomy', '' );
-        $term = get_queried_object();
-
-        if ($tax = 'tema') {
-          $args['post_type'] = 'pauta';
-        }
-
-        $args['tax_query'] = array(
-          array(
-            'taxonomy' => $tax, 
-            'field' => 'term_id', 
-            'terms' => $term->term_id
-          )
-        );
-        $args['posts_per_page'] = -1;
-      }
-
-
 
       $query = new WP_Query( $args );
     ?>
@@ -66,6 +41,15 @@
             <span class="fa fa-clock-o"></span>
             <?php echo the_date(); ?>
           </p>
+          <p>
+          <?php
+            if ( \Delibera\Flow::getDeadlineDays( $post->ID ) <= -1 )
+            _e( 'Prazo encerrado', 'delibera' );
+            else
+            printf( _n( 'Pauta aberta por mais 1 dia', 'Pauta aberta por mais %1$s dias', \Delibera\Flow::getDeadlineDays( $post->ID ), 'pmc' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
+          ?>
+          </p>
+
         </div>
         <?php echo the_content(); ?>
       </article>
