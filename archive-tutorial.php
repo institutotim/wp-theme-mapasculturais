@@ -16,114 +16,52 @@
             Tutoriais
           </h2>
           <h3 class="complete">
-            <span class="fa fa-gear"></span>
-            para gestores
+            <?php 
+              $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
+              if($target_group == 2){
+                echo '<span class="fa fa-gear"></span>para agentes';
+              }
+              else if ($target_group == 1){
+                echo '<span class="fa fa-gear"></span>para gestores';
+              } 
+              else { ?>
+                <span class="fa fa-gear"></span>
+                <select  onchange="if (this.value) window.location.href=this.value">
+                  <option value=""><?php _e('Select Target Group','pmc') ?></option>
+                  <option value="<?php echo add_query_arg(array('target_group' => '1') , get_post_type_archive_link( 'tutorial' )); ?>">para gestores</option>
+                  <option value="<?php echo add_query_arg(array('target_group' => '2') , get_post_type_archive_link( 'tutorial' )); ?>">para agentes</option>
+                </select>
+              <?php
+              }
+
+            ?>
           </h3>
         </div>
       </div>
     </div>
   </header>
   <section id="big-search">
-    <div class="container">
-      <div class="twelve columns">
-        <div class="big-search-container">
-          <label for="big_search_input">
-            <span class="fa fa-search"></span>
-            <input id="big_search_input" type="text" placeholder="Busque por tutoriais..." />
-          </label>
+    <form method="get" id="searchform" action="<?php echo get_post_type_archive_link( 'tutorial' ); ?>">
+      <div class="container">
+        <div class="twelve columns">
+          <div class="big-search-container">
+            <label for="big_search_input">
+              <span class="fa fa-search"></span>
+              <input value="<?php the_search_query(); ?>" name="s" id="big_search_input" type="text" placeholder="Busque por tutoriais..." />
+            </label>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </section>
   <section id="content">
     <div class="container">
       <div class="eight columns">
         <?php get_template_part('parts/tutorials'); ?>
-        <?php get_template_part('parts/pagination'); ?>
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-          <div class="widget">
-            <h2>Navegar pelos tutoriais</h2>
-            <nav class="target-group-nav">
-              <a>
-                <span class="fa fa-gear"></span>
-                gestor
-              </a>
-              <a>
-                <span class="fa fa-user"></span>
-                agente cultural
-              </a>
-            </nav>
-            <ul>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="widget text-widget">
-            <h2>Exemplo de widget de texto</h2>
-            <div class="widget-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod lectus a cursus dictum. Nulla at metus id elit volutpat ornare ut quis nisl. Sed pellentesque leo in massa ornare, eu tincidunt nibh cursus. Nulla vestibulum, enim in vulputate imperdiet, felis arcu dignissim ipsum, at laoreet urna lectus at metus. Phasellus vitae massa ac ligula placerat sagittis. Ut lobortis purus in neque vestibulum, quis tincidunt ipsum posuere. Etiam vel pellentesque justo. Aliquam semper id purus eu cursus.</p>
-            </div>
-          </div>
-          <div class="widget">
-            <h2>Categorias</h2>
-            <ul>
-              <li>
-                <a href="#">
-                  Categoria #1
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #2
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #3
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Categoria #4
-                </a>
-              </li>
-            </ul>
-          </div>
+          <?php dynamic_sidebar('archive-tutorials-pmc') ?>
         </div>
       </div>
     </div>

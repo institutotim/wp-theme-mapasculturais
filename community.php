@@ -31,21 +31,94 @@
                 </ul>
               </div>
             </div>
+            <?php 
+
+              if ( false === ( $request_contributors = get_transient( 'request_contributors' ) ) ) {
+                   $request_contributors = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/contributors'));
+                   set_transient( 'request_contributors', $request_contributors, 3 * HOUR_IN_SECONDS );
+              }
+
+              if( is_wp_error( $request_contributors ) ) {
+                return false;
+              }
+              $body_contributors = wp_remote_retrieve_body( $request_contributors );
+              $data_contributors = json_decode( $body_contributors );
+              if( ! empty( $data_contributors ) ) {
+                $contributors = count($data_contributors)+1;
+              }
+
+              if ( false === ( $request_latest_commit = get_transient( 'request_latest_commit' ) ) ) {
+                   $request_latest_commit = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/git/refs/heads/master'));
+                   set_transient( 'request_latest_commit', $request_latest_commit, 3 * HOUR_IN_SECONDS );
+              }
+
+              if( is_wp_error( $request_latest_commit ) ) {
+                return false; 
+              }
+              $body_latest_commit = wp_remote_retrieve_body( $request_latest_commit );
+              $data_latest_commit = json_decode( $body_latest_commit );
+              if( ! empty( $data_latest_commit ) ) {
+
+                if ( false === ( $request_commits = get_transient( 'request_commits' ) ) ) {
+                     $request_commits = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/compare/917c0cc5ea17cb8961efe7486eccb9d450d3c8cd...'.$data_latest_commit->object->sha));
+                     set_transient( 'request_commits', $request_commits, 3 * HOUR_IN_SECONDS );
+                }
+
+                if( is_wp_error( $request_commits ) ) {
+                  return false;
+                }
+                $body_commits = wp_remote_retrieve_body( $request_commits );
+                $data_commits = json_decode( $body_commits );
+                if( ! empty( $data_commits ) ) {
+                  $commits = $data_commits->total_commits+1;
+                }
+              }
+
+
+              if ( false === ( $request_issues = get_transient( 'request_issues' ) ) ) {
+                   $request_issues = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais'));
+
+                   set_transient( 'request_issues', $request_issues, 3 * HOUR_IN_SECONDS );
+              }
+
+              if( is_wp_error( $request_issues ) ) {
+                return false;
+              }
+              $body_issues = wp_remote_retrieve_body( $request_issues );
+              $data_issues = json_decode( $body_issues );
+              if( ! empty( $data_issues ) ) {
+                $issues = $data_issues->open_issues_count;
+              }
+
+
+              // $request_graph = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/commits'));
+
+              // if( is_wp_error( $request_graph ) ) {
+              //   return false;
+              // }
+              // $body_graph = wp_remote_retrieve_body( $request_graph );
+              // $data_graph = json_decode( $body_graph );
+              // if( ! empty( $data_graph ) ) {
+              //   var_dump($data_graph);
+              //   //$graph = $data_graph;
+              // }
+
+            ?>
             <div class="eight columns">
               <div class="community-numbers">
                 <div class="intro-numbers">
                   <p class="icon fa fa-code"></p>
-                  <p class="number do-count">4681</p>
+                  <p class="number do-count"><?php echo $commits; ?></p>
                   <p class="label">contribuições no código</p>
                 </div>
                 <div class="intro-numbers">
                   <p class="icon fa fa-code-fork"></p>
-                  <p class="number do-count">29</p>
+                  <p class="number do-count"><?php echo $contributors; ?></p>
                   <p class="label">desenvolvedores colaborando</p>
                 </div>
                 <div class="intro-numbers">
                   <p class="icon fa fa-comments-o"></p>
-                  <p class="number do-count">161</p>
+                  <p class="number do-count"><?php echo $issues; ?></p>
                   <p class="label">questões em discussão no GitHub</p>
                 </div>
               </div>
@@ -90,7 +163,7 @@
       <div class="eight columns">
         <div class="row">
           <section class="community-session">
-            <p>Você não está conectado, <a href="#">cadastre-se</a> ou efetue <a href="#">login</a>.</p>
+            <p>Você não está conectado, <a href="<?php echo wp_registration_url(); ?> ">cadastre-se</a> ou efetue <a href="<?php echo wp_login_url( home_url() ); ?>">login</a>.</p>
           </section>
         </div>
         <div class="row">

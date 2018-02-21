@@ -32,7 +32,7 @@
             </ul>
           </li>
           <li>
-            <a href="#">
+            <a href="<?php echo get_option('github_url') ?>">
               <span class="fa fa-github"></span>
               GitHub
             </a>
@@ -43,14 +43,7 @@
       <p class="credits">Software livre desenvolvido pelo <a href="http://institutotim.org.br/" target="_blank" title="Instituto TIM" rel="external"><img alt="Instituto TIM" src="<?php echo get_template_directory_uri(); ?>/img/institutotim.png" /></a>.</p>
     </div>
     <div class="four columns">
-      <div class="newsletter-form">
-        <h2>
-          <span class="fa fa-envelope"></span>
-          Newsletter
-        </h2>
-        <input type="email" placeholder="Preencha seu email" />
-        <input type="submit" value="Cadastrar" />
-      </div>
+      <?php echo do_shortcode('[mc4wp_form]'); ?>
     </div>
   </div>
 </footer>

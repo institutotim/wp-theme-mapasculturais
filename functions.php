@@ -48,6 +48,14 @@ function pmc_register_required_plugins() {
    'is_automatic'  => false,
    'message'    => ''
   );
+
+  $plugins[] = array(
+    'name' => 'MailChimp for WordPress',
+    'slug' => 'mailchimp-for-wp',
+    'required' => true,
+    'force_activation' => true
+  );
+
   tgmpa($plugins, $options);
 }
 add_action('tgmpa_register', 'pmc_register_required_plugins');
@@ -97,10 +105,6 @@ function pmc_setup_theme() {
     $role->add_cap( 'manage_related_versions' );
     $role->add_cap( 'assign_related_versions' );
 
-    // difficulties (taxonomy)
-    $role->add_cap( 'manage_difficulties' );
-    $role->add_cap( 'assign_difficulties' );
-
     // install stats (custom post type)
     $role->add_cap( 'edit_published_install_stats' );
     $role->add_cap( 'publish_install_stats' );
@@ -116,10 +120,6 @@ function pmc_setup_theme() {
     // mapas culturais' versions (taxonomy)
     $role->add_cap( 'edit_related_versions' );
     $role->add_cap( 'delete_related_versions' );
-
-    // difficulties (taxonomy)
-    $role->add_cap( 'edit_difficulties' );
-    $role->add_cap( 'delete_difficulties' );
 
     // tutorials (custom type)
     $role->add_cap( 'publish_tutorials' );
@@ -168,8 +168,20 @@ function pmc_header_scripts() {
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
   wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
 
-  $gh_data = file_get_contents(TEMPLATEPATH . '/js/ghdata.json');
-  wp_localize_script('github', 'ghData', json_decode($gh_data));
+
+  if ( false === ( $gh_request = get_transient( 'gh_request' ) ) ) {
+    $gh_request = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity'));
+    set_transient( 'gh_request', $gh_request, 3 * HOUR_IN_SECONDS );
+  }
+
+  if( is_wp_error( $gh_request ) ) {
+    return false;
+  }
+  $gh_body = wp_remote_retrieve_body( $gh_request );
+  $gh_data = json_decode( $gh_body );
+  if( ! empty( $gh_data ) ) {
+    wp_localize_script('github', 'ghData', $gh_data);
+  }
 
   wp_localize_script('map', 'mapData', array(
     'iconUrl' => get_template_directory_uri() . '/img/marker.png'
@@ -194,6 +206,93 @@ function pmc_is_pauta($is_pauta) {
 }
 add_filter('delibera_is_pauta', 'pmc_is_pauta');
 
+// next and previous post links class
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="button"';
+}
+
+
+// settings page
+
+
+function pmc_settings()
+{
+  ?>
+  <h1><?php _e('Settings Page','pmc'); ?></h1>
+  <h3><?php _e("Add the button's link:");?><h3>
+  <form method="post" action="admin-post.php" >
+    <input type="hidden" name="action" value="update_options">
+    <div>
+      <p>
+        <label>The github link of Mapas Culturais</label>
+        <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
+      </p>
+      <p>
+        <label>The network link's page</label>
+        <input id="network_url" name="network_url" type="text" value="<?php echo get_option('network_url') ? get_option('network_url'):""; ?>">
+      </p>
+      <p>
+        <label>The manual link's page</label>
+        <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
+      </p>
+      <p>
+        <label>The rocket link's page</label>
+        <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
+      </p>
+  </div>
+  <?php submit_button(__("Save", 'pmc')); ?>
+  </form>
+
+  <?php
+  
+}
+  
+function add_admin_menu(){
+  add_menu_page( __('Mapas Theme','pmc'), __('Mapas Theme','pmc'), 'manage_options', 'pmc_menu', 'pmc_settings', 'dashicons-megaphone', 100);
+}
+
+add_action('admin_menu', 'add_admin_menu');
+
+add_action( 'admin_post_update_options', 'save_settings_fields' );
+
+function save_settings_fields(){
+
+  $github_url = isset( $_POST["github_url"]) ? $_POST["github_url"]:"";
+  $network_url = isset( $_POST["network_url"]) ? $_POST["network_url"]:"";
+  $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
+  $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
+
+  update_option( "github_url", $github_url);
+  update_option( "network_url", $network_url);
+  update_option( "manual_url", $manual_url);
+  update_option( "rocket_url", $rocket_url);
+
+  wp_redirect( "admin.php?page=pmc_menu" );
+  exit;
+}
+
+function pmc_custom_query_vars_filter($vars) {
+  $vars[] = 'target_group';
+  return $vars;
+}
+add_filter( 'query_vars', 'pmc_custom_query_vars_filter' );
+
+function custom_rewrite_rule() {
+    add_rewrite_rule('^tutorials/page/([0-9]+)/?','index.php?post_type=tutorial&page=$matches[1]','top');
+    add_rewrite_rule('^noticias/page/([0-9]+)/?','index.php?post_type=post&page=$matches[1]','top');
+    add_rewrite_rule('^tutorials/?','index.php?post_type=tutorial','top');
+}
+add_action('init', 'custom_rewrite_rule', 10, 0);
+
+function custom_rewrite_tag() {
+  add_rewrite_tag('%page%', '([0-9]+)');
+}
+add_action('init', 'custom_rewrite_tag', 10, 0);
+
 /**
  * Include features
  */
@@ -205,5 +304,7 @@ require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
-require_once(TEMPLATEPATH . '/inc/tutorials/difficulties.php');
+require_once(TEMPLATEPATH . '/inc/tutorials/widget.php');
 require_once(TEMPLATEPATH . '/inc/platform-statistics.php');
+require_once(TEMPLATEPATH . '/inc/sidebars.php');
+require_once(TEMPLATEPATH . '/inc/menus.php');

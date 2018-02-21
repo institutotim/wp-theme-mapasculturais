@@ -1,25 +1,58 @@
 <div class="content-section">
   <div class="content-section-content">
-    <?php for($i = 0; $i <= 3; $i++) : ?>
+    <?php
+
+      $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+      $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+      $args = array(
+        'post_type' => 'post', 
+        's' => esc_html( get_search_query( false ) ),
+        'posts_per_page' => 3,
+        'paged' => $paged,
+        'author' => $author->ID
+      );
+      $query = new WP_Query( $args );
+    ?>
+
+    <?php if ( $query->have_posts() ) : ?>
+      <?php while ( $query->have_posts() ) : $query->the_post(); ?>
       <article class="post">
-        <h3>Mauris mattis elit ac justo commodo pulvinar. Quisque porta libero massa. In interdum facilisis.</h3>
+        <div class="featured-image">
+          <?php get_the_post_thumbnail(); ?>
+        </div>
+        <a href="<?php echo get_permalink();?>">
+          <h3><?php the_title(); ?></h3>
+        </a>
         <div class="meta">
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            10 de abril de 2017
+            <?php the_date(); ?>
           </p>
           <p class="comments">
-            <a href="#">
+            <a href="<?php comments_link(); ?>">
               <span class="fa fa-comments-o"></span>
-              10 comentários
+              <?php comments_number(); ?> 
             </a>
           </p>
         </div>
-        <p>Quisque tempus, massa in pulvinar aliquet, est tellus scelerisque lorem, vel lobortis felis elit at justo. Nullam id arcu sed purus scelerisque aliquam in et purus. Nam et consequat lacus. Fusce dapibus, sem id efficitur consequat, sem nulla vulputate velit, eget mattis nibh elit vitae dolor. Nulla facilisi. Nullam et consectetur est. Nam mollis, elit eu scelerisque elementum, nibh lectus mattis dui, aliquet iaculis erat lacus at elit.</p>
+        <?php the_content(); ?>
       </article>
-      <?php if($i < 4) : ?>
-        <hr class="dark" />
+      <hr class="dark" />
+    <?php endwhile; ?>
+
+    <nav class="paging row">
+      <?php if( get_next_posts_link('', $query->max_num_pages) ) : ?>
+        <?php echo get_next_posts_link( 'Older Entries', $query->max_num_pages); ?>
       <?php endif; ?>
-    <?php endfor; ?>
+      <?php if( get_previous_posts_link() ) : ?>
+        <?php echo get_previous_posts_link( 'Newer posts' ); ?>
+      <?php endif; ?>
+    </nav>
+
+    <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+      <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'pmc' ); ?></p>
+    <?php endif; ?> 
   </div>
 </div>
