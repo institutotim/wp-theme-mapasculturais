@@ -1,13 +1,8 @@
 > **Portal do Mapas Culturais** is a website that gathers information about *Mapas Culturais* platform, providing institutional information about the project as well serving as plataform for development and support of the project. This repository holds the Wordpress theme used by the website.
 
-## Install
+## Documentation
 
-* Copy this repository to `wp-content` directory of your Wordpress install;
-* Activate this theme at the menu 'Apperance/Themes';
-* Install suggested plugins (ACF and others) at the menu 'Plugins';
-* Create the following pages:
-  * Homepage, using model 'Homepage';
-  * News;
+* [Manual (PT)](docs/MANUAL.md): install and usage instructions;
 
 ## Development
 
