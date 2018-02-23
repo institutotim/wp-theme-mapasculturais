@@ -104,7 +104,7 @@
                 </div>
               </div>
               <p class="profile-label"><?php echo esc_html($user->display_name); ?></p>
-              <h3><a href="#"><?php echo esc_html($user->user_nicename); ?></a></h3>
+              <h3><a href="<?php echo get_author_posts_url( $user->ID ) ?>"><?php echo esc_html($user->user_nicename); ?></a></h3>
               <p class="profile-data">
                 <span class="profile-data-item">
                   <span class="pmc-icon-person icon"></span>
