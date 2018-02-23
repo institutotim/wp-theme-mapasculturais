@@ -25,7 +25,7 @@
         popup += '<strong>'+markers[i].events_count+'</strong> eventos, ';
         popup += '<strong>'+markers[i].spaces_count+'</strong> espaços, ';
         popup += '<strong>'+markers[i].projects_count+'</strong> projetos</p>';
-        popup += '<p><a href="'+markers[i].url+'" class="button">Ver perfil</a></p>';
+        popup += '<p><a href=/author/"'+markers[i].instance+'" class="button">Ver perfil</a></p>';
         L.marker([
             markers[i].position.lat,
             markers[i].position.lng
