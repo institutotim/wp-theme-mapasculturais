@@ -2,9 +2,6 @@
   <div class="content-section-content">
     <?php
 
-
-
-
       $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
 
       $args = array(
