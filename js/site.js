@@ -124,7 +124,6 @@ Number.prototype.format = function(n, x) {
     })
   });
 
-
   // drag and drop add pauta
   $(document).ready(function () {
     $('.sort-container').sortable({
@@ -134,8 +133,6 @@ Number.prototype.format = function(n, x) {
         cursor: "move",
         update: function (event, ui) {
             $('.sort-order-value').each(function (index, element) {
-                console.log(index);
-                console.log(element);
                 if (0 == index) {
                     $(element).parent().find('.delete-handle').hide();
                 } else {
