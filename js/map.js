@@ -1,5 +1,6 @@
 (function($) {
-  $(document).ready(function() {
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("teste");
     if($('#map').length) {
 
       var icon = L.icon({
