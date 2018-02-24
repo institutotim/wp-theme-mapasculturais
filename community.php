@@ -90,19 +90,6 @@
                 $issues = $data_issues->open_issues_count;
               }
 
-
-              // $request_graph = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/commits'));
-
-              // if( is_wp_error( $request_graph ) ) {
-              //   return false;
-              // }
-              // $body_graph = wp_remote_retrieve_body( $request_graph );
-              // $data_graph = json_decode( $body_graph );
-              // if( ! empty( $data_graph ) ) {
-              //   var_dump($data_graph);
-              //   //$graph = $data_graph;
-              // }
-
             ?>
             <div class="eight columns">
               <div class="community-numbers">

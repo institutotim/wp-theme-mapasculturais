@@ -302,10 +302,6 @@ function pmc_settings()
         <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
       </p>
       <p>
-        <label><?php _e('The network link\'s page', 'pmc') ?></label>
-        <input id="network_url" name="network_url" type="text" value="<?php echo get_option('network_url') ? get_option('network_url'):""; ?>">
-      </p>
-      <p>
         <label><?php _e('The manual link\'s page', 'pmc') ?></label>
         <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
       </p>
@@ -342,14 +338,12 @@ add_action( 'admin_post_update_options', 'save_settings_fields' );
 function save_settings_fields(){
 
   $github_url = isset( $_POST["github_url"]) ? $_POST["github_url"]:"";
-  $network_url = isset( $_POST["network_url"]) ? $_POST["network_url"]:"";
   $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
   $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
   $delibera = isset( $_POST["delibera"]) ? $_POST["delibera"]:"";
   $know = isset( $_POST["know"]) ? $_POST["know"]:"";
 
   update_option( "github_url", $github_url );
-  update_option( "network_url", $network_url );
   update_option( "manual_url", $manual_url );
   update_option( "rocket_url", $rocket_url );
   update_option( "delibera", $delibera );
@@ -449,6 +443,15 @@ function get_support_link(){
   $pages = get_pages(array(
     'meta_key' => '_wp_page_template',
     'meta_value' => 'support.php'
+  ));
+
+  echo $pages[0]->guid;
+}
+
+function get_community_url(){
+  $pages = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'community.php'
   ));
 
   echo $pages[0]->guid;
