@@ -131,26 +131,26 @@ class PMC_Tutorials {
   function tutorial_get_metas(){
     $metas = [];
     $metas[] = array ( 
-      'label' => 'Group Target', 
+      'label' => __('Group Target', 'pmc'),
       'slug'=>'tutorial_group_target' ,
       'info' => __('No target group was informed', 'pmc') , 
       'html' => array (
         'tag'=> 'select', 
         'options' => array(
           array('content' => __('agents', 'pmc'), 'value' => '2'),
-          array('content' => __('maintainers'), 'value' => '1')
+          array('content' => __('maintainers', 'pmc'), 'value' => '1')
         )
       )
     );
 
     $metas[] = array ( 
-      'label' => 'Difficulty', 
-      'slug'=>'tutorial_difficulty' ,
+      'label' => __('Difficulty','pmc'),
+      'slug'=> 'tutorial_difficulty' ,
       'info' => __('No difficulty was informed', 'pmc') , 
       'html' => array (
         'tag'=> 'select', 
         'options' => array(
-          array('content' => __('easy'), 'value' => '1'),
+          array('content' => __('easy', 'pmc'), 'value' => '1'),
           array('content' => __('medium', 'pmc'), 'value' => '2'),
           array('content' => __('advanced', 'pmc'), 'value' => '3')
         )
