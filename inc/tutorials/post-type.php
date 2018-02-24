@@ -41,7 +41,7 @@ class PMC_Tutorials {
       'show_ui'            => true,
       'show_in_menu'       => true,
       'query_var'          => true,
-      'rewrite'            => array( 'slug' => 'tutorials' ),
+      'rewrite'            => array( 'slug' => 'tutoriais' ),
       'capabilities'       => $capabilities,
       'map_meta_cap'       => true,
       'has_archive'        => true,
