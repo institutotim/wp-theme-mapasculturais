@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-30 21:40-0200\n"
+"POT-Creation-Date: 2018-02-24 00:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: archive-pmc_timeline_item.php:13
+#: archive-pauta.php:25
+msgid "Pautas"
+msgstr ""
+
+#: archive-pauta.php:26
+msgid "Veja as pautas abertas sobre o mapas culturais"
+msgstr ""
+
+#: archive-pmc_timeline_item.php:10
 msgctxt "Pattern for YYYY-MM in timeline items"
 msgid "F Y"
 msgstr ""
 
-#: archive-pmc_timeline_item.php:16
+#: archive-pmc_timeline_item.php:13
 msgctxt "Pattern for YYYY-MM-DD in timeline items"
 msgid "F j, Y"
 msgstr ""
 
-#: archive-pmc_timeline_item.php:62
+#: archive-pmc_timeline_item.php:59
 msgctxt "Conjunction for timeline periods"
 msgid "to"
 msgstr ""
@@ -37,76 +45,123 @@ msgstr ""
 msgid "Select Target Group"
 msgstr ""
 
-#: archive.php:32 archive.php:34
+#: archive.php:22 archive.php:24
 #, php-format
 msgid "%s"
 msgstr ""
 
-#: archive.php:38
+#: archive.php:28
 #, php-format
 msgid "Search results for: %s"
 msgstr ""
 
-#: archive.php:40
+#: archive.php:30
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:32
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:32
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:44
+#: archive.php:34
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:44
+#: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: functions.php:73
+#: archive.php:36 single.php:30
+msgid "Network Blog"
+msgstr ""
+
+#: archive.php:38 inc/sidebars.php:11
+msgid "News"
+msgstr ""
+
+#: archive.php:41
+msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
+msgstr ""
+
+#: front_add_pauta.php:103
+msgid "Título da pauta"
+msgstr ""
+
+#: front_add_pauta.php:104
+msgid "Digite o título da pauta aqui"
+msgstr ""
+
+#: front_add_pauta.php:165
+msgid "Resumo da pauta"
+msgstr ""
+
+#: front_add_pauta.php:183
+msgid "Temas"
+msgstr ""
+
+#: front_add_pauta.php:259
+msgid "Criar pauta"
+msgstr ""
+
+#: functions.php:76
 msgid "Instance"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:288
 msgid "Settings Page"
 msgstr ""
 
-#: functions.php:226
+#: functions.php:289
 msgid "Add the button's link:"
 msgstr ""
 
-#: functions.php:252
+#: functions.php:294
+msgid "The github link's of Mapas Culturais"
+msgstr ""
+
+#: functions.php:298
+msgid "The network link's page"
+msgstr ""
+
+#: functions.php:302
+msgid "The manual link's page"
+msgstr ""
+
+#: functions.php:306
+msgid "The rocket link's page"
+msgstr ""
+
+#: functions.php:311
+msgid "The delibera link's page"
+msgstr ""
+
+#: functions.php:316
+msgid "Know More link's page"
+msgstr ""
+
+#: functions.php:320
 msgid "Save"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:328
 msgid "Mapas Theme"
 msgstr ""
 
 #: inc/404.php:11
-msgid "404 Error "
+msgid "Página não encontrada "
 msgstr ""
 
 #: inc/404.php:12
-msgid "This is somewhat embarrassing, isn’t it?"
-msgstr ""
-
-#: inc/404.php:21
-msgid ""
-"\"Oops, I screwed up and you discovered my fatal flaw. \n"
-"\t\t\t\t\t\t\tWell, we're not all perfect, but we try.  Can you try this\n"
-"\t\t\t\t\t\t\tagain or maybe visit our <a \n"
-"\t\t\t\t\t\t\ttitle=\"Our Site\" href=\"/\">Home \n"
-"\t\t\t\t\t\t\tPage</a> to start fresh.  We'll do better next time.\""
+msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
 msgstr ""
 
 #: inc/menus.php:12
@@ -230,8 +285,8 @@ msgstr ""
 msgid "WhatsApp"
 msgstr ""
 
-#: inc/sidebars.php:11
-msgid "News"
+#: inc/platform-statistics.php:225
+msgid "Position on the map"
 msgstr ""
 
 #: inc/sidebars.php:23
@@ -344,26 +399,54 @@ msgstr ""
 msgid "Additional info"
 msgstr ""
 
+#: inc/tutorials/post-type.php:134
+msgid "Group Target"
+msgstr ""
+
 #: inc/tutorials/post-type.php:136
 msgid "No target group was informed"
 msgstr ""
 
-#: inc/tutorials/post-type.php:140 inc/tutorials/post-type.php:173
-#: inc/tutorials/post-type.php:185
+#: inc/tutorials/post-type.php:140 inc/tutorials/post-type.php:177
+#: inc/tutorials/post-type.php:201
 msgid "agents"
 msgstr ""
 
-#: inc/tutorials/post-type.php:141 inc/tutorials/post-type.php:176
-#: inc/tutorials/post-type.php:188
+#: inc/tutorials/post-type.php:141 inc/tutorials/post-type.php:180
+#: inc/tutorials/post-type.php:204
 msgid "maintainers"
+msgstr ""
+
+#: inc/tutorials/post-type.php:147
+msgid "Difficulty"
 msgstr ""
 
 #: inc/tutorials/post-type.php:149
 msgid "No difficulty was informed"
 msgstr ""
 
-#: inc/tutorials/post-type.php:197 inc/tutorials/post-type.php:200
+#: inc/tutorials/post-type.php:153 inc/tutorials/post-type.php:186
+#: inc/tutorials/post-type.php:209
+msgid "easy"
+msgstr ""
+
+#: inc/tutorials/post-type.php:154 inc/tutorials/post-type.php:189
+#: inc/tutorials/post-type.php:212
+msgid "medium"
+msgstr ""
+
+#: inc/tutorials/post-type.php:155 inc/tutorials/post-type.php:192
+#: inc/tutorials/post-type.php:215
+msgid "advanced"
+msgstr ""
+
+#: inc/tutorials/post-type.php:224 inc/tutorials/post-type.php:227
 msgid "The content don't have group target"
+msgstr ""
+
+#: inc/tutorials/post-type.php:233 inc/tutorials/post-type.php:236
+#: inc/tutorials/post-type.php:239
+msgid "The content don't have difficulty"
 msgstr ""
 
 #: inc/tutorials/related-versions.php:14
@@ -390,13 +473,37 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: parts/blog.php:60 parts/tutorials.php:76
+#: parts/blog.php:82 parts/pautas.php:69 parts/tutorials.php:76
 msgid "« Previous"
 msgstr ""
 
-#: parts/blog.php:61 parts/tutorials.php:77
+#: parts/blog.php:83 parts/pautas.php:70 parts/tutorials.php:77
 msgid "Next »"
 msgstr ""
+
+#: parts/network-blog.php:37
+msgid "no comments"
+msgstr ""
+
+#: parts/network-blog.php:37
+msgid "one comment"
+msgstr ""
+
+#: parts/network-blog.php:37
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: parts/pautas.php:47 single-pauta.php:113
+msgid "Prazo encerrado"
+msgstr ""
+
+#: parts/pautas.php:49 single-pauta.php:115
+#, php-format
+msgid "Pauta aberta por mais 1 dia"
+msgid_plural "Pauta aberta por mais %1$s dias"
+msgstr[0] ""
+msgstr[1] ""
 
 #: parts/topic-item.php:12
 msgid "prazo encerrado"
@@ -408,3 +515,7 @@ msgid "<span class=\"numero\">1</span> dia restante"
 msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] ""
 msgstr[1] ""
+
+#: single-pauta.php:142
+msgid "Tema(as)"
+msgstr ""

@@ -59,6 +59,13 @@ function pmc_register_required_plugins() {
     'force_activation' => true
   );
 
+  $plugins[] = array(
+    'name' => 'Delibera',
+    'slug' => 'delibera',
+    'required' => true,
+    'force_activation' => true
+  );
+
   tgmpa($plugins, $options);
 }
 add_action('tgmpa_register', 'pmc_register_required_plugins');
