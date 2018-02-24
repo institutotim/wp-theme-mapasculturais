@@ -172,6 +172,14 @@
                 </a>
               </li>
               <?php endif; ?>
+              <?php if (get_the_author_meta( 'twitter', $author->ID )): ?>
+              <li>
+                <a href="https://twitter.com/<?php the_author_meta( 'twitter', $author->ID ) ?>">
+                  <span class="fa fa-twitter"></span>
+                  Twitter
+                </a>
+              </li>
+              <?php endif; ?>
             </ul>
           </div>
         </div>
