@@ -1,6 +1,5 @@
 (function($) {
-
-  $(document).ready(function() {
+  document.addEventListener("DOMContentLoaded", function(event) {
 
     $('.spaces-chart').hide()
     $('.projects-chart').hide()
@@ -26,7 +25,7 @@
       $("#"+$("#types option:selected").val()+'-result').show();
     });
 
-    if (!instanceData){
+    if (typeof instanceData === 'undefined'){
 
       var data = {
         'commit_count': 0,
@@ -106,7 +105,6 @@
       }
 
     } else {
-      console.log(instanceData);
       var data = []
       for(type in instanceData){
 

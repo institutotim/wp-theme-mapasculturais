@@ -125,7 +125,7 @@ Number.prototype.format = function(n, x) {
   });
 
   // drag and drop add pauta
-  $(document).ready(function () {
+  document.addEventListener("DOMContentLoaded", function(event) {
     $('.sort-container').sortable({
         placeholder: "ui-state-highlight",
         handle: ".dragdrop-handle",

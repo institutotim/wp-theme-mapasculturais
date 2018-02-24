@@ -192,12 +192,10 @@ function pmc_header_scripts() {
   }
   $gh_body = wp_remote_retrieve_body( $gh_request );
   $gh_data = json_decode( $gh_body );
+
   if( ! empty( $gh_data ) ) {
     wp_localize_script('github', 'ghData', $gh_data);
   }
-
-  // var_dump($gh_data);
-  // exit();
 
   $users = get_users( array( 'fields' => array( 'id', 'user_nicename', 'user_url' ), 'role' => 'instance') );
 
