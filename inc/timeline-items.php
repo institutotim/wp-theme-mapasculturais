@@ -77,7 +77,7 @@ class PMC_Timeline_Items {
       'show_ui'            => true,
       'show_in_menu'       => true,
       'query_var'          => true,
-      'rewrite'            => array( 'slug' => 'timeline' ),
+      'rewrite'            => array( 'slug' => 'linha-do-tempo' ),
       'capabilities'       => $capabilities,
       'map_meta_cap'       => true,
       'has_archive'        => true,
