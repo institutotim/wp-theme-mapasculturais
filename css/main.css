@@ -1970,7 +1970,6 @@ p.post-meta .fa {
   font-size: .7em;
   margin-right: 1rem;
   display: inline-block;
-  color: #bbb;
 }
 #meta .author {
   line-height: 60px;
@@ -1989,7 +1988,6 @@ p.post-meta .fa {
   color: inherit;
 }
 #meta .valid {
-  float: right;
   margin-right: 0;
   color: #43be57;
 }

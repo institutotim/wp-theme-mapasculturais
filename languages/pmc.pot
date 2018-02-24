@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-24 13:34+0000\n"
+"POT-Creation-Date: 2018-02-24 14:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -514,4 +514,24 @@ msgstr[1] ""
 
 #: single-pauta.php:142
 msgid "Theme(s)"
+msgstr ""
+
+#: single-tutorial.php:46
+msgid "to all platform versions"
+msgstr ""
+
+#: single-tutorial.php:53
+msgid "to platform versions:"
+msgstr ""
+
+#: single-tutorial.php:55
+msgid "to platform version:"
+msgstr ""
+
+#: single-tutorial.php:71
+msgid "to"
+msgstr ""
+
+#: single-tutorial.php:75
+msgid "difficulty"
 msgstr ""

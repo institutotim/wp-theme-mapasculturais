@@ -43,11 +43,16 @@
     if ( $all_terms && !is_wp_error( $all_terms ) && $terms && !is_wp_error( $terms ) ) {
 
       if (count($all_terms) == count($terms)){
-         $valid = "Válido para todas as versões da plataforma";
+         $valid = __('to all platform versions', 'pmc');
       }
       if (count($terms) < count($all_terms)){
         foreach ( $terms as $term ) {
           $valid = '<a href="' . get_term_link($term->term_id) . '" class="category">' . $term->name . '</a>';
+        }
+        if (count($terms) > 1) {
+          $valid = __('to platform versions:', 'pmc') . " " . $valid;
+        } else {
+          $valid = __('to platform version:', 'pmc') . " " . $valid;
         }
       }
 
@@ -63,12 +68,11 @@
         <div id="meta">
           <p class="target-group">
             <span class="fa fa-gear"></span>
-            <?php echo get_post_meta(get_the_ID(), 'tutorial_group_target_label')[0]; ?>
+            <?php echo __('to', 'pmc') . " " . get_post_meta(get_the_ID(), 'tutorial_group_target_label')[0]; ?>
           </p>
           <p class="complex">
             <span class="fa fa-certificate"></span>
-            <span class="label">Complexidade:</span>
-            <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
+            <?php echo __('difficulty', 'pmc') . " " . get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
           </p>
           <p class="valid">
             <span class="fa fa-check-circle"></span>
