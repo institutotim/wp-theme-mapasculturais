@@ -24,7 +24,7 @@
             </a>
           </p>
           <p>
-            <a href="<?php echo get_option('network_url') ?>" class="button button-primary block">
+            <a href="<?php echo get_community_url() ?>" class="button button-primary block">
               <span class="fa fa-star"></span>
               Participe da discussão
             </a>
