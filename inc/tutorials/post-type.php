@@ -101,11 +101,13 @@ class PMC_Tutorials {
           <br>
           <select name="<?php echo $meta['slug'] ?>">
           <?php
-          setlocale(LC_ALL, "en_US.utf8");
-        foreach ($meta['html']['options'] as $option) {
-          $content = iconv("utf-8", "ascii//TRANSLIT", $option['content']);
+            foreach ($meta['html']['options'] as $option) {
+            $content = $option['content'];
           ?>
-            <option value="<?php echo $option['value'] ?>" <?php echo esc_html(get_post_meta($object->ID, $meta['slug'] , true), 1) === $option['value'] ? 'selected' : ''; ?> ><?php echo ucwords(strtolower($content)) ?></option>
+            <option value="<?php echo $option['value'] ?>" 
+              <?php echo esc_html(get_post_meta($object->ID, $meta['slug'] , true), 1) === $option['value'] ? 'selected' : ''; ?> >
+              <?php echo ucwords($content) ?>
+            </option>
             <?php 
         }
         ?>
