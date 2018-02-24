@@ -298,25 +298,25 @@ function pmc_settings()
     <input type="hidden" name="action" value="update_options">
     <div>
       <p>
-        <label><?php _e('The github link\'s of Mapas Culturais', 'pmc') ?></label>
+        <label><?php _e('URL for Mapas Culturais repository at Github', 'pmc') ?></label>
         <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
       </p>
       <p>
-        <label><?php _e('The manual link\'s page', 'pmc') ?></label>
+        <label><?php _e('User Manual URL', 'pmc') ?></label>
         <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
       </p>
       <p>
-        <label><?php _e('The rocket link\'s page', 'pmc') ?></label>
+        <label><?php _e('Rocket Chat URL', 'pmc') ?></label>
         <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
       </p>
 
       <p>
-        <label><?php _e('The delibera link\'s page', 'pmc') ?></label>
+        <label><?php _e('Delibera home URL', 'pmc') ?></label>
         <textarea id="delibera" name="delibera"><?php echo get_option('delibera') ? get_option('delibera'):""; ?></textarea>
       </p>
 
       <p>
-        <label><?php _e('Know More link\'s page', 'pmc') ?></label>
+        <label><?php _e('"Know More" URL', 'pmc') ?></label>
         <input id="know" name="know" value="<?php echo get_option('know') ? get_option('know'):""; ?>">
       </p>
   </div>
