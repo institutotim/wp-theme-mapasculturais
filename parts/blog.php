@@ -21,6 +21,7 @@
 
       if( is_tag() || is_category() || is_tax() ) {
         $tax = get_query_var( 'taxonomy', '' );
+
         $term = get_queried_object();
 
         if ($tax = 'tema') {
@@ -29,8 +30,8 @@
 
         $args['tax_query'] = array(
           array(
-            'taxonomy' => $tax, 
-            'field' => 'term_id', 
+            'taxonomy' => $term->taxonomy,
+            'field' => 'term_id',
             'terms' => $term->term_id
           )
         );
