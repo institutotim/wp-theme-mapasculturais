@@ -1,7 +1,4 @@
 <?php
-/*
- * Template name: Timeline
- */
 
 // format date according to length
 function formatTimelineDate($date) {
