@@ -202,6 +202,8 @@ function pmc_header_scripts() {
 
     $response  = wp_safe_remote_get( 'https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity' );
 
+    var_dump($response);
+
     if ( ! is_wp_error( $response ) ) {
       $gh_request = $response;
       set_transient( 'gh_request', $gh_request, 6 * HOUR_IN_SECONDS );
