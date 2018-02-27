@@ -190,6 +190,10 @@ function pmc_header_scripts() {
 
   $gh_request = get_transient( 'gh_request' );
 
+  echo '<pre>';
+  var_dump($gh_request);
+  echo '<pre>';
+
   if (  false === $gh_request || null === $gh_request || is_wp_error( $gh_request ) ) {
 
     $response  = wp_safe_remote_get( 'https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity' );
@@ -205,8 +209,8 @@ function pmc_header_scripts() {
     
   }
 
-
   $gh_body = wp_remote_retrieve_body( $gh_request );
+
   $gh_data = json_decode( $gh_body );
 
   if( ! empty( $gh_data ) ) {
