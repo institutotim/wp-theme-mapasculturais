@@ -198,7 +198,7 @@ function pmc_header_scripts() {
 
   var_dump(empty($gh_status));
 
-  if (  false === $gh_request || null === $gh_request || is_wp_error( $gh_request || empty($gh_status)) ) {
+  if (  false === $gh_request || null === $gh_request || is_wp_error( $gh_request ) || empty($gh_status) ) {
 
     $response  = wp_safe_remote_get( 'https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity' );
 
