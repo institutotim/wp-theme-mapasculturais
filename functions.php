@@ -188,15 +188,24 @@ function pmc_header_scripts() {
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
   wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
 
+  $gh_request = get_transient( 'gh_request' );
 
-  if ( false === ( $gh_request = get_transient( 'gh_request' ) ) ) {
-    $gh_request = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity'));
-    set_transient( 'gh_request', $gh_request, 3 * HOUR_IN_SECONDS );
+  if (  false === $gh_request || null === $gh_request || is_wp_error( $gh_request ) ) {
+
+    $response  = wp_safe_remote_get( 'https://api.github.com/repos/hacklabr/mapasculturais/stats/commit_activity' );
+
+    if ( ! is_wp_error( $response ) ) {
+      $gh_request = $response;
+      set_transient( 'gh_request', $gh_request, 6 * HOUR_IN_SECONDS );
+    } elseif ( true === WP_DEBUG && is_wp_error( $response ) ) {
+      echo $response->get_error_message();
+    } else {
+      echo 'Não foi possivel obter dados do github';
+    }
+    
   }
 
-  if( is_wp_error( $gh_request ) ) {
-    return false;
-  }
+
   $gh_body = wp_remote_retrieve_body( $gh_request );
   $gh_data = json_decode( $gh_body );
 
