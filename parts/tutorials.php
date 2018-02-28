@@ -30,7 +30,7 @@
         <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
           if ( $terms && !is_wp_error( $terms ) ) : 
             foreach ( $terms as $term ) { ?>
-              <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+              <a class="post-tag category" href="<?php echo get_term_link($term->term_id); ?>">
                 <span class="fa fa-bookmark-o"></span>
                 <?php echo $term->name; ?>
               </a>
@@ -51,13 +51,13 @@
         </p>
       </div>
       <div class="tutorial-content">
-        <a href="<?php echo get_permalink();?>">
+        <a class="tutorials-title" href="<?php echo get_permalink();?>">
           <div class="featured-image">
             <?php echo get_the_post_thumbnail(); ?>
           </div>
           <h3><?php the_title(); ?></h3>
         </a>
-        <?php echo the_content(); ?>
+        <?php the_excerpt(); ?>
       </div>
     </article>
     <hr class="dark" />
