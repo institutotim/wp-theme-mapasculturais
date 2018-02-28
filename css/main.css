@@ -2127,6 +2127,11 @@ p.post-meta .fa {
   padding-bottom: 2rem;
   border-bottom: 1px solid #eee;
 }
+#add-pauta .pauta-item .pauta-subitem {
+  background: #f7f7f7;
+  padding: 2rem;
+  font-size: .8em;
+}
 #add-pauta .add-pauta-buttons {
   margin-top: 4rem;
 }
