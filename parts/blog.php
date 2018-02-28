@@ -50,7 +50,7 @@
         <h3>
           <a href="<?php echo get_permalink();?>">
             <div class="featured-image">
-              <?php echo get_the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('archive-post'); ?>
             </div>
             <?php the_title(); ?>
           </a>
