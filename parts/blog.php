@@ -47,12 +47,14 @@
 
     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
       <article class="post">
-        <a href="<?php echo get_permalink();?>">
-          <div class="featured-image">
-            <?php echo get_the_post_thumbnail(); ?>
-          </div>
-          <h3><?php the_title(); ?></h3>
-        </a>
+        <h3>
+          <a href="<?php echo get_permalink();?>">
+            <div class="featured-image">
+              <?php echo get_the_post_thumbnail(); ?>
+            </div>
+            <?php the_title(); ?>
+          </a>
+        </h3>
         <div class="meta">
           <p class="author">
             <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
