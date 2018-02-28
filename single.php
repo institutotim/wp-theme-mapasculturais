@@ -41,8 +41,11 @@
       <div class="twelve columns">
         <div id="meta">
           <p class="author">
-            <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-              <img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>" />
+            <a class="user-link" href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
+              <?php 
+                $url = get_template_directory_uri()."/img/logo.png";
+              ?>
+              <img src="<?php echo get_avatar_url(get_the_author_meta('ID'), $size = '30', $url); ?>" />
               <?php the_author(); ?>
               </a>
           </p>
@@ -53,7 +56,7 @@
               if ( $terms && !is_wp_error( $terms ) ) :
                 $aux = array();
                 foreach ( $terms as $term ) {
-                  $aux[] = '<a href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
+                  $aux[] = '<a class="post-tag" href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
                 }
                 endif; 
                 echo join( ", ", $aux );
