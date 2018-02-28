@@ -144,6 +144,7 @@ add_action('after_setup_theme', 'pmc_setup_theme');
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'timeline', 600, 600, false );
+add_image_size( 'archive-post', 836, 327, true );
 
 /**
  * Header
