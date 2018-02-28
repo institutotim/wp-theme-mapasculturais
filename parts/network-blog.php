@@ -4,7 +4,7 @@
   $args = array(
     'post_type' => 'network_post',
     's' => esc_html( get_search_query( false ) ),
-    'posts_per_page' => 5,
+    'posts_per_page' => 3,
     'paged' => $paged,
     'author' => $author->ID
   );
