@@ -139,7 +139,7 @@
 
 					<?php if (!empty($temas)) : ?>
 						<ul class="meta meta-temas">
-							<li class="delibera-tema-entry-title"><?php _e('Theme(s)', 'delibera'); ?>:</li>
+							<li class="delibera-tema-entry-title"><?php _e('Tema(as)', 'delibera'); ?>:</li>
 							<?php $size = count($temas) - 1; ?>
 							<?php foreach ($temas as $key => $tema) : ?>
 							<li>

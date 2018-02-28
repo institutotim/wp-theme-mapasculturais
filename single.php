@@ -1,4 +1,14 @@
-<?php get_header(); ?>
+<?php
+
+echo '<pre>';
+echo get_post_meta(get_the_ID());
+echo '</pre>';
+
+
+?>
+
+
+<!-- <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <article id="page-<?php the_ID(); ?>">
   <header class="page-header">
@@ -81,4 +91,4 @@
 </article>
 <?php endwhile; endif; ?>
 <?php get_template_part('parts/community-section'); ?>
-<?php get_footer(); ?>
+<?php get_footer(); ?> -->
