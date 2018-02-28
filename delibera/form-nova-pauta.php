@@ -7,7 +7,7 @@ $resumo		 = isset($_POST['nova-pauta-resumo'])		? stripslashes($_POST['nova-paut
 	<form method="post">
 		<?php wp_nonce_field('delibera_nova_pauta'); ?>
 		<p>
-			<label for="nova-pauta-resumo"><?php _e( 'Título da pauta', 'delibera' ); ?></label>
+			<label for="nova-pauta-titulo"><?php _e( 'Título da pauta', 'delibera' ); ?></label>
 			<input type="text" name="nova-pauta-titulo" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>"/>
 		</p>
 		<p>
