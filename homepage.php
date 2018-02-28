@@ -60,7 +60,8 @@
                   <div class="meta">
                     <p class="author">
                       <?php
-                       echo get_avatar(get_the_author_meta('ID'), $size = '30');
+                       $url = get_template_directory_uri()."/img/logo.png";
+                       echo get_avatar(get_the_author_meta('ID'), $size = '30', $url);
                       ?>
                       <?php echo get_the_author(); ?>
                     </p>
