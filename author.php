@@ -79,7 +79,7 @@
   <section id="content">
     <div class="container">
       <div class="eight columns">
-        <?php get_template_part('parts/network-blog-2'); ?>
+        <?php get_template_part('parts/network-entry-on-author-page'); ?>
       </div>
       <div class="four columns">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">

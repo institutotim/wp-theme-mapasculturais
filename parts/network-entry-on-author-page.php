@@ -19,13 +19,15 @@
         <div class="featured-image">
           <?php get_the_post_thumbnail(); ?>
         </div>
-        <a href="<?php echo get_permalink();?>">
-          <h3><?php the_title(); ?></h3>
-        </a>
+        <h3>
+          <a href="<?php echo get_permalink();?>">
+            <?php the_title(); ?>
+          </a>
+        </h3>
         <div class="meta">
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            <?php the_date(); ?>
+            <?php echo the_time( get_option( 'date_format' ) ); ?>
           </p>
           <p class="comments">
             <a href="<?php comments_link(); ?>">
@@ -34,7 +36,7 @@
             </a>
           </p>
         </div>
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
       </article>
       <hr class="dark" />
     <?php endwhile; ?>
