@@ -36,13 +36,32 @@
       i = 1;
     }
     var $step = $steps.filter('[data-step="' + i + '"]');
-    if ($step && $step.length) {
+    if ($step && $step.length && validate(currentStep)) {
       currentStep = i;
       $steps.hide();
       $step.show();
     }
     window.scrollTo(0, 0);
     handleButtons();
+  }
+
+  function validate(i) {
+    var success = true;
+    if(!currentStep)
+      return true;
+    var $step = $steps.filter('[data-step="' + i + '"]');
+    var $required = $step.find("[required]");
+    if($required.length) {
+      $required.each(function() {
+        if(!$(this).val()) {
+          success = false;
+        }
+      });
+    }
+    if(!success) {
+      alert("Certifique-se de preencher todos os campos obrigatórios");
+    }
+    return success;
   }
 
   function handleButtons() {
