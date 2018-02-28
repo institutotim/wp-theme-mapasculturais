@@ -7,7 +7,11 @@
     $next = $(".add-pauta-next");
     $prev = $(".add-pauta-prev");
     $create = $(".add-pauta-create");
-    goStep(1);
+
+    // Wait for scripts to load
+    setTimeout(function() {
+      goStep(1);
+    }, 1000);
   }
 
   function bindings() {
