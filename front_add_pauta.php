@@ -88,17 +88,15 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 ?>
 
-
-
 <?php get_header(); ?>
 
 <div class="container">
+	<div class="row">
 	<form id="new_pauta" name="new_pauta" method="post">
   	<div class="eight columns">
 			<?php wp_nonce_field('delibera_nova_pauta'); ?>
 
 			<div class="row">
-
 				<div class="twelve columns">
 					<p>
 						<h4 for="nova-pauta-resumo"><?php _e( 'Título da pauta', 'delibera' ); ?></h4>
@@ -107,7 +105,6 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 				</div>
 
 				<div class="three columns">
-
 					<p>
 						<label>File</label>
 						<input type="file" name="file" id="file"  multiple="false" />
@@ -116,11 +113,8 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 				<div class="three columns offset-by-three">
 					<p>
-
 						<label>Flow</label>
-
 						<div class="sort-container">
-
 	            <div class="sort-item">
 	            	<div class="input-group">
 	                <input type="hidden" class="sort-order-value" id="form-field-0-sort-order" name="flow[]" value="validacao">
@@ -155,11 +149,9 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 	               <input class="form-control" type="text" id="form-field-4" name="form-field[]" value="Com resolução" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
 	             </div>
 	            </div>
-
 	        	</div>
 					</p>
 				</div>
-
 			</div>
 
 			<p>
@@ -171,9 +163,7 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 			<p>
 				<?php wp_editor($conteudo, 'content'); ?>
 			</p>
-
-
-	  </div>
+		</div>
 	  <div class="three columns offset-by-one">
 	    <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
 
@@ -211,7 +201,6 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 				<hr>
 
-
 				<p>
 					<h4>Pauta em discussão</h4>
 					<label>Prazo para Discussões</label>
@@ -227,7 +216,6 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 				  <label>
 				     <input value="S" name="enable_any_comment" type="checkbox"> Permitir comentários gerais?
 				  </label>
-
 				</p>
 
 				<hr>
@@ -237,8 +225,6 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 					<label>Prazo para relatoria</label>
 					<input type="date" name="deadline_report">
 				</p>
-
-				
 
 				<p>
 					<h4>Regime de Votação</h4>
@@ -258,10 +244,10 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 				<input type="hidden" name="submitted" id="submitted" value="true" />
 				<input type="submit" value="<?php _e( 'Criar pauta', 'delibera' ); ?>"/>
-
 	    </div>
 	  </div>
   </form>
+	</div>
 </div>
 
 <?php get_footer(); ?>
