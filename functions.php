@@ -301,74 +301,6 @@ function posts_link_attributes() {
     return 'class="button"';
 }
 
-
-// settings page
-
-
-function pmc_settings()
-{
-  ?>
-  <h1><?php _e('Settings Page','pmc'); ?></h1>
-  <h3><?php _e("Add the button's link:");?><h3>
-  <form method="post" action="admin-post.php" >
-    <input type="hidden" name="action" value="update_options">
-    <div>
-      <p>
-        <label><?php _e('URL for Mapas Culturais repository at Github', 'pmc') ?></label>
-        <input id="github_url" name="github_url" type="text" value="<?php echo get_option('github_url') ? get_option('github_url'):""; ?>">
-      </p>
-      <p>
-        <label><?php _e('User Manual URL', 'pmc') ?></label>
-        <input id="manual_url" name="manual_url" type="text" value="<?php echo get_option('manual_url') ? get_option('manual_url'):""; ?>">
-      </p>
-      <p>
-        <label><?php _e('Rocket Chat URL', 'pmc') ?></label>
-        <input id="rocket_url" name="rocket_url" type="text" value="<?php echo get_option('rocket_url') ? get_option('rocket_url'):""; ?>">
-      </p>
-
-      <p>
-        <label><?php _e('Delibera home URL', 'pmc') ?></label>
-        <textarea id="delibera" name="delibera"><?php echo get_option('delibera') ? get_option('delibera'):""; ?></textarea>
-      </p>
-
-      <p>
-        <label><?php _e('"Know More" URL', 'pmc') ?></label>
-        <input id="know" name="know" value="<?php echo get_option('know') ? get_option('know'):""; ?>">
-      </p>
-  </div>
-  <?php submit_button(__("Save", 'pmc')); ?>
-  </form>
-
-  <?php
-  
-}
-  
-function add_admin_menu(){
-  add_menu_page( __('Mapas Theme','pmc'), __('Mapas Theme','pmc'), 'manage_options', 'pmc_menu', 'pmc_settings', 'dashicons-megaphone', 100);
-}
-
-add_action('admin_menu', 'add_admin_menu');
-
-add_action( 'admin_post_update_options', 'save_settings_fields' );
-
-function save_settings_fields(){
-
-  $github_url = isset( $_POST["github_url"]) ? $_POST["github_url"]:"";
-  $manual_url = isset( $_POST["manual_url"]) ? $_POST["manual_url"]:"";
-  $rocket_url = isset( $_POST["rocket_url"]) ? $_POST["rocket_url"]:"";
-  $delibera = isset( $_POST["delibera"]) ? $_POST["delibera"]:"";
-  $know = isset( $_POST["know"]) ? $_POST["know"]:"";
-
-  update_option( "github_url", $github_url );
-  update_option( "manual_url", $manual_url );
-  update_option( "rocket_url", $rocket_url );
-  update_option( "delibera", $delibera );
-  update_option( "know", $know );
-
-  wp_redirect( "admin.php?page=pmc_menu" );
-  exit;
-}
-
 function pmc_custom_query_vars_filter($vars) {
   $vars[] = 'target_group';
   return $vars;
@@ -496,6 +428,7 @@ function add_pauta_template_redirect($post_id){
 load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
 require_once(TEMPLATEPATH . '/inc/homepage-config.php');
+require_once(TEMPLATEPATH . '/inc/support-config.php');
 require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
