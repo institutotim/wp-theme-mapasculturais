@@ -63,8 +63,8 @@ function pmc_register_required_plugins() {
     'name' => 'Delibera',
     'slug' => 'delibera',
     'required' => true,
-    'force_activation' => true,
-    'source' => 'https://github.com/redelivre/delibera/archive/v2.0.1-beta.1.zip'
+    'force_activation' => false,
+    'source' => 'https://github.com/redelivre/delibera/archive/v2.0.1a.zip'
   );
 
   tgmpa($plugins, $options);

@@ -5,7 +5,6 @@ wordpress:
   ports:
     - 8080:80
   volumes:
-    - ../delibera:/var/www/html/wp-content/plugins/delibera
     - .:/var/www/html/wp-content/themes/mapasculturais
     - ./.data/wp:/var/www/html/
     - ./.data/php:/usr/local/php/conf.d

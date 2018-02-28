@@ -2122,6 +2122,25 @@ p.post-meta .fa {
   margin: 1rem;
 }
 /* Add pauta form */
+#nova-pauta input[type="text"],
+#nova-pauta textarea {
+  width: 100%;
+}
+#nova-pauta form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nova-pauta form ul li {
+  margin: 0;
+  padding: 0;
+}
+#nova-pauta form ul li label {
+  display: block;
+}
+#nova-pauta form ul li input {
+  display: inline-block;
+}
 #add-pauta .pauta-item {
   margin-bottom: 2rem;
   padding-bottom: 2rem;

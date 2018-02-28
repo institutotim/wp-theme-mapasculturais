@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 18:30-0300\n"
+"POT-Creation-Date: 2018-02-28 19:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,19 +92,15 @@ msgstr ""
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr ""
 
-#: front_add_pauta.php:124
+#: delibera/form-nova-pauta.php:10 front_add_pauta.php:124
 msgid "Título da pauta"
 msgstr ""
 
-#: front_add_pauta.php:125
+#: delibera/form-nova-pauta.php:11 front_add_pauta.php:125
 msgid "Digite o título da pauta aqui"
 msgstr ""
 
-#: front_add_pauta.php:132
-msgid "Temas"
-msgstr ""
-
-#: front_add_pauta.php:139
+#: delibera/form-nova-pauta.php:17 front_add_pauta.php:139
 msgid "Resumo da pauta"
 msgstr ""
 
@@ -148,8 +144,12 @@ msgstr ""
 #. </div>
 #. </div>
 #.
-#: front_add_pauta.php:273
+#: delibera/form-nova-pauta.php:30 front_add_pauta.php:273
 msgid "Criar pauta"
+msgstr ""
+
+#: front_add_pauta.php:132
+msgid "Temas"
 msgstr ""
 
 #: functions.php:84
