@@ -122,13 +122,13 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 						<div class="pauta-item row">
 							<div class="twelve columns">
 								<h4 for="nova-pauta-resumo"><label for="nova-pauta-titulo"><?php _e( 'Título da pauta', 'delibera' ); ?></label></h4>
-								<input style="width: 100%" type="text" name="title" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>"/>
+								<input style="width: 100%" type="text" name="title" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>" required />
 							</div>
 						</div>
 
 						<div class="pauta-item row">
 							<h4 for="nova-pauta-resumo"><label for="nova-pauta-resumo"><?php _e( 'Resumo da pauta', 'delibera' ); ?></label></h4>
-							<textarea style="width: 100%;height: 150px;" name="description" id="nova-pauta-resumo" placeholder="Digite o resumo da pauta aqui..."><?php echo htmlentities($resumo) ?></textarea>
+							<textarea style="width: 100%;height: 150px;" name="description" id="nova-pauta-resumo" placeholder="Digite o resumo da pauta aqui..." required><?php echo htmlentities($resumo) ?></textarea>
 						</div>
 
 					</div>
