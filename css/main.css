@@ -137,6 +137,10 @@ a.post-tag {
 div p.eight {
   padding-bottom: 20px;
 }
+a.tutorials-title {
+  text-decoration: none;
+  color: black;
+}
 .prev,
 .next {
   font-family: 'Tim Sans';
