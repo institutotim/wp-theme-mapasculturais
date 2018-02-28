@@ -45,9 +45,7 @@
 	$temas = wp_get_post_terms(get_the_ID(), 'tema');
 
 ?>
-
 	<div class="pauta-content <?php echo $status_pauta; ?>">
-
 		<div class="banner-ciclo status-ciclo">
 			<h3>Estágio da pauta</h3>
 			<ul class="ciclos"><?php
@@ -79,9 +77,6 @@
 		</ul>
 	</div>
 
-
-
-  <section id="content">
     <div class="container">
       <div class="twelve columns">
         <div id="meta">
@@ -119,6 +114,7 @@
       </div>
     </div>
     <div class="container">
+    	<div class="row">
       <div class="eight columns">
         <?php the_content(); ?>
 	      <div>
@@ -158,17 +154,14 @@
 						comments_template( '', true );
 					?>
 
-					
-				</div>
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-
          	<?php dynamic_sidebar('news-pmc') ?>
         </div>
       </div>
+     </div>
     </div>
-  <section>
 </article>
 <?php endwhile; endif; ?>
 
