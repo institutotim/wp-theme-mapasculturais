@@ -1,6 +1,6 @@
 <?php
 
-ob_clean(); 
+ob_clean();
 ob_start();
 
 /**
@@ -63,7 +63,8 @@ function pmc_register_required_plugins() {
     'name' => 'Delibera',
     'slug' => 'delibera',
     'required' => true,
-    'force_activation' => true
+    'force_activation' => true,
+    'source' => 'https://github.com/redelivre/delibera/archive/v2.0.1-beta.1.zip'
   );
 
   tgmpa($plugins, $options);
@@ -166,7 +167,7 @@ function pmc_header_scripts() {
   wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
   wp_register_style('bootstrap-theme', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css');
   wp_register_style('jquery-ui', '//code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css');
-  
+
 
   wp_enqueue_style('main');
   wp_enqueue_style('responsive');
@@ -191,7 +192,7 @@ function pmc_header_scripts() {
 
   $gh_request = get_transient( 'gh_request' );
 
-  $gh_body = wp_remote_retrieve_body( $gh_request ); 
+  $gh_body = wp_remote_retrieve_body( $gh_request );
 
   $gh_data = json_decode( $gh_body );
 
@@ -209,10 +210,10 @@ function pmc_header_scripts() {
     } else {
       echo 'Não foi possivel obter dados do github';
     }
-    
+
   }
 
-  $gh_body = wp_remote_retrieve_body( $gh_request ); 
+  $gh_body = wp_remote_retrieve_body( $gh_request );
 
   $gh_data = json_decode( $gh_body );
 
@@ -335,7 +336,7 @@ function get_agents_count(){
 
   $sum = 0;
 
-  foreach ($users as $user) { 
+  foreach ($users as $user) {
     $sum += array_values(get_the_author_meta( 'agents_count', $user->id ))[0];
   }
   echo $sum;
@@ -346,8 +347,8 @@ function get_events_count(){
   $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
 
   $sum = 0;
-  
-  foreach ($users as $user) { 
+
+  foreach ($users as $user) {
     $sum += array_values(get_the_author_meta( 'events_count', $user->id ))[0];
   }
   echo $sum;
@@ -359,8 +360,8 @@ function get_spaces_count(){
   $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
 
   $sum = 0;
-  
-  foreach ($users as $user) { 
+
+  foreach ($users as $user) {
     $sum += array_values(get_the_author_meta( 'spaces_count', $user->id ))[0];
   }
   echo $sum;
@@ -371,8 +372,8 @@ function get_projects_count(){
   $users = get_users( array( 'fields' => array( 'id' ), 'role' => 'instance') );
 
   $sum = 0;
-  
-  foreach ($users as $user) { 
+
+  foreach ($users as $user) {
     $sum += array_values(get_the_author_meta( 'projects_count', $user->id ))[0];
   }
   echo $sum;
