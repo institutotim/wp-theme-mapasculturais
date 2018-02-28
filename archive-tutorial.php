@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-  <section>
+  </section>
 </section>
 <?php get_template_part('parts/community-section'); ?>
 <?php get_footer(); ?>
