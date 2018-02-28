@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 18:17-0300\n"
+"POT-Creation-Date: 2018-02-28 18:30-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,7 +108,47 @@ msgstr ""
 msgid "Resumo da pauta"
 msgstr ""
 
-#: front_add_pauta.php:260
+#. /label></p>
+#. <div class="sort-container">
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-0-sort-order" name="flow[]" value="validacao">
+#. <input class="form-control" type="text" id="form-field-0" name="form-field[]" value="Validação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-1-sort-order" name="flow[]" value="discussao">
+#. <input class="form-control" type="text" id="form-field-1" name="form-field[]" value="Discussão" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-2-sort-order" name="flow[]" value="relatoria">
+#. <input class="form-control" type="text" id="form-field-2" name="form-field[]" value="Relatoria" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-3-sort-order" name="flow[]" value="emvotacao">
+#. <input class="form-control" type="text" id="form-field-3" name="form-field[]" value="Em votação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-4-sort-order" name="flow[]" value="comresolucao">
+#. <input class="form-control" type="text" id="form-field-4" name="form-field[]" value="Com resolução" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#. </div>
+#. </div>
+#. </div>
+#.
+#: front_add_pauta.php:273
 msgid "Criar pauta"
 msgstr ""
 
