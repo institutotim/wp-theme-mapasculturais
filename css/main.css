@@ -44,6 +44,11 @@
 /*
  * Colors
  */
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.6em;
@@ -1112,12 +1117,14 @@ p.post-meta .fa {
     padding-top: 12%;
   }
 }
-#content {
+#content,
+.page-content {
   padding: 4rem 0;
   min-height: 500px;
   color: #333;
 }
-#content .main-text {
+#content .main-text,
+.page-content .main-text {
   padding: 6rem 0;
   background: #ffed7c;
   color: #333;
@@ -1129,12 +1136,14 @@ p.post-meta .fa {
   position: relative;
   padding-bottom: 0;
 }
-#content .main-text strong {
+#content .main-text strong,
+.page-content .main-text strong {
   border-bottom: 8px solid #e94b80;
   font-weight: normal;
   font-size: 1.2em;
 }
-#content .main-text .svg {
+#content .main-text .svg,
+.page-content .main-text .svg {
   max-width: 900px;
   margin: 0 auto;
   padding-left: 10%;
@@ -1143,12 +1152,14 @@ p.post-meta .fa {
   right: 5%;
   pointer-events: none;
 }
-#content .main-text .svg svg {
+#content .main-text .svg svg,
+.page-content .main-text .svg svg {
   width: 100%;
   height: auto;
   display: block;
 }
-#content .main-text .svg svg tspan {
+#content .main-text .svg svg tspan,
+.page-content .main-text .svg svg tspan {
   font-family: "Tim Sans" !important;
   font-weight: 200;
 }
@@ -1864,7 +1875,12 @@ p.post-meta .fa {
 .single #content,
 .author #content,
 .page-template-default #content,
-.page-template-fullwidth #content {
+.page-template-fullwidth #content,
+#archive .page-content,
+.single .page-content,
+.author .page-content,
+.page-template-default .page-content,
+.page-template-fullwidth .page-content {
   font-size: 1.2em;
   padding: 6rem 0;
 }
@@ -2104,4 +2120,20 @@ p.post-meta .fa {
 }
 .leaflet-popup-content {
   margin: 1rem;
+}
+/* Add pauta form */
+#add-pauta .pauta-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+#add-pauta .add-pauta-buttons {
+  margin-top: 4rem;
+}
+#add-pauta .add-pauta-buttons .add-pauta-prev {
+  float: left;
+}
+#add-pauta .add-pauta-buttons .add-pauta-next,
+#add-pauta .add-pauta-buttons .add-pauta-create {
+  float: right;
 }

@@ -99,160 +99,171 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
     </div>
     <div class="container">
       <div class="eight columns">
-        <div class="page-header-content no-text">
-          <h2>Nova pauta</h2>
+        <div class="page-header-content has-icon no-text">
+					<div class="row">
+						<span class="page-icon">
+	              <span class="fa fa-group"></span>
+	            </span>
+	          <h2>Nova pauta</h2>
+					</div>
         </div>
       </div>
     </div>
   </header>
-	<div class="container">
-		<div class="row">
-		<form id="new_pauta" name="new_pauta" method="post">
-	  	<div class="eight columns">
-				<?php wp_nonce_field('delibera_nova_pauta'); ?>
+	<section class="page-content">
+		<div class="container">
+			<div class="row">
+			<form id="new_pauta" name="new_pauta" method="post">
+		  	<div class="eight columns offset-by-two">
+					<?php wp_nonce_field('delibera_nova_pauta'); ?>
 
-				<div class="row">
-					<div class="twelve columns">
-						<p>
-							<h4 for="nova-pauta-resumo"><?php _e( 'Título da pauta', 'delibera' ); ?></h4>
-							<input style="width: 100%" type="text" name="title" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>"/>
-						</p>
+					<div class="add-pauta-step" data-step="1">
+
+						<div class="pauta-item row">
+							<div class="twelve columns">
+								<h4 for="nova-pauta-resumo"><?php _e( 'Título da pauta', 'delibera' ); ?></h4>
+								<input style="width: 100%" type="text" name="title" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>"/>
+							</div>
+						</div>
+
+
+						<div class="pauta-item row">
+							<?php $temas = get_terms('tema', array('hide_empty' => false)); ?>
+							<h4><?php _e("Temas", 'pmc') ?>:</h4>
+								<?php foreach($temas as $tema): ?>
+									<label><input type="checkbox" name="tema[]" value="<?php echo $tema->term_id; ?>" /> <?php echo $tema->name ?></label>
+								<?php endforeach; ?>
+						</div>
+
+						<div class="pauta-item row">
+							<h4 for="nova-pauta-resumo"><?php _e( 'Resumo da pauta', 'delibera' ); ?></h4>
+							<textarea style="width: 100%" name="description" id="nova-pauta-resumo" placeholder="Digite o resumo da pauta aqui..."><?php echo htmlentities($resumo) ?></textarea>
+						</div>
+
+						<div class="pauta-item row">
+							<h4>Descrição detalhada</h4>
+							<?php wp_editor($conteudo, 'content'); ?>
+						</div>
 					</div>
-				</div>
+					<div class="add-pauta-step" data-step="2">
 
-				<div class="row">
-					<div class="six columns">
-						<p>
-							<label>File</label>
-							<input type="file" name="file" id="file"  multiple="false" />
-						</p>
+						<div class="row">
+							<div class="six columns">
+								<label>Adicionar anexo em PDF</label>
+								<input type="file" name="file" id="file"  multiple="false" />
+							</div>
+
+							<div class="six columns">
+									<p><label>Flow</label></p>
+									<div class="sort-container">
+				            <div class="sort-item">
+				            	<div class="input-group">
+				                <input type="hidden" class="sort-order-value" id="form-field-0-sort-order" name="flow[]" value="validacao">
+				               <input class="form-control" type="text" id="form-field-0" name="form-field[]" value="Validação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+				             </div>
+				            </div>
+
+				            <div class="sort-item">
+				            	<div class="input-group">
+				                <input type="hidden" class="sort-order-value" id="form-field-1-sort-order" name="flow[]" value="discussao">
+				               <input class="form-control" type="text" id="form-field-1" name="form-field[]" value="Discussão" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+				             </div>
+				            </div>
+
+				            <div class="sort-item">
+				            	<div class="input-group">
+				                <input type="hidden" class="sort-order-value" id="form-field-2-sort-order" name="flow[]" value="relatoria">
+				               <input class="form-control" type="text" id="form-field-2" name="form-field[]" value="Relatoria" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+				             </div>
+				            </div>
+
+				            <div class="sort-item">
+				            	<div class="input-group">
+				                <input type="hidden" class="sort-order-value" id="form-field-3-sort-order" name="flow[]" value="emvotacao">
+				               <input class="form-control" type="text" id="form-field-3" name="form-field[]" value="Em votação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+				             </div>
+				            </div>
+
+				            <div class="sort-item">
+				            	<div class="input-group">
+				                <input type="hidden" class="sort-order-value" id="form-field-4-sort-order" name="flow[]" value="comresolucao">
+				               <input class="form-control" type="text" id="form-field-4" name="form-field[]" value="Com resolução" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+				             </div>
+				            </div>
+				        	</div>
+							</div>
+						</div>
 					</div>
+					<div class="add-pauta-step" data-step="3">
+						<h3>Configurações</h3>
 
-					<div class="six columns">
-							<p><label>Flow</label></p>
-							<div class="sort-container">
-		            <div class="sort-item">
-		            	<div class="input-group">
-		                <input type="hidden" class="sort-order-value" id="form-field-0-sort-order" name="flow[]" value="validacao">
-		               <input class="form-control" type="text" id="form-field-0" name="form-field[]" value="Validação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
-		             </div>
-		            </div>
+						<div class="pauta-item">
+							<h4>Proposta de Pauta</h4>
+							<label>Prazo para validação</label>
+							<input type="date" name="deadline_validation">
+							<label>Mínimo de Validações:</label>
+							<input type="text" name="min_validations">
 
-		            <div class="sort-item">
-		            	<div class="input-group">
-		                <input type="hidden" class="sort-order-value" id="form-field-1-sort-order" name="flow[]" value="discussao">
-		               <input class="form-control" type="text" id="form-field-1" name="form-field[]" value="Discussão" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
-		             </div>
-		            </div>
+							<label>
+								 <input value="S" name="show_reject" type="checkbox"> Mostrar opção para rejeitar Pauta
+							</label>
 
-		            <div class="sort-item">
-		            	<div class="input-group">
-		                <input type="hidden" class="sort-order-value" id="form-field-2-sort-order" name="flow[]" value="relatoria">
-		               <input class="form-control" type="text" id="form-field-2" name="form-field[]" value="Relatoria" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
-		             </div>
-		            </div>
+							<label>
+								 <input value="S" name="show_abstention" type="checkbox"> Mostrar opção para absteção sobre a Pauta
+							</label>
 
-		            <div class="sort-item">
-		            	<div class="input-group">
-		                <input type="hidden" class="sort-order-value" id="form-field-3-sort-order" name="flow[]" value="emvotacao">
-		               <input class="form-control" type="text" id="form-field-3" name="form-field[]" value="Em votação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
-		             </div>
-		            </div>
+							<label>
+								 <input value="S" name="show_comment" type="checkbox"> Mostrar campo para comentário durante a validação
+							</label>
+						</div>
 
-		            <div class="sort-item">
-		            	<div class="input-group">
-		                <input type="hidden" class="sort-order-value" id="form-field-4-sort-order" name="flow[]" value="comresolucao">
-		               <input class="form-control" type="text" id="form-field-4" name="form-field[]" value="Com resolução" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
-		             </div>
-		            </div>
-		        	</div>
+						<div class="pauta-item">
+							<h4>Pauta em discussão</h4>
+							<label>Prazo para Discussões</label>
+							<input type="date" name="deadline_discussion">
+
+							<label>Tipo da discussão</label>
+
+							<select name="discussion_type">
+								<option value="forum">Formato de fórum</option>
+								<option value="side">Por parágrafo</option>
+							</select>
+
+							<label>
+								 <input value="S" name="enable_any_comment" type="checkbox"> Permitir comentários gerais?
+							</label>
+						</div>
+
+						<div class="pauta-item">
+							<h4>Relatoria</h4>
+							<label>Prazo para relatoria</label>
+							<input type="date" name="deadline_report">
+						</div>
+
+						<div class="pauta-item">
+							<h4>Regime de Votação</h4>
+							<label>Prazo para votações</label>
+							<input type="date" name="deadline_voting">
+						</div>
+
+						<input type="radio" name="votation_type" value="checkbox"> Multipla escolha<br>
+						<input type="radio" name="votation_type" value="radio"> Opção única<br>
+						<input type="radio" name="votation_type" value="pairwise"> Pairwise
+						<label>
+							 <input value="S" name="show_based_proposals" type="checkbox"> Votar em propostas que tiveram outras propostas derivadas?
+						</label>
 					</div>
-				</div>
-
-				<p>
-					<h4 for="nova-pauta-resumo"><?php _e( 'Resumo da pauta', 'delibera' ); ?></h4>
-					<textarea style="width: 100%" name="description" id="nova-pauta-resumo"><?php echo htmlentities($resumo) ?></textarea>
-				</p>
-
-
-				<p>
-					<?php wp_editor($conteudo, 'content'); ?>
-				</p>
-			</div>
-		  <div class="three columns offset-by-one">
-		    <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-
-		    	<h3>Configurações</h3>
-
-					<div class="pauta-config-item">
-						<?php $temas = get_terms('tema', array('hide_empty' => false)); ?>
-						<h4><?php _e("Temas", 'pmc') ?>:</h4>
-							<?php foreach($temas as $tema): ?>
-								<label><input type="checkbox" name="tema[]" value="<?php echo $tema->term_id; ?>" /> <?php echo $tema->name ?></label>
-							<?php endforeach; ?>
-					</div>
-					<div class="pauta-config-item">
-						<h4>Proposta de Pauta</h4>
-						<label>Prazo para validação</label>
-						<input type="date" name="deadline_validation">
-						<label>Mínimo de Validações:</label>
-						<input type="text" name="min_validations">
-
-					  <label>
-					     <input value="S" name="show_reject" type="checkbox"> Mostrar opção para rejeitar Pauta
-					  </label>
-
-					  <label>
-					     <input value="S" name="show_abstention" type="checkbox"> Mostrar opção para absteção sobre a Pauta
-					  </label>
-
-					  <label>
-					     <input value="S" name="show_comment" type="checkbox"> Mostrar campo para comentário durante a validação
-					  </label>
-					</div>
-					<div class="pauta-config-item">
-						<h4>Pauta em discussão</h4>
-						<label>Prazo para Discussões</label>
-						<input type="date" name="deadline_discussion">
-
-						<label>Tipo da discussão</label>
-
-						<select name="discussion_type">
-							<option value="forum">Formato de fórum</option>
-							<option value="side">Por parágrafo</option>
-						</select>
-
-					  <label>
-					     <input value="S" name="enable_any_comment" type="checkbox"> Permitir comentários gerais?
-					  </label>
-					</div>
-					<div class="pauta-config-item">
-						<h4>Relatoria</h4>
-						<label>Prazo para relatoria</label>
-						<input type="date" name="deadline_report">
-					</div>
-
-					<div class="pauta-config-item">
-						<h4>Regime de Votação</h4>
-						<label>Prazo para votações</label>
-						<input type="date" name="deadline_voting">
-					</div>
-					<input type="radio" name="votation_type" value="checkbox"> Multipla escolha<br>
-				  <input type="radio" name="votation_type" value="radio"> Opção única<br>
-				  <input type="radio" name="votation_type" value="pairwise"> Pairwise
-				  <label>
-				     <input value="S" name="show_based_proposals" type="checkbox"> Votar em propostas que tiveram outras propostas derivadas?
-				  </label>
-
-				  <hr>
-
 					<input type="hidden" name="submitted" id="submitted" value="true" />
-					<input type="submit" value="<?php _e( 'Criar pauta', 'delibera' ); ?>"/>
-		    </div>
-		  </div>
-	  </form>
+					<div class="add-pauta-buttons row">
+						<a class="button add-pauta-prev" href="#">Etapa anterior</a>
+						<a class="button add-pauta-next" href="#">Próxima etapa</a>
+						<input class="button primary add-pauta-create" type="submit" value="<?php _e( 'Criar pauta', 'delibera' ); ?>"/>
+					</div>
+				</div>
+		  </form>
+			</div>
 		</div>
-	</div>
+	</section>
 </div>
 
 <?php get_footer(); ?>
