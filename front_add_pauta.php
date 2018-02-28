@@ -121,10 +121,19 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 						<div class="pauta-item row">
 							<div class="twelve columns">
-								<h4 for="nova-pauta-resumo"><?php _e( 'Título da pauta', 'delibera' ); ?></h4>
+								<h4 for="nova-pauta-resumo"><label for="nova-pauta-titulo"><?php _e( 'Título da pauta', 'delibera' ); ?></label></h4>
 								<input style="width: 100%" type="text" name="title" id="nova-pauta-titulo" value="<?php echo htmlentities($titulo) ?>" placeholder="<?php _e( 'Digite o título da pauta aqui', 'delibera' ); ?>"/>
 							</div>
 						</div>
+
+						<div class="pauta-item row">
+							<h4 for="nova-pauta-resumo"><label for="nova-pauta-resumo"><?php _e( 'Resumo da pauta', 'delibera' ); ?></label></h4>
+							<textarea style="width: 100%;height: 150px;" name="description" id="nova-pauta-resumo" placeholder="Digite o resumo da pauta aqui..."><?php echo htmlentities($resumo) ?></textarea>
+						</div>
+
+					</div>
+
+					<div class="add-pauta-step" data-step="2">
 
 
 						<div class="pauta-item row">
@@ -133,11 +142,6 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 								<?php foreach($temas as $tema): ?>
 									<label><input type="checkbox" name="tema[]" value="<?php echo $tema->term_id; ?>" /> <?php echo $tema->name ?></label>
 								<?php endforeach; ?>
-						</div>
-
-						<div class="pauta-item row">
-							<h4 for="nova-pauta-resumo"><?php _e( 'Resumo da pauta', 'delibera' ); ?></h4>
-							<textarea style="width: 100%" name="description" id="nova-pauta-resumo" placeholder="Digite o resumo da pauta aqui..."><?php echo htmlentities($resumo) ?></textarea>
 						</div>
 
 						<div class="pauta-item row">
@@ -195,9 +199,7 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 							</div>
 						</div>
 					</div>
-					*/
-					?>
-					<div class="add-pauta-step" data-step="2">
+					<div class="add-pauta-step" data-step="3">
 						<h3>Configurações</h3>
 
 						<div class="pauta-item">
@@ -266,6 +268,8 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 						</div>
 
 					</div>
+					*/
+					?>
 					<input type="hidden" name="submitted" id="submitted" value="true" />
 					<div class="add-pauta-buttons row">
 						<a class="button add-pauta-prev" href="#">Etapa anterior</a>
