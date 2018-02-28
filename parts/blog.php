@@ -64,10 +64,10 @@
           </p>
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            <?php echo the_date(); ?>
+            <?php echo the_time( get_option( 'date_format' ) ); ?>
           </p>
         </div>
-        <?php echo the_content(); ?>
+        <?php echo the_excerpt(); ?>
       </article>
       <hr class="dark" />
     <?php endwhile; ?>
