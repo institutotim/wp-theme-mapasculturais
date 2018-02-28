@@ -60,6 +60,11 @@
 @beige: #DBD4B1;
 @yellow: #ffed7c;
 
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -1138,7 +1143,8 @@ p.post-meta .fa {
     }
   }
 }
-#content {
+#content,
+.page-content {
   padding: 4rem 0;
   min-height: 500px;
   color: #333;
@@ -1929,7 +1935,8 @@ p.post-meta .fa {
 .author,
 .page-template-default,
 .page-template-fullwidth {
-  #content {
+  #content,
+  .page-content {
     font-size: 1.2em;
     padding: 6rem 0;
     // .sidebar {
@@ -2213,4 +2220,24 @@ p.post-meta .fa {
 }
 .leaflet-popup-content {
   margin: 1rem;
+}
+
+/* Add pauta form */
+
+#add-pauta {
+  .pauta-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+  .add-pauta-buttons {
+    margin-top: 4rem;
+    .add-pauta-prev {
+      float: left;
+    }
+    .add-pauta-next,
+    .add-pauta-create {
+      float:right;
+    }
+  }
 }

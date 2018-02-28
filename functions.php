@@ -185,6 +185,7 @@ function pmc_header_scripts() {
   wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.2');
   wp_register_script('map', get_template_directory_uri() . '/js/map.js', array('jquery', 'leaflet'), '0.0.2');
   wp_register_script('github', get_template_directory_uri() . '/js/github.js', array('jquery', 'highcharts', 'highcharts-more', 'moment'), '0.0.2');
+  wp_register_script('add-pauta', get_template_directory_uri() . '/js/add-pauta.js', array('jquery', 'moment'), '0.0.2');
 
   if (is_page_template( 'front_add_pauta.php')){
     wp_enqueue_style('bootstrap');
@@ -192,6 +193,7 @@ function pmc_header_scripts() {
     wp_enqueue_style('jquery-ui');
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('jquery-ui');
+    wp_enqueue_script('add-pauta');
   }
 
   wp_enqueue_style('main');
