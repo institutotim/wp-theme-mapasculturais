@@ -67,6 +67,10 @@ hr.dark,
 .container {
   max-width: 1280px;
 }
+.container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
 .button,
 button,
 input[type=button],
@@ -804,8 +808,9 @@ p.post-meta .fa {
   font-family: 'Tim Sans';
   color: #fff;
   position: relative;
-  padding-bottom: 0;
   z-index: 1000;
+  margin: 0;
+  padding-bottom: 0;
 }
 .page-header a {
   font-weight: 800;

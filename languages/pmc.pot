@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:08+0000\n"
+"POT-Creation-Date: 2018-02-28 17:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,64 +92,28 @@ msgstr ""
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr ""
 
-#: front_add_pauta.php:102
+#: front_add_pauta.php:117
 msgid "Título da pauta"
 msgstr ""
 
-#: front_add_pauta.php:103
+#: front_add_pauta.php:118
 msgid "Digite o título da pauta aqui"
 msgstr ""
 
-#: front_add_pauta.php:158
+#: front_add_pauta.php:173
 msgid "Resumo da pauta"
 msgstr ""
 
-#: front_add_pauta.php:174
+#: front_add_pauta.php:189
 msgid "Temas"
 msgstr ""
 
-#: front_add_pauta.php:246
+#: front_add_pauta.php:250
 msgid "Criar pauta"
 msgstr ""
 
-#: functions.php:83
+#: functions.php:84
 msgid "Instance"
-msgstr ""
-
-#: functions.php:311
-msgid "Settings Page"
-msgstr ""
-
-#: functions.php:312
-msgid "Add the button's link:"
-msgstr ""
-
-#: functions.php:317
-msgid "URL for Mapas Culturais repository at Github"
-msgstr ""
-
-#: functions.php:321
-msgid "User Manual URL"
-msgstr ""
-
-#: functions.php:325
-msgid "Rocket Chat URL"
-msgstr ""
-
-#: functions.php:330
-msgid "Delibera home URL"
-msgstr ""
-
-#: functions.php:335
-msgid "\"Know More\" URL"
-msgstr ""
-
-#: functions.php:339
-msgid "Save"
-msgstr ""
-
-#: functions.php:347
-msgid "Mapas Theme"
 msgstr ""
 
 #: inc/404.php:11
