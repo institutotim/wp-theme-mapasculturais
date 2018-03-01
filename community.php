@@ -185,6 +185,37 @@
             endif;
             ?>
           </section>
+          <?php
+          $voting_query = new WP_Query(array(
+            'post_type' => 'pauta',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'situacao',
+                'field' => 'slug',
+                'terms' => 'emvotacao'
+              )
+            )
+          ));
+          if($voting_query->have_posts()) :
+            ?>
+            <hr class="dark" />
+            <section class="content-section">
+              <header class="content-section-header">
+                <h3>Pautas em votação</h3>
+                <p class="section-description">Vote nas pautas que já estão na reta final!</p>
+              </header>
+              <?php
+              while($voting_query->have_posts()) :
+                $voting_query->the_post();
+                ?>
+                <?php get_template_part('parts/topic-item'); ?>
+                <?php
+                wp_reset_postdata();
+              endwhile;
+              ?>
+            </section>
+            <?php
+          endif; ?>
         </div>
         <hr class="dark" />
         <div class="row">

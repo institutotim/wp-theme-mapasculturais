@@ -24,9 +24,10 @@
           </span>
 					<p class="over-title">
 						<a href="<?php echo home_url("/comunidade"); ?>" class="area">Comunidade</a>
+            <span class="fa fa-chevron-right"></span>
+            <a href="<?php echo get_post_type_archive_link("pauta"); ?>" class="area">Pautas</a>
 					</p>
-          <h2><?php _e('Pautas', 'pmc');?></h2>
-          <p class="page-description"><?php _e('Veja as pautas abertas sobre o mapas culturais', 'pmc') ?></p>
+          <h2><?php single_term_title(); ?></h2>
         </div>
       </div>
     </div>

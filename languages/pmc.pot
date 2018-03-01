@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 00:58-0300\n"
+"POT-Creation-Date: 2018-03-01 02:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: archive-pauta.php:28 taxonomy-tema.php:28
+#: archive-pauta.php:28
 msgid "Pautas"
 msgstr ""
 
-#: archive-pauta.php:29 taxonomy-tema.php:29
-msgid "Veja as pautas abertas sobre o mapas culturais"
+#: archive-pauta.php:29
+msgid "Acompanhe o debate sobre a plataforma."
 msgstr ""
 
 #: archive-pmc_timeline_item.php:10
@@ -574,11 +574,11 @@ msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: single-pauta.php:96
+#: single-pauta.php:97
 msgid "Prazo encerrado"
 msgstr ""
 
-#: single-pauta.php:98
+#: single-pauta.php:99
 #, php-format
 msgid "Pauta aberta por mais 1 dia"
 msgid_plural "Pauta aberta por mais %1$s dias"

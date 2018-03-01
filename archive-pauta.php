@@ -26,7 +26,7 @@
 						<a href="<?php echo home_url("/comunidade"); ?>" class="area">Comunidade</a>
 					</p>
           <h2><?php _e('Pautas', 'pmc');?></h2>
-          <p class="page-description"><?php _e('Veja as pautas abertas sobre o mapas culturais', 'pmc') ?></p>
+          <p class="page-description"><?php _e('Acompanhe o debate sobre a plataforma.', 'pmc') ?></p>
         </div>
       </div>
     </div>
