@@ -125,7 +125,6 @@
       <div class="four columns">
         <div class="community-intro connect-border connect-left parent-height" data-parent=".container">
           <h2>Discussões</h2>
-          <p><?php echo get_option('delibera') ?></p>
           <div class="featured-categories">
             <ul>
             <?php
