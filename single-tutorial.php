@@ -14,15 +14,13 @@
             <span class="fa fa-bookmark-o"></span>
           </span>
           <p class="over-title category">
-            <a href="<?php echo get_post_type_archive_link( 'tutorial' ); ?>" class="area">Tutoriais</a>
-            <span class="fa fa-chevron-right"></span>
-            <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
-              if ( $terms && !is_wp_error( $terms ) ) : 
-                foreach ( $terms as $term ) { ?>
-                  <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
-                    <?php echo $term->name; ?>
-                  </a>
-          <?php } ?>
+            <a href="<?php echo get_post_type_archive_link( 'tutorial' ); ?>" class="area">TUTORIAIS</a>            
+            <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );      
+              if ( $terms && !is_wp_error( $terms ) ) : ?>
+                <span class="fa fa-chevron-right"></span>
+                <a href="<?php echo get_term_link($terms[0]->term_id); ?>" class="category">
+                  <?php echo $terms[0]->name; ?>
+                </a>
         <?php endif; ?>
           </p>
           <h2>
