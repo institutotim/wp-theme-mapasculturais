@@ -6,7 +6,7 @@
     $args = array(
       'post_type' => 'tutorial',
        'paged' => $paged,
-       'meta_key' => 'tutorial_group_target', 
+       'meta_key' => 'tutorial_group_target',
        'meta_value' => esc_html($target_group)
     );
 
@@ -27,8 +27,8 @@
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <article class="tutorial-item row">
       <div class="tutorial-meta">
-        <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );      
-          if ( $terms && !is_wp_error( $terms ) ) : 
+        <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );
+          if ( $terms && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) { ?>
               <a class="post-tag category" href="<?php echo get_term_link($term->term_id); ?>">
                 <span class="fa fa-bookmark-o"></span>
@@ -51,12 +51,16 @@
         </p>
       </div>
       <div class="tutorial-content">
-        <a class="tutorials-title" href="<?php echo get_permalink();?>">
           <div class="featured-image">
-            <?php echo get_the_post_thumbnail(); ?>
+            <a href="<?php echo get_permalink();?>">
+              <?php echo get_the_post_thumbnail(); ?>
+            </a>
           </div>
-          <h3><?php the_title(); ?></h3>
-        </a>
+          <h3>
+            <a href="<?php echo get_permalink();?>">
+              <?php the_title(); ?>
+            <a>
+          </h3>
         <?php the_excerpt(); ?>
       </div>
     </article>
@@ -80,12 +84,12 @@
           'after_page_number' => '-->'
       );
 
-      if ( $wp_rewrite->using_permalinks() ) 
+      if ( $wp_rewrite->using_permalinks() )
         $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
 
-      if ( !empty($query->query_vars['s']) ) 
+      if ( !empty($query->query_vars['s']) )
         $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-        
+
       echo paginate_links( $pagination );
     ?>
   </nav>
