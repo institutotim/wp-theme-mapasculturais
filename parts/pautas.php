@@ -1,28 +1,9 @@
 <div class="content-section">
   <div class="content-section-content">
-    <?php
 
-      $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
-      $args = array(
-        'post_type' => 'pauta', 
-        's' => esc_html( get_search_query( false ) ),
-        'paged' => $page
-      );
+    <?php if ( have_posts() ) : ?>
 
-
-      if (get_search_query( false )) {
-        $args['s'] = esc_html( get_search_query( false ) );
-        $args['posts_per_page'] = -1;
-      } else {
-        $args['posts_per_page'] = 5;
-      }
-
-      $query = new WP_Query( $args );
-    ?>
-    
-    <?php if ( $query->have_posts() ) : ?>
-
-    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
       <article class="post">
         <a href="<?php echo get_permalink();?>">
           <div class="featured-image">
@@ -73,12 +54,12 @@
           'after_page_number' => '-->'
       );
 
-      if ( $wp_rewrite->using_permalinks() ) 
+      if ( $wp_rewrite->using_permalinks() )
         $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
 
-      if ( !empty($query->query_vars['s']) ) 
+      if ( !empty($query->query_vars['s']) )
         $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-        
+
       echo paginate_links( $pagination );
     ?>
     </nav>
@@ -87,6 +68,6 @@
 
     <?php else : ?>
       <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'pmc' ); ?></p>
-    <?php endif; ?> 
+    <?php endif; ?>
   </div>
 </div>

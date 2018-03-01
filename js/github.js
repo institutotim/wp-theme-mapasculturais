@@ -32,8 +32,6 @@
         'chart_data': []
       };
 
-      console.log(ghData);
-
       ghData.forEach(function(week) {
         data.commit_count += week.total;
         data.chart_data.push([
@@ -43,8 +41,6 @@
       });
 
       $chart = $('.gh-chart');
-
-      console.log($chart.length);
 
       if($chart.length) {
         $chart.highcharts({
@@ -197,6 +193,6 @@
           });
         }
       }
-    }  
+    }
   });
 })(jQuery);

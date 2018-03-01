@@ -31,40 +31,40 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 	// metas
 
-	$pauta['meta_input'] = array();
-
-	$deadline_validation = date("d/m/Y", strtotime($_POST['deadline_validation']));
-	$deadline_discussion = date("d/m/Y", strtotime($_POST['deadline_discussion']));
-	$deadline_report = date("d/m/Y", strtotime($_POST['deadline_report']));
-	$deadline_voting = date("d/m/Y", strtotime($_POST['deadline_voting']));
-
-	$pauta['meta_input']['prazo_validacao'] = $deadline_validation;
-	$pauta['meta_input']['prazo_discussao'] = $deadline_discussion;
-	$pauta['meta_input']['prazo_relatoria'] = $deadline_report;
-	$pauta['meta_input']['prazo_votacao'] = $deadline_voting;
-
-
-	$pauta['meta_input']['tipo_votacao'] = $_POST['votation_type'];
-
-	$pauta['meta_input']['discussion_type'] = $_POST['discussion_type'];
-
-	$pauta['meta_input']['delibera_flow'] = $_POST['flow'];
-
-	if (intval($_POST['min_validations']) != 0){
-		$pauta['meta_input']['min_validacoes'] = intval($_POST['min_validations']);
-	} else {
-		// add error "Valor não pode ser zero ou caracteres, deve ser um valor numerico."
-	}
-
-	$pauta['meta_input']['delibera_validation_show_rejeitar'] = $_POST['show_reject'] == "S"? "S": "N";
-
-	$pauta['meta_input']['delibera_validation_show_abstencao'] = $_POST['show_abstention'] == "S"? "S": "N";
-
-	$pauta['meta_input']['delibera_validation_show_comment'] = $_POST['show_comment'] == "S"? "S": "N";
-
-	$pauta['meta_input']['delibera_show_default_comment_form'] = $_POST['enable_any_comment'] == "S"? "S": "N";
-
-	$pauta['meta_input']['show_based_proposals'] = $_POST['show_based_proposals'] == "S"? "S": "N";
+	// $pauta['meta_input'] = array();
+	//
+	// $deadline_validation = date("d/m/Y", strtotime($_POST['deadline_validation']));
+	// $deadline_discussion = date("d/m/Y", strtotime($_POST['deadline_discussion']));
+	// $deadline_report = date("d/m/Y", strtotime($_POST['deadline_report']));
+	// $deadline_voting = date("d/m/Y", strtotime($_POST['deadline_voting']));
+	//
+	// $pauta['meta_input']['prazo_validacao'] = $deadline_validation;
+	// $pauta['meta_input']['prazo_discussao'] = $deadline_discussion;
+	// $pauta['meta_input']['prazo_relatoria'] = $deadline_report;
+	// $pauta['meta_input']['prazo_votacao'] = $deadline_voting;
+	//
+	//
+	// $pauta['meta_input']['tipo_votacao'] = $_POST['votation_type'];
+	//
+	// $pauta['meta_input']['discussion_type'] = $_POST['discussion_type'];
+	//
+	// $pauta['meta_input']['delibera_flow'] = $_POST['flow'];
+	//
+	// if (intval($_POST['min_validations']) != 0){
+	// 	$pauta['meta_input']['min_validacoes'] = intval($_POST['min_validations']);
+	// } else {
+	// 	// add error "Valor não pode ser zero ou caracteres, deve ser um valor numerico."
+	// }
+	//
+	// $pauta['meta_input']['delibera_validation_show_rejeitar'] = $_POST['show_reject'] == "S"? "S": "N";
+	//
+	// $pauta['meta_input']['delibera_validation_show_abstencao'] = $_POST['show_abstention'] == "S"? "S": "N";
+	//
+	// $pauta['meta_input']['delibera_validation_show_comment'] = $_POST['show_comment'] == "S"? "S": "N";
+	//
+	// $pauta['meta_input']['delibera_show_default_comment_form'] = $_POST['enable_any_comment'] == "S"? "S": "N";
+	//
+	// $pauta['meta_input']['show_based_proposals'] = $_POST['show_based_proposals'] == "S"? "S": "N";
 
 
 	//$pauta['meta_input']['prazo_eleicao_relator'] = ... (parece que não é algo necessário, parece que é baseado na ultima data de)
@@ -99,13 +99,15 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
     </div>
     <div class="container">
       <div class="eight columns">
-        <div class="page-header-content has-icon no-text">
-					<div class="row">
-						<span class="page-icon">
-	              <span class="fa fa-group"></span>
-	            </span>
-	          <h2>Nova pauta</h2>
-					</div>
+        <div class="page-header-content has-icon no-text row">
+					<span class="page-icon">
+            <span class="fa fa-group"></span>
+          </span>
+					<p class="over-title">
+						<a href="<?php echo home_url("/comunidade"); ?>" class="area">Comunidade</a>
+					</p>
+          <h2>Nova pauta</h2>
+					<p class="page-description">Participe do debate do Mapas Culturais</p>
         </div>
       </div>
     </div>

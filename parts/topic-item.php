@@ -17,7 +17,7 @@ $status_pauta = delibera_get_situacao($post->ID)->slug;
     <?php
   endif;
   ?>
-  <h4><?php the_title(); ?></h4>
+  <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
   <div class="topic-meta row">
     <div class="topic-vote">
       <?php
