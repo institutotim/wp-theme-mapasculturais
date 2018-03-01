@@ -13,17 +13,17 @@
             <span class="fa fa-bookmark-o"></span>
           </span>
           <h2>
-            Tutoriais
+            <a href="<?php echo get_post_type_archive_link("tutorial"); ?>">Tutoriais</a>
           </h2>
           <h3 class="complete">
-            <?php 
+            <?php
               $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
               if($target_group == 2){
                 echo '<span class="fa fa-gear"></span>para agentes';
               }
               else if ($target_group == 1){
                 echo '<span class="fa fa-gear"></span>para gestores';
-              } 
+              }
               else { ?>
                 <span class="fa fa-gear"></span>
                 <select  onchange="if (this.value) window.location.href=this.value">
