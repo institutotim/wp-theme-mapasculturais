@@ -25,11 +25,11 @@
         <h4><?php echo esc_html($author->user_nicename); ?></h4>
       </div>
       <div class="network-post-content">
-        <a href="<?php echo get_permalink();?>"><h3><?php the_title() ?></h3></a>
+        <h3><a href="<?php echo get_permalink();?>"><?php the_title() ?></a></h3>
         <div class="meta">
           <p class="date">
             <span class="fa fa-clock-o"></span>
-            <?php echo get_the_date(); ?> 
+            <?php echo get_the_date(); ?>
           </p>
           <p class="comments">
             <a href="<?php comments_link(); ?>">
