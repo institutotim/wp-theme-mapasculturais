@@ -60,7 +60,7 @@
           </p>
           <p class="complex">
             <span class="fa fa-certificate"></span>
-            <?php echo __('difficulty', 'pmc') . " " . get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
+            <?php echo __('difficulty:', 'pmc') . " " . get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
           </p>
           <p class="valid">
             <span class="fa fa-check-circle"></span>
