@@ -34,7 +34,7 @@
           <p class="comments">
             <a href="<?php comments_link(); ?>">
               <span class="fa fa-comments-o"></span>
-              <?php comments_number( __('no comments', 'pmc'), __('one comment', 'pmc'), __('% comments', 'pmc') ); ?>.
+              <?php comments_number( __('no comments', 'pmc'), __('one comment', 'pmc'), __('% comments', 'pmc') ); ?>
             </a>
           </p>
         </div>
