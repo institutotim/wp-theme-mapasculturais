@@ -1,8 +1,5 @@
 <?php
 
-ob_clean();
-ob_start();
-
 /**
  * Init plugins
  */
