@@ -126,23 +126,26 @@ Number.prototype.format = function(n, x) {
 
   // drag and drop add pauta
   document.addEventListener("DOMContentLoaded", function(event) {
-    $('.sort-container').sortable({
+    var node = $(".sort-container");
+    if(node.length) {
+      node.sortable({
         placeholder: "ui-state-highlight",
         handle: ".dragdrop-handle",
         opacity: 0.5,
         cursor: "move",
         update: function (event, ui) {
-            $('.sort-order-value').each(function (index, element) {
-                if (0 == index) {
-                    $(element).parent().find('.delete-handle').hide();
-                } else {
-                    $(element).parent().find('.delete-handle').show();
-                }
-                $(element).val(element.value);
-            });
+          $('.sort-order-value').each(function (index, element) {
+            if (0 == index) {
+              $(element).parent().find('.delete-handle').hide();
+            } else {
+              $(element).parent().find('.delete-handle').show();
+            }
+            $(element).val(element.value);
+          });
         }
-    });
-    $('.sort-container').disableSelection();
+      });
+      $('.sort-container').disableSelection();
+    }
   });
 
 })(jQuery);

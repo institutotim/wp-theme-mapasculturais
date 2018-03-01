@@ -217,6 +217,11 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
   float: right;
   margin: 0 -5% 4rem 4rem;
 }
+.small {
+  font-size: .8em;
+  color: #999;
+  margin-left: .5rem;
+}
 
 @media (min-width: 550px) {
   .container {
@@ -2049,6 +2054,14 @@ p.post-meta .fa {
         margin: 0;
       }
     }
+    .button,
+    a.button {
+      background: #fff;
+      color: #333;
+    }
+    .new {
+      margin-top: 4rem;
+    }
   }
   .community-session {
     background: #f7f7f7;
@@ -2115,6 +2128,9 @@ p.post-meta .fa {
     .fa {
       color: inherit;
     }
+  }
+  a {
+    text-decoration: none;
   }
 }
 
@@ -2249,6 +2265,10 @@ p.post-meta .fa {
 }
 
 #add-pauta {
+  input[type="text"],
+  textarea {
+    padding: 2rem;
+  }
   .pauta-item {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
@@ -2268,5 +2288,49 @@ p.post-meta .fa {
     .add-pauta-create {
       float:right;
     }
+  }
+}
+
+/*
+ * Single pauta
+ */
+
+body.single-pauta .pauta {
+  .pauta-content {
+    padding: 0;
+  }
+  .banner-ciclo {
+    background: #f7f7f7;
+    padding: 2rem 0;
+    margin: 0 0 4rem;
+    h3 {
+      font-size: 1em;
+      text-transform: uppercase;
+      margin: 1rem 0;
+    }
+    .ciclos {
+      margin: 0;
+      li {
+        font-size: 1em;
+        line-height: 1.2;
+      }
+    }
+  }
+  #meta {
+    p {
+      margin-bottom: 1rem;
+    }
+    .author {
+      line-height: 30px;
+      img {
+        width: 30px;
+      }
+    }
+  }
+  .pauta-actions {
+    background: #f7f7f7;
+    padding: 2rem;
+    text-align: center;
+
   }
 }

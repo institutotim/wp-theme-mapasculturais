@@ -31,7 +31,7 @@
                 </ul>
               </div>
             </div>
-            <?php 
+            <?php
 
               if ( false === ( $request_contributors = get_transient( 'request_contributors' ) ) ) {
                    $request_contributors = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/stats/contributors'));
@@ -53,7 +53,7 @@
               }
 
               if( is_wp_error( $request_latest_commit ) ) {
-                return false; 
+                return false;
               }
               $body_latest_commit = wp_remote_retrieve_body( $request_latest_commit );
               $data_latest_commit = json_decode( $body_latest_commit );
@@ -127,9 +127,8 @@
           <h2>Discussões</h2>
           <p><?php echo get_option('delibera') ?></p>
           <div class="featured-categories">
-
             <ul>
-            <?php 
+            <?php
               $terms = get_terms( 'tema');
                 if ( $terms && !is_wp_error( $terms ) ) :
                   foreach ( $terms as $term ) { ?>
@@ -140,6 +139,9 @@
               <?php endif; ?>
             </ul>
           </div>
+          <?php if(is_user_logged_in()) : ?>
+            <p class="new"><a class="button block" href="<?php echo home_url("/adicionar-pauta"); ?>">Criar nova pauta</a></p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="eight columns">

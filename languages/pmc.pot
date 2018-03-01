@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 19:52-0300\n"
+"POT-Creation-Date: 2018-03-01 00:28-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: archive-pauta.php:25
+#: archive-pauta.php:28 taxonomy-tema.php:28
 msgid "Pautas"
 msgstr ""
 
-#: archive-pauta.php:26
+#: archive-pauta.php:29 taxonomy-tema.php:29
 msgid "Veja as pautas abertas sobre o mapas culturais"
 msgstr ""
 
@@ -92,15 +92,15 @@ msgstr ""
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:10 front_add_pauta.php:124
+#: delibera/form-nova-pauta.php:10 front_add_pauta.php:126
 msgid "Título da pauta"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:11 front_add_pauta.php:125
+#: delibera/form-nova-pauta.php:11 front_add_pauta.php:127
 msgid "Digite o título da pauta aqui"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:17 front_add_pauta.php:139
+#: delibera/form-nova-pauta.php:17 front_add_pauta.php:132
 msgid "Resumo da pauta"
 msgstr ""
 
@@ -143,12 +143,81 @@ msgstr ""
 #. </div>
 #. </div>
 #. </div>
+#. <div class="add-pauta-step" data-step="3">
+#. <h3>Configurações</h3>
 #.
-#: delibera/form-nova-pauta.php:30 front_add_pauta.php:273
+#. <div class="pauta-item">
+#. <h4>Proposta de Pauta</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para validação</label>
+#. <input type="date" name="deadline_validation">
+#. <label>Mínimo de Validações:</label>
+#. <input type="text" name="min_validations">
+#.
+#. <label>
+#. <input value="S" name="show_reject" type="checkbox"> Mostrar opção para rejeitar Pauta
+#. </label>
+#.
+#. <label>
+#. <input value="S" name="show_abstention" type="checkbox"> Mostrar opção para absteção sobre a Pauta
+#. </label>
+#.
+#. <label>
+#. <input value="S" name="show_comment" type="checkbox"> Mostrar campo para comentário durante a validação
+#. </label>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Pauta em discussão</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para Discussões</label>
+#. <input type="date" name="deadline_discussion">
+#.
+#. <label>Tipo da discussão</label>
+#.
+#. <select name="discussion_type">
+#. <option value="forum">Formato de fórum</option>
+#. <option value="side">Por parágrafo</option>
+#. </select>
+#.
+#. <label>
+#. <input value="S" name="enable_any_comment" type="checkbox"> Permitir comentários gerais?
+#. </label>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Regime de Votação</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para votações</label>
+#. <input type="date" name="deadline_voting">
+#. <div class="row">
+#. <label><input type="radio" name="votation_type" value="checkbox"> Multipla escolha</label>
+#. <label><input type="radio" name="votation_type" value="radio"> Opção única</label>
+#. <label><input type="radio" name="votation_type" value="pairwise"> Pairwise</label>
+#. <label>
+#. <input value="S" name="show_based_proposals" type="checkbox"> Votar em propostas que tiveram outras propostas derivadas?
+#. </label>
+#. </div>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Relatoria</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para relatoria</label>
+#. <input type="date" name="deadline_report">
+#. </div>
+#. </div>
+#.
+#. </div>
+#.
+#: delibera/form-nova-pauta.php:30 front_add_pauta.php:279
 msgid "Criar pauta"
 msgstr ""
 
-#: front_add_pauta.php:132
+#: front_add_pauta.php:143
 msgid "Temas"
 msgstr ""
 
@@ -473,11 +542,11 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: parts/blog.php:85 parts/pautas.php:69 parts/tutorials.php:76
+#: parts/blog.php:85 parts/pautas.php:50 parts/tutorials.php:76
 msgid "« Previous"
 msgstr ""
 
-#: parts/blog.php:86 parts/pautas.php:70 parts/tutorials.php:77
+#: parts/blog.php:86 parts/pautas.php:51 parts/tutorials.php:77
 msgid "Next »"
 msgstr ""
 
@@ -494,11 +563,11 @@ msgstr ""
 msgid "% comments"
 msgstr ""
 
-#: parts/pautas.php:47 single-pauta.php:108
+#: parts/pautas.php:28 single-pauta.php:96
 msgid "Prazo encerrado"
 msgstr ""
 
-#: parts/pautas.php:49 single-pauta.php:110
+#: parts/pautas.php:30 single-pauta.php:98
 #, php-format
 msgid "Pauta aberta por mais 1 dia"
 msgid_plural "Pauta aberta por mais %1$s dias"
@@ -515,10 +584,6 @@ msgid "<span class=\"numero\">1</span> dia restante"
 msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] ""
 msgstr[1] ""
-
-#: single-pauta.php:138
-msgid "Theme(s)"
-msgstr ""
 
 #: single-tutorial.php:46
 msgid "to all platform versions"
