@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 12:06+0000\n"
+"POT-Creation-Date: 2018-03-01 12:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -464,6 +464,46 @@ msgstr ""
 msgid "Tutorials Posts"
 msgstr ""
 
+#: inc/tutorials/post-type.php:56 inc/tutorials/post-type.php:66
+msgid "Categories"
+msgstr ""
+
+#: inc/tutorials/post-type.php:57
+msgid "Category"
+msgstr ""
+
+#: inc/tutorials/post-type.php:58
+msgid "Search Categories"
+msgstr ""
+
+#: inc/tutorials/post-type.php:59
+msgid "All categories"
+msgstr ""
+
+#: inc/tutorials/post-type.php:60
+msgid "Parent category"
+msgstr ""
+
+#: inc/tutorials/post-type.php:61
+msgid "Parent category:"
+msgstr ""
+
+#: inc/tutorials/post-type.php:62
+msgid "Edit category"
+msgstr ""
+
+#: inc/tutorials/post-type.php:63
+msgid "Update category"
+msgstr ""
+
+#: inc/tutorials/post-type.php:64
+msgid "Add new category"
+msgstr ""
+
+#: inc/tutorials/post-type.php:65
+msgid "New category name"
+msgstr ""
+
 #: inc/tutorials/post-type.php:82
 msgid "Additional info"
 msgstr ""
@@ -585,22 +625,22 @@ msgid_plural "Pauta aberta por mais %1$s dias"
 msgstr[0] ""
 msgstr[1] ""
 
-#: single-tutorial.php:40
+#: single-tutorial.php:38
 msgid "to all platform versions"
 msgstr ""
 
-#: single-tutorial.php:46
+#: single-tutorial.php:44
 msgid "platform versions:"
 msgstr ""
 
-#: single-tutorial.php:48
+#: single-tutorial.php:46
 msgid "platform version:"
 msgstr ""
 
-#: single-tutorial.php:59
+#: single-tutorial.php:57
 msgid "to"
 msgstr ""
 
-#: single-tutorial.php:63
+#: single-tutorial.php:61
 msgid "difficulty:"
 msgstr ""

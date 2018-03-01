@@ -53,20 +53,20 @@ class PMC_Tutorials {
     register_post_type( 'tutorial', $args );
 
     $labels = array(
-      'name'              => esc_html__( 'Categories', 'pmc' ),
-      'singular_name'     => esc_html__( 'Category', 'pmc' ),
-      'search_items'      => esc_html__( 'Search Categories', 'pmc' ),
-      'all_items'         => esc_html__( 'All Categories', 'pmc' ),
-      'parent_item'       => esc_html__( 'Parent Category', 'pmc' ),
-      'parent_item_colon' => esc_html__( 'Parent Category:', 'pmc' ),
-      'edit_item'         => esc_html__( 'Edit Category', 'pmc' ),
-      'update_item'       => esc_html__( 'Update Category', 'pmc' ),
-      'add_new_item'      => esc_html__( 'Add New Category', 'pmc' ),
-      'new_item_name'     => esc_html__( 'New Category Name', 'pmc' ),
-      'menu_name'         => esc_html__( 'Categories', 'pmc' ),
+      'name'              => __( 'Categories', 'pmc' ),
+      'singular_name'     => __( 'Category', 'pmc' ),
+      'search_items'      => __( 'Search Categories', 'pmc' ),
+      'all_items'         => __( 'All categories', 'pmc' ),
+      'parent_item'       => __( 'Parent category', 'pmc' ),
+      'parent_item_colon' => __( 'Parent category:', 'pmc' ),
+      'edit_item'         => __( 'Edit category', 'pmc' ),
+      'update_item'       => __( 'Update category', 'pmc' ),
+      'add_new_item'      => __( 'Add new category', 'pmc' ),
+      'new_item_name'     => __( 'New category name', 'pmc' ),
+      'menu_name'         => __( 'Categories', 'pmc' ),
     );
 
-    register_taxonomy( 'category_tutorial', array( 'tutorial' ), array(
+    register_taxonomy( 'tutorial_category', array( 'tutorial' ), array(
         'hierarchical'      => false,
         'labels'            => $labels,
         'show_ui'           => true,

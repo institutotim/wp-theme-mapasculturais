@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 12:06+0000\n"
-"PO-Revision-Date: 2018-03-01 12:06+0000\n"
+"POT-Creation-Date: 2018-03-01 12:25+0000\n"
+"PO-Revision-Date: 2018-03-01 12:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -81,9 +81,6 @@ msgid "Y"
 msgstr "Y"
 
 #: archive.php:46 single.php:30
-#, fuzzy
-#| msgctxt "post type singular name"
-#| msgid "Network Post"
 msgid "Network Blog"
 msgstr "Post da Rede"
 
@@ -382,10 +379,8 @@ msgid "Examples: 2014, 2014-05, 2014-05-01"
 msgstr "Exemplos: 2014 ou 2014-05 ou 2014-05-01"
 
 #: inc/timeline-items.php:29
-#, fuzzy
-#| msgid "Finish date:"
 msgid "Finish date (optional):"
-msgstr "Final do evento:"
+msgstr "Final do evento (opcional):"
 
 #: inc/timeline-items.php:32
 msgid "Leave blank if same as above."
@@ -467,6 +462,46 @@ msgstr "Nenhum Tutorial encontrado na Lixeira."
 #: inc/tutorials/post-type.php:38
 msgid "Tutorials Posts"
 msgstr "Tutoriais"
+
+#: inc/tutorials/post-type.php:56 inc/tutorials/post-type.php:66
+msgid "Categories"
+msgstr "Categorias"
+
+#: inc/tutorials/post-type.php:57
+msgid "Category"
+msgstr "Categoria"
+
+#: inc/tutorials/post-type.php:58
+msgid "Search Categories"
+msgstr "Buscar Categorias"
+
+#: inc/tutorials/post-type.php:59
+msgid "All categories"
+msgstr "Todos as categorias"
+
+#: inc/tutorials/post-type.php:60
+msgid "Parent category"
+msgstr "Categoria superior"
+
+#: inc/tutorials/post-type.php:61
+msgid "Parent category:"
+msgstr "Categoria superior:"
+
+#: inc/tutorials/post-type.php:62
+msgid "Edit category"
+msgstr "Editar categoria"
+
+#: inc/tutorials/post-type.php:63
+msgid "Update category"
+msgstr "Editar categoria"
+
+#: inc/tutorials/post-type.php:64
+msgid "Add new category"
+msgstr "Adicionar nova categoria"
+
+#: inc/tutorials/post-type.php:65
+msgid "New category name"
+msgstr "Novo nome de categoria"
 
 #: inc/tutorials/post-type.php:82
 msgid "Additional info"

@@ -121,7 +121,7 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
               <article class="tutorial-item row">
                 <div class="tutorial-meta">
-                  <?php $terms = get_the_terms( get_the_ID(), 'category_tutorial' );      
+                  <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );      
                     if ( $terms && !is_wp_error( $terms ) ) : 
                       foreach ( $terms as $term ) { ?>
                         <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
