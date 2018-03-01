@@ -4,35 +4,7 @@
     <?php if ( have_posts() ) : ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
-      <article class="post">
-        <div class="featured-image">
-          <a href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
-        </div>
-        <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <div class="meta">
-          <p class="author">
-            <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-              <img src='<?php echo get_avatar_url(get_the_author_meta( 'ID' ), 30); ?>' />
-              <?php the_author(); ?>
-            </a>
-          </p>
-          <p class="date">
-            <span class="fa fa-clock-o"></span>
-            <?php echo the_date(); ?>
-          </p>
-          <p>
-          <?php
-            if ( \Delibera\Flow::getDeadlineDays( $post->ID ) <= -1 )
-            _e( 'Prazo encerrado', 'delibera' );
-            else
-            printf( _n( 'Pauta aberta por mais 1 dia', 'Pauta aberta por mais %1$s dias', \Delibera\Flow::getDeadlineDays( $post->ID ), 'pmc' ), number_format_i18n( \Delibera\Flow::getDeadlineDays( $post->ID ) ) );
-          ?>
-          </p>
-
-        </div>
-        <?php echo the_content(); ?>
-      </article>
-      <hr class="dark" />
+      <?php get_template_part('parts/topic-item'); ?>
     <?php endwhile; ?>
 
     <nav class="paging row">

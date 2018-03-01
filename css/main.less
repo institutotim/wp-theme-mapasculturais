@@ -2319,7 +2319,7 @@ body.single-pauta .pauta {
   .banner-ciclo {
     background: #f7f7f7;
     padding: 2rem 0;
-    margin: 0 0 4rem;
+    margin: 0;
     h3 {
       font-size: 1em;
       text-transform: uppercase;
@@ -2334,6 +2334,7 @@ body.single-pauta .pauta {
     }
   }
   #meta {
+    font-size: .8em;
     p {
       margin-bottom: 1rem;
     }
@@ -2344,10 +2345,122 @@ body.single-pauta .pauta {
       }
     }
   }
+  .pauta-content-body {
+    font-size: .8em;
+  }
   .pauta-actions {
     background: #f7f7f7;
-    padding: 2rem;
+    display: table;
+    width: 100%;
     text-align: center;
-
+    margin: 0 0 4rem;
+    .button {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+      .fa {
+        margin-top: 1rem;
+        margin-left: 4rem;
+      }
+    }
+    > * {
+      width: 1%;
+      display: table-cell;
+      margin: 0;
+    }
+    .delibera-like,
+    .delibera-unlike {
+      .delibera-unlike-count,
+      .delibera-like-count {
+        line-height: 1.7em;
+        // float: right;
+        font-size: 1.2em;
+        font-weight: 700;
+        padding: 0 2rem;
+      }
+      i {
+        // float: left;
+        border-radius: 100%;
+        background: @pink;
+        color: #fff;
+        display: inline-block;
+        width: 1.6em;
+        height: 1.6em;
+        font-size: .8em;
+        line-height: 1.6em;
+        text-align: center;
+        padding: .5rem;
+        margin: 0 1rem 0 0;
+        &:hover {
+          background: lighten(@pink, 5%);
+        }
+      }
+    }
+  }
+  .painel_validacao {
+    margin-bottom: 4rem;
+    #delibera_aceitar {
+      float: left;
+      margin-right: 2rem;
+    }
+    label {
+      text-align: left;
+    }
+  }
+  #delibera-comments {
+    font-size: .8em;
+    .delibera-index-comments {
+      display: block;
+      text-transform: uppercase;
+      font-size: .6em;
+      text-align: left;
+      > div {
+        padding: .5rem 1rem;
+        float: none;
+        display: inline-block;
+      }
+      .delibera-index-comments-opiniao {
+        background: #f7f7f7;
+      }
+    }
+    .delibera-comment-discussao {
+      background: #f7f7f7;
+    }
+    .delibera-comment-body i {
+      font-size: .9em;
+    }
+    .delibera-comment-author img {
+      max-height: 20px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+    .delibera-comment-header {
+      font-size: .8em;
+    }
+    .comment-respond {
+      width: auto;
+      margin: 0;
+    }
+    .comment-form-url,
+    .comment-form-attachment {
+      text-align: left;
+      font-size: 12px;
+      color: #999;
+    }
+    label.delibera-encaminha-label {
+      display: inline-block;
+      margin-right: 2rem;
+      input {
+        outline: none;
+        float: left;
+        margin: .5rem 1rem .5rem 0;
+      }
+    }
+    .comment-form-comment {
+      #comment {
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 }
