@@ -34,31 +34,19 @@
   </header>
 
   <?php
-
-    $all_terms = get_terms( 'related_version' );
     $terms = get_the_terms( get_the_ID(), 'related_version' );
 
-   
-
-    if ( $all_terms && !is_wp_error( $all_terms ) && $terms && !is_wp_error( $terms ) ) {
-
-      if (count($all_terms) == count($terms)){
-         $valid = __('to all platform versions', 'pmc');
-      }
-      if (count($terms) < count($all_terms)){
-        foreach ( $terms as $term ) {
-          $valid = '<a href="' . get_term_link($term->term_id) . '" class="category">' . $term->name . '</a>';
-        }
-        if (count($terms) > 1) {
-          $valid = __('to platform versions:', 'pmc') . " " . $valid;
-        } else {
-          $valid = __('to platform version:', 'pmc') . " " . $valid;
-        }
-      }
-
-    }
     if (!$terms) {
-      $valid = "Nenhuma versão foi definida no tutorial";
+      $valid_versions = __('to all platform versions', 'pmc');
+    } else {
+      $valid_versions = implode(", ", array_column($terms, 'name'));
+
+      // add prefix
+      if (count($terms) > 1) {
+        $valid_versions = __('platform versions:', 'pmc') . " " . $valid_versions;
+      } else {
+        $valid_versions = __('platform version:', 'pmc') . " " . $valid_versions;
+      }  
     }
   ?>
 
@@ -76,7 +64,7 @@
           </p>
           <p class="valid">
             <span class="fa fa-check-circle"></span>
-            <?php echo $valid; ?>
+            <?php echo $valid_versions; ?>
           </p>
         </div>
       </div>
