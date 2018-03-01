@@ -14,17 +14,15 @@
     if (get_search_query( false )) {
       $args['s'] = esc_html( get_search_query( false ) );
       $args['posts_per_page'] = -1;
-    } else {
-      $args['posts_per_page'] = 1;
     }
 
 
     $query = new WP_Query( $args );
   ?>
 
-  <?php if ( $query->have_posts() ) : ?>
+  <?php if ( have_posts() ) : ?>
 
-  <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
     <article class="tutorial-item row">
       <div class="tutorial-meta">
         <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );
@@ -34,8 +32,8 @@
                 <span class="fa fa-bookmark-o"></span>
                 <?php echo $term->name; ?>
               </a>
-      <?php } ?>
-    <?php endif; ?>
+          <?php } ?>
+        <?php endif; ?>
         <p class="meta-item">
           <span class="label">
             <span class="fa fa-certificate"></span>

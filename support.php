@@ -106,7 +106,7 @@
               $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
               $args = array(
                 'post_type' => 'tutorial',
-                 'posts_per_page' => 3
+                'posts_per_page' => 3
               );
               $query = new WP_Query( $args );
             ?>
@@ -121,15 +121,15 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
               <article class="tutorial-item row">
                 <div class="tutorial-meta">
-                  <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );      
-                    if ( $terms && !is_wp_error( $terms ) ) : 
+                  <?php $terms = get_the_terms( get_the_ID(), 'tutorial_category' );
+                    if ( $terms && !is_wp_error( $terms ) ) :
                       foreach ( $terms as $term ) { ?>
-                        <a href="<?php echo get_term_link($term->term_id); ?>" class="category">
+                        <a class="post-tag category" href="<?php echo get_term_link($term->term_id); ?>">
                           <span class="fa fa-bookmark-o"></span>
                           <?php echo $term->name; ?>
                         </a>
-                <?php } ?>
-              <?php endif; ?>
+                    <?php } ?>
+                  <?php endif; ?>
                   <p class="meta-item">
                     <span class="label">
                       <span class="fa fa-certificate"></span>
@@ -148,10 +148,12 @@
                   <div class="featured-image">
                     <?php echo get_the_post_thumbnail(); ?>
                   </div>
-                  <a href="<?php echo get_permalink();?>">
-                    <h3><?php the_title(); ?></h3>
-                  </a>
-                  <?php echo the_content(); ?>
+                  <h3>
+                    <a href="<?php echo get_permalink();?>">
+                      <?php the_title(); ?>
+                    </a>
+                  </h3>
+                  <?php the_excerpt(); ?>
                 </div>
               </article>
               <hr class="dark" />
@@ -164,77 +166,6 @@
             <?php else : ?>
               <p><?php esc_html_e( 'Sorry, no posts found.', 'pmc' ); ?></p>
             <?php endif; ?>
-            <!-- <article class="tutorial-item row">
-              <div class="tutorial-meta">
-                <a class="category">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #1
-                </a>
-                <p class="meta-item">
-                  <span class="label">
-                    <span class="fa fa-certificate"></span>
-                    Complexidade
-                  </span>
-                  <span class="meta-val complex-item complex-item-2">Média</span>
-                </p>
-                <p class="meta-item target-group">
-                  <span class="fa fa-gear"></span>
-                  para gestores
-                </p>
-              </div>
-              <div class="tutorial-content">
-                <h3>Como fazer uma instalação local da plataforma</h3>
-                <p>Conheça os passos para instalar a plataforma no seu computador.</p>
-              </div>
-            </article>
-            <hr class="dark" />
-            <article class="tutorial-item row">
-              <div class="tutorial-meta">
-                <a class="category">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #2
-                </a>
-                <p class="meta-item">
-                  <span class="label">
-                    <span class="fa fa-certificate"></span>
-                    Complexidade
-                  </span>
-                  <span class="meta-val complex-item complex-item-2">Média</span>
-                </p>
-                <p class="meta-item target-group">
-                  <span class="fa fa-gear"></span>
-                  para gestores
-                </p>
-              </div>
-              <div class="tutorial-content">
-                <h3>Gerenciamento de usuários</h3>
-                <p>In in velit in nibh ullamcorper lobortis nec eu ante. Curabitur vitae mauris ut quam elementum posuere vel ac quam.</p>
-              </div>
-            </article>
-            <hr class="dark" />
-            <article class="tutorial-item row">
-              <div class="tutorial-meta">
-                <a class="category">
-                  <span class="fa fa-bookmark-o"></span>
-                  Categoria #3
-                </a>
-                <p class="meta-item">
-                  <span class="label">
-                    <span class="fa fa-certificate"></span>
-                    Complexidade
-                  </span>
-                  <span class="meta-val complex-item complex-item-2">Baixa</span>
-                </p>
-                <p class="meta-item target-group">
-                  <span class="fa fa-user"></span>
-                  para agentes culturais
-                </p>
-              </div>
-              <div class="tutorial-content">
-                <h3>Editando seu perfil</h3>
-                <p>In in velit in nibh ullamcorper lobortis nec eu ante. Curabitur vitae mauris ut quam elementum posuere vel ac quam.</p>
-              </div>
-            </article> -->
           </div>
           <p>
             <a href="/tutorials" class="button block">Veja mais tutoriais</a>
