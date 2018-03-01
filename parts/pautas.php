@@ -5,12 +5,10 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
       <article class="post">
-        <a href="<?php echo get_permalink();?>">
-          <div class="featured-image">
-            <?php echo get_the_post_thumbnail(); ?>
-          </div>
-          <h3><?php the_title(); ?></h3>
-        </a>
+        <div class="featured-image">
+          <a href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
+        </div>
+        <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
         <div class="meta">
           <p class="author">
             <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
