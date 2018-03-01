@@ -18,6 +18,12 @@ $status_pauta = delibera_get_situacao($post->ID)->slug;
   endif;
   ?>
   <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+  <p class="topic-author">proposta por <?php the_author(); ?></p>
+  <?php if(has_term('validacao', 'situacao') || has_term('discussao', 'situacao')) : ?>
+    <div class="topic-excerpt row">
+      <?php the_excerpt(); ?>
+    </div>
+  <?php endif; ?>
   <div class="topic-meta row">
     <?php if(has_term('validacao', 'situacao')) : ?>
       <div class="topic-vote">
@@ -26,19 +32,18 @@ $status_pauta = delibera_get_situacao($post->ID)->slug;
         echo delibera_gerar_discordar($post->ID, 'pauta');
         ?>
       </div>
-      <?php the_excerpt(); ?>
     <?php endif; ?>
     <?php if(has_term('discussao', 'situacao')) : ?>
       <span class="topic-comment">
-        <a href="#">
+        <a href="<?php the_permalink(); ?>">
           <span class="fa fa-comment"></span>
-          Comente
+          Participe
         </a>
       </span>
     <?php endif; ?>
     <?php if(has_term('comresolucao', 'situacao')) : ?>
       <span class="topic-comment">
-        <a href="#">
+        <a href="<?php the_permalink(); ?>">
           <span class="fa fa-comment"></span>
           Veja debate
         </a>
