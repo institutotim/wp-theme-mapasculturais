@@ -19,12 +19,15 @@ $status_pauta = delibera_get_situacao($post->ID)->slug;
   ?>
   <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
   <div class="topic-meta row">
-    <div class="topic-vote">
-      <?php
-      echo delibera_gerar_curtir($post->ID, 'pauta');
-      echo delibera_gerar_discordar($post->ID, 'pauta');
-      ?>
-    </div>
+    <?php if(has_term('validacao', 'situacao')) : ?>
+      <div class="topic-vote">
+        <?php
+        echo delibera_gerar_curtir($post->ID, 'pauta');
+        echo delibera_gerar_discordar($post->ID, 'pauta');
+        ?>
+      </div>
+      <?php the_excerpt(); ?>
+    <?php endif; ?>
     <?php if(has_term('discussao', 'situacao')) : ?>
       <span class="topic-comment">
         <a href="#">

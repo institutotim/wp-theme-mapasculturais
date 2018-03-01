@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 00:28-0300\n"
+"POT-Creation-Date: 2018-03-01 00:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -542,11 +542,11 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: parts/blog.php:85 parts/pautas.php:50 parts/tutorials.php:76
+#: parts/blog.php:85 parts/pautas.php:48 parts/tutorials.php:76
 msgid "« Previous"
 msgstr ""
 
-#: parts/blog.php:86 parts/pautas.php:51 parts/tutorials.php:77
+#: parts/blog.php:86 parts/pautas.php:49 parts/tutorials.php:77
 msgid "Next »"
 msgstr ""
 
@@ -563,11 +563,11 @@ msgstr ""
 msgid "% comments"
 msgstr ""
 
-#: parts/pautas.php:28 single-pauta.php:96
+#: parts/pautas.php:26 single-pauta.php:96
 msgid "Prazo encerrado"
 msgstr ""
 
-#: parts/pautas.php:30 single-pauta.php:98
+#: parts/pautas.php:28 single-pauta.php:98
 #, php-format
 msgid "Pauta aberta por mais 1 dia"
 msgid_plural "Pauta aberta por mais %1$s dias"
