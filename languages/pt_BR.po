@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0000\n"
-"PO-Revision-Date: 2018-02-28 16:06+0000\n"
+"POT-Creation-Date: 2018-03-01 11:58+0000\n"
+"PO-Revision-Date: 2018-03-01 11:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: archive-pauta.php:25
+#: archive-pauta.php:28
 msgid "Pautas"
 msgstr "Pautas"
 
-#: archive-pauta.php:26
-msgid "Veja as pautas abertas sobre o mapas culturais"
-msgstr "Veja as pautas abertas sobre o mapas culturais"
+#: archive-pauta.php:29
+msgid "Acompanhe o debate sobre a plataforma."
+msgstr ""
 
 #: archive-pmc_timeline_item.php:10
 msgctxt "Pattern for YYYY-MM in timeline items"
@@ -95,67 +95,138 @@ msgstr "Notícias"
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr "Saiba o que está acontecendo no mundo do Mapas Culturais"
 
-#: front_add_pauta.php:102
+#: delibera/form-nova-pauta.php:10 front_add_pauta.php:126
 msgid "Título da pauta"
 msgstr "Titulo da pauta"
 
-#: front_add_pauta.php:103
+#: delibera/form-nova-pauta.php:11 front_add_pauta.php:127
 msgid "Digite o título da pauta aqui"
 msgstr "Digite o título da pauta aqui"
 
-#: front_add_pauta.php:158
+#: delibera/form-nova-pauta.php:17 front_add_pauta.php:132
 msgid "Resumo da pauta"
 msgstr "Resumo da pauta"
 
-#: front_add_pauta.php:174
-msgid "Temas"
-msgstr "Temas"
-
-#: front_add_pauta.php:246
+#. /label></p>
+#. <div class="sort-container">
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-0-sort-order" name="flow[]" value="validacao">
+#. <input class="form-control" type="text" id="form-field-0" name="form-field[]" value="Validação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-1-sort-order" name="flow[]" value="discussao">
+#. <input class="form-control" type="text" id="form-field-1" name="form-field[]" value="Discussão" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-2-sort-order" name="flow[]" value="relatoria">
+#. <input class="form-control" type="text" id="form-field-2" name="form-field[]" value="Relatoria" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-3-sort-order" name="flow[]" value="emvotacao">
+#. <input class="form-control" type="text" id="form-field-3" name="form-field[]" value="Em votação" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#.
+#. <div class="sort-item">
+#. <div class="input-group">
+#. <input type="hidden" class="sort-order-value" id="form-field-4-sort-order" name="flow[]" value="comresolucao">
+#. <input class="form-control" type="text" id="form-field-4" name="form-field[]" value="Com resolução" disabled=""><div class="input-group-addon dragdrop-handle"><span class="glyphicon glyphicon-move"></span></div>
+#. </div>
+#. </div>
+#. </div>
+#. </div>
+#. </div>
+#. <div class="add-pauta-step" data-step="3">
+#. <h3>Configurações</h3>
+#.
+#. <div class="pauta-item">
+#. <h4>Proposta de Pauta</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para validação</label>
+#. <input type="date" name="deadline_validation">
+#. <label>Mínimo de Validações:</label>
+#. <input type="text" name="min_validations">
+#.
+#. <label>
+#. <input value="S" name="show_reject" type="checkbox"> Mostrar opção para rejeitar Pauta
+#. </label>
+#.
+#. <label>
+#. <input value="S" name="show_abstention" type="checkbox"> Mostrar opção para absteção sobre a Pauta
+#. </label>
+#.
+#. <label>
+#. <input value="S" name="show_comment" type="checkbox"> Mostrar campo para comentário durante a validação
+#. </label>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Pauta em discussão</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para Discussões</label>
+#. <input type="date" name="deadline_discussion">
+#.
+#. <label>Tipo da discussão</label>
+#.
+#. <select name="discussion_type">
+#. <option value="forum">Formato de fórum</option>
+#. <option value="side">Por parágrafo</option>
+#. </select>
+#.
+#. <label>
+#. <input value="S" name="enable_any_comment" type="checkbox"> Permitir comentários gerais?
+#. </label>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Regime de Votação</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para votações</label>
+#. <input type="date" name="deadline_voting">
+#. <div class="row">
+#. <label><input type="radio" name="votation_type" value="checkbox"> Multipla escolha</label>
+#. <label><input type="radio" name="votation_type" value="radio"> Opção única</label>
+#. <label><input type="radio" name="votation_type" value="pairwise"> Pairwise</label>
+#. <label>
+#. <input value="S" name="show_based_proposals" type="checkbox"> Votar em propostas que tiveram outras propostas derivadas?
+#. </label>
+#. </div>
+#. </div>
+#. </div>
+#.
+#. <div class="pauta-item">
+#. <h4>Relatoria</h4>
+#. <div class="pauta-subitem">
+#. <label>Prazo para relatoria</label>
+#. <input type="date" name="deadline_report">
+#. </div>
+#. </div>
+#.
+#. </div>
+#.
+#: delibera/form-nova-pauta.php:30 front_add_pauta.php:279
 msgid "Criar pauta"
 msgstr "Criar pauta"
 
-#: functions.php:83
+#: front_add_pauta.php:143
+msgid "Temas"
+msgstr "Temas"
+
+#: functions.php:81
 msgid "Instance"
 msgstr "Instância"
-
-#: functions.php:311
-msgid "Settings Page"
-msgstr "Página de configurações"
-
-#: functions.php:312
-msgid "Add the button's link:"
-msgstr "Adicione o link do botão:"
-
-#: functions.php:317
-#, fuzzy
-#| msgid "URL for Mapas Culturais at Github "
-msgid "URL for Mapas Culturais repository at Github"
-msgstr "URL do repositório do Mapas Culturais no Github"
-
-#: functions.php:321
-msgid "User Manual URL"
-msgstr "URL para o Manual do Usuário"
-
-#: functions.php:325
-msgid "Rocket Chat URL"
-msgstr "URL para o Rocket Chat"
-
-#: functions.php:330
-msgid "Delibera home URL"
-msgstr "URL da página de início do Delibera"
-
-#: functions.php:335
-msgid "\"Know More\" URL"
-msgstr "URL para “Saiba Mais”"
-
-#: functions.php:339
-msgid "Save"
-msgstr "Salvar"
-
-#: functions.php:347
-msgid "Mapas Theme"
-msgstr "Tema do Mapas Culturais"
 
 #: inc/404.php:11
 msgid "Página não encontrada "
@@ -475,11 +546,11 @@ msgstr "Novo título"
 msgid "Title:"
 msgstr "Título:"
 
-#: parts/blog.php:85 parts/pautas.php:69 parts/tutorials.php:76
+#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:76
 msgid "« Previous"
 msgstr "« Anterior"
 
-#: parts/blog.php:86 parts/pautas.php:70 parts/tutorials.php:77
+#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:77
 msgid "Next »"
 msgstr "Próximo »"
 
@@ -496,17 +567,6 @@ msgstr "um comentário"
 msgid "% comments"
 msgstr "% comentários"
 
-#: parts/pautas.php:47 single-pauta.php:108
-msgid "Prazo encerrado"
-msgstr "Prazo encerrado"
-
-#: parts/pautas.php:49 single-pauta.php:110
-#, php-format
-msgid "Pauta aberta por mais 1 dia"
-msgid_plural "Pauta aberta por mais %1$s dias"
-msgstr[0] "Pauta aberta por mais 1 dia"
-msgstr[1] "Pauta aberta por mais %1$s dias"
-
 #: parts/topic-item.php:12
 msgid "prazo encerrado"
 msgstr "prazo encerrado"
@@ -518,32 +578,74 @@ msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] "<span class=“numero”>1</span> dia restante"
 msgstr[1] "<span class=“numero”>%1$s</span> dias restantes"
 
-#: single-pauta.php:138
-msgid "Tema(as)"
-msgstr "Tema(as)"
+#: single-pauta.php:97
+msgid "Prazo encerrado"
+msgstr "Prazo encerrado"
 
-#: single-tutorial.php:46
+#: single-pauta.php:99
+#, php-format
+msgid "Pauta aberta por mais 1 dia"
+msgid_plural "Pauta aberta por mais %1$s dias"
+msgstr[0] "Pauta aberta por mais 1 dia"
+msgstr[1] "Pauta aberta por mais %1$s dias"
+
+#: single-tutorial.php:40
 msgid "to all platform versions"
 msgstr "para todas versões da plataforma"
 
-#: single-tutorial.php:53
-msgid "to platform versions:"
-msgstr "para versões da plataforma:"
+#: single-tutorial.php:46
+msgid "platform versions:"
+msgstr "versões da plataforma:"
 
-#: single-tutorial.php:55
-msgid "to platform version:"
-msgstr "para versão da plataforma:"
+#: single-tutorial.php:48
+msgid "platform version:"
+msgstr "versão da plataforma:"
 
-#: single-tutorial.php:71
+#: single-tutorial.php:59
 msgid "to"
 msgstr "para"
 
-#: single-tutorial.php:75
+#: single-tutorial.php:63
 msgid "difficulty"
 msgstr "dificuldade"
 
+#~ msgid "Veja as pautas abertas sobre o mapas culturais"
+#~ msgstr "Veja as pautas abertas sobre o mapas culturais"
+
+#~ msgid "Settings Page"
+#~ msgstr "Página de configurações"
+
+#~ msgid "Add the button's link:"
+#~ msgstr "Adicione o link do botão:"
+
+#, fuzzy
+#~| msgid "URL for Mapas Culturais at Github "
+#~ msgid "URL for Mapas Culturais repository at Github"
+#~ msgstr "URL do repositório do Mapas Culturais no Github"
+
+#~ msgid "User Manual URL"
+#~ msgstr "URL para o Manual do Usuário"
+
+#~ msgid "Rocket Chat URL"
+#~ msgstr "URL para o Rocket Chat"
+
+#~ msgid "Delibera home URL"
+#~ msgstr "URL da página de início do Delibera"
+
+#~ msgid "\"Know More\" URL"
+#~ msgstr "URL para “Saiba Mais”"
+
+#~ msgid "Save"
+#~ msgstr "Salvar"
+
+#~ msgid "Mapas Theme"
+#~ msgstr "Tema do Mapas Culturais"
+
 #~ msgid "Theme(s)"
 #~ msgstr "Tema(s)"
+
+#~ msgid "Tema(as)"
+#~ msgstr "Tema(as)"
 
 #~ msgid "versions"
 #~ msgstr "versões"
