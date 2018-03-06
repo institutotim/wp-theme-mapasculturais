@@ -34,7 +34,7 @@
                 </div>
                 <div class="network-numbers connect-border connect-right">
                   <hr />
-                  <p class="numbers-intro">Consulte o mapa e a lista abaixo para conhecer as instalações da ferramenta Mapas Culturais.</p>
+                  <p class="numbers-intro">Consulte o mapa e a lista abaixo para conhecer as instalações da ferramenta Mapas Culturais</p>
                   <div class="row">
                     <div class="six columns">
                       <div class="intro-numbers">
