@@ -19,12 +19,45 @@
 
       var markers = mapData.markers;
       for (i in markers) {
-       var popup = '';
+
+        var agents_count;
+
+        if (markers[i].agents_count){
+          agents_count = markers[i].agents_count;
+        } else {
+          agents_count = 0;
+        }
+
+        var events_count;
+
+        if (markers[i].events_count){
+          events_count = markers[i].events_count;
+        } else {
+          events_count = 0;
+        }
+
+        var spaces_count;
+
+        if (markers[i].spaces_count){
+          spaces_count = markers[i].spaces_count;
+        } else {
+          spaces_count = 0;
+        }
+
+        var projects_count;
+
+        if (markers[i].projects_count){
+          projects_count = markers[i].projects_count;
+        } else {
+          projects_count = 0;
+        }
+
+        var popup = '';
         popup += '<h3>'+markers[i].instance+'</h3>';
-        popup += '<p><strong>'+markers[i].agents_count+'</strong> agentes, ';
-        popup += '<strong>'+markers[i].events_count+'</strong> eventos, ';
-        popup += '<strong>'+markers[i].spaces_count+'</strong> espaços, ';
-        popup += '<strong>'+markers[i].projects_count+'</strong> projetos</p>';
+        popup += '<p><strong>'+agents_count+'</strong> agentes, ';
+        popup += '<strong>'+events_count+'</strong> eventos, ';
+        popup += '<strong>'+spaces_count+'</strong> espaços, ';
+        popup += '<strong>'+projects_count+'</strong> projetos</p>';
         popup += '<p><a href=/author/'+markers[i].instance+' class="button">Ver perfil</a></p>';
         L.marker([
             markers[i].position.lat,
