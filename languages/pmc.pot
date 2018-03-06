@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 12:35+0000\n"
+"POT-Creation-Date: 2018-03-06 15:09-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,7 +221,15 @@ msgstr ""
 msgid "Temas"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:79
+msgid "Web links"
+msgstr ""
+
+#: functions.php:93 inc/platform-statistics.php:168
+msgid "Github"
+msgstr ""
+
+#: functions.php:111
 msgid "Instance"
 msgstr ""
 
@@ -336,10 +344,6 @@ msgstr ""
 
 #: inc/platform-statistics.php:149
 msgid "Twitter"
-msgstr ""
-
-#: inc/platform-statistics.php:168
-msgid "Github"
 msgstr ""
 
 #: inc/platform-statistics.php:187
@@ -574,31 +578,36 @@ msgstr ""
 msgid "Navigate on tutorials categories"
 msgstr ""
 
-#: inc/tutorials/widget.php:70
+#: inc/tutorials/widget.php:66
 msgid "New title"
 msgstr ""
 
-#: inc/tutorials/widget.php:76
+#: inc/tutorials/widget.php:72
 msgid "Title:"
 msgstr ""
 
-#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:76
+#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
 msgid "« Previous"
 msgstr ""
 
-#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:77
+#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
 msgid "Next »"
 msgstr ""
 
-#: parts/network-blog.php:37
+#: parts/blog.php:105 parts/network-entry-on-author-page.php:56
+#: parts/pautas.php:40 parts/tutorials.php:98
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: parts/network-blog.php:38
 msgid "no comments"
 msgstr ""
 
-#: parts/network-blog.php:37
+#: parts/network-blog.php:38
 msgid "one comment"
 msgstr ""
 
-#: parts/network-blog.php:37
+#: parts/network-blog.php:38
 #, php-format
 msgid "% comments"
 msgstr ""
