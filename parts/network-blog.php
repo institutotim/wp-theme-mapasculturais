@@ -17,12 +17,13 @@
   <div class="content-section-content">
     <?php if ( $query->have_posts() ) : ?>
     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+    <?php $author = get_the_author(); ?>
     <article class="row">
       <div class="author network-author">
         <div class="author-thumb">
-          <?php get_the_post_thumbnail(); ?>
+          <?php echo get_the_post_thumbnail(); ?>
         </div>
-        <h4><?php echo esc_html($author->user_nicename); ?></h4>
+        <h4 class="nickname"><?php echo esc_html($author); ?></h4>
       </div>
       <div class="network-post-content">
         <h3><a href="<?php echo get_permalink();?>"><?php the_title() ?></a></h3>
