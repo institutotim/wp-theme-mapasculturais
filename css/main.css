@@ -833,6 +833,7 @@ p.post-meta .fa {
 .page-header a {
   font-weight: 800;
   text-decoration: none;
+  color: white;
 }
 .page-header a:hover {
   color: rgba(255, 255, 255, 0.8);
