@@ -5,6 +5,7 @@
  */
 
 require_once(TEMPLATEPATH . '/inc/class-tgm-plugin-activation.php');
+
 function pmc_register_required_plugins() {
   $plugins = array();
 
@@ -67,6 +68,35 @@ function pmc_register_required_plugins() {
   tgmpa($plugins, $options);
 }
 add_action('tgmpa_register', 'pmc_register_required_plugins');
+
+/**
+ * Setup Customizer
+ */
+
+function pmc_customize_register( $wp_customize ) {
+
+  $wp_customize->add_section( 'pmc_links' , array(
+    'title'      => __( 'Web links', 'pmc' ),
+    'priority'   => 30,
+  ) );
+
+  // input left
+
+  $wp_customize->add_setting('github', array(
+      'default' => 'https://github.com/hacklabr/mapasculturais' , 
+      'capability'=> 'edit_theme_options',
+
+  ));
+
+  $wp_customize->add_control('pmc_github', array(
+      'type'       => 'text',
+      'label'      => __('Github', 'pmc'),
+      'section'    => 'pmc_links',
+      'settings'   => 'github',
+  ));
+
+}
+add_action( 'customize_register', 'pmc_customize_register' );
 
 /**
  * Setup Theme
