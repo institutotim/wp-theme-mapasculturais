@@ -78,11 +78,4 @@ class tutorials_widget extends WP_Widget {
 	</p>
 	<?php 
 	}
-     
-	// Updating widget replacing old instances with new
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		return $instance;
-	}
 } // Class tutorials_widget ends here
