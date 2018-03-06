@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 12:25+0000\n"
-"PO-Revision-Date: 2018-03-01 12:26+0000\n"
+"POT-Creation-Date: 2018-03-06 15:09-0300\n"
+"PO-Revision-Date: 2018-03-06 15:10-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -24,7 +24,7 @@ msgstr "Pautas"
 
 #: archive-pauta.php:29
 msgid "Acompanhe o debate sobre a plataforma."
-msgstr ""
+msgstr "Acompanhe o debate sobre a plataforma."
 
 #: archive-pmc_timeline_item.php:10
 msgctxt "Pattern for YYYY-MM in timeline items"
@@ -221,7 +221,15 @@ msgstr "Criar pauta"
 msgid "Temas"
 msgstr "Temas"
 
-#: functions.php:81
+#: functions.php:79
+msgid "Web links"
+msgstr "Links da Web"
+
+#: functions.php:93 inc/platform-statistics.php:168
+msgid "Github"
+msgstr "Github"
+
+#: functions.php:111
 msgid "Instance"
 msgstr "Instância"
 
@@ -337,10 +345,6 @@ msgstr "Facebook"
 #: inc/platform-statistics.php:149
 msgid "Twitter"
 msgstr "Twitter"
-
-#: inc/platform-statistics.php:168
-msgid "Github"
-msgstr "Github"
 
 #: inc/platform-statistics.php:187
 msgid "Telegram"
@@ -573,31 +577,36 @@ msgstr "Navegar nos Tutoriais"
 msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
-#: inc/tutorials/widget.php:70
+#: inc/tutorials/widget.php:66
 msgid "New title"
 msgstr "Novo título"
 
-#: inc/tutorials/widget.php:76
+#: inc/tutorials/widget.php:72
 msgid "Title:"
 msgstr "Título:"
 
-#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:76
+#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
 msgid "« Previous"
 msgstr "« Anterior"
 
-#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:77
+#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
 msgid "Next »"
 msgstr "Próximo »"
 
-#: parts/network-blog.php:37
+#: parts/blog.php:105 parts/network-entry-on-author-page.php:56
+#: parts/pautas.php:40 parts/tutorials.php:98
+msgid "Sorry, no posts matched your criteria."
+msgstr "Desculpe nenhum post foi encontrado."
+
+#: parts/network-blog.php:38
 msgid "no comments"
 msgstr "sem comentários"
 
-#: parts/network-blog.php:37
+#: parts/network-blog.php:38
 msgid "one comment"
 msgstr "um comentário"
 
-#: parts/network-blog.php:37
+#: parts/network-blog.php:38
 #, php-format
 msgid "% comments"
 msgstr "% comentários"
@@ -624,23 +633,23 @@ msgid_plural "Pauta aberta por mais %1$s dias"
 msgstr[0] "Pauta aberta por mais 1 dia"
 msgstr[1] "Pauta aberta por mais %1$s dias"
 
-#: single-tutorial.php:40
+#: single-tutorial.php:38
 msgid "to all platform versions"
 msgstr "para todas versões da plataforma"
 
-#: single-tutorial.php:46
+#: single-tutorial.php:44
 msgid "platform versions:"
 msgstr "versões da plataforma:"
 
-#: single-tutorial.php:48
+#: single-tutorial.php:46
 msgid "platform version:"
 msgstr "versão da plataforma:"
 
-#: single-tutorial.php:59
+#: single-tutorial.php:57
 msgid "to"
 msgstr "para"
 
-#: single-tutorial.php:63
+#: single-tutorial.php:61
 msgid "difficulty:"
 msgstr "dificuldade:"
 
