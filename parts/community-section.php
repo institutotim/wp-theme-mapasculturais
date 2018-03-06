@@ -18,7 +18,7 @@
       <div class="four columns">
         <div class="buttons">
           <p>
-            <a  href="<?php echo get_option('github_url') ?>" class="button block">
+            <a  href="<?php echo get_option('theme_mods_mapasculturais')['github'] ?>" class="button block">
               <span class="fa fa-github"></span>
               GitHub
             </a>
