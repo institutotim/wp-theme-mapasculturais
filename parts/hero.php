@@ -15,11 +15,11 @@
           <h2>Mapas Culturais</h2>
           <p class="big"><?php echo get_post_meta(get_the_ID(), 'introduction_text', true); ?></p>
           <p class="connect-border connect-left buttons">
-            <a class="button" href="<?php get_support_link() ?>">
+            <a target="_blank"  class="button" href="<?php get_support_link() ?>">
               <span class="fa fa-wrench"></span>
               Suporte
             </a>
-            <a class="button button-primary" href="<?php echo get_option('know') ?>">
+            <a target="_blank" class="button button-primary" href="<?php echo get_option('know') ?>">
               <span class="fa fa-star"></span>
               Saiba mais
             </a>
@@ -37,7 +37,7 @@
             </p>
             <p class="number-label">plataformas <span>na rede</span></p>
           </div>
-          <a href="<?php get_instances_link() ?>">Conheça as instalações</a>
+          <a target="_blank" href="<?php get_instances_link() ?>">Conheça as instalações</a>
         </div>
       </div>
     </div>

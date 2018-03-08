@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 12:27-0300\n"
+"POT-Creation-Date: 2018-03-08 12:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,6 +239,32 @@ msgstr ""
 
 #: inc/404.php:12
 msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
+msgstr ""
+
+#: inc/homepage-config.php:11
+msgid "Homepage configuration"
+msgstr ""
+
+#: inc/homepage-config.php:15
+msgid "Introduction text"
+msgstr ""
+
+#: inc/homepage-config.php:34
+msgid "\"Support\" button target"
+msgstr ""
+
+#: inc/homepage-config.php:55
+msgid "\"Learn More\" button target"
+msgstr ""
+
+#: inc/homepage-config.php:76
+msgid "Project description"
+msgstr ""
+
+#: inc/homepage-config.php:79
+msgid ""
+"Please enter one paragraph describing the project, considering that the "
+"first phrase will be highlighted."
 msgstr ""
 
 #: inc/menus.php:12

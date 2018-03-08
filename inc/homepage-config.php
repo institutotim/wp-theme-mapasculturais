@@ -8,11 +8,11 @@ class PMC_Homepage_Config {
 
       acf_add_local_field_group(array (
       	'key' => 'group_5936ea5e6fb56',
-      	'title' => 'Homepage configuration',
+      	'title' => __('Homepage configuration', 'pmc'),
       	'fields' => array (
       		array (
       			'key' => 'field_5936ea88f8eee',
-      			'label' => 'Introduction text',
+      			'label' => __('Introduction text', 'pmc'),
       			'name' => 'introduction_text',
       			'type' => 'text',
       			'instructions' => '',
@@ -31,7 +31,7 @@ class PMC_Homepage_Config {
       		),
       		array (
       			'key' => 'field_5936eaaff8eef',
-      			'label' => '"Support" button target',
+      			'label' => __('"Support" button target', 'pmc'),
       			'name' => 'support_button_target',
       			'type' => 'page_link',
       			'instructions' => '',
@@ -52,7 +52,7 @@ class PMC_Homepage_Config {
       		),
       		array (
       			'key' => 'field_5936eb07f8ef0',
-      			'label' => '"Learn More" button target',
+      			'label' => __('"Learn More" button target', 'pmc'),
       			'name' => 'learn_more_button_target',
       			'type' => 'page_link',
       			'instructions' => '',
@@ -73,10 +73,10 @@ class PMC_Homepage_Config {
       		),
       		array (
       			'key' => 'field_5936ec3df8ef1',
-      			'label' => 'Project description',
+      			'label' => __('Project description', 'pmc'),
       			'name' => 'project_description',
       			'type' => 'textarea',
-      			'instructions' => 'Please enter one paragraph describing the project, considering that the first phrase will be highlighted.',
+      			'instructions' => __('Please enter one paragraph describing the project, considering that the first phrase will be highlighted.', 'pmc'),
       			'required' => 0,
       			'conditional_logic' => 0,
       			'wrapper' => array (
