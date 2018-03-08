@@ -7,14 +7,14 @@ class PMC_Support_Config {
 
 		acf_add_local_field_group(array(
 			'key' => 'group_5a96c36cd2e26',
-			'title' => 'Support Configuration',
+			'title' => __('Support Configuration','pmc'),
 			'fields' => array(
 				array(
 					'key' => 'field_5a96c36b44f95',
 					'label' => 'Github',
 					'name' => 'github_url',
 					'type' => 'text',
-					'instructions' => 'URL for Mapas Culturais repository at Github',
+					'instructions' => __('URL for Mapas Culturais repository at Github', 'pmc'),
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -33,7 +33,7 @@ class PMC_Support_Config {
 					'label' => 'Rocket Chat',
 					'name' => 'rocket_url',
 					'type' => 'text',
-					'instructions' => 'URL para o Rocket Chat',
+					'instructions' => __('URL for Rocket Chat', 'pmc'),
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -52,7 +52,7 @@ class PMC_Support_Config {
 					'label' => 'Delibera',
 					'name' => 'delibera',
 					'type' => 'text',
-					'instructions' => 'URL da página de início do Delibera',
+					'instructions' => __('initial page URL for Delibera', 'pmc'),
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -68,10 +68,10 @@ class PMC_Support_Config {
 				),
 				array(
 					'key' => 'field_5a96c51544f99',
-					'label' => 'Saiba Mais',
+					'label' => __('About', 'pmc'),
 					'name' => 'know',
 					'type' => 'text',
-					'instructions' => 'URL para “Saiba Mais”',
+					'instructions' => __('URL for about page', 'pmc'),
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -87,10 +87,10 @@ class PMC_Support_Config {
 				),
 				array(
 					'key' => 'field_5a96db0db367d',
-					'label' => 'Link Manual',
+					'label' => __('Link Manual', 'pmc'),
 					'name' => 'manual',
 					'type' => 'text',
-					'instructions' => 'URL para o Manual do Usuário',
+					'instructions' => __('URL for User Manual', 'pmc'),
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
