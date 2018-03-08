@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 15:09-0300\n"
+"POT-Creation-Date: 2018-03-08 12:27-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -370,6 +370,38 @@ msgstr ""
 msgid "Archive Tutorials"
 msgstr ""
 
+#: inc/support-config.php:10
+msgid "Support Configuration"
+msgstr ""
+
+#: inc/support-config.php:17
+msgid "URL for Mapas Culturais repository at Github"
+msgstr ""
+
+#: inc/support-config.php:36
+msgid "URL for Rocket Chat"
+msgstr ""
+
+#: inc/support-config.php:55
+msgid "initial page URL for Delibera"
+msgstr ""
+
+#: inc/support-config.php:71
+msgid "About"
+msgstr ""
+
+#: inc/support-config.php:74
+msgid "URL for about page"
+msgstr ""
+
+#: inc/support-config.php:90
+msgid "Link Manual"
+msgstr ""
+
+#: inc/support-config.php:93
+msgid "URL for User Manual"
+msgstr ""
+
 #: inc/timeline-items.php:18
 msgid "Date of occurrence or start date (if a period):"
 msgstr ""
@@ -580,10 +612,6 @@ msgstr ""
 
 #: inc/tutorials/widget.php:66
 msgid "New title"
-msgstr ""
-
-#: inc/tutorials/widget.php:72
-msgid "Title:"
 msgstr ""
 
 #: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
