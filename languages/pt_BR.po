@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 15:09-0300\n"
-"PO-Revision-Date: 2018-03-06 15:10-0300\n"
+"POT-Creation-Date: 2018-03-08 12:27-0300\n"
+"PO-Revision-Date: 2018-03-08 12:30-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -370,6 +370,38 @@ msgstr "Tutoriais"
 msgid "Archive Tutorials"
 msgstr "Arquivo de Tutoriais"
 
+#: inc/support-config.php:10
+msgid "Support Configuration"
+msgstr "Configuração da página de suporte"
+
+#: inc/support-config.php:17
+msgid "URL for Mapas Culturais repository at Github"
+msgstr "URL do repositório do Mapas Culturais no Github"
+
+#: inc/support-config.php:36
+msgid "URL for Rocket Chat"
+msgstr "URL para o Rocket Chat"
+
+#: inc/support-config.php:55
+msgid "initial page URL for Delibera"
+msgstr "URL da página inicial do delibera"
+
+#: inc/support-config.php:71
+msgid "About"
+msgstr "Sobre nós"
+
+#: inc/support-config.php:74
+msgid "URL for about page"
+msgstr "URL da página “Sobre nós”"
+
+#: inc/support-config.php:90
+msgid "Link Manual"
+msgstr "Link do Manual"
+
+#: inc/support-config.php:93
+msgid "URL for User Manual"
+msgstr "URL para o Manual do Usuário"
+
 #: inc/timeline-items.php:18
 msgid "Date of occurrence or start date (if a period):"
 msgstr "Date de ocorrência ou data de inicio (se um período):"
@@ -581,10 +613,6 @@ msgstr "Navegar nas categorias de Tutoriais"
 msgid "New title"
 msgstr "Novo título"
 
-#: inc/tutorials/widget.php:72
-msgid "Title:"
-msgstr "Título:"
-
 #: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
 msgid "« Previous"
 msgstr "« Anterior"
@@ -653,6 +681,9 @@ msgstr "para"
 msgid "difficulty:"
 msgstr "dificuldade:"
 
+#~ msgid "Title:"
+#~ msgstr "Título:"
+
 #~ msgid "Veja as pautas abertas sobre o mapas culturais"
 #~ msgstr "Veja as pautas abertas sobre o mapas culturais"
 
@@ -661,17 +692,6 @@ msgstr "dificuldade:"
 
 #~ msgid "Add the button's link:"
 #~ msgstr "Adicione o link do botão:"
-
-#, fuzzy
-#~| msgid "URL for Mapas Culturais at Github "
-#~ msgid "URL for Mapas Culturais repository at Github"
-#~ msgstr "URL do repositório do Mapas Culturais no Github"
-
-#~ msgid "User Manual URL"
-#~ msgstr "URL para o Manual do Usuário"
-
-#~ msgid "Rocket Chat URL"
-#~ msgstr "URL para o Rocket Chat"
 
 #~ msgid "Delibera home URL"
 #~ msgstr "URL da página de início do Delibera"
