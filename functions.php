@@ -105,7 +105,7 @@ add_action( 'customize_register', 'pmc_customize_register' );
 function pmc_setup_theme() {
 
   // uncomment this line to refresh maintainer's capabilities
-  // remove_role('instance');
+  remove_role('instance');
 
   // create instance role
   $instance_role = add_role('instance', __('Instance', 'pmc'));
@@ -122,17 +122,10 @@ function pmc_setup_theme() {
     // network posts (custom post type)
     $role->add_cap( 'edit_published_network_posts' );
     $role->add_cap( 'publish_network_posts' );
-    $role->add_cap( 'delete_published_network_posts' );
+    //$role->add_cap( 'delete_published_network_posts' );
     $role->add_cap( 'edit_network_posts' );
     $role->add_cap( 'delete_network_posts' );
-
-    // network posts (custom post type)
-    $role->add_cap( 'edit_published_timeline_items' );
-    $role->add_cap( 'publish_timeline_items' );
-    $role->add_cap( 'delete_published_timeline_items' );
-    $role->add_cap( 'edit_timeline_items' );
-    $role->add_cap( 'delete_timeline_items' );
-
+  
     // tutorials (custom type)
     $role->add_cap( 'edit_published_tutorials' );
     $role->add_cap( 'delete_published_tutorials' );
@@ -154,6 +147,20 @@ function pmc_setup_theme() {
   // capabilities for admins, editors
   foreach (array('administrator', 'editor') as $role_name) {
     $role = get_role( $role_name );
+
+    // network posts (custom post type)
+    $role->add_cap( 'edit_published_network_posts' );
+    $role->add_cap( 'publish_network_posts' );
+    $role->add_cap( 'delete_published_network_posts' );
+    $role->add_cap( 'edit_network_posts' );
+    $role->add_cap( 'delete_network_posts' );
+
+    // timeline-items (custom post type)
+    $role->add_cap( 'edit_published_timeline_items' );
+    $role->add_cap( 'publish_timeline_items' );
+    $role->add_cap( 'delete_published_timeline_items' );
+    $role->add_cap( 'edit_timeline_items' );
+    $role->add_cap( 'delete_timeline_items' );
 
     // mapas culturais' versions (taxonomy)
     $role->add_cap( 'edit_related_versions' );
