@@ -106,11 +106,11 @@ class PMC_Support_Config {
 				),
 			),
 			'location' => array(
-				array(
-					array(
-						'param' => 'page',
+				array (
+					array (
+						'param' => 'page_template',
 						'operator' => '==',
-						'value' => '20',
+						'value' => 'support.php',
 					),
 				),
 			),
