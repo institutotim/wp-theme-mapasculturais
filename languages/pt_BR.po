@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 12:27-0300\n"
-"PO-Revision-Date: 2018-03-08 12:30-0300\n"
+"POT-Creation-Date: 2018-03-08 12:44-0300\n"
+"PO-Revision-Date: 2018-03-08 12:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -241,6 +241,34 @@ msgstr "Página não encontrada "
 msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
 msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
 
+#: inc/homepage-config.php:11
+msgid "Homepage configuration"
+msgstr "Configuração da página de suporte"
+
+#: inc/homepage-config.php:15
+msgid "Introduction text"
+msgstr "Texto Introdutório"
+
+#: inc/homepage-config.php:34
+msgid "\"Support\" button target"
+msgstr "URL da página de suporte"
+
+#: inc/homepage-config.php:55
+msgid "\"Learn More\" button target"
+msgstr "URL da página de saiba mais"
+
+#: inc/homepage-config.php:76
+msgid "Project description"
+msgstr "Descrição do projeto"
+
+#: inc/homepage-config.php:79
+msgid ""
+"Please enter one paragraph describing the project, considering that the "
+"first phrase will be highlighted."
+msgstr ""
+"Por favor entre com um paragrafo descrevendo o projeto, considerando que a "
+"Primera frase será destacada."
+
 #: inc/menus.php:12
 msgid "Header"
 msgstr "Cabeçalho"
@@ -407,8 +435,10 @@ msgid "Date of occurrence or start date (if a period):"
 msgstr "Date de ocorrência ou data de inicio (se um período):"
 
 #: inc/timeline-items.php:21
-msgid "Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
-msgstr "Formato: AAAA-MM-DD (AAAA = ano, MM = mês, DD = dia, o ano é obrigatório)."
+msgid ""
+"Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
+msgstr ""
+"Formato: AAAA-MM-DD (AAAA = ano, MM = mês, DD = dia, o ano é obrigatório)."
 
 #: inc/timeline-items.php:23
 msgid "Examples: 2014, 2014-05, 2014-05-01"
@@ -732,7 +762,8 @@ msgstr "dificuldade:"
 #~ msgstr ""
 #~ "“Ops, me ferrei e você descobriu minha falha.\n"
 #~ "Bem, não somos perfeitos, mas tentamos. Você pode tentar isso?\n"
-#~ "novamente ou talvez visite nossa <a title=“Nosso Site” href = “/“> Página Inicial </a>\n"
+#~ "novamente ou talvez visite nossa <a title=“Nosso Site” href = “/“> Página "
+#~ "Inicial </a>\n"
 #~ "para começar de novo. Faremos melhor na próxima.“"
 
 #~ msgid "Start date:"
