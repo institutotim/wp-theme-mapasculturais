@@ -1389,25 +1389,16 @@ p.post-meta .fa {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
-.gh-chart .highcharts-tooltip-box,
-.events-chart .highcharts-tooltip-box,
-.spaces-chart .highcharts-tooltip-box,
-.projects-chart .highcharts-tooltip-box,
-.agents-chart .highcharts-tooltip-box {
+.global-chart .highcharts-tooltip-box,
+.gh-chart .highcharts-tooltip-box {
   fill: #373f57;
 }
-.gh-chart .highcharts-background,
-.events-chart .highcharts-background,
-.spaces-chart .highcharts-background,
-.projects-chart .highcharts-background,
-.agents-chart .highcharts-background {
+.global-chart .highcharts-background,
+.gh-chart .highcharts-background {
   fill: transparent;
 }
-.gh-chart .highcharts-area,
-.events-chart .highcharts-area,
-.spaces-chart .highcharts-area,
-.projects-chart .highcharts-area,
-.agents-chart .highcharts-area {
+.global-chart .highcharts-area,
+.gh-chart .highcharts-area {
   fill: transparent;
   fill-opacity: 1;
 }

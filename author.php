@@ -96,18 +96,17 @@
                 nos últimos 30 dias
               </p>
 
-              <div class="agents-chart chart" ></div>
-              <div class="events-chart chart" ></div>
+              <div class="global-chart chart" ></div>
+              <!-- <div class="events-chart chart" ></div>
               <div class="projects-chart chart" ></div>
-              <div class="spaces-chart chart" ></div>
+              <div class="spaces-chart chart" ></div> -->
+              <p id="agents-result" class="result"><?php echo (array_values(get_the_author_meta( 'agents_count', $author->ID ))[0] - array_values(get_the_author_meta( 'agents_count', $author->ID ))[1]) ?> agentes culturais cadastrados nos últimos 30 dias</p>
 
-              <p id="agents-result" class="result"><?php echo array_values(get_the_author_meta( 'agents_count', $author->ID ))[0] ?> agentes culturais cadastrados nos últimos 30 dias</p>
+              <p id="events-result" class="result"><?php echo (array_values(get_the_author_meta( 'events_count', $author->ID ))[0] - array_values(get_the_author_meta( 'events_count', $author->ID ))[1]) ?> eventos culturais cadastrados nos últimos 30 dias</p>
 
-              <p id="events-result" class="result"><?php echo array_values(get_the_author_meta( 'events_count', $author->ID ))[0] ?> eventos culturais cadastrados nos últimos 30 dias</p>
+              <p id="projects-result" class="result"><?php echo (array_values(get_the_author_meta( 'projects_count', $author->ID ))[0] - array_values(get_the_author_meta( 'projects_count', $author->ID ))[1]) ?>  projetos culturais cadastrados nos últimos 30 dias</p>
 
-              <p id="projects-result" class="result"><?php echo array_values(get_the_author_meta( 'projects_count', $author->ID ))[0] ?>  projetos culturais cadastrados nos últimos 30 dias</p>
-
-              <p id="spaces-result" class="result"><?php echo array_values(get_the_author_meta( 'spaces_count', $author->ID ))[0] ?> espaços culturais cadastrados nos últimos 30 dias</p>
+              <p id="spaces-result" class="result"><?php echo (array_values(get_the_author_meta( 'spaces_count', $author->ID ))[0] - array_values(get_the_author_meta( 'spaces_count', $author->ID ))[1]) ?> espaços culturais cadastrados nos últimos 30 dias</p>
 
               
             </div>
