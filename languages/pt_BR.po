@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 12:44-0300\n"
-"PO-Revision-Date: 2018-03-08 12:46-0300\n"
+"POT-Creation-Date: 2018-03-09 19:56+0000\n"
+"PO-Revision-Date: 2018-03-09 19:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -639,7 +639,7 @@ msgstr "Navegar nos Tutoriais"
 msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
-#: inc/tutorials/widget.php:66
+#: inc/tutorials/widget.php:65
 msgid "New title"
 msgstr "Novo título"
 
