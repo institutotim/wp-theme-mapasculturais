@@ -19,7 +19,7 @@
     <div class="page-excerpt">
       <div class="container">
         <div class="eight columns offset-by-two">
-          <p>In tempor lacus nec lorem ornare egestas. Morbi auctor placerat dolor, at bibendum ex tempor luctus. Nulla tellus nibh, ullamcorper non finibus eget, volutpat et sapien. Phasellus ac ipsum vitae orci tempor viverra nec vel sapien.</p>
+          <p><?php echo the_excerpt(); ?></p>
         </div>
       </div>
     </div>
