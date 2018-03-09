@@ -105,7 +105,7 @@ add_action( 'customize_register', 'pmc_customize_register' );
 function pmc_setup_theme() {
 
   // uncomment this line to refresh maintainer's capabilities
-  // remove_role('instance');
+  remove_role('instance');
 
   // create instance role
   $instance_role = add_role('instance', __('Instance', 'pmc'));
