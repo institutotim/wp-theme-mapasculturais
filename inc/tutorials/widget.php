@@ -61,11 +61,9 @@ class tutorials_widget extends WP_Widget {
 	public function form( $instance ) {
 		if ( isset( $instance[ 'title' ] ) ) {
 		$title = $instance[ 'title' ];
-	}
-	else {
-	$title = __( 'New title', 'pmc' );
-	}
-	// Widget admin form
+		}	else {
+		$title = __( 'New title', 'pmc' );
+		}
 	}
      
 	// Updating widget replacing old instances with new
