@@ -256,10 +256,10 @@ class PMC_Platform_Statistics {
 
   function create_get_event() {
     // Uncomment lines bellow to reschedule task
-    $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
-    if ($timestamp) {
-      wp_unschedule_event($timestamp, 'pmc_create_get_event');
-    }
+    // $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
+    // if ($timestamp) {
+    //   wp_unschedule_event($timestamp, 'pmc_create_get_event');
+    // }
 
     $timestamp = wp_next_scheduled( 'pmc_create_get_event' );
     if( $timestamp == false ) {
