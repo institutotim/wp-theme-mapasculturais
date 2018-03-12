@@ -17,6 +17,8 @@ apt:
   packages:
   - sshpass
 before_install:
+- openssl aes-256-cbc -K $encrypted_731ac0e3ac48_key -iv $encrypted_731ac0e3ac48_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
 - openssl aes-256-cbc -K $encrypted_bbba74f7c321_key -iv $encrypted_bbba74f7c321_iv
   -in deploy_rsa.enc -out deploy_rsa -d
 - sudo apt-get install sshpass
@@ -29,14 +31,8 @@ after_success:
 - ssh-add deploy_rsa
 - echo -e "Host  $ssh_host\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
-- awk "/WP_DEBUG/ { print; print \"define('ACF_PRO_KEY', '${ACF_PRO_KEY}');\"; next }1" wp-config-sample.php > wp-config.php
-#deploy:
-#- provider: script
-#  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server "
- # skip_cleanup: true
- # branches:
-  #  only:
-   # - to-validate
+- awk "/WP_DEBUG/ { print; print \"define('ACF_PRO_KEY', '${ACF_PRO_KEY}');\"; next
+  }1" wp-config-sample.php > wp-config.php
 cache:
   directories:
   - vendor
