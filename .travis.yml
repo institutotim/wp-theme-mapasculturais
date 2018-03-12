@@ -32,7 +32,7 @@ after_success:
 - awk "/WP_DEBUG/ { print; print \"define('ACF_PRO_KEY', '${ACF_PRO_KEY}');\"; next }1" wp-config-sample.php > wp-config.php
 #deploy:
 #- provider: script
-#  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server"
+#  script: sshpass -p '$ssh_user_pass'  ssh $ssh_user@$ssh_host "sh $path_script_deploy_server "
  # skip_cleanup: true
  # branches:
   #  only:
