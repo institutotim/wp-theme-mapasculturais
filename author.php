@@ -122,6 +122,7 @@
                       <?php echo get_avatar( get_sub_field('email'), 100 ); ?>
                       <h4><?php the_sub_field('name'); ?></h4>
                       <p><?php the_sub_field('position'); ?></p>
+                      <p><?php the_sub_field('email'); ?></p>
                     </li>
                   <?php endwhile; ?>
                 <?php endif; ?>
