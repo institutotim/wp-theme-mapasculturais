@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 14:18+0000\n"
+"POT-Creation-Date: 2018-03-13 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,8 +237,9 @@ msgstr ""
 msgid "Página não encontrada "
 msgstr ""
 
-#: inc/404.php:12
-msgid "Return to the <a href=\"/\">main page</a> or perform a new search."
+#: inc/404.php:13
+#, php-format
+msgid "Return to the <a href=%s>main page</a> or perform a new search."
 msgstr ""
 
 #: inc/homepage-config.php:11
