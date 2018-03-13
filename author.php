@@ -68,7 +68,7 @@
                     </div>
                   </div>
                 </div>
-                <p><a class="button block" href="<?php echo get_the_author_meta( 'url', $author->ID ) ?>"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
+                <p><a class="button block" target="_blank" href="<?php echo get_the_author_meta( 'url', $author->ID ) ?>"><span class="fa fa-star"></span>Acesse a plataforma</a></p>
               </div>
             </div>
           </div>
