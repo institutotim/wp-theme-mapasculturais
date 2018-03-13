@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-09 19:56+0000\n"
-"PO-Revision-Date: 2018-03-09 19:57+0000\n"
+"POT-Creation-Date: 2018-03-13 14:18+0000\n"
+"PO-Revision-Date: 2018-03-13 14:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -238,8 +238,8 @@ msgid "Página não encontrada "
 msgstr "Página não encontrada "
 
 #: inc/404.php:12
-msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
-msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
+msgid "Return to the <a href=\"/\">main page</a> or perform a new search."
+msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma nova busca."
 
 #: inc/homepage-config.php:11
 msgid "Homepage configuration"
@@ -643,6 +643,10 @@ msgstr "Navegar nas categorias de Tutoriais"
 msgid "New title"
 msgstr "Novo título"
 
+#: inc/tutorials/widget.php:71
+msgid "Title:"
+msgstr "Título:"
+
 #: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
 msgid "« Previous"
 msgstr "« Anterior"
@@ -711,8 +715,8 @@ msgstr "para"
 msgid "difficulty:"
 msgstr "dificuldade:"
 
-#~ msgid "Title:"
-#~ msgstr "Título:"
+#~ msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
+#~ msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
 
 #~ msgid "Veja as pautas abertas sobre o mapas culturais"
 #~ msgstr "Veja as pautas abertas sobre o mapas culturais"

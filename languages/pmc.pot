@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-09 19:56+0000\n"
+"POT-Creation-Date: 2018-03-13 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,7 +238,7 @@ msgid "Página não encontrada "
 msgstr ""
 
 #: inc/404.php:12
-msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
+msgid "Return to the <a href=\"/\">main page</a> or perform a new search."
 msgstr ""
 
 #: inc/homepage-config.php:11
@@ -638,6 +638,10 @@ msgstr ""
 
 #: inc/tutorials/widget.php:65
 msgid "New title"
+msgstr ""
+
+#: inc/tutorials/widget.php:71
+msgid "Title:"
 msgstr ""
 
 #: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
