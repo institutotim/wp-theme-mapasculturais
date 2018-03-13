@@ -29,7 +29,7 @@
             </div>
             <div class="four columns">
               <p class="buttons small-buttons u-pull-right">
-                <a href="/tutorials"  class="button">
+                <a href="/tutoriais"  class="button">
                   <span class="fa fa-bookmark-o"></span>
                   Tutoriais
                 </a>
