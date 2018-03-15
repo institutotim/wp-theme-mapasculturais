@@ -9,16 +9,6 @@
     <div class="container">
       <div class="twelve columns">
         <div class="page-header-content no-text has-icon row">
-          <nav class="button-nav u-pull-right">
-              <?php $terms = get_terms( array( 'taxonomy'  => 'category') );
-                if ( $terms && !is_wp_error( $terms ) ) :
-                  foreach ( $terms as $term ) { ?>
-                      <a href="<?php echo get_term_link($term->term_id); ?>" class="button">
-                      <?php echo $term->name; ?>
-                    </a>
-                    <?php } ?>
-                <?php endif; ?>
-          </nav>
           <span class="page-icon">
             <span class="fa fa-newspaper-o"></span>
           </span>
