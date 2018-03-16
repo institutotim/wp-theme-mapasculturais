@@ -448,6 +448,33 @@ p.big {
   top: 20px;
   right: -5px;
 }
+.content-section article .network-author .instance-thumb {
+  display: block;
+  width: 100px;
+  border-radius: 100%;
+  background: #ddd;
+  margin: 0 0 1rem;
+  position: relative;
+  border: 5px solid #ddd;
+  box-sizing: border-box;
+}
+.content-section article .network-author .instance-thumb img {
+  height: 90px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+}
+.content-section article .network-author .instance-thumb:after {
+  content: '';
+  display: block;
+  background: #ddd;
+  width: 10px;
+  height: 10px;
+  transform: rotate(105deg);
+  position: absolute;
+  top: 20px;
+  right: -5px;
+}
 .content-section article .network-author h4 {
   font-family: "Open Sans";
   font-size: .9em;

@@ -99,7 +99,7 @@
           foreach ( $blogusers as $user ) : ?>
             <article class="profile row">
               <div class="author network-author">
-                <div class="author-thumb">
+                <div class="instance-thumb">
                   <?php echo get_avatar( $user->ID, 100 ); ?>
                 </div>
               </div>
