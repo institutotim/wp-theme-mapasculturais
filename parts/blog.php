@@ -82,8 +82,8 @@
           'current' => $page,
           'type' => 'plain',
           'prev_next'          => true,
-          'prev_text'          => __('« Previous'),
-          'next_text'          => __('Next »'),
+          'prev_text'          => "« " . __('Previous'),
+          'next_text'          => __('Next') . " »",
           'show_all' => get_theme_mod( 'all-links', false ),
           'before_page_number' => "<!--",
           'after_page_number' => '-->'

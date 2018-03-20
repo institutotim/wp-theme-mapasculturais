@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 14:37+0000\n"
+"POT-Creation-Date: 2018-03-20 22:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Github"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:114
 msgid "Instance"
 msgstr ""
 
@@ -646,11 +646,11 @@ msgid "Title:"
 msgstr ""
 
 #: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
-msgid "« Previous"
+msgid "Previous"
 msgstr ""
 
 #: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
-msgid "Next »"
+msgid "Next"
 msgstr ""
 
 #: parts/blog.php:105 parts/network-entry-on-author-page.php:56

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 14:37+0000\n"
-"PO-Revision-Date: 2018-03-13 14:37+0000\n"
+"POT-Creation-Date: 2018-03-20 22:52+0000\n"
+"PO-Revision-Date: 2018-03-20 22:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -229,7 +229,7 @@ msgstr "Links da Web"
 msgid "Github"
 msgstr "Github"
 
-#: functions.php:111
+#: functions.php:114
 msgid "Instance"
 msgstr "Instância"
 
@@ -648,11 +648,11 @@ msgstr "Novo título"
 msgid "Title:"
 msgstr "Título:"
 
-#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
+#: parts/blog.php:85 parts/pautas.php:20
 msgid "« Previous"
 msgstr "« Anterior"
 
-#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
+#: parts/blog.php:86 parts/pautas.php:21
 msgid "Next »"
 msgstr "Próximo »"
 
@@ -684,6 +684,14 @@ msgid "<span class=\"numero\">1</span> dia restante"
 msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] "<span class=“numero”>1</span> dia restante"
 msgstr[1] "<span class=“numero”>%1$s</span> dias restantes"
+
+#: parts/tutorials.php:78
+msgid "Previous"
+msgstr "Anterior"
+
+#: parts/tutorials.php:79
+msgid "Next"
+msgstr "Próximo"
 
 #: single-pauta.php:97
 msgid "Prazo encerrado"
