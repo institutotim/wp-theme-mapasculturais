@@ -104,8 +104,11 @@ add_action( 'customize_register', 'pmc_customize_register' );
 
 function pmc_setup_theme() {
 
+  // add excerpt to pages
+  add_post_type_support( 'page', 'excerpt' );
+
   // uncomment this line to refresh maintainer's capabilities
-  remove_role('instance');
+  // remove_role('instance');
 
   // create instance role
   $instance_role = add_role('instance', __('Instance', 'pmc'));
