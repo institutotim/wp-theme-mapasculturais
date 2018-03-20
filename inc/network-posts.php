@@ -39,7 +39,7 @@ class PMC_Network_Posts {
       'show_ui'            => true,
       'show_in_menu'       => true,
       'query_var'          => true,
-      'rewrite'            => array( 'slug' => 'network_posts' ),
+      'rewrite'            => array( 'slug' => 'blog-da-rede' ),
       'capabilities'       => $capabilities,
       'map_meta_cap'       => true,
       'has_archive'        => true,
