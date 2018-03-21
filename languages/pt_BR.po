@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 22:52+0000\n"
-"PO-Revision-Date: 2018-03-20 22:54+0000\n"
+"POT-Creation-Date: 2018-03-08 12:44-0300\n"
+"PO-Revision-Date: 2018-03-08 12:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -229,7 +229,7 @@ msgstr "Links da Web"
 msgid "Github"
 msgstr "Github"
 
-#: functions.php:114
+#: functions.php:111
 msgid "Instance"
 msgstr "Instância"
 
@@ -237,10 +237,9 @@ msgstr "Instância"
 msgid "Página não encontrada "
 msgstr "Página não encontrada "
 
-#: inc/404.php:13
-#, php-format
-msgid "Return to the <a href=%s>main page</a> or perform a new search."
-msgstr "Volte à <a href=%s>página inicial</a> ou faça uma nova busca."
+#: inc/404.php:12
+msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
+msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
 
 #: inc/homepage-config.php:11
 msgid "Homepage configuration"
@@ -640,19 +639,15 @@ msgstr "Navegar nos Tutoriais"
 msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
-#: inc/tutorials/widget.php:65
+#: inc/tutorials/widget.php:66
 msgid "New title"
 msgstr "Novo título"
 
-#: inc/tutorials/widget.php:71
-msgid "Title:"
-msgstr "Título:"
-
-#: parts/blog.php:85 parts/pautas.php:20
+#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
 msgid "« Previous"
 msgstr "« Anterior"
 
-#: parts/blog.php:86 parts/pautas.php:21
+#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
 msgid "Next »"
 msgstr "Próximo »"
 
@@ -685,14 +680,6 @@ msgid_plural "<span class=\"numero\">%1$s</span> dias restantes"
 msgstr[0] "<span class=“numero”>1</span> dia restante"
 msgstr[1] "<span class=“numero”>%1$s</span> dias restantes"
 
-#: parts/tutorials.php:78
-msgid "Previous"
-msgstr "Anterior"
-
-#: parts/tutorials.php:79
-msgid "Next"
-msgstr "Próximo"
-
 #: single-pauta.php:97
 msgid "Prazo encerrado"
 msgstr "Prazo encerrado"
@@ -724,8 +711,8 @@ msgstr "para"
 msgid "difficulty:"
 msgstr "dificuldade:"
 
-#~ msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
-#~ msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
+#~ msgid "Title:"
+#~ msgstr "Título:"
 
 #~ msgid "Veja as pautas abertas sobre o mapas culturais"
 #~ msgstr "Veja as pautas abertas sobre o mapas culturais"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 22:56+0000\n"
+"POT-Creation-Date: 2018-03-21 10:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,50 +45,50 @@ msgstr ""
 msgid "Select Target Group"
 msgstr ""
 
-#: archive.php:32 archive.php:34
+#: archive.php:22 archive.php:24
 #, php-format
 msgid "%s"
 msgstr ""
 
-#: archive.php:38
+#: archive.php:28
 #, php-format
 msgid "Search results for: %s"
 msgstr ""
 
-#: archive.php:40
+#: archive.php:30
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:32
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:32
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:44
+#: archive.php:34
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:44
+#: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: archive.php:46 single.php:30
+#: archive.php:36 single.php:30
 msgid "Network Blog"
 msgstr ""
 
-#: archive.php:48 inc/sidebars.php:11
+#: archive.php:38 inc/sidebars.php:11
 msgid "News"
 msgstr ""
 
-#: archive.php:51
+#: archive.php:41
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr ""
 
@@ -637,23 +637,19 @@ msgstr ""
 msgid "Navigate on tutorials categories"
 msgstr ""
 
-#: inc/tutorials/widget.php:65
+#: inc/tutorials/widget.php:66
 msgid "New title"
 msgstr ""
 
-#: inc/tutorials/widget.php:71
-msgid "Title:"
-msgstr ""
-
-#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
+#: parts/blog.php:86 parts/pautas.php:20 parts/tutorials.php:78
 msgid "Previous"
 msgstr ""
 
-#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
+#: parts/blog.php:87 parts/pautas.php:21 parts/tutorials.php:79
 msgid "Next"
 msgstr ""
 
-#: parts/blog.php:105 parts/network-entry-on-author-page.php:56
+#: parts/blog.php:106 parts/network-entry-on-author-page.php:56
 #: parts/pautas.php:40 parts/tutorials.php:98
 msgid "Sorry, no posts matched your criteria."
 msgstr ""

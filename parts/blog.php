@@ -3,9 +3,10 @@
     <?php
 
       $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
+      $post_type = ( get_query_var('post_type') ) ? get_query_var('post_type') : 'post';
 
       $args = array(
-        'post_type' => 'post', 
+        'post_type' => $post_type, 
         's' => esc_html( get_search_query( false ) ),
         'paged' => $page
       );
