@@ -11,8 +11,8 @@ class PMC_RelatedVersions {
       'related_version',
       'tutorial',
       array(
-        'label'          => __( 'Related Versions' ),
-        'description'    => __( 'Versions of Mapas Culturais a tutorial applies to.' ),
+        'label'          => __( 'Related Versions', 'pmc' ),
+        'description'    => __( 'Versions of Mapas Culturais a tutorial applies to.', 'pmc' ),
         'capabilities'   => array(
           'manage_terms' => 'manage_related_versions',
           'edit_terms'   => 'edit_related_versions',
