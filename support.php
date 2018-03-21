@@ -37,7 +37,7 @@
                   <span class="fa fa-comments-o"></span>
                   Rocket Chat
                 </a>
-                <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
+                <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual', true) ?>" class="button"> 
                   <span class="fa fa-book"></span>
                   Manual
                 </a>
@@ -72,7 +72,7 @@
     <div class="container">
       <div class="seven columns">
         <p class="download-user-guide connect-border connect-left">
-          <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
+          <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual', true) ?>" class="button">
             <span class="fa fa-download"></span>
             Baixar o manual
           </a>
