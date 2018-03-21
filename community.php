@@ -48,7 +48,7 @@
               }
 
               if ( false === ( $request_latest_commit = get_transient( 'request_latest_commit' ) ) ) {
-                   $request_latest_commit = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/git/refs/heads/master'));
+                   $request_latest_commit = wp_remote_get(esc_url('https://api.github.com/repos/hacklabr/mapasculturais/git/refs/heads/develop'));
                    set_transient( 'request_latest_commit', $request_latest_commit, 3 * HOUR_IN_SECONDS );
               }
 
