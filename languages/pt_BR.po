@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-21 13:53-0300\n"
-"PO-Revision-Date: 2018-03-21 13:54-0300\n"
+"PO-Revision-Date: 2018-03-21 13:57-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -421,10 +421,8 @@ msgid "Sidebar for single post news page"
 msgstr "Menu lateral da página única de noticias"
 
 #: inc/single-post-widget.php:15
-#, fuzzy
-#| msgid "Navigate on tutorials categories"
 msgid "List single post categories"
-msgstr "Navegar nas categorias de Tutoriais"
+msgstr "Listar as categorias de noticias"
 
 #: inc/single-post-widget.php:17
 msgid "Show all single post categories"
@@ -672,14 +670,10 @@ msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
 #: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:78
-#, fuzzy
-#| msgid "« Previous"
 msgid "Previous"
 msgstr "« Anterior"
 
 #: parts/blog.php:83 parts/pautas.php:21 parts/tutorials.php:79
-#, fuzzy
-#| msgid "Next »"
 msgid "Next"
 msgstr "Próximo »"
 
