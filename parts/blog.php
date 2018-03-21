@@ -18,14 +18,12 @@
         $args['posts_per_page'] = 5;
       }
 
-
-
       if( is_tag() || is_category() || is_tax() ) {
         $tax = get_query_var( 'taxonomy', '' );
 
         $term = get_queried_object();
 
-        if ($tax = 'tema') {
+        if ($tax == 'tema') {
           $args['post_type'] = 'pauta';
         }
 
@@ -38,8 +36,6 @@
         );
         $args['posts_per_page'] = -1;
       }
-
-
 
       $query = new WP_Query( $args );
     ?>
