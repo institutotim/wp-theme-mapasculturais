@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 12:44-0300\n"
-"PO-Revision-Date: 2018-03-08 12:46-0300\n"
+"POT-Creation-Date: 2018-03-21 13:35-0300\n"
+"PO-Revision-Date: 2018-03-21 13:39-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -45,50 +45,50 @@ msgstr "a"
 msgid "Select Target Group"
 msgstr "Selecionar Grupo"
 
-#: archive.php:32 archive.php:34
+#: archive.php:22 archive.php:24
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: archive.php:38
+#: archive.php:28
 #, php-format
 msgid "Search results for: %s"
 msgstr "Resultados de busca para: %s"
 
-#: archive.php:40
+#: archive.php:30
 #, php-format
 msgid "Daily Archives: %s"
 msgstr "Arquivo do dia: %s"
 
-#: archive.php:42
+#: archive.php:32
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr "Arquivo Mensal: %s"
 
-#: archive.php:42
+#: archive.php:32
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F \\d\\e Y"
 
-#: archive.php:44
+#: archive.php:34
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "Arquivo Anual: %s"
 
-#: archive.php:44
+#: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: archive.php:46 single.php:30
+#: archive.php:36 single.php:30
 msgid "Network Blog"
 msgstr "Post da Rede"
 
-#: archive.php:48 inc/sidebars.php:11
+#: archive.php:38 inc/sidebars.php:11
 msgid "News"
 msgstr "Notícias"
 
-#: archive.php:51
+#: archive.php:41
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr "Saiba o que está acontecendo no mundo do Mapas Culturais"
 
@@ -229,7 +229,7 @@ msgstr "Links da Web"
 msgid "Github"
 msgstr "Github"
 
-#: functions.php:111
+#: functions.php:114
 msgid "Instance"
 msgstr "Instância"
 
@@ -237,9 +237,10 @@ msgstr "Instância"
 msgid "Página não encontrada "
 msgstr "Página não encontrada "
 
-#: inc/404.php:12
-msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
-msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
+#: inc/404.php:13
+#, php-format
+msgid "Return to the <a href=%s>main page</a> or perform a new search."
+msgstr ""
 
 #: inc/homepage-config.php:11
 msgid "Homepage configuration"
@@ -390,13 +391,33 @@ msgstr "WhatsApp"
 msgid "Position on the map"
 msgstr "Posição no mapa"
 
+#: inc/sidebars.php:13
+msgid "Archive Newspage sidebar"
+msgstr "Menu Lateral da pagina de Tutoriais"
+
 #: inc/sidebars.php:23
 msgid "Tutorials"
 msgstr "Tutoriais"
 
+#: inc/sidebars.php:25
+msgid "Single Tutorials page sidebar"
+msgstr "Menu Lateral da pagina de tutorial"
+
 #: inc/sidebars.php:35
 msgid "Archive Tutorials"
 msgstr "Arquivo de Tutoriais"
+
+#: inc/sidebars.php:37
+msgid "Archive Tutorials page sidebar"
+msgstr "Menu Lateral da pagina de Tutoriais"
+
+#: inc/sidebars.php:47
+msgid "News - Single Post"
+msgstr "Noticias - Página única"
+
+#: inc/sidebars.php:49
+msgid "Sidebar for single post news page"
+msgstr "Menu lateral da página única de noticias"
 
 #: inc/support-config.php:10
 msgid "Support Configuration"
@@ -639,19 +660,19 @@ msgstr "Navegar nos Tutoriais"
 msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
-#: inc/tutorials/widget.php:66
-msgid "New title"
-msgstr "Novo título"
-
-#: parts/blog.php:85 parts/pautas.php:20 parts/tutorials.php:78
-msgid "« Previous"
+#: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:78
+#, fuzzy
+#| msgid "« Previous"
+msgid "Previous"
 msgstr "« Anterior"
 
-#: parts/blog.php:86 parts/pautas.php:21 parts/tutorials.php:79
-msgid "Next »"
+#: parts/blog.php:83 parts/pautas.php:21 parts/tutorials.php:79
+#, fuzzy
+#| msgid "Next »"
+msgid "Next"
 msgstr "Próximo »"
 
-#: parts/blog.php:105 parts/network-entry-on-author-page.php:56
+#: parts/blog.php:102 parts/network-entry-on-author-page.php:56
 #: parts/pautas.php:40 parts/tutorials.php:98
 msgid "Sorry, no posts matched your criteria."
 msgstr "Desculpe nenhum post foi encontrado."
@@ -710,6 +731,12 @@ msgstr "para"
 #: single-tutorial.php:61
 msgid "difficulty:"
 msgstr "dificuldade:"
+
+#~ msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
+#~ msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
+
+#~ msgid "New title"
+#~ msgstr "Novo título"
 
 #~ msgid "Title:"
 #~ msgstr "Título:"

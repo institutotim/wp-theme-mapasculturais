@@ -471,6 +471,7 @@ require_once(TEMPLATEPATH . '/inc/network-posts.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/post-type.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/related-versions.php');
 require_once(TEMPLATEPATH . '/inc/tutorials/widget.php');
+require_once(TEMPLATEPATH . '/inc/single-post-widget.php');
 require_once(TEMPLATEPATH . '/inc/platform-statistics.php');
 require_once(TEMPLATEPATH . '/inc/sidebars.php');
 require_once(TEMPLATEPATH . '/inc/menus.php');
