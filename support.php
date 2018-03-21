@@ -24,20 +24,20 @@
                 <?php the_title(); ?>
               </h2>
               <div class="page-header-text connect-border connect-left">
-                <p>Mapas Culturais foi criado pelo <a href="http://institutotim.org.br" rel="external" target="_blank">Instituto TIM</a> em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior. Em 2015, Mapas Culturais passou a ser a plataforma oficial do Sistema Nacional de Informações e Indicadores Culturais (SNIIC), sendo o sistema oficial para mapeamento colaborativo e gestão da cultura do Ministério da Cultura.</p>
+                <p>Mapas Culturais foi criado pelo <a target="_blank" href="http://institutotim.org.br" rel="external" target="_blank">Instituto TIM</a> em parceria com a Secretaria de Cultura do Município de São Paulo, a primeira a adotar a plataforma, em 2014. Atualmente, a solução está em operação no Ministério da Cultura, em estados e municípios de todas as regiões do Brasil e até no exterior. Em 2015, Mapas Culturais passou a ser a plataforma oficial do Sistema Nacional de Informações e Indicadores Culturais (SNIIC), sendo o sistema oficial para mapeamento colaborativo e gestão da cultura do Ministério da Cultura.</p>
               </div>
             </div>
             <div class="four columns">
               <p class="buttons small-buttons u-pull-right">
-                <a href="/tutoriais"  class="button">
+                <a target="_blank" href="/tutoriais"  class="button">
                   <span class="fa fa-bookmark-o"></span>
                   Tutoriais
                 </a>
-                <a href="<?php echo get_post_meta(get_the_ID(), 'rocket_url', true) ?>" class="button">
+                <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'rocket_url', true) ?>" class="button">
                   <span class="fa fa-comments-o"></span>
                   Rocket Chat
                 </a>
-                <a href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
+                <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
                   <span class="fa fa-book"></span>
                   Manual
                 </a>
@@ -72,7 +72,7 @@
     <div class="container">
       <div class="seven columns">
         <p class="download-user-guide connect-border connect-left">
-          <a href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
+          <a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'manual_url', true) ?>" class="button">
             <span class="fa fa-download"></span>
             Baixar o manual
           </a>
@@ -82,7 +82,7 @@
         <section id="support-chat">
           <h3>Participe do chat</h3>
           <p>Se tiver dúvidas durante o processo de instalação de Mapas Culturais, entre em contato com a equipe do projeto no chat de Suporte Técnico.</p>
-          <p><a href="<?php echo get_post_meta(get_the_ID(), 'rocket_url', true) ?>" class="button button-primary block">
+          <p><a target="_blank" href="<?php echo get_post_meta(get_the_ID(), 'rocket_url', true) ?>" class="button button-primary block">
             <span class="fa fa-comments-o"></span>
             Entrar
           </a></p>
@@ -149,7 +149,7 @@
                     <?php echo get_the_post_thumbnail(); ?>
                   </div>
                   <h3>
-                    <a href="<?php echo get_permalink();?>">
+                    <a target="_blank" href="<?php echo get_permalink();?>">
                       <?php the_title(); ?>
                     </a>
                   </h3>
@@ -168,7 +168,7 @@
             <?php endif; ?>
           </div>
           <p>
-            <a href="/tutorials" class="button block">Veja mais tutoriais</a>
+            <a target="_blank" href="/tutorials" class="button block">Veja mais tutoriais</a>
           </p>
         </div>
         <div class="four columns">
