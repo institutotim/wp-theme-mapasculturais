@@ -51,9 +51,9 @@
           </p>
           <?php if (get_post_type() != 'network_post'): ?>
           <p class="tags">
-            <span class="fa fa-tags"></span>
-           <?php $terms = get_the_terms( get_the_ID(), 'category');
-              if ( $terms && !is_wp_error( $terms ) ) :
+           <?php $terms = get_the_terms( get_the_ID(), 'post_tag');
+              if ( $terms && !is_wp_error( $terms ) ) :?>
+                <span class="fa fa-tags"></span><?php
                 $aux = array();
                 foreach ( $terms as $term ) {
                   $aux[] = '<a class="post-tag" href="'.get_term_link($term->term_id).'" class="category">'.$term->name.'</a>';
