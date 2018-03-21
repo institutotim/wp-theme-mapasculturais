@@ -76,7 +76,7 @@
       </div>
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
-         <?php dynamic_sidebar('news-single-pmc') ?>
+         <?php dynamic_sidebar('news-pmc') ?>
         </div>
       </div>
     </div>
