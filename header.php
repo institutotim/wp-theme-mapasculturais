@@ -13,7 +13,9 @@
           <h1 class="link_tim">
             <a href="<?php echo home_url('/'); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Portal Mapas Culturais" />
-              <p class="header-title" >Portal Mapas Culturais</p>
+              <div class="content-header-title">
+                <p class="header-title" >Portal Mapas Culturais</p>
+              </div>
             </a>
           </h1>
       </div>
