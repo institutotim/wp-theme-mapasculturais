@@ -2196,6 +2196,10 @@ p.post-meta .fa {
 #nova-pauta form ul li input {
   display: inline-block;
 }
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  color: black !important;
+}
 #add-pauta input[type="text"],
 #add-pauta textarea {
   padding: 2rem;
