@@ -62,6 +62,8 @@
               array( 'file' => 'g264.png', "name" => "Governo de Brasilia", "url" => "http://www.cultura.df.gov.br/"),
               array( 'file' => 'g280.png', "name" => "Governo do Estado do Espirito Santo - Secreataria de Cultura", "url" => "https://secult.es.gov.br/"),
               array( 'file' => 'g296.png', "name" => "Governo de Mato Grosso", "url" => "http://www.cultura.mt.gov.br/"),
+            ),
+            array(
               array( 'file' => 'g416.png', "name" => "Governo da Paraiba", "url" => "http://paraiba.pb.gov.br/cultura/"),
               array( 'file' => 'g390.png', "name" => "Governo de Pernambuco", "url" => "http://www.cultura.pe.gov.br/"),
               array( 'file' => 'g552.png', "name" => "Governo do estado do Rio Grande do Sul - Secreataria de Cultura", "url" => "http://sedactel.rs.gov.br/inicial"),

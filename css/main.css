@@ -2122,6 +2122,9 @@ p.post-meta .fa {
   margin-bottom: -4rem;
   box-shadow: 0 0 0;
 }
+.page-template-partners .page-header p {
+  margin-bottom: -5px;
+}
 .partner-list {
   margin-top: 8rem;
 }
