@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-21 13:53-0300\n"
+"POT-Creation-Date: 2018-04-01 20:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -337,6 +337,22 @@ msgstr ""
 msgid "Network's Posts"
 msgstr ""
 
+#: inc/networkpage-config.php:10
+msgid "Network Map"
+msgstr ""
+
+#: inc/networkpage-config.php:14
+msgid "Main Text"
+msgstr ""
+
+#: inc/networkpage-config.php:17
+msgid "The main text of the network map page."
+msgstr ""
+
+#: inc/networkpage-config.php:26
+msgid "Add your main text for network map page"
+msgstr ""
+
 #: inc/platform-statistics.php:14
 msgid "Instance details"
 msgstr ""
@@ -389,40 +405,12 @@ msgstr ""
 msgid "Position on the map"
 msgstr ""
 
-#: inc/sidebars.php:13
-msgid "Archive Newspage sidebar"
-msgstr ""
-
 #: inc/sidebars.php:23
 msgid "Tutorials"
 msgstr ""
 
-#: inc/sidebars.php:25
-msgid "Single Tutorials page sidebar"
-msgstr ""
-
 #: inc/sidebars.php:35
 msgid "Archive Tutorials"
-msgstr ""
-
-#: inc/sidebars.php:37
-msgid "Archive Tutorials page sidebar"
-msgstr ""
-
-#: inc/sidebars.php:47
-msgid "News - Single Post"
-msgstr ""
-
-#: inc/sidebars.php:49
-msgid "Sidebar for single post news page"
-msgstr ""
-
-#: inc/single-post-widget.php:15
-msgid "List single post categories"
-msgstr ""
-
-#: inc/single-post-widget.php:17
-msgid "Show all single post categories"
 msgstr ""
 
 #: inc/support-config.php:10
@@ -665,6 +653,14 @@ msgstr ""
 msgid "Navigate on tutorials categories"
 msgstr ""
 
+#: inc/tutorials/widget.php:65
+msgid "New title"
+msgstr ""
+
+#: inc/tutorials/widget.php:71
+msgid "Title:"
+msgstr ""
+
 #: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:78
 msgid "Previous"
 msgstr ""
@@ -729,6 +725,6 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-#: single-tutorial.php:61
+#: single-tutorial.php:61 support.php:136
 msgid "difficulty:"
 msgstr ""

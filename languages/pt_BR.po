@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-21 13:53-0300\n"
-"PO-Revision-Date: 2018-03-21 13:57-0300\n"
+"POT-Creation-Date: 2018-04-01 20:46-0300\n"
+"PO-Revision-Date: 2018-04-01 20:48-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -292,12 +292,12 @@ msgstr "Post da Rede"
 #: inc/network-posts.php:13
 msgctxt "admin menu"
 msgid "Network"
-msgstr "Rede"
+msgstr "Mapa da Rede"
 
 #: inc/network-posts.php:14
 msgctxt "add new on admin bar"
 msgid "Network"
-msgstr "Rede"
+msgstr "Mapa da Rede"
 
 #: inc/network-posts.php:15
 msgctxt "network_post"
@@ -339,6 +339,22 @@ msgstr "Nenhum post da Rede foi encontrado na Lixeira."
 #: inc/network-posts.php:36
 msgid "Network's Posts"
 msgstr "Posts da Rede"
+
+#: inc/networkpage-config.php:10
+msgid "Network Map"
+msgstr "Mapa da Rede"
+
+#: inc/networkpage-config.php:14
+msgid "Main Text"
+msgstr "Texto Principal"
+
+#: inc/networkpage-config.php:17
+msgid "The main text of the network map page."
+msgstr "Texto principal da página mapas da rede."
+
+#: inc/networkpage-config.php:26
+msgid "Add your main text for network map page"
+msgstr "Adicione o texto principal da página mapas da rede."
 
 #: inc/platform-statistics.php:14
 msgid "Instance details"
@@ -392,41 +408,13 @@ msgstr "WhatsApp"
 msgid "Position on the map"
 msgstr "Posição no mapa"
 
-#: inc/sidebars.php:13
-msgid "Archive Newspage sidebar"
-msgstr "Menu Lateral da pagina de Tutoriais"
-
 #: inc/sidebars.php:23
 msgid "Tutorials"
 msgstr "Tutoriais"
 
-#: inc/sidebars.php:25
-msgid "Single Tutorials page sidebar"
-msgstr "Menu Lateral da pagina de tutorial"
-
 #: inc/sidebars.php:35
 msgid "Archive Tutorials"
 msgstr "Arquivo de Tutoriais"
-
-#: inc/sidebars.php:37
-msgid "Archive Tutorials page sidebar"
-msgstr "Menu Lateral da pagina de Tutoriais"
-
-#: inc/sidebars.php:47
-msgid "News - Single Post"
-msgstr "Noticias - Página única"
-
-#: inc/sidebars.php:49
-msgid "Sidebar for single post news page"
-msgstr "Menu lateral da página única de noticias"
-
-#: inc/single-post-widget.php:15
-msgid "List single post categories"
-msgstr "Listar as categorias de noticias"
-
-#: inc/single-post-widget.php:17
-msgid "Show all single post categories"
-msgstr "Apresenta todas as categorias de página única"
 
 #: inc/support-config.php:10
 msgid "Support Configuration"
@@ -669,6 +657,14 @@ msgstr "Navegar nos Tutoriais"
 msgid "Navigate on tutorials categories"
 msgstr "Navegar nas categorias de Tutoriais"
 
+#: inc/tutorials/widget.php:65
+msgid "New title"
+msgstr "Novo título"
+
+#: inc/tutorials/widget.php:71
+msgid "Title:"
+msgstr "Título:"
+
 #: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:78
 msgid "Previous"
 msgstr "« Anterior"
@@ -733,18 +729,33 @@ msgstr "versão da plataforma:"
 msgid "to"
 msgstr "para"
 
-#: single-tutorial.php:61
+#: single-tutorial.php:61 support.php:136
 msgid "difficulty:"
 msgstr "dificuldade:"
 
+#~ msgid "Archive Newspage sidebar"
+#~ msgstr "Menu Lateral da pagina de Tutoriais"
+
+#~ msgid "Single Tutorials page sidebar"
+#~ msgstr "Menu Lateral da pagina de tutorial"
+
+#~ msgid "Archive Tutorials page sidebar"
+#~ msgstr "Menu Lateral da pagina de Tutoriais"
+
+#~ msgid "News - Single Post"
+#~ msgstr "Noticias - Página única"
+
+#~ msgid "Sidebar for single post news page"
+#~ msgstr "Menu lateral da página única de noticias"
+
+#~ msgid "List single post categories"
+#~ msgstr "Listar as categorias de noticias"
+
+#~ msgid "Show all single post categories"
+#~ msgstr "Apresenta todas as categorias de página única"
+
 #~ msgid "Volte à <a href=\"/\">página inicial</a> ou faça uma busca."
 #~ msgstr "Volte à <a href=“/“>página inicial</a> ou faça uma busca."
-
-#~ msgid "New title"
-#~ msgstr "Novo título"
-
-#~ msgid "Title:"
-#~ msgstr "Título:"
 
 #~ msgid "Veja as pautas abertas sobre o mapas culturais"
 #~ msgstr "Veja as pautas abertas sobre o mapas culturais"
