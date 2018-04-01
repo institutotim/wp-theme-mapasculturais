@@ -465,6 +465,7 @@ function add_pauta_template_redirect($post_id){
 load_theme_textdomain('pmc', get_template_directory() . '/languages');
 
 require_once(TEMPLATEPATH . '/inc/homepage-config.php');
+require_once(TEMPLATEPATH . '/inc/networkpage-config.php');
 require_once(TEMPLATEPATH . '/inc/support-config.php');
 require_once(TEMPLATEPATH . '/inc/timeline-items.php');
 require_once(TEMPLATEPATH . '/inc/network-posts.php');
