@@ -133,10 +133,10 @@
                   <p class="meta-item">
                     <span class="label">
                       <span class="fa fa-certificate"></span>
-                      Complexidade
+                      <?php echo __('difficulty:', 'pmc'); ?>
                     </span>
                     <span class="meta-val complex-item complex-item-2">
-                      <?php echo get_post_meta(get_the_ID(), 'tutorial_difficulty')[0]; ?>
+                      <?php  echo get_post_meta(get_the_ID(), 'tutorial_difficulty_label')[0]; ?>
                     </span>
                   </p>
                   <p class="meta-item target-group">
