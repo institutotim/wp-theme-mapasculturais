@@ -10,8 +10,13 @@
       });
 
       var map = L.map('map', {
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        maxZoom: 10
       }).setView([-14.235004, -51.92528], 4);
+
+      var markerLayer = L.featureGroup();
+
+      map.addLayer(markerLayer);
 
       L.tileLayer('http://{s}.sm.mapstack.stamen.com/($373f57[@p],toner-background[screen])/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -64,8 +69,9 @@
             markers[i].position.lng
           ],
           {icon: icon}
-        ).bindPopup(popup).addTo(map);
+        ).bindPopup(popup).addTo(markerLayer);
       }
+      map.fitBounds(markerLayer.getBounds());
     }
   });
 })(jQuery);
