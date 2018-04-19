@@ -40,7 +40,7 @@
     ?>
     <div class="pauta-content <?php echo $status_pauta; ?>">
       <div class="banner-ciclo status-ciclo">
-        <h3>Estágio da pauta</h3>
+        <h3>Estágio da discussão</h3>
         <ul class="ciclos"><?php
         $i = 1;
         foreach ($flow as $situacao)

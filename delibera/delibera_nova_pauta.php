@@ -17,7 +17,7 @@ get_header();
 						<span class="page-icon">
 	              <span class="fa fa-group"></span>
 	            </span>
-	          <h2>Nova pauta</h2>
+	          <h2>Novo tópico de discussão</h2>
 					</div>
         </div>
       </div>

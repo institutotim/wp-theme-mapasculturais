@@ -139,7 +139,7 @@
             </ul>
           </div>
           <?php if(is_user_logged_in()) : ?>
-            <p class="new"><a class="button block" href="<?php echo home_url("/adicionar-pauta"); ?>">Criar nova pauta</a></p>
+            <p class="new"><a class="button block" href="<?php echo home_url("/adicionar-pauta"); ?>">Criar novo tópico de discussão</a></p>
           <?php endif; ?>
         </div>
       </div>
@@ -164,10 +164,13 @@
             )
           ));
           ?>
-          <section class="content-section">
+          <section class="content-section first-content-section">
+            <form class="content-section-search-form" action="<?php echo get_post_type_archive_link("pauta"); ?>">
+              <input placeholder="Busque por tópicos de discussão..." name="s" />
+            </form>
             <header class="content-section-header">
-              <h3>Pautas em discussão</h3>
-              <p class="section-description">Acompanhe e participe do debate das pautas em discussão.</p>
+              <h3>Tópicos em discussão</h3>
+              <p class="section-description">Acompanhe e participe do debate das tópicos em discussão.</p>
             </header>
             <?php
             if($debating_query->have_posts()) :
@@ -180,7 +183,7 @@
               endwhile;
             else :
               ?>
-              <p>Nenhuma pauta foi encontrada</p>
+              <p>Nenhum tópico foi encontrado</p>
               <?php
             endif;
             ?>
@@ -201,8 +204,8 @@
             <hr class="dark" />
             <section class="content-section">
               <header class="content-section-header">
-                <h3>Pautas em votação</h3>
-                <p class="section-description">Vote nas pautas que já estão na reta final!</p>
+                <h3>Tópicos em votação</h3>
+                <p class="section-description">Vote nos tópicos que já estão na reta final!</p>
               </header>
               <?php
               while($voting_query->have_posts()) :
@@ -234,8 +237,8 @@
             ?>
             <section class="content-section community-section topic-proposal-section">
               <header class="content-section-header">
-                <h3>Propostas de pauta</h3>
-                <p class="section-description">Vote para abrir discussão sobre as pautas propostas.</p>
+                <h3>Propostas de tópico</h3>
+                <p class="section-description">Vote para abrir discussão sobre os tópicos propostos.</p>
               </header>
               <?php
               if($proposal_query->have_posts()) :
@@ -248,7 +251,7 @@
                 endwhile;
               else :
                 ?>
-                <p>Nenhuma pauta foi encontrada</p>
+                <p>Nenhum tópico foi encontrado</p>
                 <?php
               endif;
               ?>
@@ -269,8 +272,8 @@
             ?>
             <section class="content-section community-section topic-resolved-section">
               <header class="content-section-header">
-                <h3>Pautas com resolução</h3>
-                <p class="section-description">Veja as resoluções das pautas concluídas.</p>
+                <h3>Tópicos com resolução</h3>
+                <p class="section-description">Veja as resoluções de tópicos concluídos.</p>
               </header>
               <?php
               if($debating_query->have_posts()) :
@@ -283,7 +286,7 @@
                 endwhile;
               else :
                 ?>
-                <p>Nenhuma pauta foi encontrada</p>
+                <p>Nenhum tópico foi encontrada</p>
                 <?php
               endif;
               ?>

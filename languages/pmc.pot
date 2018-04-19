@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 00:39-0300\n"
+"POT-Creation-Date: 2018-04-19 01:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,12 @@ msgstr ""
 msgid "Pautas"
 msgstr ""
 
-#: archive-pauta.php:29
+#: archive-pauta.php:30
+#, php-format
+msgid "Resultados da busca por \"%s\""
+msgstr ""
+
+#: archive-pauta.php:32
 msgid "Acompanhe o debate sobre a plataforma."
 msgstr ""
 
@@ -102,6 +107,14 @@ msgstr ""
 
 #: delibera/form-nova-pauta.php:17 front_add_pauta.php:132
 msgid "Resumo da pauta"
+msgstr ""
+
+#: delibera/form-nova-pauta.php:30
+msgid "Criar pauta"
+msgstr ""
+
+#: front_add_pauta.php:143
+msgid "Temas"
 msgstr ""
 
 #. /label></p>
@@ -213,12 +226,8 @@ msgstr ""
 #.
 #. </div>
 #.
-#: delibera/form-nova-pauta.php:30 front_add_pauta.php:279
-msgid "Criar pauta"
-msgstr ""
-
-#: front_add_pauta.php:143
-msgid "Temas"
+#: front_add_pauta.php:279
+msgid "Criar tópico de discussão"
 msgstr ""
 
 #: functions.php:79

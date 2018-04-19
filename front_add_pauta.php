@@ -106,7 +106,7 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 					<p class="over-title">
 						<a href="<?php echo home_url("/comunidade"); ?>" class="area">Comunidade</a>
 					</p>
-          <h2>Nova pauta</h2>
+          <h2>Novo tópico de discussão</h2>
 					<p class="page-description">Participe do debate do Mapas Culturais</p>
         </div>
       </div>
@@ -276,7 +276,7 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 					<div class="add-pauta-buttons row">
 						<a class="button add-pauta-prev" href="#">Etapa anterior</a>
 						<a class="button add-pauta-next" href="#">Próxima etapa</a>
-						<input class="button button-primary add-pauta-create" type="submit" value="<?php _e( 'Criar pauta', 'delibera' ); ?>"/>
+						<input class="button button-primary add-pauta-create" type="submit" value="<?php _e( 'Criar tópico de discussão', 'delibera' ); ?>"/>
 					</div>
 				</div>
 		  </form>
