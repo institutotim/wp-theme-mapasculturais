@@ -909,6 +909,53 @@ p.post-meta .fa {
           font-size: 1em;
           margin-right: 1rem;
         }
+        select {
+          text-transform: lowercase;
+          padding: 0;
+          background: transparent;
+          color: @pink;
+          border: 0;
+          font-family: inherit;
+          font-size: .8em;
+          padding-right: 1rem;
+        }
+        .dropdown-menu {
+          position: relative;
+          text-transform: lowercase;
+          display: inline-block;
+          z-index: 10;
+          .dropdown-menu-label {
+            cursor: default;
+            font-size: .8em;
+          }
+          .fa-chevron-down {
+            font-size: .5em;
+            float: right;
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+          }
+          .dropdown-menu-items {
+            display: none;
+            position: absolute;
+            top: 35px;
+            padding-top: 2rem;
+            width: 14em;
+            left: 0;
+            color: #fff;
+            font-size: .6em;
+            padding: .5rem;
+            a {
+              display: block;
+              padding: 1rem;
+              background: @pink;
+            }
+          }
+          &:hover {
+            .dropdown-menu-items {
+              display: block;
+            }
+          }
+        }
       }
     }
     .page-icon {
@@ -1708,7 +1755,7 @@ p.post-meta .fa {
     .tutorial-meta {
       font-family: 'Tim Sans';
       float: right;
-      width: 27%;
+      width: 30%;
       margin: 2rem 0;
       box-sizing: border-box;
       font-size: .9em;

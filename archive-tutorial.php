@@ -26,11 +26,22 @@
               }
               else { ?>
                 <span class="fa fa-gear"></span>
+                <span class="dropdown-menu">
+                  <span class="dropdown-menu-label"><?php _e("Select Target Group", "pmc"); ?> <span class="fa fa-chevron-down"></span></span>
+                  <span class="dropdown-menu-items">
+                    <a href="<?php echo add_query_arg(array('target_group' => '1') , get_post_type_archive_link( 'tutorial' )); ?>">para gestores</a>
+                    <a href="<?php echo add_query_arg(array('target_group' => '2') , get_post_type_archive_link( 'tutorial' )); ?>">para agentes</a>
+                  </span>
+                </span>
+                <?php
+                /*
                 <select  onchange="if (this.value) window.location.href=this.value">
                   <option value=""><?php _e('Select Target Group','pmc') ?></option>
                   <option value="<?php echo add_query_arg(array('target_group' => '1') , get_post_type_archive_link( 'tutorial' )); ?>">para gestores</option>
                   <option value="<?php echo add_query_arg(array('target_group' => '2') , get_post_type_archive_link( 'tutorial' )); ?>">para agentes</option>
                 </select>
+                */
+                ?>
               <?php
               }
 
