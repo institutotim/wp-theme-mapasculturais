@@ -9,32 +9,28 @@
 <body <?php body_class(); ?>>
   <header id="masthead">
     <div class="container">
-      <div class="four columns">
-          <h1 class="link_tim">
-            <a href="<?php echo home_url('/'); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Portal Mapas Culturais" />
-              <div class="content-header-title">
-                <p class="header-title" >Portal Mapas Culturais</p>
-              </div>
-            </a>
-          </h1>
-      </div>
-      <div class="eight columns">
+      <h1 class="link_tim">
+        <a href="<?php echo home_url('/'); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Portal Mapas Culturais" />
+          Portal Mapas Culturais
+        </a>
+      </h1>
+      <nav class="headnav">
         <div class="search-input u-pull-right">
           <form method="get" id="searchform" action="<?php echo get_post_type_archive_link("post") ?>/">
               <label class="fa fa-search" for="search"></label>
               <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="search" type="text" placeholder="Busca..." />
           </form>
         </div>
-          <?php wp_nav_menu(array(
-            "theme_location" => "header",
-            "menu_class" => "",
-            "menu_id" => "",
-            "container_class" => "u-pull-right",
-            "container_id" => "mastnav"
-            )
-          ); 
-          ?>
-      </div>
+        <?php wp_nav_menu(array(
+          "theme_location" => "header",
+          "menu_class" => "",
+          "menu_id" => "",
+          "container_class" => "u-pull-right",
+          "container_id" => "mastnav"
+          )
+        );
+        ?>
+      </nav>
     </div>
   </header>
