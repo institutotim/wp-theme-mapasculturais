@@ -168,7 +168,7 @@
             <?php endif; ?>
           </div>
           <p>
-            <a target="_blank" href="/tutorials" class="button block">Veja mais tutoriais</a>
+            <a target="_blank" href="/tutoriais" class="button block">Veja mais tutoriais</a>
           </p>
         </div>
         <div class="four columns">
