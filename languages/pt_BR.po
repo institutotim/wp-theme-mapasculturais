@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-01 20:46-0300\n"
-"PO-Revision-Date: 2018-04-01 20:48-0300\n"
+"POT-Creation-Date: 2018-05-03 20:24-0300\n"
+"PO-Revision-Date: 2018-05-03 20:26-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,13 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #: archive-pauta.php:28
 msgid "Pautas"
 msgstr "Pautas"
 
-#: archive-pauta.php:29
+#: archive-pauta.php:30
+#, php-format
+msgid "Search results for \"%s\""
+msgstr "Resultados de busca para: “%s”"
+
+#: archive-pauta.php:32
 msgid "Acompanhe o debate sobre a plataforma."
 msgstr "Acompanhe o debate sobre a plataforma."
 
@@ -103,6 +108,14 @@ msgstr "Digite o título da pauta aqui"
 #: delibera/form-nova-pauta.php:17 front_add_pauta.php:132
 msgid "Resumo da pauta"
 msgstr "Resumo da pauta"
+
+#: delibera/form-nova-pauta.php:30
+msgid "Criar pauta"
+msgstr "Criar pauta"
+
+#: front_add_pauta.php:143
+msgid "Temas"
+msgstr "Temas"
 
 #. /label></p>
 #. <div class="sort-container">
@@ -213,13 +226,9 @@ msgstr "Resumo da pauta"
 #.
 #. </div>
 #.
-#: delibera/form-nova-pauta.php:30 front_add_pauta.php:279
-msgid "Criar pauta"
-msgstr "Criar pauta"
-
-#: front_add_pauta.php:143
-msgid "Temas"
-msgstr "Temas"
+#: front_add_pauta.php:279
+msgid "Criar tópico de discussão"
+msgstr ""
 
 #: functions.php:79
 msgid "Web links"

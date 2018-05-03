@@ -27,7 +27,7 @@
 					</p>
           <h2><?php _e('Pautas', 'pmc');?></h2>
           <?php if($_GET["s"]) : ?>
-            <p class="page-description"><?php echo sprintf(__('Resultados da busca por "%s"', 'pmc'), $_GET["s"]); ?></p>
+            <p class="page-description"><?php echo sprintf(__('Search results for "%s"', 'pmc'), $_GET["s"]); ?></p>
           <?php else : ?>
             <p class="page-description"><?php _e('Acompanhe o debate sobre a plataforma.', 'pmc') ?></p>
           <?php endif; ?>

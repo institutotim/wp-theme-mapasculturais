@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 01:14-0300\n"
+"POT-Creation-Date: 2018-05-03 20:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: archive-pauta.php:30
 #, php-format
-msgid "Resultados da busca por \"%s\""
+msgid "Search results for \"%s\""
 msgstr ""
 
 #: archive-pauta.php:32
