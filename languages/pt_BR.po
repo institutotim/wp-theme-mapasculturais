@@ -82,7 +82,7 @@ msgstr "Y"
 
 #: archive.php:36 single.php:30
 msgid "Network Blog"
-msgstr "Post da Rede"
+msgstr "Blog da Rede"
 
 #: archive.php:38 inc/sidebars.php:11
 msgid "News"
