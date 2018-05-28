@@ -78,11 +78,11 @@ class PMC_Tutorials {
   }
 
   function tutorial_add_meta_box() {
-    add_meta_box('tutorial-meta-box', 
-      __('Additional info', 'pmc'), 
-      array($this, 'display_tutorial_meta_box'), 
-      'tutorial', 
-      'normal', 
+    add_meta_box('tutorial-meta-box',
+      __('Additional info', 'pmc'),
+      array($this, 'display_tutorial_meta_box'),
+      'tutorial',
+      'normal',
       'high'
     );
   }
@@ -91,7 +91,7 @@ class PMC_Tutorials {
     $metas = $this->tutorial_get_metas();
 
     foreach($metas as $meta) { ?>
-      <?php 
+      <?php
 
     if ($meta['html']['tag'] == 'select')
       {
@@ -104,11 +104,11 @@ class PMC_Tutorials {
             foreach ($meta['html']['options'] as $option) {
             $content = $option['content'];
           ?>
-            <option value="<?php echo $option['value'] ?>" 
+            <option value="<?php echo $option['value'] ?>"
               <?php echo esc_html(get_post_meta($object->ID, $meta['slug'] , true), 1) === $option['value'] ? 'selected' : ''; ?> >
               <?php echo ucwords($content) ?>
             </option>
-            <?php 
+            <?php
         }
         ?>
           </select>
@@ -132,12 +132,12 @@ class PMC_Tutorials {
 
   function tutorial_get_metas(){
     $metas = [];
-    $metas[] = array ( 
+    $metas[] = array (
       'label' => __('Group Target', 'pmc'),
       'slug'=>'tutorial_group_target' ,
-      'info' => __('No target group was informed', 'pmc') , 
+      'info' => __('No target group was informed', 'pmc') ,
       'html' => array (
-        'tag'=> 'select', 
+        'tag'=> 'select',
         'options' => array(
           array('content' => __('agents', 'pmc'), 'value' => '2'),
           array('content' => __('maintainers', 'pmc'), 'value' => '1')
@@ -145,12 +145,12 @@ class PMC_Tutorials {
       )
     );
 
-    $metas[] = array ( 
+    $metas[] = array (
       'label' => __('Difficulty','pmc'),
       'slug'=> 'tutorial_difficulty' ,
-      'info' => __('No difficulty was informed', 'pmc') , 
+      'info' => __('No difficulty was informed', 'pmc') ,
       'html' => array (
-        'tag'=> 'select', 
+        'tag'=> 'select',
         'options' => array(
           array('content' => __('easy', 'pmc'), 'value' => '1'),
           array('content' => __('medium', 'pmc'), 'value' => '2'),
@@ -179,7 +179,7 @@ class PMC_Tutorials {
               add_post_meta($post_id, $meta['slug'].'_label', __('agents', 'pmc') , true);
             }
             else {
-              add_post_meta($post_id, $meta['slug'].'_label', __('maintainers', 'preg_match(pattern, subject)') , true);
+              add_post_meta($post_id, $meta['slug'].'_label', __('maintainers', 'pmc') , true);
             }
           }
 
