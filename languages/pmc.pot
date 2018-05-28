@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-03 20:24-0300\n"
+"POT-Creation-Date: 2018-05-28 20:28-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgctxt "Conjunction for timeline periods"
 msgid "to"
 msgstr ""
 
-#: archive-tutorial.php:30
+#: archive-tutorial.php:29
 msgid "Select Target Group"
 msgstr ""
 
@@ -454,41 +454,41 @@ msgstr ""
 msgid "URL for User Manual"
 msgstr ""
 
-#: inc/timeline-items.php:18
+#: inc/timeline-items.php:13
+msgid "Edit event"
+msgstr ""
+
+#: inc/timeline-items.php:14
+msgid "All events"
+msgstr ""
+
+#: inc/timeline-items.php:27
+msgid "Timeline"
+msgstr ""
+
+#: inc/timeline-items.php:28
+msgid "Historical events of Mapas Culturais platform."
+msgstr ""
+
+#: inc/timeline-items.php:54
 msgid "Date of occurrence or start date (if a period):"
 msgstr ""
 
-#: inc/timeline-items.php:21
+#: inc/timeline-items.php:57
 msgid ""
 "Format: YYYY-MM-DD (YYYY = year, MM = month, DD = day, year is required)."
 msgstr ""
 
-#: inc/timeline-items.php:23
+#: inc/timeline-items.php:59
 msgid "Examples: 2014, 2014-05, 2014-05-01"
 msgstr ""
 
-#: inc/timeline-items.php:29
+#: inc/timeline-items.php:65
 msgid "Finish date (optional):"
 msgstr ""
 
-#: inc/timeline-items.php:32
+#: inc/timeline-items.php:68
 msgid "Leave blank if same as above."
-msgstr ""
-
-#: inc/timeline-items.php:59
-msgid "Edit event"
-msgstr ""
-
-#: inc/timeline-items.php:60
-msgid "All events"
-msgstr ""
-
-#: inc/timeline-items.php:73
-msgid "Timeline"
-msgstr ""
-
-#: inc/timeline-items.php:74
-msgid "Historical events of Mapas Culturais platform."
 msgstr ""
 
 #: inc/tutorials/post-type.php:13
