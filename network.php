@@ -89,15 +89,15 @@
       <?php get_template_part('parts/network-blog'); ?>
       </div>
       <div class="five columns offset-by-one">
-        <div class="profiles content-section connect-border connect-right">
+        <div class="profiles content-section connect-border connect-right expandable">
           <header class="content-section-header">
             <h2>Conheça as iniciativas</h2>
           </header>
 
           <?php $blogusers = get_users( 'orderby=nicename&role=instance' );
           // Array of WP_User objects.
-          foreach ( $blogusers as $user ) : ?>
-            <article class="profile row">
+          foreach ( $blogusers as $index => $user ) : ?>
+            <article class="profile row <?php if($index > 3) echo "more"; ?>">
               <div class="author network-author">
                 <div class="instance-thumb">
                   <?php echo get_avatar( $user->ID, 100 ); ?>
@@ -125,6 +125,7 @@
               </p>
             </article>
           <?php endforeach; ?>
+          <a class="button block expand" href="javascript:void(0);" data-expanded="Exibir menos iniciativas">Ver mais iniciativas</a>
         </div>
       </div>
     </div>

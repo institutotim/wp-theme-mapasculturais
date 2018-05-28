@@ -83,7 +83,7 @@ function pmc_customize_register( $wp_customize ) {
   // input left
 
   $wp_customize->add_setting('github', array(
-      'default' => 'https://github.com/hacklabr/mapasculturais' , 
+      'default' => 'https://github.com/hacklabr/mapasculturais' ,
       'capability'=> 'edit_theme_options',
 
   ));
@@ -128,7 +128,7 @@ function pmc_setup_theme() {
     //$role->add_cap( 'delete_published_network_posts' );
     $role->add_cap( 'edit_network_posts' );
     $role->add_cap( 'delete_network_posts' );
-  
+
     // tutorials (custom type)
     $role->add_cap( 'edit_published_tutorials' );
     $role->add_cap( 'delete_published_tutorials' );
@@ -216,7 +216,7 @@ function pmc_header_scripts() {
   wp_register_script('highcharts-more', '//cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.10/highcharts-more.js');
   wp_register_script('moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js');
   wp_register_script('scroll-locate', get_template_directory_uri() . '/js/scroll-locate.js', array('jquery'), '0.0.2');
-  wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery'), '0.0.3');
+  wp_register_script('site', get_template_directory_uri() . '/js/site.js', array('jquery'), '0.0.4');
   wp_register_script('svg', get_template_directory_uri() . '/js/svg.js', array('jquery', 'scroll-locate', 'snapsvg', 'underscore'), '0.0.2');
   wp_register_script('timeline', get_template_directory_uri() . '/js/timeline.js', array('jquery', 'scroll-locate'), '0.0.2');
   wp_register_script('canvas', get_template_directory_uri() . '/js/canvas.js', array('jquery'), '0.0.2');
