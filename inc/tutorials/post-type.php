@@ -4,6 +4,7 @@ class PMC_Tutorials {
 
   function __construct() {
     add_action('init', array($this, 'register_post_type'));
+    add_action('pre_get_posts', array($this, 'pre_get_posts'));
     add_action('admin_menu', array($this, 'tutorial_add_meta_box'));
     add_action('save_post', array($this, 'save_tutorial_meta_box'), 10, 2);
   }
@@ -75,6 +76,14 @@ class PMC_Tutorials {
       )
     );
 
+  }
+
+  function pre_get_posts($query) {
+    $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
+    if($target_group) {
+      $query->set("meta_key", "tutorial_group_target");
+      $query->set("meta_value", esc_html($target_group));
+    }
   }
 
   function tutorial_add_meta_box() {

@@ -1,27 +1,5 @@
 <div class="tutorial-list">
-  <?php
-
-    $page = ( get_query_var('page') ) ? get_query_var('page') : 1;
-    $target_group = ( get_query_var('target_group') ) ? get_query_var('target_group') : '';
-    $args = array(
-      'post_type' => 'tutorial',
-       'paged' => $paged,
-       'meta_key' => 'tutorial_group_target',
-       'meta_value' => esc_html($target_group)
-    );
-
-
-    if (get_search_query( false )) {
-      $args['s'] = esc_html( get_search_query( false ) );
-      $args['posts_per_page'] = -1;
-    }
-
-
-    $query = new WP_Query( $args );
-  ?>
-
   <?php if ( have_posts() ) : ?>
-
   <?php while ( have_posts() ) : the_post(); ?>
     <article class="tutorial-item row">
       <div class="tutorial-meta">
@@ -91,9 +69,6 @@
       echo paginate_links( $pagination );
     ?>
   </nav>
-
-  <?php wp_reset_postdata(); ?>
-
   <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.', 'pmc' ); ?></p>
   <?php endif; ?>
