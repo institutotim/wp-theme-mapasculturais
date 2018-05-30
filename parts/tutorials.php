@@ -35,7 +35,7 @@
           <h3>
             <a href="<?php echo get_permalink();?>">
               <?php the_title(); ?>
-            <a>
+            </a>
           </h3>
         <?php the_excerpt(); ?>
       </div>
