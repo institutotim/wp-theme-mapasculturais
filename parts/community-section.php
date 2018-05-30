@@ -18,7 +18,7 @@
       <div class="four columns">
         <div class="buttons">
           <p>
-            <a target="_blank" href="<?php echo get_option('theme_mods_mapasculturais')['github']; ?>" class="button block">
+            <a target="_blank" href="https://github.com/hacklabr/mapasculturais" class="button block">
               <span class="fa fa-github"></span>
               GitHub
             </a>
