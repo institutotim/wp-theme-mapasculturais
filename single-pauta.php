@@ -42,14 +42,11 @@
       <div class="banner-ciclo status-ciclo">
         <h3>Estágio da discussão</h3>
         <ul class="ciclos"><?php
-        $i = 1;
+        $i = 0;
         foreach ($flow as $situacao)
         {
           switch($situacao)
           {
-            case 'validacao':?>
-            <li class="validacao <?php echo ($status_pauta != "validacao" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Validação</li><?php
-            break;
             case 'discussao': ?>
             <li class="discussao <?php echo ($status_pauta != "discussao" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Discussão</li><?php
             break;
@@ -127,8 +124,14 @@
                 <?php echo delibera_gerar_discordar($post->ID, 'pauta');?>
               <?php endif; ?>
             </div>
-            <?php echo $current_module->getCommentListLabel(); ?>
-            <?php comments_template( '', true ); ?>
+            <?php
+              if(
+                delibera_current_user_can_participate()
+              ) {
+                echo $current_module->getCommentListLabel();
+              }
+              comments_template( '', true );
+              ?>
           </div>
         </div>
       </div>

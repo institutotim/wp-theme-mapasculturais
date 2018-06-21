@@ -84,7 +84,7 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 	$pauta_id = wp_insert_post($pauta);
 
 	if ($pauta_id) {
-		wp_set_post_terms( $pauta_id, 'validacao', 'situacao');
+		wp_set_post_terms( $pauta_id, 'discussao', 'situacao');
 		wp_redirect(get_permalink( $pauta_id ));
 		exit();
 	} else {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-theme-mapasculturais 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 20:28-0300\n"
+"POT-Creation-Date: 2018-06-21 20:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,15 +97,15 @@ msgstr ""
 msgid "Saiba o que está acontecendo no mundo do Mapas Culturais"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:10 front_add_pauta.php:126
+#: delibera/form-nova-pauta.php:10 front_add_pauta.php:133
 msgid "Título da pauta"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:11 front_add_pauta.php:127
+#: delibera/form-nova-pauta.php:11 front_add_pauta.php:134
 msgid "Digite o título da pauta aqui"
 msgstr ""
 
-#: delibera/form-nova-pauta.php:17 front_add_pauta.php:132
+#: delibera/form-nova-pauta.php:17 front_add_pauta.php:139
 msgid "Resumo da pauta"
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Criar pauta"
 msgstr ""
 
-#: front_add_pauta.php:143
+#: front_add_pauta.php:150
 msgid "Temas"
 msgstr ""
 
@@ -226,7 +226,7 @@ msgstr ""
 #.
 #. </div>
 #.
-#: front_add_pauta.php:279
+#: front_add_pauta.php:286
 msgid "Criar tópico de discussão"
 msgstr ""
 
@@ -491,158 +491,158 @@ msgstr ""
 msgid "Leave blank if same as above."
 msgstr ""
 
-#: inc/tutorials/post-type.php:13
+#: inc/tutorials/post-type.php:14
 msgctxt "post type general name"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:14
+#: inc/tutorials/post-type.php:15
 msgctxt "post type singular name"
 msgid "Tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:15
+#: inc/tutorials/post-type.php:16
 msgctxt "admin menu"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:16
+#: inc/tutorials/post-type.php:17
 msgctxt "add new on admin bar"
 msgid "Tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:17
+#: inc/tutorials/post-type.php:18
 msgctxt "tutorial"
 msgid "Add new tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:18
+#: inc/tutorials/post-type.php:19
 msgid "Add new tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:19
+#: inc/tutorials/post-type.php:20
 msgid "New tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:20
+#: inc/tutorials/post-type.php:21
 msgid "Edit tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:21
+#: inc/tutorials/post-type.php:22
 msgid "View tutorial"
 msgstr ""
 
-#: inc/tutorials/post-type.php:22
+#: inc/tutorials/post-type.php:23
 msgid "All tutorials"
 msgstr ""
 
-#: inc/tutorials/post-type.php:23
+#: inc/tutorials/post-type.php:24
 msgid "Search tutorial's posts"
 msgstr ""
 
-#: inc/tutorials/post-type.php:24
+#: inc/tutorials/post-type.php:25
 msgid "No tutorials found."
 msgstr ""
 
-#: inc/tutorials/post-type.php:25
+#: inc/tutorials/post-type.php:26
 msgid "No tutorials found in trash."
 msgstr ""
 
-#: inc/tutorials/post-type.php:38
+#: inc/tutorials/post-type.php:39
 msgid "Tutorials Posts"
 msgstr ""
 
-#: inc/tutorials/post-type.php:56 inc/tutorials/post-type.php:66
+#: inc/tutorials/post-type.php:57 inc/tutorials/post-type.php:67
 msgid "Categories"
 msgstr ""
 
-#: inc/tutorials/post-type.php:57
+#: inc/tutorials/post-type.php:58
 msgid "Category"
 msgstr ""
 
-#: inc/tutorials/post-type.php:58
+#: inc/tutorials/post-type.php:59
 msgid "Search Categories"
 msgstr ""
 
-#: inc/tutorials/post-type.php:59
+#: inc/tutorials/post-type.php:60
 msgid "All categories"
 msgstr ""
 
-#: inc/tutorials/post-type.php:60
+#: inc/tutorials/post-type.php:61
 msgid "Parent category"
 msgstr ""
 
-#: inc/tutorials/post-type.php:61
+#: inc/tutorials/post-type.php:62
 msgid "Parent category:"
 msgstr ""
 
-#: inc/tutorials/post-type.php:62
+#: inc/tutorials/post-type.php:63
 msgid "Edit category"
 msgstr ""
 
-#: inc/tutorials/post-type.php:63
+#: inc/tutorials/post-type.php:64
 msgid "Update category"
 msgstr ""
 
-#: inc/tutorials/post-type.php:64
+#: inc/tutorials/post-type.php:65
 msgid "Add new category"
 msgstr ""
 
-#: inc/tutorials/post-type.php:65
+#: inc/tutorials/post-type.php:66
 msgid "New category name"
 msgstr ""
 
-#: inc/tutorials/post-type.php:82
+#: inc/tutorials/post-type.php:91
 msgid "Additional info"
 msgstr ""
 
-#: inc/tutorials/post-type.php:136
+#: inc/tutorials/post-type.php:145
 msgid "Group Target"
 msgstr ""
 
-#: inc/tutorials/post-type.php:138
+#: inc/tutorials/post-type.php:147
 msgid "No target group was informed"
 msgstr ""
 
-#: inc/tutorials/post-type.php:142 inc/tutorials/post-type.php:179
-#: inc/tutorials/post-type.php:203
+#: inc/tutorials/post-type.php:151 inc/tutorials/post-type.php:188
+#: inc/tutorials/post-type.php:212
 msgid "agents"
 msgstr ""
 
-#: inc/tutorials/post-type.php:143 inc/tutorials/post-type.php:182
-#: inc/tutorials/post-type.php:206
+#: inc/tutorials/post-type.php:152 inc/tutorials/post-type.php:191
+#: inc/tutorials/post-type.php:215
 msgid "maintainers"
 msgstr ""
 
-#: inc/tutorials/post-type.php:149
+#: inc/tutorials/post-type.php:158
 msgid "Difficulty"
 msgstr ""
 
-#: inc/tutorials/post-type.php:151
+#: inc/tutorials/post-type.php:160
 msgid "No difficulty was informed"
 msgstr ""
 
-#: inc/tutorials/post-type.php:155 inc/tutorials/post-type.php:188
-#: inc/tutorials/post-type.php:211
+#: inc/tutorials/post-type.php:164 inc/tutorials/post-type.php:197
+#: inc/tutorials/post-type.php:220
 msgid "easy"
 msgstr ""
 
-#: inc/tutorials/post-type.php:156 inc/tutorials/post-type.php:191
-#: inc/tutorials/post-type.php:214
+#: inc/tutorials/post-type.php:165 inc/tutorials/post-type.php:200
+#: inc/tutorials/post-type.php:223
 msgid "medium"
 msgstr ""
 
-#: inc/tutorials/post-type.php:157 inc/tutorials/post-type.php:194
-#: inc/tutorials/post-type.php:217
+#: inc/tutorials/post-type.php:166 inc/tutorials/post-type.php:203
+#: inc/tutorials/post-type.php:226
 msgid "advanced"
 msgstr ""
 
-#: inc/tutorials/post-type.php:226 inc/tutorials/post-type.php:229
+#: inc/tutorials/post-type.php:235 inc/tutorials/post-type.php:238
 msgid "The content don't have group target"
 msgstr ""
 
-#: inc/tutorials/post-type.php:235 inc/tutorials/post-type.php:238
-#: inc/tutorials/post-type.php:241
+#: inc/tutorials/post-type.php:244 inc/tutorials/post-type.php:247
+#: inc/tutorials/post-type.php:250
 msgid "The content don't have difficulty"
 msgstr ""
 
@@ -670,16 +670,16 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:78
+#: parts/blog.php:82 parts/pautas.php:20 parts/tutorials.php:56
 msgid "Previous"
 msgstr ""
 
-#: parts/blog.php:83 parts/pautas.php:21 parts/tutorials.php:79
+#: parts/blog.php:83 parts/pautas.php:21 parts/tutorials.php:57
 msgid "Next"
 msgstr ""
 
 #: parts/blog.php:102 parts/network-entry-on-author-page.php:56
-#: parts/pautas.php:40 parts/tutorials.php:98
+#: parts/pautas.php:40 parts/tutorials.php:73
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
