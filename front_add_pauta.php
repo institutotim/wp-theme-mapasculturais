@@ -2,9 +2,6 @@
 /*
  * Template name: Add Pauta via Front
  */
-?>
-
-<?php
 
 if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'delibera_nova_pauta' ) && is_user_logged_in()){
 
@@ -74,12 +71,22 @@ if (isset( $_POST['submitted'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_non
 
 	// ...
 
+	$pauta['meta_input'] = array();
+
+	$pauta['meta_input']['delibera_validation_show_rejeitar'] = "S";
+	$pauta['meta_input']['delibera_validation_show_abstencao'] = "N";
+	$pauta['meta_input']['delibera_validation_show_comment'] = "N";
+	$pauta['meta_input']['delibera_show_default_comment_form'] = "N";
+	$pauta['meta_input']['discussion_type'] = "forum";
+	$pauta['meta_input']['tipo_votacao'] = "checkbox";
+	$pauta['meta_input']['show_based_proposals'] = "S";
+
 	$pauta_id = wp_insert_post($pauta);
 
 	if ($pauta_id) {
 		wp_set_post_terms( $pauta_id, 'validacao', 'situacao');
 		wp_redirect(get_permalink( $pauta_id ));
-  	die;
+		exit();
 	} else {
 		var_dump("Erro!");
 	}
