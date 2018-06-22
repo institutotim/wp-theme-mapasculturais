@@ -155,6 +155,7 @@
           <?php
           $debating_query = new WP_Query(array(
             'post_type' => 'pauta',
+            'posts_per_page' => 4,
             'tax_query' => array(
               array(
                 'taxonomy' => 'situacao',
@@ -191,6 +192,7 @@
           <?php
           $voting_query = new WP_Query(array(
             'post_type' => 'pauta',
+            'posts_per_page' => 4,
             'tax_query' => array(
               array(
                 'taxonomy' => 'situacao',
@@ -219,57 +221,21 @@
             </section>
             <?php
           endif; ?>
-        </div>
-        <hr class="dark" />
-        <div class="row">
-          <div class="six columns">
-            <?php
-            $proposal_query = new WP_Query(array(
-              'post_type' => 'pauta',
-              'tax_query' => array(
-                array(
-                  'taxonomy' => 'situacao',
-                  'field' => 'slug',
-                  'terms' => 'validacao'
-                )
+          <?php
+          $debating_query = new WP_Query(array(
+            'post_type' => 'pauta',
+            'posts_per_page' => 4,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'situacao',
+                'field' => 'slug',
+                'terms' => 'comresolucao'
               )
-            ));
+            )
+          ));
+          if($debating_query->have_posts()) :
             ?>
-            <section class="content-section community-section topic-proposal-section">
-              <header class="content-section-header">
-                <h3>Propostas de tópico</h3>
-                <p class="section-description">Vote para abrir discussão sobre os tópicos propostos.</p>
-              </header>
-              <?php
-              if($proposal_query->have_posts()) :
-                while($proposal_query->have_posts()) :
-                  $proposal_query->the_post();
-                  ?>
-                  <?php get_template_part('parts/topic-item'); ?>
-                  <?php
-                  wp_reset_postdata();
-                endwhile;
-              else :
-                ?>
-                <p>Nenhum tópico foi encontrado</p>
-                <?php
-              endif;
-              ?>
-            </section>
-          </div>
-          <div class="six columns">
-            <?php
-            $debating_query = new WP_Query(array(
-              'post_type' => 'pauta',
-              'tax_query' => array(
-                array(
-                  'taxonomy' => 'situacao',
-                  'field' => 'slug',
-                  'terms' => 'comresolucao'
-                )
-              )
-            ));
-            ?>
+            <hr class="dark" />
             <section class="content-section community-section topic-resolved-section">
               <header class="content-section-header">
                 <h3>Tópicos com resolução</h3>
@@ -291,8 +257,86 @@
               endif;
               ?>
             </section>
-          </div>
+            <?php
+          endif; ?>
         </div>
+        <?php
+        /*
+          <hr class="dark" />
+          <div class="row">
+            <div class="six columns">
+              <?php
+              $proposal_query = new WP_Query(array(
+                'post_type' => 'pauta',
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'situacao',
+                    'field' => 'slug',
+                    'terms' => 'validacao'
+                  )
+                )
+              ));
+              ?>
+              <section class="content-section community-section topic-proposal-section">
+                <header class="content-section-header">
+                  <h3>Propostas de tópico</h3>
+                  <p class="section-description">Vote para abrir discussão sobre os tópicos propostos.</p>
+                </header>
+                <?php
+                if($proposal_query->have_posts()) :
+                  while($proposal_query->have_posts()) :
+                    $proposal_query->the_post();
+                    ?>
+                    <?php get_template_part('parts/topic-item'); ?>
+                    <?php
+                    wp_reset_postdata();
+                  endwhile;
+                else :
+                  ?>
+                  <p>Nenhum tópico foi encontrado</p>
+                  <?php
+                endif;
+                ?>
+              </section>
+            </div>
+            <div class="six columns">
+              <?php
+              $debating_query = new WP_Query(array(
+                'post_type' => 'pauta',
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'situacao',
+                    'field' => 'slug',
+                    'terms' => 'comresolucao'
+                  )
+                )
+              ));
+              ?>
+              <section class="content-section community-section topic-resolved-section">
+                <header class="content-section-header">
+                  <h3>Tópicos com resolução</h3>
+                  <p class="section-description">Veja as resoluções de tópicos concluídos.</p>
+                </header>
+                <?php
+                if($debating_query->have_posts()) :
+                  while($debating_query->have_posts()) :
+                    $debating_query->the_post();
+                    ?>
+                    <?php get_template_part('parts/topic-item'); ?>
+                    <?php
+                    wp_reset_postdata();
+                  endwhile;
+                else :
+                  ?>
+                  <p>Nenhum tópico foi encontrada</p>
+                  <?php
+                endif;
+                ?>
+              </section>
+            </div>
+        </div>
+        */
+        ?>
       </div>
     </div>
   <section>
