@@ -47,22 +47,21 @@
         {
           switch($situacao)
           {
-            case 'discussao': ?>
+            case 'discussao': $i++; ?>
             <li class="discussao <?php echo ($status_pauta != "discussao" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Discussão</li><?php
             break;
             case 'relatoria':
-            case 'eleicao_relator': ?>
+            case 'eleicao_relator': $i++; ?>
             <li class="relatoria <?php echo ($status_pauta != "relatoria" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Relatoria</li><?php
             break;
-            case 'emvotacao': ?>
+            case 'emvotacao': $i++; ?>
             <li class="emvotacao <?php echo ($status_pauta != "emvotacao" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Votação</li><?php
             break;
             case 'naovalidada':
-            case 'comresolucao': ?>
+            case 'comresolucao': $i++; ?>
             <li class="comresolucao <?php echo ($status_pauta != "comresolucao" && $status_pauta != "naovalidada" ? "inactive" : ""); ?>"><?php echo $i; ?><br>Resolução</li><?php
             break;
           }
-          $i++;
         }?>
       </ul>
     </div>
