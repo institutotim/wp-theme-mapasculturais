@@ -329,6 +329,19 @@ function pmc_is_pauta($is_pauta) {
 }
 add_filter('delibera_is_pauta', 'pmc_is_pauta');
 
+function pmc_delibera_pauta_situacao_filter($query) {
+  if(is_post_type_archive("pauta") && $_GET["situacao"]) {
+    $query->set("tax_query", array(
+      array(
+        "taxonomy" => "situacao",
+        "field" => "slug",
+        "terms" => $_GET["situacao"]
+      )
+    ));
+  }
+}
+add_action("pre_get_posts", "pmc_delibera_pauta_situacao_filter");
+
 // next and previous post links class
 
 add_filter('next_posts_link_attributes', 'posts_link_attributes');

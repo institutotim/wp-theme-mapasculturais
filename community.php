@@ -170,7 +170,7 @@
               <input placeholder="Busque por tópicos de discussão..." name="s" />
             </form>
             <header class="content-section-header">
-              <h3>Tópicos em discussão</h3>
+              <h3><a href="<?php echo add_query_arg("situacao", "discussao", get_post_type_archive_link("pauta")); ?>">Tópicos em discussão</a></h3>
               <p class="section-description">Acompanhe e participe do debate das tópicos em discussão.</p>
             </header>
             <?php
@@ -206,7 +206,7 @@
             <hr class="dark" />
             <section class="content-section">
               <header class="content-section-header">
-                <h3>Tópicos em votação</h3>
+                <h3><a href="<?php echo add_query_arg("situacao", "emvotacao", get_post_type_archive_link("pauta")); ?>">Tópicos em votação</a></h3>
                 <p class="section-description">Vote nos tópicos que já estão na reta final!</p>
               </header>
               <?php
@@ -238,7 +238,7 @@
             <hr class="dark" />
             <section class="content-section community-section topic-resolved-section">
               <header class="content-section-header">
-                <h3>Tópicos com resolução</h3>
+                <h3><a href="<?php echo add_query_arg("situacao", "comresolucao", get_post_type_archive_link("pauta")); ?>">Tópicos com resolução</a></h3>
                 <p class="section-description">Veja as resoluções de tópicos concluídos.</p>
               </header>
               <?php

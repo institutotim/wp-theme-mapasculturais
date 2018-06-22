@@ -424,7 +424,7 @@ display: block;
 	/*width: 75%;*/
 	padding: 10px 10px 5px;
 	margin: 10px auto;
-	background-color: #a8e7f9;
+	background-color: #ffed7c;
 	overflow: auto;
 }
 
@@ -462,7 +462,7 @@ label.delibera_aceitar_radio_label  {
 
 .delibera-index-comments-encaminhamento {
 	float: left;
-	background-color: #a8e7f9;
+	background-color: #ffed7c;
 }
 
 .delibera-index-comments-opiniao {
@@ -475,7 +475,7 @@ label.delibera_aceitar_radio_label  {
 }
 
 #delibera-comment-encaminhamento .children .delibera-comment-discussao {
-	background-color: #a8e7f9 !important;
+	background-color: #ffed7c !important;
 }
 
 .delibera-comment-text {
@@ -1025,7 +1025,7 @@ color: #777;
 }
 
 .delibera-voto-option {
-    background-color: #a8e7f9;
+    background-color: #ffed7c;
     border-radius: 12px;
     margin-bottom: 10px;
     padding: 1em 1em 0.75em;

@@ -43,6 +43,42 @@
 
       <div class="three columns offset-by-one">
         <div id="sidebar" class="sidebar regular-sidebar connect-border connect-right">
+          <div class="widget">
+            <form class="content-section-search-form" action="<?php echo get_post_type_archive_link("pauta"); ?>">
+              <input type="text" placeholder="Busque por tópicos de discussão..." name="s" value="<?php echo $_GET['s']; ?>" />
+            </form>
+          </div>
+          <div class="widget">
+            <h3>Temas</h3>
+            <ul>
+            <?php
+              $terms = get_terms( 'tema');
+                if ( $terms && !is_wp_error( $terms ) ) :
+                  foreach ( $terms as $term ) { ?>
+                    <li><a href="<?php echo get_term_link($term->term_id); ?>">
+                      <?php echo $term->name; ?>
+                    </a></li>
+                <?php } ?>
+              <?php endif; ?>
+            </ul>
+          </div>
+          <div class="widget">
+            <h3>Situação</h3>
+            <ul>
+            <?php
+              $terms = get_terms('situacao');
+                if ( $terms && !is_wp_error( $terms ) ) :
+                  foreach ( $terms as $term ) :
+                    if($term->slug !== "validacao") : ?>
+                      <li><a href="<?php echo add_query_arg("situacao", $term->slug, get_post_type_archive_link("pauta")); ?>">
+                        <?php echo $term->name; ?>
+                      </a></li>
+                    <?php
+                  endif;
+                endforeach; ?>
+              <?php endif; ?>
+            </ul>
+          </div>
           <?php dynamic_sidebar('news-pmc') ?>
         </div>
       </div>

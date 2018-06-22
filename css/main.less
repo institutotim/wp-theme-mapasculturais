@@ -99,6 +99,7 @@ hr.dark,
     margin-right: 0;
   }
 }
+.warning.message .button,
 .button,
 button,
 input[type="button"],
@@ -108,7 +109,7 @@ input[type="submit"] {
   height: auto;
   border-radius: 0;
   border: 0;
-  background: @lightblue;
+  background-color: @lightblue;
   color: #fff;
   // line-height: inherit;
   padding: 1rem 4rem;
@@ -1633,6 +1634,12 @@ p.post-meta .fa {
         border-bottom: 0;
       }
     }
+  }
+  input[type=text] {
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.2em;
   }
 }
 
